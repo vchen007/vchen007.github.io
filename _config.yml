@@ -4,7 +4,7 @@ url: "http://vchen007.github.io"    # the protocol and hostname of your site, eg
 baseurl: "" # the prefix of your site uri, eg. `"/jekyll-theme-EasyBook"` or empty string `""`
 #timezone: Asia/Chongqing
 description: >
-  One or more sentences introducing this blog.
+  Hello! This is my site where I display projects!
 
 # Your information
 email: vchen007@gmail.com
@@ -14,8 +14,8 @@ profile: One sentence introducing yourself.
 #twitter_username: twitter_username
 #github_username:  github_username
 profile_links:
-  Email: "mailto:your_email@example.com"
-  GitHub: "https://github.com/laobubu/jekyll-theme-EasyBook"
+  Email: "mailto:vchen007@gmail.com"
+  GitHub: "http://vchen007.github.io"
   # You can add more profile links above, or edit _includes/sidebar.html 
 
 # Comment Service (Disqus or 多说)
