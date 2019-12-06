@@ -1,21 +1,20 @@
 # Site settings
-title: Another Blog
+title: Victor's Data Science Blog
 url: "http://vchen007.github.io"    # the protocol and hostname of your site, eg. `http://laobubu.github.io`
 baseurl: "" # the prefix of your site uri, eg. `"/jekyll-theme-EasyBook"` or empty string `""`
 #timezone: Asia/Chongqing
-description: >
-  Hello! This is my site where I display projects!
+description: >Hello! This is my site where I display projects!
 
 # Your information
 email: vchen007@gmail.com
 author: Victor Chen
 avatar: "//www.gravatar.com/avatar/your_email_md5?d=mm&s=135"
-profile: One sentence introducing yourself.
+profile: Hello! This is my site where I display projects!
 #twitter_username: twitter_username
 github_username:  http://vchen007.github.io
 profile_links:
   Email: "mailto:vchen007@gmail.com"
-  GitHub: "http://vchen007.github.io"
+  #GitHub: "http://vchen007.github.io"
   # You can add more profile links above, or edit _includes/sidebar.html 
 
 # Comment Service (Disqus or 多说)
@@ -29,7 +28,7 @@ header:
   links:             # Links on the header. Link to in-site page with a slash as prefix
     About: /about/
     Category: /category/
-    Donate: https://laobubu.net/donate.html
+    #Donate: https://laobubu.net/donate.html
 
 permalink: /archivers/:title
 plugins:
