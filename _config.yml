@@ -4,13 +4,13 @@ url: "http://vchen007.github.io"    # the protocol and hostname of your site, eg
 baseurl: "" # the prefix of your site uri, eg. `"/jekyll-theme-EasyBook"` or empty string `""`
 #timezone: Asia/Chongqing
 description: >
-              Hello! This is my site where I display projects!
+              Hello! This is my site where I display my projects!
 
 # Your information
 email: vchen007@gmail.com
 author: Victor Chen
 avatar: "//www.gravatar.com/avatar/your_email_md5?d=mm&s=135"
-profile: Hello! This is my site where I display projects!
+profile: Hello! This is my site where I display my projects!
 #twitter_username: twitter_username
 github_username:  http://vchen007.github.io
 profile_links:
