@@ -472,7 +472,6 @@ plt.show()
 
 
 ## Conclusion
-
 After seeing the feature importance based off of the column coefficients, the most important questions to ask future loan applicants are:
 1. How much is their monthly debt?
 2. What is their credit score?
