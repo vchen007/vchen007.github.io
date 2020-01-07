@@ -366,7 +366,7 @@ df.head(10)
 
 
 ```python
-print(tabulate(df.head(10), tablefmt="pipe", headers="keys"))
+print(tabulate(df.head(10), headers="keys", tablefmt="pipe"))
 ```
     |    | Loan ID                              | Customer ID                          | Loan Status   |   Current Loan Amount | Term       |   Credit Score | Years in current job   | Home Ownership   |   Annual Income | Purpose            | Monthly Debt   |   Years of Credit History |   Months since last delinquent |   Number of Open Accounts |   Number of Credit Problems |   Current Credit Balance |   Maximum Open Credit |   Bankruptcies |   Tax Liens |
     |----|--------------------------------------|--------------------------------------|---------------|-----------------------|------------|----------------|------------------------|------------------|-----------------|--------------------|----------------|---------------------------|--------------------------------|---------------------------|-----------------------------|--------------------------|-----------------------|----------------|-------------|
