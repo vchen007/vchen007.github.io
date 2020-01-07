@@ -14,9 +14,6 @@ import pandas as pd
 df = pd.read_csv('1533148983_LoansTrainingSet.csv')
 ```
 
-    /Applications/anaconda3/lib/python3.7/site-packages/IPython/core/interactiveshell.py:3058: DtypeWarning: Columns (16) have mixed types. Specify dtype option on import or set low_memory=False.
-      interactivity=interactivity, compiler=compiler, result=result)
-
 
 ## Taking a Look at the Data
 
