@@ -66,7 +66,7 @@ from tabulate import tabulate
 ```python
 print(tabulate(df.describe(),headers="keys", tablefmt="github"))
 ```
-
+<div>
 |       |   Current Loan Amount |   Credit Score |    Annual Income |   Years of Credit History |   Months since last delinquent |   Number of Open Accounts |   Number of Credit Problems |   Current Credit Balance |   Bankruptcies |      Tax Liens |
 |-------|-----------------------|----------------|------------------|---------------------------|--------------------------------|---------------------------|-----------------------------|--------------------------|----------------|----------------|
 | count |      256984           |      195308    | 195308           |              256984       |                    116601      |              256984       |               256984        |         256984           |  256455        | 256961         |
@@ -77,7 +77,7 @@ print(tabulate(df.describe(),headers="keys", tablefmt="github"))
 | 50%   |       14298           |         733    |  61242           |                  17       |                        32      |                  10       |                    0        |          11078           |       0        |      0         |
 | 75%   |       24367           |         744    |  86462           |                  21.7     |                        51      |                  14       |                    0        |          19319           |       0        |      0         |
 | max   |           1e+08       |        7510    |      8.71355e+06 |                  70.5     |                       176      |                  76       |                   11        |              1.73141e+06 |       7        |     11         |
-
+</div>
 
 |       |   Current Loan Amount |   Credit Score |    Annual Income |   Years of Credit History |   Months since last delinquent |   Number of Open Accounts |   Number of Credit Problems |   Current Credit Balance |   Bankruptcies |      Tax Liens |
 |-------|-----------------------|----------------|------------------|---------------------------|--------------------------------|---------------------------|-----------------------------|--------------------------|----------------|----------------|
