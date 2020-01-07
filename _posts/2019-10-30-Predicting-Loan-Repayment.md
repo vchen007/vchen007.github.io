@@ -9,19 +9,9 @@ A bank has given us a data set and would like us to find which potential custome
 import pandas as pd
 ```
 
-
-```python
-
-```
-
-
 ```python
 df = pd.read_csv('1533148983_LoansTrainingSet.csv')
 ```
-
-    /Applications/anaconda3/lib/python3.7/site-packages/IPython/core/interactiveshell.py:3058: DtypeWarning: Columns (16) have mixed types. Specify dtype option on import or set low_memory=False.
-      interactivity=interactivity, compiler=compiler, result=result)
-
 
 ## Taking a Look at the Data
 
@@ -56,28 +46,9 @@ df.info()
     dtypes: float64(6), int64(4), object(9)
     memory usage: 37.3+ MB
 
-
-
-```python
-from tabulate import tabulate
-```
-
-
 ```python
 print(tabulate(df.describe(),headers="keys", tablefmt="github"))
 ```
-<div>
-|       |   Current Loan Amount |   Credit Score |    Annual Income |   Years of Credit History |   Months since last delinquent |   Number of Open Accounts |   Number of Credit Problems |   Current Credit Balance |   Bankruptcies |      Tax Liens |
-|-------|-----------------------|----------------|------------------|---------------------------|--------------------------------|---------------------------|-----------------------------|--------------------------|----------------|----------------|
-| count |      256984           |      195308    | 195308           |              256984       |                    116601      |              256984       |               256984        |         256984           |  256455        | 256961         |
-| mean  |           1.37133e+07 |        1251.12 |  71952.7         |                  18.2902  |                        34.8815 |                  11.1063  |                    0.156628 |          15406.6         |       0.110316 |      0.0272026 |
-| std   |           3.43813e+07 |        1762.02 |  58877.6         |                   7.07575 |                        21.8542 |                   4.98298 |                    0.460731 |          19665.1         |       0.336229 |      0.24595   |
-| min   |         505           |         585    |      0           |                   3.4     |                         0      |                   0       |                    0        |              0           |       0        |      0         |
-| 25%   |        8299           |         714    |  44321           |                  13.5     |                        16      |                   8       |                    0        |           5974           |       0        |      0         |
-| 50%   |       14298           |         733    |  61242           |                  17       |                        32      |                  10       |                    0        |          11078           |       0        |      0         |
-| 75%   |       24367           |         744    |  86462           |                  21.7     |                        51      |                  14       |                    0        |          19319           |       0        |      0         |
-| max   |           1e+08       |        7510    |      8.71355e+06 |                  70.5     |                       176      |                  76       |                   11        |              1.73141e+06 |       7        |     11         |
-</div>
 
 |       |   Current Loan Amount |   Credit Score |    Annual Income |   Years of Credit History |   Months since last delinquent |   Number of Open Accounts |   Number of Credit Problems |   Current Credit Balance |   Bankruptcies |      Tax Liens |
 |-------|-----------------------|----------------|------------------|---------------------------|--------------------------------|---------------------------|-----------------------------|--------------------------|----------------|----------------|
@@ -91,9 +62,17 @@ print(tabulate(df.describe(),headers="keys", tablefmt="github"))
 | max   |           1e+08       |        7510    |      8.71355e+06 |                  70.5     |                       176      |                  76       |                   11        |              1.73141e+06 |       7        |     11         |
 
 
-```python
-print(tabulate(df.head(10),headers="keys", tablefmt="github"))
-```
+|       |   Current Loan Amount |   Credit Score |    Annual Income |   Years of Credit History |   Months since last delinquent |   Number of Open Accounts |   Number of Credit Problems |   Current Credit Balance |   Bankruptcies |      Tax Liens |
+|-------|-----------------------|----------------|------------------|---------------------------|--------------------------------|---------------------------|-----------------------------|--------------------------|----------------|----------------|
+| count |      256984           |      195308    | 195308           |              256984       |                    116601      |              256984       |               256984        |         256984           |  256455        | 256961         |
+| mean  |           1.37133e+07 |        1251.12 |  71952.7         |                  18.2902  |                        34.8815 |                  11.1063  |                    0.156628 |          15406.6         |       0.110316 |      0.0272026 |
+| std   |           3.43813e+07 |        1762.02 |  58877.6         |                   7.07575 |                        21.8542 |                   4.98298 |                    0.460731 |          19665.1         |       0.336229 |      0.24595   |
+| min   |         505           |         585    |      0           |                   3.4     |                         0      |                   0       |                    0        |              0           |       0        |      0         |
+| 25%   |        8299           |         714    |  44321           |                  13.5     |                        16      |                   8       |                    0        |           5974           |       0        |      0         |
+| 50%   |       14298           |         733    |  61242           |                  17       |                        32      |                  10       |                    0        |          11078           |       0        |      0         |
+| 75%   |       24367           |         744    |  86462           |                  21.7     |                        51      |                  14       |                    0        |          19319           |       0        |      0         |
+| max   |           1e+08       |        7510    |      8.71355e+06 |                  70.5     |                       176      |                  76       |                   11        |              1.73141e+06 |       7        |     11         |
+
 
     |    | Loan ID                              | Customer ID                          | Loan Status   |   Current Loan Amount | Term       |   Credit Score | Years in current job   | Home Ownership   |   Annual Income | Purpose            | Monthly Debt   |   Years of Credit History |   Months since last delinquent |   Number of Open Accounts |   Number of Credit Problems |   Current Credit Balance |   Maximum Open Credit |   Bankruptcies |   Tax Liens |
     |----|--------------------------------------|--------------------------------------|---------------|-----------------------|------------|----------------|------------------------|------------------|-----------------|--------------------|----------------|---------------------------|--------------------------------|---------------------------|-----------------------------|--------------------------|-----------------------|----------------|-------------|
@@ -129,67 +108,21 @@ Going through each column, duplicate values have been recorded, missing informat
 # drop exact duplicate rows 
 df.drop_duplicates(keep='first', inplace=True)
 ```
-
-
 ```python
 # Split Columns between numbers and objects to groupby 'Loan ID' so we can fill in missing values
 df_obj = df.select_dtypes(include='object')
 df_num = df.select_dtypes(exclude='object')
 ```
-
-
 ```python
 # Loan ID to numbers data frame so can use groupby
 df_num['Loan ID'] = df['Loan ID']
 ```
-
-    /Applications/anaconda3/lib/python3.7/site-packages/ipykernel_launcher.py:2: SettingWithCopyWarning: 
-    A value is trying to be set on a copy of a slice from a DataFrame.
-    Try using .loc[row_indexer,col_indexer] = value instead
-    
-    See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-      
-
-
-
 ```python
 # groupby Loan ID and takes the max of each loan
 df_num = df_num.groupby('Loan ID').max().reset_index()
 df_obj = df_obj.drop_duplicates(subset='Loan ID')
 df = df_obj.merge(df_num) 
 ```
-
-
-```python
-df.info()
-```
-
-    <class 'pandas.core.frame.DataFrame'>
-    Int64Index: 215700 entries, 0 to 215699
-    Data columns (total 19 columns):
-    Loan ID                         215700 non-null object
-    Customer ID                     215700 non-null object
-    Loan Status                     215700 non-null object
-    Term                            215700 non-null object
-    Years in current job            206710 non-null object
-    Home Ownership                  215700 non-null object
-    Purpose                         215700 non-null object
-    Monthly Debt                    215700 non-null object
-    Maximum Open Credit             215700 non-null object
-    Current Loan Amount             215700 non-null int64
-    Credit Score                    171202 non-null float64
-    Annual Income                   171202 non-null float64
-    Years of Credit History         215700 non-null float64
-    Months since last delinquent    97438 non-null float64
-    Number of Open Accounts         215700 non-null int64
-    Number of Credit Problems       215700 non-null int64
-    Current Credit Balance          215700 non-null int64
-    Bankruptcies                    215248 non-null float64
-    Tax Liens                       215678 non-null float64
-    dtypes: float64(6), int64(4), object(9)
-    memory usage: 32.9+ MB
-
-
 
 ```python
 # grabbing Loan and Customer ID
@@ -219,30 +152,6 @@ df['Years in current job'] = df['Years in current job'].str.extract('(\d+)').ast
 df['Years in current job'] = df['Years in current job'].fillna(value=0.5)
 ```
 
-
-```python
-df['Years in current job'].value_counts(dropna=False)
-```
-
-
-
-
-    15.0    66711
-    2.0     19831
-    0.5     17544
-    3.0     17428
-    5.0     14987
-    1.0     14130
-    4.0     13632
-    6.0     12230
-    7.0     11713
-    8.0     10232
-    0.0      8990
-    9.0      8272
-    Name: Years in current job, dtype: int64
-
-
-
 ### CORRECTING DATA INPUT ERRORS
 
 
@@ -256,26 +165,17 @@ loan_median = df[df['Current Loan Amount'] < 99999999]['Current Loan Amount'].me
 # Change the 9999999 Loan Amount Values to loan median
 df.loc[df['Current Loan Amount'] == 99999999, 'Current Loan Amount'] = loan_median
 ```
-
-
 ```python
 df.replace('HaveMortgage', 'Home Mortgage', inplace=True)
 ```
 
-
-```python
-
-```
-
-### For a score with a range between 300-850, a credit score of 700 or above is generally considered good. A score of 800 or above on the same range is considered to be excellent. Most credit scores fall between 600 and 750
+### Fixing credit scores
+For a score with a range between 300-850, a credit score of 700 or above is generally considered good. A score of 800 or above on the same range is considered to be excellent. Most credit scores fall between 600 and 750
 
 
 ```python
 df['Credit Score'].describe()
 ```
-
-
-
 
     count    171202.000000
     mean       1261.776013
@@ -298,9 +198,6 @@ df['Credit Score'] = df['Credit Score'].apply(lambda x : x / 10 if x > 1000 else
 ```python
 df['Credit Score'].describe()
 ```
-
-
-
 
     count    171202.000000
     mean        722.755698
@@ -336,35 +233,6 @@ df['Monthly Debt'] = df['Monthly Debt'].astype(float)
 ```python
 df['Maximum Open Credit'] = df['Maximum Open Credit'].astype(float)
 ```
-
-
-```python
-df.info()
-```
-
-    <class 'pandas.core.frame.DataFrame'>
-    Int64Index: 215700 entries, 0 to 215699
-    Data columns (total 17 columns):
-    Loan Status                     215700 non-null int64
-    Term                            215700 non-null object
-    Years in current job            215700 non-null float64
-    Home Ownership                  215700 non-null object
-    Purpose                         215700 non-null object
-    Monthly Debt                    215700 non-null float64
-    Maximum Open Credit             215700 non-null float64
-    Current Loan Amount             215700 non-null float64
-    Credit Score                    171202 non-null float64
-    Annual Income                   171202 non-null float64
-    Years of Credit History         215700 non-null float64
-    Months since last delinquent    215700 non-null float64
-    Number of Open Accounts         215700 non-null int64
-    Number of Credit Problems       215700 non-null int64
-    Current Credit Balance          215700 non-null int64
-    Bankruptcies                    215700 non-null float64
-    Tax Liens                       215700 non-null float64
-    dtypes: float64(10), int64(4), object(3)
-    memory usage: 29.6+ MB
-
 
 ### Creating Dummies for the Columns: Term, Home Ownership and Purpose
 
@@ -402,7 +270,7 @@ sns.jointplot(x='Loan Status', y='Annual Income', data=df)
 
 
 
-![png](output_39_1.png)
+![png](/assets/output_39_1.png)
 
 
 
@@ -418,7 +286,7 @@ sns.countplot(x='Loan Status', data=df)
 
 
 
-![png](output_40_1.png)
+![png](/assets/output_40_1.png)
 
 
 
@@ -471,7 +339,7 @@ sns.scatterplot(x='Credit Score', y='Annual Income', data=df)
 
 
 
-![png](output_42_1.png)
+![png](/assets/output_42_1.png)
 
 
 
@@ -638,7 +506,7 @@ plt.scatter(y_test, predict)
 
 
 
-![png](output_55_1.png)
+![png](/assets/output_55_1.png)
 
 
 
@@ -742,7 +610,7 @@ sns.countplot(x='Loan Status', data=df)
 
 
 
-![png](output_67_1.png)
+![png](/assets/output_67_1.png)
 
 
 
@@ -789,7 +657,7 @@ plt.show()
 ```
 
 
-![png](output_72_0.png)
+![png](/assets/output_72_0.png)
 
 
 
@@ -886,7 +754,7 @@ plt.show()
 ```
 
 
-![png](output_82_0.png)
+![png](/assets/output_82_0.png)
 
 
 ## Conclusion
