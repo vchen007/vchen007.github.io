@@ -11,23 +11,6 @@ import pandas as pd
 
 
 ```python
-!pip install tabulate
-```
-
-    Collecting tabulate
-    [?25l  Downloading https://files.pythonhosted.org/packages/c4/41/523f6a05e6dc3329a5660f6a81254c6cd87e5cfb5b7482bae3391d86ec3a/tabulate-0.8.6.tar.gz (45kB)
-    [K     |████████████████████████████████| 51kB 2.9MB/s eta 0:00:01
-    [?25hBuilding wheels for collected packages: tabulate
-      Building wheel for tabulate (setup.py) ... [?25ldone
-    [?25h  Created wheel for tabulate: filename=tabulate-0.8.6-cp37-none-any.whl size=23274 sha256=41a7d96eef8677f6d418b89feb38e7d047ffd13bab2493c416fe9bc4a79e61c0
-      Stored in directory: /Users/vchen123/Library/Caches/pip/wheels/9c/9b/f4/eb243fdb89676ec00588e8c54bb54360724c06e7fafe95278e
-    Successfully built tabulate
-    Installing collected packages: tabulate
-    Successfully installed tabulate-0.8.6
-
-
-
-```python
 
 ```
 
@@ -76,11 +59,16 @@ df.info()
 
 
 ```python
-df.describe()
+from tabulate import tabulate
+```
+
+
+```python
+print(tabulate(df.describe(),headers="keys", tablefmt="github"))
 ```
 
     |       |   Current Loan Amount |   Credit Score |    Annual Income |   Years of Credit History |   Months since last delinquent |   Number of Open Accounts |   Number of Credit Problems |   Current Credit Balance |   Bankruptcies |      Tax Liens |
-    |:------|----------------------:|---------------:|-----------------:|--------------------------:|-------------------------------:|--------------------------:|----------------------------:|-------------------------:|---------------:|---------------:|
+    |-------|-----------------------|----------------|------------------|---------------------------|--------------------------------|---------------------------|-----------------------------|--------------------------|----------------|----------------|
     | count |      256984           |      195308    | 195308           |              256984       |                    116601      |              256984       |               256984        |         256984           |  256455        | 256961         |
     | mean  |           1.37133e+07 |        1251.12 |  71952.7         |                  18.2902  |                        34.8815 |                  11.1063  |                    0.156628 |          15406.6         |       0.110316 |      0.0272026 |
     | std   |           3.43813e+07 |        1762.02 |  58877.6         |                   7.07575 |                        21.8542 |                   4.98298 |                    0.460731 |          19665.1         |       0.336229 |      0.24595   |
@@ -91,277 +79,21 @@ df.describe()
     | max   |           1e+08       |        7510    |      8.71355e+06 |                  70.5     |                       176      |                  76       |                   11        |              1.73141e+06 |       7        |     11         |
 
 
+|       |   Current Loan Amount |   Credit Score |    Annual Income |   Years of Credit History |   Months since last delinquent |   Number of Open Accounts |   Number of Credit Problems |   Current Credit Balance |   Bankruptcies |      Tax Liens |
+|-------|-----------------------|----------------|------------------|---------------------------|--------------------------------|---------------------------|-----------------------------|--------------------------|----------------|----------------|
+| count |      256984           |      195308    | 195308           |              256984       |                    116601      |              256984       |               256984        |         256984           |  256455        | 256961         |
+| mean  |           1.37133e+07 |        1251.12 |  71952.7         |                  18.2902  |                        34.8815 |                  11.1063  |                    0.156628 |          15406.6         |       0.110316 |      0.0272026 |
+| std   |           3.43813e+07 |        1762.02 |  58877.6         |                   7.07575 |                        21.8542 |                   4.98298 |                    0.460731 |          19665.1         |       0.336229 |      0.24595   |
+| min   |         505           |         585    |      0           |                   3.4     |                         0      |                   0       |                    0        |              0           |       0        |      0         |
+| 25%   |        8299           |         714    |  44321           |                  13.5     |                        16      |                   8       |                    0        |           5974           |       0        |      0         |
+| 50%   |       14298           |         733    |  61242           |                  17       |                        32      |                  10       |                    0        |          11078           |       0        |      0         |
+| 75%   |       24367           |         744    |  86462           |                  21.7     |                        51      |                  14       |                    0        |          19319           |       0        |      0         |
+| max   |           1e+08       |        7510    |      8.71355e+06 |                  70.5     |                       176      |                  76       |                   11        |              1.73141e+06 |       7        |     11         |
+
+
 ```python
-df.head(10)
+print(tabulate(df.head(10),headers="keys", tablefmt="github"))
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Loan ID</th>
-      <th>Customer ID</th>
-      <th>Loan Status</th>
-      <th>Current Loan Amount</th>
-      <th>Term</th>
-      <th>Credit Score</th>
-      <th>Years in current job</th>
-      <th>Home Ownership</th>
-      <th>Annual Income</th>
-      <th>Purpose</th>
-      <th>Monthly Debt</th>
-      <th>Years of Credit History</th>
-      <th>Months since last delinquent</th>
-      <th>Number of Open Accounts</th>
-      <th>Number of Credit Problems</th>
-      <th>Current Credit Balance</th>
-      <th>Maximum Open Credit</th>
-      <th>Bankruptcies</th>
-      <th>Tax Liens</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>0</td>
-      <td>000025bb-5694-4cff-b17d-192b1a98ba44</td>
-      <td>5ebc8bb1-5eb9-4404-b11b-a6eebc401a19</td>
-      <td>Fully Paid</td>
-      <td>11520</td>
-      <td>Short Term</td>
-      <td>741.0</td>
-      <td>10+ years</td>
-      <td>Home Mortgage</td>
-      <td>33694.0</td>
-      <td>Debt Consolidation</td>
-      <td>$584.03</td>
-      <td>12.3</td>
-      <td>41.0</td>
-      <td>10</td>
-      <td>0</td>
-      <td>6760</td>
-      <td>16056</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>00002c49-3a29-4bd4-8f67-c8f8fbc1048c</td>
-      <td>927b388d-2e01-423f-a8dc-f7e42d668f46</td>
-      <td>Fully Paid</td>
-      <td>3441</td>
-      <td>Short Term</td>
-      <td>734.0</td>
-      <td>4 years</td>
-      <td>Home Mortgage</td>
-      <td>42269.0</td>
-      <td>other</td>
-      <td>$1,106.04</td>
-      <td>26.3</td>
-      <td>NaN</td>
-      <td>17</td>
-      <td>0</td>
-      <td>6262</td>
-      <td>19149</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>00002d89-27f3-409b-aa76-90834f359a65</td>
-      <td>defce609-c631-447d-aad6-1270615e89c4</td>
-      <td>Fully Paid</td>
-      <td>21029</td>
-      <td>Short Term</td>
-      <td>747.0</td>
-      <td>10+ years</td>
-      <td>Home Mortgage</td>
-      <td>90126.0</td>
-      <td>Debt Consolidation</td>
-      <td>$1,321.85</td>
-      <td>28.8</td>
-      <td>NaN</td>
-      <td>5</td>
-      <td>0</td>
-      <td>20967</td>
-      <td>28335</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>00005222-b4d8-45a4-ad8c-186057e24233</td>
-      <td>070bcecb-aae7-4485-a26a-e0403e7bb6c5</td>
-      <td>Fully Paid</td>
-      <td>18743</td>
-      <td>Short Term</td>
-      <td>747.0</td>
-      <td>10+ years</td>
-      <td>Own Home</td>
-      <td>38072.0</td>
-      <td>Debt Consolidation</td>
-      <td>$751.92</td>
-      <td>26.2</td>
-      <td>NaN</td>
-      <td>9</td>
-      <td>0</td>
-      <td>22529</td>
-      <td>43915</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>0000757f-a121-41ed-b17b-162e76647c1f</td>
-      <td>dde79588-12f0-4811-bab0-e2b07f633fcd</td>
-      <td>Fully Paid</td>
-      <td>11731</td>
-      <td>Short Term</td>
-      <td>746.0</td>
-      <td>4 years</td>
-      <td>Rent</td>
-      <td>50025.0</td>
-      <td>Debt Consolidation</td>
-      <td>$355.18</td>
-      <td>11.5</td>
-      <td>NaN</td>
-      <td>12</td>
-      <td>0</td>
-      <td>17391</td>
-      <td>37081</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>0000a149-b055-4a57-b762-280783ccc25e</td>
-      <td>62ddc017-7023-4ba7-af23-1a7cd16c1ce5</td>
-      <td>Fully Paid</td>
-      <td>10208</td>
-      <td>Short Term</td>
-      <td>716.0</td>
-      <td>10+ years</td>
-      <td>Rent</td>
-      <td>41853.0</td>
-      <td>Business Loan</td>
-      <td>$561.52</td>
-      <td>13.2</td>
-      <td>NaN</td>
-      <td>4</td>
-      <td>1</td>
-      <td>2289</td>
-      <td>4671</td>
-      <td>1.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <td>6</td>
-      <td>0000afa6-8902-4f8f-b870-25a8fdad0aeb</td>
-      <td>e49c1a82-a0f7-45e8-9f46-2f75c43f9fbc</td>
-      <td>Charged Off</td>
-      <td>24613</td>
-      <td>Long Term</td>
-      <td>6640.0</td>
-      <td>6 years</td>
-      <td>Rent</td>
-      <td>49225.0</td>
-      <td>Business Loan</td>
-      <td>$542.29</td>
-      <td>17.6</td>
-      <td>73.0</td>
-      <td>7</td>
-      <td>0</td>
-      <td>14123</td>
-      <td>16954</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <td>7</td>
-      <td>0000afa6-8902-4f8f-b870-25a8fdad0aeb</td>
-      <td>e49c1a82-a0f7-45e8-9f46-2f75c43f9fbc</td>
-      <td>Charged Off</td>
-      <td>24613</td>
-      <td>Long Term</td>
-      <td>NaN</td>
-      <td>6 years</td>
-      <td>Rent</td>
-      <td>NaN</td>
-      <td>Business Loan</td>
-      <td>$542.29</td>
-      <td>17.6</td>
-      <td>73.0</td>
-      <td>7</td>
-      <td>0</td>
-      <td>14123</td>
-      <td>16954</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <td>8</td>
-      <td>00011dfc-31c1-4178-932a-fbeb3f341efb</td>
-      <td>ef6e098c-6c83-4752-8d00-ff793e476b8c</td>
-      <td>Fully Paid</td>
-      <td>10036</td>
-      <td>Short Term</td>
-      <td>NaN</td>
-      <td>5 years</td>
-      <td>Rent</td>
-      <td>NaN</td>
-      <td>Debt Consolidation</td>
-      <td>$386.36</td>
-      <td>17.7</td>
-      <td>NaN</td>
-      <td>7</td>
-      <td>0</td>
-      <td>11970</td>
-      <td>16579</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <td>9</td>
-      <td>0001cb86-af28-4011-bb86-183786e473ae</td>
-      <td>4aae67bb-d54b-41ae-8bce-1d62022ed8dd</td>
-      <td>Fully Paid</td>
-      <td>2036</td>
-      <td>Short Term</td>
-      <td>733.0</td>
-      <td>NaN</td>
-      <td>Home Mortgage</td>
-      <td>55985.0</td>
-      <td>Debt Consolidation</td>
-      <td>$741.79</td>
-      <td>19.8</td>
-      <td>29.0</td>
-      <td>7</td>
-      <td>0</td>
-      <td>10926</td>
-      <td>15676</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
 
     |    | Loan ID                              | Customer ID                          | Loan Status   |   Current Loan Amount | Term       |   Credit Score | Years in current job   | Home Ownership   |   Annual Income | Purpose            | Monthly Debt   |   Years of Credit History |   Months since last delinquent |   Number of Open Accounts |   Number of Credit Problems |   Current Credit Balance |   Maximum Open Credit |   Bankruptcies |   Tax Liens |
     |----|--------------------------------------|--------------------------------------|---------------|-----------------------|------------|----------------|------------------------|------------------|-----------------|--------------------|----------------|---------------------------|--------------------------------|---------------------------|-----------------------------|--------------------------|-----------------------|----------------|-------------|
@@ -376,6 +108,19 @@ df.head(10)
     |  8 | 00011dfc-31c1-4178-932a-fbeb3f341efb | ef6e098c-6c83-4752-8d00-ff793e476b8c | Fully Paid    |                 10036 | Short Term |            nan | 5 years                | Rent             |             nan | Debt Consolidation | $386.36        |                      17.7 |                            nan |                         7 |                           0 |                    11970 |                 16579 |              0 |           0 |
     |  9 | 0001cb86-af28-4011-bb86-183786e473ae | 4aae67bb-d54b-41ae-8bce-1d62022ed8dd | Fully Paid    |                  2036 | Short Term |            733 | nan                    | Home Mortgage    |           55985 | Debt Consolidation | $741.79        |                      19.8 |                             29 |                         7 |                           0 |                    10926 |                 15676 |              0 |           0 |
 
+
+|    | Loan ID                              | Customer ID                          | Loan Status   |   Current Loan Amount | Term       |   Credit Score | Years in current job   | Home Ownership   |   Annual Income | Purpose            | Monthly Debt   |   Years of Credit History |   Months since last delinquent |   Number of Open Accounts |   Number of Credit Problems |   Current Credit Balance |   Maximum Open Credit |   Bankruptcies |   Tax Liens |
+|----|--------------------------------------|--------------------------------------|---------------|-----------------------|------------|----------------|------------------------|------------------|-----------------|--------------------|----------------|---------------------------|--------------------------------|---------------------------|-----------------------------|--------------------------|-----------------------|----------------|-------------|
+|  0 | 000025bb-5694-4cff-b17d-192b1a98ba44 | 5ebc8bb1-5eb9-4404-b11b-a6eebc401a19 | Fully Paid    |                 11520 | Short Term |            741 | 10+ years              | Home Mortgage    |           33694 | Debt Consolidation | $584.03        |                      12.3 |                             41 |                        10 |                           0 |                     6760 |                 16056 |              0 |           0 |
+|  1 | 00002c49-3a29-4bd4-8f67-c8f8fbc1048c | 927b388d-2e01-423f-a8dc-f7e42d668f46 | Fully Paid    |                  3441 | Short Term |            734 | 4 years                | Home Mortgage    |           42269 | other              | $1,106.04      |                      26.3 |                            nan |                        17 |                           0 |                     6262 |                 19149 |              0 |           0 |
+|  2 | 00002d89-27f3-409b-aa76-90834f359a65 | defce609-c631-447d-aad6-1270615e89c4 | Fully Paid    |                 21029 | Short Term |            747 | 10+ years              | Home Mortgage    |           90126 | Debt Consolidation | $1,321.85      |                      28.8 |                            nan |                         5 |                           0 |                    20967 |                 28335 |              0 |           0 |
+|  3 | 00005222-b4d8-45a4-ad8c-186057e24233 | 070bcecb-aae7-4485-a26a-e0403e7bb6c5 | Fully Paid    |                 18743 | Short Term |            747 | 10+ years              | Own Home         |           38072 | Debt Consolidation | $751.92        |                      26.2 |                            nan |                         9 |                           0 |                    22529 |                 43915 |              0 |           0 |
+|  4 | 0000757f-a121-41ed-b17b-162e76647c1f | dde79588-12f0-4811-bab0-e2b07f633fcd | Fully Paid    |                 11731 | Short Term |            746 | 4 years                | Rent             |           50025 | Debt Consolidation | $355.18        |                      11.5 |                            nan |                        12 |                           0 |                    17391 |                 37081 |              0 |           0 |
+|  5 | 0000a149-b055-4a57-b762-280783ccc25e | 62ddc017-7023-4ba7-af23-1a7cd16c1ce5 | Fully Paid    |                 10208 | Short Term |            716 | 10+ years              | Rent             |           41853 | Business Loan      | $561.52        |                      13.2 |                            nan |                         4 |                           1 |                     2289 |                  4671 |              1 |           0 |
+|  6 | 0000afa6-8902-4f8f-b870-25a8fdad0aeb | e49c1a82-a0f7-45e8-9f46-2f75c43f9fbc | Charged Off   |                 24613 | Long Term  |           6640 | 6 years                | Rent             |           49225 | Business Loan      | $542.29        |                      17.6 |                             73 |                         7 |                           0 |                    14123 |                 16954 |              0 |           0 |
+|  7 | 0000afa6-8902-4f8f-b870-25a8fdad0aeb | e49c1a82-a0f7-45e8-9f46-2f75c43f9fbc | Charged Off   |                 24613 | Long Term  |            nan | 6 years                | Rent             |             nan | Business Loan      | $542.29        |                      17.6 |                             73 |                         7 |                           0 |                    14123 |                 16954 |              0 |           0 |
+|  8 | 00011dfc-31c1-4178-932a-fbeb3f341efb | ef6e098c-6c83-4752-8d00-ff793e476b8c | Fully Paid    |                 10036 | Short Term |            nan | 5 years                | Rent             |             nan | Debt Consolidation | $386.36        |                      17.7 |                            nan |                         7 |                           0 |                    11970 |                 16579 |              0 |           0 |
+|  9 | 0001cb86-af28-4011-bb86-183786e473ae | 4aae67bb-d54b-41ae-8bce-1d62022ed8dd | Fully Paid    |                  2036 | Short Term |            733 | nan                    | Home Mortgage    |           55985 | Debt Consolidation | $741.79        |                      19.8 |                             29 |                         7 |                           0 |                    10926 |                 15676 |              0 |           0 |
 
 Going through each column, duplicate values have been recorded, missing information needs to be filled in multiple columns and object columns need to be convereted to numbers. Also, the 'credit score' column has a recording error. The column most important column we need for analysis is 'Loan Status'. Which is our column that shows if a loan was paid off or defaulted.
 
@@ -657,7 +402,7 @@ sns.jointplot(x='Loan Status', y='Annual Income', data=df)
 
 
 
-![png](output_40_1.png)
+![png](output_39_1.png)
 
 
 
@@ -673,7 +418,7 @@ sns.countplot(x='Loan Status', data=df)
 
 
 
-![png](output_41_1.png)
+![png](output_40_1.png)
 
 
 
@@ -726,7 +471,7 @@ sns.scatterplot(x='Credit Score', y='Annual Income', data=df)
 
 
 
-![png](output_43_1.png)
+![png](output_42_1.png)
 
 
 
@@ -893,7 +638,7 @@ plt.scatter(y_test, predict)
 
 
 
-![png](output_56_1.png)
+![png](output_55_1.png)
 
 
 
@@ -997,7 +742,7 @@ sns.countplot(x='Loan Status', data=df)
 
 
 
-![png](output_68_1.png)
+![png](output_67_1.png)
 
 
 
@@ -1044,7 +789,7 @@ plt.show()
 ```
 
 
-![png](output_73_0.png)
+![png](output_72_0.png)
 
 
 
@@ -1141,7 +886,7 @@ plt.show()
 ```
 
 
-![png](output_83_0.png)
+![png](output_82_0.png)
 
 
 ## Conclusion
