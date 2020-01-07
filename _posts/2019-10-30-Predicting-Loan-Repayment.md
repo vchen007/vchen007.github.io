@@ -121,14 +121,6 @@ df.describe()
 
 
 
-```python
-from tabulate import tabulate
-```
-
-
-```python
-print(tabulate(df.describe(), tablefmt="pipe", headers="keys"))
-```
 
     |       |   Current Loan Amount |   Credit Score |    Annual Income |   Years of Credit History |   Months since last delinquent |   Number of Open Accounts |   Number of Credit Problems |   Current Credit Balance |   Bankruptcies |      Tax Liens |
     |:------|----------------------:|---------------:|-----------------:|--------------------------:|-------------------------------:|--------------------------:|----------------------------:|-------------------------:|---------------:|---------------:|
