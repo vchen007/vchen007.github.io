@@ -363,11 +363,6 @@ df.head(10)
 </div>
 
 
-
-
-```python
-print(tabulate(df.head(10), headers="keys", tablefmt="pipe"))
-```
     |    | Loan ID                              | Customer ID                          | Loan Status   |   Current Loan Amount | Term       |   Credit Score | Years in current job   | Home Ownership   |   Annual Income | Purpose            | Monthly Debt   |   Years of Credit History |   Months since last delinquent |   Number of Open Accounts |   Number of Credit Problems |   Current Credit Balance |   Maximum Open Credit |   Bankruptcies |   Tax Liens |
     |----|--------------------------------------|--------------------------------------|---------------|-----------------------|------------|----------------|------------------------|------------------|-----------------|--------------------|----------------|---------------------------|--------------------------------|---------------------------|-----------------------------|--------------------------|-----------------------|----------------|-------------|
     |  0 | 000025bb-5694-4cff-b17d-192b1a98ba44 | 5ebc8bb1-5eb9-4404-b11b-a6eebc401a19 | Fully Paid    |                 11520 | Short Term |            741 | 10+ years              | Home Mortgage    |           33694 | Debt Consolidation | $584.03        |                      12.3 |                             41 |                        10 |                           0 |                     6760 |                 16056 |              0 |           0 |
