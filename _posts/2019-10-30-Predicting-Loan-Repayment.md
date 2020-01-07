@@ -240,182 +240,8 @@ df['Maximum Open Credit'] = df['Maximum Open Credit'].astype(float)
 ```python
 df = pd.get_dummies(df, drop_first=True)
 ```
-
-
-```python
-
-```
-
-
-```python
-import seaborn as sns
-%matplotlib inline
-```
-
-
-```python
-loan = df.corr()['Loan Status']
-```
-
-
-```python
-sns.jointplot(x='Loan Status', y='Annual Income', data=df)
-```
-
-
-
-
-    <seaborn.axisgrid.JointGrid at 0x11e89dc10>
-
-
-
-
-![png](/assets/output_39_1.png)
-
-
-
-```python
-sns.countplot(x='Loan Status', data=df)
-```
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x11b72a290>
-
-
-
-
-![png](/assets/output_40_1.png)
-
-
-
-```python
-df.corr()['Credit Score']
-```
-
-
-
-
-    Loan Status                    -0.245848
-    Years in current job           -0.015201
-    Monthly Debt                   -0.088133
-    Maximum Open Credit             0.010205
-    Current Loan Amount            -0.208047
-    Credit Score                    1.000000
-    Annual Income                   0.014844
-    Years of Credit History         0.085461
-    Months since last delinquent   -0.057957
-    Number of Open Accounts        -0.038642
-    Number of Credit Problems      -0.062030
-    Current Credit Balance         -0.014965
-    Bankruptcies                   -0.048236
-    Tax Liens                      -0.027479
-    Term_Short Term                 0.483576
-    Home Ownership_Own Home        -0.013158
-    Home Ownership_Rent            -0.048028
-    Purpose_Buy House              -0.033435
-    Purpose_Buy a Car               0.038942
-    Purpose_Debt Consolidation      0.062105
-    Purpose_Educational Expenses    0.008310
-    Purpose_Home Improvements       0.018612
-    Purpose_Medical Bills          -0.029543
-    Purpose_Other                  -0.064317
-    Purpose_Take a Trip            -0.009580
-    Name: Credit Score, dtype: float64
-
-
-
-
-```python
-sns.scatterplot(x='Credit Score', y='Annual Income', data=df)
-```
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x11b7eb150>
-
-
-
-
-![png](/assets/output_42_1.png)
-
-
-
-```python
-df.corr()['Annual Income']
-```
-
-
-
-
-    Loan Status                    -0.064451
-    Years in current job            0.096976
-    Monthly Debt                    0.471019
-    Maximum Open Credit             0.031687
-    Current Loan Amount             0.304788
-    Credit Score                    0.014844
-    Annual Income                   1.000000
-    Years of Credit History         0.155115
-    Months since last delinquent    0.018211
-    Number of Open Accounts         0.145422
-    Number of Credit Problems      -0.017196
-    Current Credit Balance          0.305022
-    Bankruptcies                   -0.047194
-    Tax Liens                       0.036210
-    Term_Short Term                -0.066624
-    Home Ownership_Own Home        -0.037248
-    Home Ownership_Rent            -0.158150
-    Purpose_Buy House               0.008664
-    Purpose_Buy a Car              -0.015555
-    Purpose_Debt Consolidation     -0.034359
-    Purpose_Educational Expenses   -0.009857
-    Purpose_Home Improvements       0.076374
-    Purpose_Medical Bills          -0.002762
-    Purpose_Other                  -0.017304
-    Purpose_Take a Trip            -0.011203
-    Name: Annual Income, dtype: float64
-
-
-
-
-```python
-df.corr()['Loan Status']
-```
-
-
-
-
-    Loan Status                     1.000000
-    Years in current job           -0.016711
-    Monthly Debt                    0.014033
-    Maximum Open Credit            -0.006031
-    Current Loan Amount             0.078167
-    Credit Score                   -0.245848
-    Annual Income                  -0.064451
-    Years of Credit History        -0.030149
-    Months since last delinquent    0.000327
-    Number of Open Accounts         0.017602
-    Number of Credit Problems       0.009090
-    Current Credit Balance         -0.007107
-    Bankruptcies                   -0.000100
-    Tax Liens                       0.010739
-    Term_Short Term                -0.158569
-    Home Ownership_Own Home         0.006862
-    Home Ownership_Rent             0.052967
-    Purpose_Buy House              -0.002251
-    Purpose_Buy a Car              -0.019681
-    Purpose_Debt Consolidation      0.001182
-    Purpose_Educational Expenses   -0.000450
-    Purpose_Home Improvements      -0.018178
-    Purpose_Medical Bills           0.004362
-    Purpose_Other                   0.003693
-    Purpose_Take a Trip            -0.000357
-    Name: Loan Status, dtype: float64
-
-
-
+## Regression on the Data
+Using simple linear regression to fill in the missing values for Credit Score followed by Annual Income.
 
 ```python
 # Take out Loan Status and Annual Income
@@ -446,20 +272,9 @@ X_train, X_test, y_train, y_test = train_test_split(filled.drop('Credit Score', 
 ```python
 L = LinearRegression()
 ```
-
-
 ```python
 L.fit(X_train, y_train)
 ```
-
-
-
-
-    LinearRegression(copy_X=True, fit_intercept=True, n_jobs=None, normalize=False)
-
-
-
-
 ```python
 r2_score(y_train, L.predict(X_train))
 ```
@@ -482,38 +297,9 @@ mean_squared_error(y_train, L.predict(X_train))**.5
     22.740334260998736
 
 
-
-
 ```python
 predict = L.predict(X_test)
 ```
-
-
-```python
-import matplotlib.pyplot as plt
-```
-
-
-```python
-plt.scatter(y_test, predict)
-```
-
-
-
-
-    <matplotlib.collections.PathCollection at 0x12221ee10>
-
-
-
-
-![png](/assets/output_55_1.png)
-
-
-
-```python
-
-```
-
 
 ```python
 predictions = L.predict(missing.drop('Credit Score', axis=1))
@@ -524,14 +310,6 @@ predictions = L.predict(missing.drop('Credit Score', axis=1))
 missing['Credit Score'] = predictions
 df = pd.concat([missing, filled])
 ```
-
-    /Applications/anaconda3/lib/python3.7/site-packages/ipykernel_launcher.py:1: SettingWithCopyWarning: 
-    A value is trying to be set on a copy of a slice from a DataFrame.
-    Try using .loc[row_indexer,col_indexer] = value instead
-    
-    See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-      """Entry point for launching an IPython kernel.
-
 
 
 ```python
@@ -544,25 +322,15 @@ df['Annual Income'] = income
 filled = df[df['Annual Income'].notnull()]
 missing = df[df['Annual Income'].isnull()]
 ```
-
-
 ```python
 X_train, X_test, y_train, y_test = train_test_split(filled.drop('Annual Income', axis=1), 
-                                                    filled['Annual Income'], test_size=0.4, random_state=101)
+                                filled['Annual Income'], test_size=0.4, random_state=101)
 ```
 
 
 ```python
 L.fit(X_train, y_train)
 ```
-
-
-
-
-    LinearRegression(copy_X=True, fit_intercept=True, n_jobs=None, normalize=False)
-
-
-
 
 ```python
 print(r2_score(y_test, L.predict(X_test)))
@@ -578,20 +346,11 @@ print(mean_squared_error(y_test, L.predict(X_test))**.5)
 prediction = L.predict(missing.drop('Annual Income', axis=1))
 missing['Annual Income'] = prediction
 ```
-
-    /Applications/anaconda3/lib/python3.7/site-packages/ipykernel_launcher.py:2: SettingWithCopyWarning: 
-    A value is trying to be set on a copy of a slice from a DataFrame.
-    Try using .loc[row_indexer,col_indexer] = value instead
-    
-    See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-      
-
-
-
 ```python
 df = pd.concat([missing, filled])
 ```
-
+## Imbalanced Data
+Taking a look at the number of loans that were paid off and unpaid. Future predictions will duplicate similar results. To combate this issue, use of undersampling to balance out the number of Loans that were paid off and unpaid will return more precise forecasting.
 
 ```python
 df['Loan Status'] = loan_status
@@ -601,14 +360,6 @@ df['Loan Status'] = loan_status
 ```python
 sns.countplot(x='Loan Status', data=df)
 ```
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x122501190>
-
-
-
 
 ![png](/assets/output_67_1.png)
 
@@ -624,13 +375,6 @@ df['Loan Status'].value_counts()
     0    176191
     1     39509
     Name: Loan Status, dtype: int64
-
-
-
-## Imbalanced Data
-
-
-Using undersampling to balance out the number of Loans that were paid off and unpai
 
 
 ```python
@@ -678,22 +422,6 @@ log = LogisticRegression()
 log.fit(X_train, y_train)
 ```
 
-    /Applications/anaconda3/lib/python3.7/site-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
-      FutureWarning)
-
-
-
-
-
-    LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
-                       intercept_scaling=1, l1_ratio=None, max_iter=100,
-                       multi_class='warn', n_jobs=None, penalty='l2',
-                       random_state=None, solver='warn', tol=0.0001, verbose=0,
-                       warm_start=False)
-
-
-
-
 ```python
 predictions = log.predict(X_test)
 ```
@@ -721,21 +449,7 @@ print(classification_report(y_test, predictions))
 
 Based off the classification report, we scored about 60% accuracy that people will pay back their loans. 
 
-
-```python
-print(confusion_matrix(y_test, predictions))
-```
-
-    [[9495 6309]
-     [6521 9283]]
-
-
-
-```python
-import numpy as np   
-```
-
-
+### Finding what columns are most significant to our projections.
 ```python
 feature_importance = abs(log.coef_[0])
 feature_importance = 100.0 * (feature_importance / feature_importance.max())
@@ -764,8 +478,3 @@ After seeing the feature importance based off of the column coefficients, the mo
 2. What is their credit score?
 3. How much is their current loan amount?
 4. What is their annual income?
-
-
-```python
-
-```
