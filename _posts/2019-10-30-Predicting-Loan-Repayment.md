@@ -11,8 +11,33 @@ import pandas as pd
 
 
 ```python
+!pip install tabulate
+```
+
+    Collecting tabulate
+    [?25l  Downloading https://files.pythonhosted.org/packages/c4/41/523f6a05e6dc3329a5660f6a81254c6cd87e5cfb5b7482bae3391d86ec3a/tabulate-0.8.6.tar.gz (45kB)
+    [K     |████████████████████████████████| 51kB 2.9MB/s eta 0:00:01
+    [?25hBuilding wheels for collected packages: tabulate
+      Building wheel for tabulate (setup.py) ... [?25ldone
+    [?25h  Created wheel for tabulate: filename=tabulate-0.8.6-cp37-none-any.whl size=23274 sha256=41a7d96eef8677f6d418b89feb38e7d047ffd13bab2493c416fe9bc4a79e61c0
+      Stored in directory: /Users/vchen123/Library/Caches/pip/wheels/9c/9b/f4/eb243fdb89676ec00588e8c54bb54360724c06e7fafe95278e
+    Successfully built tabulate
+    Installing collected packages: tabulate
+    Successfully installed tabulate-0.8.6
+
+
+
+```python
+
+```
+
+
+```python
 df = pd.read_csv('1533148983_LoansTrainingSet.csv')
 ```
+
+    /Applications/anaconda3/lib/python3.7/site-packages/IPython/core/interactiveshell.py:3058: DtypeWarning: Columns (16) have mixed types. Specify dtype option on import or set low_memory=False.
+      interactivity=interactivity, compiler=compiler, result=result)
 
 
 ## Taking a Look at the Data
@@ -54,148 +79,67 @@ df.info()
 df.describe()
 ```
 
+           Current Loan Amount   Credit Score  Annual Income  \
+    count         2.569840e+05  195308.000000   1.953080e+05   
+    mean          1.371331e+07    1251.116099   7.195272e+04   
+    std           3.438131e+07    1762.016848   5.887757e+04   
+    min           5.050000e+02     585.000000   0.000000e+00   
+    25%           8.299000e+03     714.000000   4.432100e+04   
+    50%           1.429800e+04     733.000000   6.124200e+04   
+    75%           2.436700e+04     744.000000   8.646200e+04   
+    max           1.000000e+08    7510.000000   8.713547e+06   
+    
+           Years of Credit History  Months since last delinquent  \
+    count            256984.000000                 116601.000000   
+    mean                 18.290195                     34.881450   
+    std                   7.075747                     21.854165   
+    min                   3.400000                      0.000000   
+    25%                  13.500000                     16.000000   
+    50%                  17.000000                     32.000000   
+    75%                  21.700000                     51.000000   
+    max                  70.500000                    176.000000   
+    
+           Number of Open Accounts  Number of Credit Problems  \
+    count            256984.000000              256984.000000   
+    mean                 11.106267                   0.156628   
+    std                   4.982982                   0.460731   
+    min                   0.000000                   0.000000   
+    25%                   8.000000                   0.000000   
+    50%                  10.000000                   0.000000   
+    75%                  14.000000                   0.000000   
+    max                  76.000000                  11.000000   
+    
+           Current Credit Balance   Bankruptcies      Tax Liens  
+    count            2.569840e+05  256455.000000  256961.000000  
+    mean             1.540656e+04       0.110316       0.027203  
+    std              1.966506e+04       0.336229       0.245950  
+    min              0.000000e+00       0.000000       0.000000  
+    25%              5.974000e+03       0.000000       0.000000  
+    50%              1.107800e+04       0.000000       0.000000  
+    75%              1.931900e+04       0.000000       0.000000  
+    max              1.731412e+06       7.000000      11.000000  
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+```python
+from tabulate import tabulate
+```
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
 
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Current Loan Amount</th>
-      <th>Credit Score</th>
-      <th>Annual Income</th>
-      <th>Years of Credit History</th>
-      <th>Months since last delinquent</th>
-      <th>Number of Open Accounts</th>
-      <th>Number of Credit Problems</th>
-      <th>Current Credit Balance</th>
-      <th>Bankruptcies</th>
-      <th>Tax Liens</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>count</td>
-      <td>2.569840e+05</td>
-      <td>195308.000000</td>
-      <td>1.953080e+05</td>
-      <td>256984.000000</td>
-      <td>116601.000000</td>
-      <td>256984.000000</td>
-      <td>256984.000000</td>
-      <td>2.569840e+05</td>
-      <td>256455.000000</td>
-      <td>256961.000000</td>
-    </tr>
-    <tr>
-      <td>mean</td>
-      <td>1.371331e+07</td>
-      <td>1251.116099</td>
-      <td>7.195272e+04</td>
-      <td>18.290195</td>
-      <td>34.881450</td>
-      <td>11.106267</td>
-      <td>0.156628</td>
-      <td>1.540656e+04</td>
-      <td>0.110316</td>
-      <td>0.027203</td>
-    </tr>
-    <tr>
-      <td>std</td>
-      <td>3.438131e+07</td>
-      <td>1762.016848</td>
-      <td>5.887757e+04</td>
-      <td>7.075747</td>
-      <td>21.854165</td>
-      <td>4.982982</td>
-      <td>0.460731</td>
-      <td>1.966506e+04</td>
-      <td>0.336229</td>
-      <td>0.245950</td>
-    </tr>
-    <tr>
-      <td>min</td>
-      <td>5.050000e+02</td>
-      <td>585.000000</td>
-      <td>0.000000e+00</td>
-      <td>3.400000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000e+00</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <td>25%</td>
-      <td>8.299000e+03</td>
-      <td>714.000000</td>
-      <td>4.432100e+04</td>
-      <td>13.500000</td>
-      <td>16.000000</td>
-      <td>8.000000</td>
-      <td>0.000000</td>
-      <td>5.974000e+03</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <td>50%</td>
-      <td>1.429800e+04</td>
-      <td>733.000000</td>
-      <td>6.124200e+04</td>
-      <td>17.000000</td>
-      <td>32.000000</td>
-      <td>10.000000</td>
-      <td>0.000000</td>
-      <td>1.107800e+04</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <td>75%</td>
-      <td>2.436700e+04</td>
-      <td>744.000000</td>
-      <td>8.646200e+04</td>
-      <td>21.700000</td>
-      <td>51.000000</td>
-      <td>14.000000</td>
-      <td>0.000000</td>
-      <td>1.931900e+04</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <td>max</td>
-      <td>1.000000e+08</td>
-      <td>7510.000000</td>
-      <td>8.713547e+06</td>
-      <td>70.500000</td>
-      <td>176.000000</td>
-      <td>76.000000</td>
-      <td>11.000000</td>
-      <td>1.731412e+06</td>
-      <td>7.000000</td>
-      <td>11.000000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+```python
+print(tabulate(df.describe(), tablefmt="pipe", headers="keys"))
+```
 
+    |       |   Current Loan Amount |   Credit Score |    Annual Income |   Years of Credit History |   Months since last delinquent |   Number of Open Accounts |   Number of Credit Problems |   Current Credit Balance |   Bankruptcies |      Tax Liens |
+    |:------|----------------------:|---------------:|-----------------:|--------------------------:|-------------------------------:|--------------------------:|----------------------------:|-------------------------:|---------------:|---------------:|
+    | count |      256984           |      195308    | 195308           |              256984       |                    116601      |              256984       |               256984        |         256984           |  256455        | 256961         |
+    | mean  |           1.37133e+07 |        1251.12 |  71952.7         |                  18.2902  |                        34.8815 |                  11.1063  |                    0.156628 |          15406.6         |       0.110316 |      0.0272026 |
+    | std   |           3.43813e+07 |        1762.02 |  58877.6         |                   7.07575 |                        21.8542 |                   4.98298 |                    0.460731 |          19665.1         |       0.336229 |      0.24595   |
+    | min   |         505           |         585    |      0           |                   3.4     |                         0      |                   0       |                    0        |              0           |       0        |      0         |
+    | 25%   |        8299           |         714    |  44321           |                  13.5     |                        16      |                   8       |                    0        |           5974           |       0        |      0         |
+    | 50%   |       14298           |         733    |  61242           |                  17       |                        32      |                  10       |                    0        |          11078           |       0        |      0         |
+    | 75%   |       24367           |         744    |  86462           |                  21.7     |                        51      |                  14       |                    0        |          19319           |       0        |      0         |
+    | max   |           1e+08       |        7510    |      8.71355e+06 |                  70.5     |                       176      |                  76       |                   11        |              1.73141e+06 |       7        |     11         |
 
 
 
@@ -470,6 +414,25 @@ df.head(10)
 </table>
 </div>
 
+
+
+
+```python
+print(tabulate(df.head(10), tablefmt="pipe", headers="keys"))
+```
+
+    |    | Loan ID                              | Customer ID                          | Loan Status   |   Current Loan Amount | Term       |   Credit Score | Years in current job   | Home Ownership   |   Annual Income | Purpose            | Monthly Debt   |   Years of Credit History |   Months since last delinquent |   Number of Open Accounts |   Number of Credit Problems |   Current Credit Balance |   Maximum Open Credit |   Bankruptcies |   Tax Liens |
+    |---:|:-------------------------------------|:-------------------------------------|:--------------|----------------------:|:-----------|---------------:|:-----------------------|:-----------------|----------------:|:-------------------|:---------------|--------------------------:|-------------------------------:|--------------------------:|----------------------------:|-------------------------:|----------------------:|---------------:|------------:|
+    |  0 | 000025bb-5694-4cff-b17d-192b1a98ba44 | 5ebc8bb1-5eb9-4404-b11b-a6eebc401a19 | Fully Paid    |                 11520 | Short Term |            741 | 10+ years              | Home Mortgage    |           33694 | Debt Consolidation | $584.03        |                      12.3 |                             41 |                        10 |                           0 |                     6760 |                 16056 |              0 |           0 |
+    |  1 | 00002c49-3a29-4bd4-8f67-c8f8fbc1048c | 927b388d-2e01-423f-a8dc-f7e42d668f46 | Fully Paid    |                  3441 | Short Term |            734 | 4 years                | Home Mortgage    |           42269 | other              | $1,106.04      |                      26.3 |                            nan |                        17 |                           0 |                     6262 |                 19149 |              0 |           0 |
+    |  2 | 00002d89-27f3-409b-aa76-90834f359a65 | defce609-c631-447d-aad6-1270615e89c4 | Fully Paid    |                 21029 | Short Term |            747 | 10+ years              | Home Mortgage    |           90126 | Debt Consolidation | $1,321.85      |                      28.8 |                            nan |                         5 |                           0 |                    20967 |                 28335 |              0 |           0 |
+    |  3 | 00005222-b4d8-45a4-ad8c-186057e24233 | 070bcecb-aae7-4485-a26a-e0403e7bb6c5 | Fully Paid    |                 18743 | Short Term |            747 | 10+ years              | Own Home         |           38072 | Debt Consolidation | $751.92        |                      26.2 |                            nan |                         9 |                           0 |                    22529 |                 43915 |              0 |           0 |
+    |  4 | 0000757f-a121-41ed-b17b-162e76647c1f | dde79588-12f0-4811-bab0-e2b07f633fcd | Fully Paid    |                 11731 | Short Term |            746 | 4 years                | Rent             |           50025 | Debt Consolidation | $355.18        |                      11.5 |                            nan |                        12 |                           0 |                    17391 |                 37081 |              0 |           0 |
+    |  5 | 0000a149-b055-4a57-b762-280783ccc25e | 62ddc017-7023-4ba7-af23-1a7cd16c1ce5 | Fully Paid    |                 10208 | Short Term |            716 | 10+ years              | Rent             |           41853 | Business Loan      | $561.52        |                      13.2 |                            nan |                         4 |                           1 |                     2289 |                  4671 |              1 |           0 |
+    |  6 | 0000afa6-8902-4f8f-b870-25a8fdad0aeb | e49c1a82-a0f7-45e8-9f46-2f75c43f9fbc | Charged Off   |                 24613 | Long Term  |           6640 | 6 years                | Rent             |           49225 | Business Loan      | $542.29        |                      17.6 |                             73 |                         7 |                           0 |                    14123 |                 16954 |              0 |           0 |
+    |  7 | 0000afa6-8902-4f8f-b870-25a8fdad0aeb | e49c1a82-a0f7-45e8-9f46-2f75c43f9fbc | Charged Off   |                 24613 | Long Term  |            nan | 6 years                | Rent             |             nan | Business Loan      | $542.29        |                      17.6 |                             73 |                         7 |                           0 |                    14123 |                 16954 |              0 |           0 |
+    |  8 | 00011dfc-31c1-4178-932a-fbeb3f341efb | ef6e098c-6c83-4752-8d00-ff793e476b8c | Fully Paid    |                 10036 | Short Term |            nan | 5 years                | Rent             |             nan | Debt Consolidation | $386.36        |                      17.7 |                            nan |                         7 |                           0 |                    11970 |                 16579 |              0 |           0 |
+    |  9 | 0001cb86-af28-4011-bb86-183786e473ae | 4aae67bb-d54b-41ae-8bce-1d62022ed8dd | Fully Paid    |                  2036 | Short Term |            733 | nan                    | Home Mortgage    |           55985 | Debt Consolidation | $741.79        |                      19.8 |                             29 |                         7 |                           0 |                    10926 |                 15676 |              0 |           0 |
 
 
 Going through each column, duplicate values have been recorded, missing information needs to be filled in multiple columns and object columns need to be convereted to numbers. Also, the 'credit score' column has a recording error. The column most important column we need for analysis is 'Loan Status'. Which is our column that shows if a loan was paid off or defaulted.
@@ -752,7 +715,7 @@ sns.jointplot(x='Loan Status', y='Annual Income', data=df)
 
 
 
-![png](/assets/output_35_1.png)
+![png](output_40_1.png)
 
 
 
@@ -768,7 +731,7 @@ sns.countplot(x='Loan Status', data=df)
 
 
 
-![png](/assets/output_36_1.png)
+![png](output_41_1.png)
 
 
 
@@ -821,7 +784,7 @@ sns.scatterplot(x='Credit Score', y='Annual Income', data=df)
 
 
 
-![png](/assets/output_38_1.png)
+![png](output_43_1.png)
 
 
 
@@ -988,7 +951,7 @@ plt.scatter(y_test, predict)
 
 
 
-![png](/assets/output_51_1.png)
+![png](output_56_1.png)
 
 
 
@@ -1092,7 +1055,7 @@ sns.countplot(x='Loan Status', data=df)
 
 
 
-![png](/assets/output_63_1.png)
+![png](output_68_1.png)
 
 
 
@@ -1139,7 +1102,7 @@ plt.show()
 ```
 
 
-![png](/assets/output_68_0.png)
+![png](output_73_0.png)
 
 
 
@@ -1236,7 +1199,7 @@ plt.show()
 ```
 
 
-![png](/assets/output_78_0.png)
+![png](output_83_0.png)
 
 
 ## Conclusion
