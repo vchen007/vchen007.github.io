@@ -755,7 +755,7 @@ sns.jointplot(x='Loan Status', y='Annual Income', data=df)
 
 
 
-![png](output_35_1.png)
+![png](/assets/output_35_1.png)
 
 
 
@@ -771,7 +771,7 @@ sns.countplot(x='Loan Status', data=df)
 
 
 
-![png](output_36_1.png)
+![png](/assets/output_36_1.png)
 
 
 
@@ -824,7 +824,7 @@ sns.scatterplot(x='Credit Score', y='Annual Income', data=df)
 
 
 
-![png](output_38_1.png)
+![png](/assets/output_38_1.png)
 
 
 
@@ -991,7 +991,7 @@ plt.scatter(y_test, predict)
 
 
 
-![png](output_51_1.png)
+![png](/assets/output_51_1.png)
 
 
 
@@ -1095,7 +1095,7 @@ sns.countplot(x='Loan Status', data=df)
 
 
 
-![png](output_63_1.png)
+![png](/assets/output_63_1.png)
 
 
 
@@ -1142,7 +1142,7 @@ plt.show()
 ```
 
 
-![png](output_68_0.png)
+![png](/assets/output_68_0.png)
 
 
 
@@ -1239,7 +1239,7 @@ plt.show()
 ```
 
 
-![png](output_78_0.png)
+![png](/assets/output_78_0.png)
 
 
 ## Conclusion
