@@ -337,7 +337,7 @@ plt.show()
 ```
 
 
-![png](output_8_0.png)
+![png](/assets/output_8_0.png)
 
 
 ### Target Column
@@ -367,7 +367,7 @@ plt.show()
 ```
 
 
-![png](output_11_0.png)
+![png](/assets/output_11_0.png)
 
 
 ### Due to the highly imbalanced data, using an oversampling of the devices that have failure will help the predictive model. The oversampling will occur after the test, train and split process.
@@ -479,7 +479,7 @@ g = sns.catplot(x="season", y="failure", data=df,
 ```
 
 
-![png](output_22_0.png)
+![png](/assets/output_22_0.png)
 
 
 
@@ -488,7 +488,7 @@ season =  sns.countplot(x="season", data=df_fail).set(title = "Number of Failure
 ```
 
 
-![png](output_23_0.png)
+![png](/assets/output_23_0.png)
 
 
 
@@ -498,7 +498,7 @@ g = sns.catplot(x="month", y="failure", data=df,
 ```
 
 
-![png](output_24_0.png)
+![png](/assets/output_24_0.png)
 
 
 
@@ -507,7 +507,7 @@ month = sns.countplot(x='month', data=df_fail).set(title = "Number of Failures b
 ```
 
 
-![png](output_25_0.png)
+![png](/assets/output_25_0.png)
 
 
 
@@ -525,7 +525,7 @@ ax = sns.lineplot(x="date", y="failure", data=df).set(title = "Mean Failures by 
 
 
 
-![png](output_26_1.png)
+![png](/assets/output_26_1.png)
 
 
 
@@ -586,7 +586,7 @@ day = sns.countplot(x='day_of_week', data=df_fail, order=order).set(title = "Num
 ```
 
 
-![png](output_30_0.png)
+![png](/assets/output_30_0.png)
 
 
 
@@ -596,7 +596,7 @@ g = sns.catplot(x='day_of_week', y="failure", data=df,
 ```
 
 
-![png](output_31_0.png)
+![png](/assets/output_31_0.png)
 
 
 
@@ -676,7 +676,7 @@ ax = sns.lineplot(x="day", y="failure", data=df).set(title = "Rate of Failure by
 ```
 
 
-![png](output_35_0.png)
+![png](/assets/output_35_0.png)
 
 
 ### Changing columns to either 0 or 1
@@ -1082,7 +1082,7 @@ sns.heatmap(myBasicCorr, ax= ax)
 
 
 
-![png](output_46_1.png)
+![png](/assets/output_46_1.png)
 
 
 
