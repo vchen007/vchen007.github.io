@@ -427,7 +427,7 @@ sns.countplot(x='Loan Status', data=df)
 
 
 
-![png](output_29_1.png)
+![png](/assets/output_29_1.png)
 
 
 
@@ -443,7 +443,7 @@ sns.scatterplot(x='Credit Score', y='Annual Income', data=df)
 
 
 
-![png](output_30_1.png)
+![png](/assets/output_30_1.png)
 
 
 
@@ -689,7 +689,7 @@ sns.countplot(x='Loan Status', data=df)
 
 
 
-![png](output_52_1.png)
+![png](/assets/output_52_1.png)
 
 
 ## Imbalanced Data
@@ -722,7 +722,7 @@ plt.show()
 ```
 
 
-![png](output_56_0.png)
+![png](/assets/output_56_0.png)
 
 
 
@@ -809,7 +809,7 @@ plt.show()
 ```
 
 
-![png](output_65_0.png)
+![png](/assets/output_65_0.png)
 
 
 ## Conclusion
