@@ -14,13 +14,7 @@ import pandas as pd
 df = pd.read_csv('1533148983_LoansTrainingSet.csv')
 ```
 
-    /Applications/anaconda3/lib/python3.7/site-packages/IPython/core/interactiveshell.py:3058: DtypeWarning: Columns (16) have mixed types. Specify dtype option on import or set low_memory=False.
-      interactivity=interactivity, compiler=compiler, result=result)
-
-
 ## Taking a Look at the Data
-
-
 
 ```python
 df.info()
@@ -56,8 +50,6 @@ df.info()
 ```python
 df.head()
 ```
-
-
 
 
 <div>
@@ -231,21 +223,10 @@ df_obj = df.select_dtypes(include='object')
 df_num = df.select_dtypes(exclude='object')
 ```
 
-
 ```python
 # Loan ID to numbers data frame so can use groupby
 df_num['Loan ID'] = df['Loan ID']
 ```
-
-    /Applications/anaconda3/lib/python3.7/site-packages/ipykernel_launcher.py:2: SettingWithCopyWarning: 
-    A value is trying to be set on a copy of a slice from a DataFrame.
-    Try using .loc[row_indexer,col_indexer] = value instead
-    
-    See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-      
-
-
-
 ```python
 # groupby Loan ID and takes the max of each loan
 df_num = df_num.groupby('Loan ID').max().reset_index()
@@ -344,36 +325,6 @@ df['Credit Score'].describe()
     Name: Credit Score, dtype: float64
 
 
-
-
-```python
-df.info()
-```
-
-    <class 'pandas.core.frame.DataFrame'>
-    Int64Index: 215700 entries, 0 to 215699
-    Data columns (total 17 columns):
-    Loan Status                     215700 non-null object
-    Term                            215700 non-null object
-    Years in current job            215700 non-null float64
-    Home Ownership                  215700 non-null object
-    Purpose                         215700 non-null object
-    Monthly Debt                    215700 non-null object
-    Maximum Open Credit             215700 non-null object
-    Current Loan Amount             215700 non-null float64
-    Credit Score                    171202 non-null float64
-    Annual Income                   171202 non-null float64
-    Years of Credit History         215700 non-null float64
-    Months since last delinquent    215700 non-null float64
-    Number of Open Accounts         215700 non-null int64
-    Number of Credit Problems       215700 non-null int64
-    Current Credit Balance          215700 non-null int64
-    Bankruptcies                    215700 non-null float64
-    Tax Liens                       215700 non-null float64
-    dtypes: float64(8), int64(3), object(6)
-    memory usage: 29.6+ MB
-
-
 ### Changing Object Columns to numeric 
 Many of the columns have object data types including: Term, Home Ownership, Purpose, Loan Status, Monthly Debt and Maximum Open Credit. Those that will be changed to nonordinal datatype include Term, Home Ownership, Purpose. The other columns will be changed to numerical. Loan Status, which is our target, will be converted to 0 based on being paid off and 1 being unpaid.
 
@@ -403,29 +354,13 @@ df['Maximum Open Credit'] = df['Maximum Open Credit'].astype(float)
 df = pd.get_dummies(df, drop_first=True)
 ```
 
-
-```python
-import seaborn as sns
-%matplotlib inline
-```
-
-
 ```python
 loan = df.corr()['Loan Status']
 ```
 
-
 ```python
 sns.countplot(x='Loan Status', data=df)
 ```
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x114342fd0>
-
-
-
 
 ![png](/assets/output_29_1.png)
 
@@ -436,88 +371,7 @@ sns.scatterplot(x='Credit Score', y='Annual Income', data=df)
 ```
 
 
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x114811bd0>
-
-
-
-
 ![png](/assets/output_30_1.png)
-
-
-
-```python
-df.corr()['Annual Income']
-```
-
-
-
-
-    Loan Status                    -0.064451
-    Years in current job            0.096976
-    Monthly Debt                    0.471019
-    Maximum Open Credit             0.031687
-    Current Loan Amount             0.304788
-    Credit Score                    0.014844
-    Annual Income                   1.000000
-    Years of Credit History         0.155115
-    Months since last delinquent    0.018211
-    Number of Open Accounts         0.145422
-    Number of Credit Problems      -0.017196
-    Current Credit Balance          0.305022
-    Bankruptcies                   -0.047194
-    Tax Liens                       0.036210
-    Term_Short Term                -0.066624
-    Home Ownership_Own Home        -0.037248
-    Home Ownership_Rent            -0.158150
-    Purpose_Buy House               0.008664
-    Purpose_Buy a Car              -0.015555
-    Purpose_Debt Consolidation     -0.034359
-    Purpose_Educational Expenses   -0.009857
-    Purpose_Home Improvements       0.076374
-    Purpose_Medical Bills          -0.002762
-    Purpose_Other                  -0.017304
-    Purpose_Take a Trip            -0.011203
-    Name: Annual Income, dtype: float64
-
-
-
-
-```python
-df.corr()['Loan Status']
-```
-
-
-
-
-    Loan Status                     1.000000
-    Years in current job           -0.016711
-    Monthly Debt                    0.014033
-    Maximum Open Credit            -0.006031
-    Current Loan Amount             0.078167
-    Credit Score                   -0.245848
-    Annual Income                  -0.064451
-    Years of Credit History        -0.030149
-    Months since last delinquent    0.000327
-    Number of Open Accounts         0.017602
-    Number of Credit Problems       0.009090
-    Current Credit Balance         -0.007107
-    Bankruptcies                   -0.000100
-    Tax Liens                       0.010739
-    Term_Short Term                -0.158569
-    Home Ownership_Own Home         0.006862
-    Home Ownership_Rent             0.052967
-    Purpose_Buy House              -0.002251
-    Purpose_Buy a Car              -0.019681
-    Purpose_Debt Consolidation      0.001182
-    Purpose_Educational Expenses   -0.000450
-    Purpose_Home Improvements      -0.018178
-    Purpose_Medical Bills           0.004362
-    Purpose_Other                   0.003693
-    Purpose_Take a Trip            -0.000357
-    Name: Loan Status, dtype: float64
-
 
 
 
@@ -528,64 +382,41 @@ income = df['Annual Income']
 df.drop(['Loan Status', 'Annual Income'], axis=1, inplace=True)
 ```
 
-
 ```python
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score, mean_squared_error
 ```
 
-
 ```python
 filled = df[df['Credit Score'].notnull()]
 missing = df[df['Credit Score'].isnull()]
 ```
-
 
 ```python
 X_train, X_test, y_train, y_test = train_test_split(filled.drop('Credit Score', axis=1), 
                                                     filled['Credit Score'], test_size=0.4, random_state=101)
 ```
 
-
 ```python
 L = LinearRegression()
 ```
-
 
 ```python
 L.fit(X_train, y_train)
 ```
 
-
-
-
-    LinearRegression(copy_X=True, fit_intercept=True, n_jobs=None, normalize=False)
-
-
-
-
 ```python
 r2_score(y_train, L.predict(X_train))
 ```
-
-
-
-
     0.28462988125672517
-
-
 
 
 ```python
 mean_squared_error(y_train, L.predict(X_train))**.5
 ```
 
-
-
-
     22.740334260998736
-
 
 
 
@@ -603,15 +434,6 @@ predictions = L.predict(missing.drop('Credit Score', axis=1))
 missing['Credit Score'] = predictions
 df = pd.concat([missing, filled])
 ```
-
-    /Applications/anaconda3/lib/python3.7/site-packages/ipykernel_launcher.py:1: SettingWithCopyWarning: 
-    A value is trying to be set on a copy of a slice from a DataFrame.
-    Try using .loc[row_indexer,col_indexer] = value instead
-    
-    See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-      """Entry point for launching an IPython kernel.
-
-
 
 ```python
 # Adding Annual Income Column back
@@ -635,14 +457,6 @@ X_train, X_test, y_train, y_test = train_test_split(filled.drop('Annual Income',
 L.fit(X_train, y_train)
 ```
 
-
-
-
-    LinearRegression(copy_X=True, fit_intercept=True, n_jobs=None, normalize=False)
-
-
-
-
 ```python
 print(r2_score(y_test, L.predict(X_test)))
 print(mean_squared_error(y_test, L.predict(X_test))**.5)
@@ -657,14 +471,6 @@ print(mean_squared_error(y_test, L.predict(X_test))**.5)
 prediction = L.predict(missing.drop('Annual Income', axis=1))
 missing['Annual Income'] = prediction
 ```
-
-    /Applications/anaconda3/lib/python3.7/site-packages/ipykernel_launcher.py:2: SettingWithCopyWarning: 
-    A value is trying to be set on a copy of a slice from a DataFrame.
-    Try using .loc[row_indexer,col_indexer] = value instead
-    
-    See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-      
-
 
 
 ```python
@@ -681,21 +487,13 @@ df['Loan Status'] = loan_status
 sns.countplot(x='Loan Status', data=df)
 ```
 
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x116a0d8d0>
-
-
-
-
 ![png](/assets/output_52_1.png)
 
 
 ## Imbalanced Data
 
 
-Using undersampling to balance out the number of Loans that were paid off and unpai
+Using undersampling to balance out the number of Loans that were paid off and unpaid. The under sampled 'Loan Status' which is the charged off loans will match the number of  paid off loans.
 
 
 ```python
@@ -788,7 +586,6 @@ Based off the classification report, we scored about 60% accuracy that people wi
 import numpy as np   
 ```
 
-
 ```python
 feature_importance = abs(log.coef_[0])
 feature_importance = 100.0 * (feature_importance / feature_importance.max())
@@ -796,8 +593,6 @@ sorted_idx = np.argsort(feature_importance)
 pos = np.arange(sorted_idx.shape[0]) + .5
 
 featfig = plt.figure()
-featfig.set_figheight(15)
-featfig.set_figwidth(15)
 featax = featfig.add_subplot(1, 1, 1)
 featax.barh(pos, feature_importance[sorted_idx], align='center')
 featax.set_yticks(pos)
@@ -814,7 +609,7 @@ plt.show()
 
 ## Conclusion
 
-After seeing the feature importance based off of the column coefficients, the most important questions to ask future loan applicants are:
+After looking at the chart above which feature importance that is based off of the column coefficients, the most important questions to ask future loan applicants are:
 1. How much is their monthly debt?
 2. What is their credit score?
 3. How much is their current loan amount?
