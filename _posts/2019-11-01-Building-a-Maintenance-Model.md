@@ -6,12 +6,9 @@ A delivery based company has daily, telementary data on it's fleet of devices an
 import pandas as pd
 import numpy as np
 ```
-
-
 ```python
 df = pd.read_csv('1533148882_failures.csv')
 ```
-
 ## Looking at the data
 The data given is in time series format with each column being a date and specific device ID. The other columns are not named and give nondescriptive information.
 
@@ -346,25 +343,9 @@ plt.show()
 ```python
 df['failure'].value_counts()
 ```
-
-
-
-
     0    124388
     1       106
     Name: failure, dtype: int64
-
-
-
-
-```python
-import seaborn as sns
-sns.set(style="whitegrid")
-plt.figure(figsize=(8, 8))
-sns.countplot('failure', data=df)
-plt.title('Failure Count')
-plt.show()
-```
 
 
 ![png](/assets/output_11_0.png)
@@ -376,36 +357,6 @@ plt.show()
 ```python
 df.drop(columns=['attribute8'], inplace=True)
 ```
-
-
-```python
-# drop the duplicate rows that are entirely the same
-df.drop_duplicates(keep='first', inplace=True)
-```
-
-
-```python
-df.info()
-```
-
-    <class 'pandas.core.frame.DataFrame'>
-    Int64Index: 124494 entries, 0 to 124493
-    Data columns (total 11 columns):
-    date          124494 non-null object
-    device        124494 non-null object
-    failure       124494 non-null int64
-    attribute1    124494 non-null int64
-    attribute2    124494 non-null int64
-    attribute3    124494 non-null int64
-    attribute4    124494 non-null int64
-    attribute5    124494 non-null int64
-    attribute6    124494 non-null int64
-    attribute7    124494 non-null int64
-    attribute9    124494 non-null int64
-    dtypes: int64(9), object(2)
-    memory usage: 11.4+ MB
-
-
 ### Extracting Information from the Date
 By creating columns for day of week, day of the month, months and seasons will give better idea of when devices fail and the kind of data that was given.
 
@@ -431,13 +382,9 @@ df['season'] = df['season'].map(season_dict)
 df['month'] = df['date'].dt.month 
 ```
 
-
 ```python
 df['month'].value_counts()
 ```
-
-
-
 
     1     25032
     3     19833
@@ -451,8 +398,6 @@ df['month'].value_counts()
     10     2940
     11       31
     Name: month, dtype: int64
-
-
 
 - Notice the number of data points decreases by each month and December not having any observations.
 
@@ -515,27 +460,13 @@ month = sns.countplot(x='month', data=df_fail).set(title = "Number of Failures b
 plt.figure(figsize=(20,5))
 ax = sns.lineplot(x="date", y="failure", data=df).set(title = "Mean Failures by Month")
 ```
-
-    /Applications/anaconda3/lib/python3.7/site-packages/pandas/plotting/_matplotlib/converter.py:103: FutureWarning: Using an implicitly registered datetime converter for a matplotlib plotting method. The converter was registered by pandas on import. Future versions of pandas will require you to explicitly register matplotlib converters.
-    
-    To register the converters:
-    	>>> from pandas.plotting import register_matplotlib_converters
-    	>>> register_matplotlib_converters()
-      warnings.warn(msg, FutureWarning)
-
-
-
 ![png](/assets/output_26_1.png)
-
 
 
 ```python
 # Groupby Day of the week by failures
 df.groupby(['day_of_week'])['failure'].value_counts()
 ```
-
-
-
 
     day_of_week  failure
     Friday       0          18029
@@ -626,55 +557,10 @@ df.groupby(['season'])['failure'].value_counts()
 df['day'] = df['date'].dt.day
 ```
 
-
-```python
-df['day'].value_counts()
-```
-
-
-
-
-    1     4742
-    2     4742
-    5     4706
-    4     4705
-    3     4677
-    6     4641
-    7     4345
-    8     4263
-    9     4263
-    10    4262
-    11    4261
-    12    4217
-    13    4154
-    14    4110
-    15    4076
-    16    4076
-    17    4033
-    18    3989
-    19    3981
-    20    3939
-    21    3894
-    22    3893
-    23    3850
-    24    3812
-    25    3806
-    26    3728
-    27    3726
-    28    3622
-    29    2948
-    30    2945
-    31    2088
-    Name: day, dtype: int64
-
-
-
-
 ```python
 plt.figure(figsize=(20,5))
 ax = sns.lineplot(x="day", y="failure", data=df).set(title = "Rate of Failure by day of the Month")
 ```
-
 
 ![png](/assets/output_35_0.png)
 
@@ -705,284 +591,8 @@ df = pd.concat([df, dummies], axis=1)
 
 
 ```python
-df.info()
-```
-
-    <class 'pandas.core.frame.DataFrame'>
-    Int64Index: 124494 entries, 0 to 124493
-    Data columns (total 21 columns):
-    device                   124494 non-null object
-    failure                  124494 non-null int64
-    attribute1               124494 non-null int64
-    attribute2               124494 non-null int64
-    attribute3               124494 non-null int64
-    attribute4               124494 non-null int64
-    attribute5               124494 non-null int64
-    attribute6               124494 non-null int64
-    attribute7               124494 non-null int64
-    attribute9               124494 non-null int64
-    month                    124494 non-null int64
-    day                      124494 non-null int64
-    day_of_week_Monday       124494 non-null uint8
-    day_of_week_Saturday     124494 non-null uint8
-    day_of_week_Sunday       124494 non-null uint8
-    day_of_week_Thursday     124494 non-null uint8
-    day_of_week_Tuesday      124494 non-null uint8
-    day_of_week_Wednesday    124494 non-null uint8
-    season_spring            124494 non-null uint8
-    season_summer            124494 non-null uint8
-    season_winter            124494 non-null uint8
-    dtypes: int64(11), object(1), uint8(9)
-    memory usage: 18.4+ MB
-
-
-
-```python
-df.describe()
-```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>failure</th>
-      <th>attribute1</th>
-      <th>attribute2</th>
-      <th>attribute3</th>
-      <th>attribute4</th>
-      <th>attribute5</th>
-      <th>attribute6</th>
-      <th>attribute7</th>
-      <th>attribute9</th>
-      <th>month</th>
-      <th>day</th>
-      <th>day_of_week_Monday</th>
-      <th>day_of_week_Saturday</th>
-      <th>day_of_week_Sunday</th>
-      <th>day_of_week_Thursday</th>
-      <th>day_of_week_Tuesday</th>
-      <th>day_of_week_Wednesday</th>
-      <th>season_spring</th>
-      <th>season_summer</th>
-      <th>season_winter</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>count</td>
-      <td>124494.000000</td>
-      <td>1.244940e+05</td>
-      <td>124494.000000</td>
-      <td>124494.000000</td>
-      <td>124494.000000</td>
-      <td>124494.000000</td>
-      <td>124494.000000</td>
-      <td>124494.000000</td>
-      <td>124494.000000</td>
-      <td>124494.000000</td>
-      <td>124494.000000</td>
-      <td>124494.000000</td>
-      <td>124494.000000</td>
-      <td>124494.000000</td>
-      <td>124494.000000</td>
-      <td>124494.000000</td>
-      <td>124494.000000</td>
-      <td>124494.000000</td>
-      <td>124494.000000</td>
-      <td>124494.000000</td>
-    </tr>
-    <tr>
-      <td>mean</td>
-      <td>0.000851</td>
-      <td>1.223868e+08</td>
-      <td>0.051280</td>
-      <td>0.073377</td>
-      <td>0.075008</td>
-      <td>14.222693</td>
-      <td>260172.858025</td>
-      <td>0.011711</td>
-      <td>0.217970</td>
-      <td>4.028299</td>
-      <td>14.894196</td>
-      <td>0.143670</td>
-      <td>0.143758</td>
-      <td>0.143453</td>
-      <td>0.145718</td>
-      <td>0.140842</td>
-      <td>0.137645</td>
-      <td>0.346804</td>
-      <td>0.235722</td>
-      <td>0.357704</td>
-    </tr>
-    <tr>
-      <td>std</td>
-      <td>0.029167</td>
-      <td>7.045960e+07</td>
-      <td>0.220568</td>
-      <td>0.260755</td>
-      <td>0.263405</td>
-      <td>15.943021</td>
-      <td>99151.009852</td>
-      <td>0.107584</td>
-      <td>0.412869</td>
-      <td>2.572167</td>
-      <td>8.759542</td>
-      <td>0.350756</td>
-      <td>0.350846</td>
-      <td>0.350535</td>
-      <td>0.352825</td>
-      <td>0.347860</td>
-      <td>0.344529</td>
-      <td>0.475955</td>
-      <td>0.424451</td>
-      <td>0.479326</td>
-    </tr>
-    <tr>
-      <td>min</td>
-      <td>0.000000</td>
-      <td>0.000000e+00</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>1.000000</td>
-      <td>8.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <td>25%</td>
-      <td>0.000000</td>
-      <td>6.127675e+07</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>8.000000</td>
-      <td>221452.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>2.000000</td>
-      <td>7.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <td>50%</td>
-      <td>0.000000</td>
-      <td>1.227957e+08</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>10.000000</td>
-      <td>249799.500000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>3.000000</td>
-      <td>15.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <td>75%</td>
-      <td>0.000000</td>
-      <td>1.833084e+08</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>12.000000</td>
-      <td>310266.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>6.000000</td>
-      <td>22.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>1.000000</td>
-      <td>0.000000</td>
-      <td>1.000000</td>
-    </tr>
-    <tr>
-      <td>max</td>
-      <td>1.000000</td>
-      <td>2.441405e+08</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>98.000000</td>
-      <td>689161.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>11.000000</td>
-      <td>31.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
-
-```python
 df.columns
 ```
-
-
-
-
     Index(['device', 'failure', 'attribute1', 'attribute2', 'attribute3',
            'attribute4', 'attribute5', 'attribute6', 'attribute7', 'attribute9',
            'month', 'day', 'day_of_week_Monday', 'day_of_week_Saturday',
@@ -990,8 +600,6 @@ df.columns
            'day_of_week_Wednesday', 'season_spring', 'season_summer',
            'season_winter'],
           dtype='object')
-
-
 
 
 ```python
@@ -1019,21 +627,6 @@ sent_after_failure = ['S1F0GPFZ', 'S1F136J0', 'W1F0KCP2', 'W1F0M35B', 'W1F11ZG9'
 device_group['sent_after_failure'] = 0
 device_group.loc[sent_after_failure, 'sent_after_failure'] = 1
 ```
-
-
-```python
-device_group['failure'].value_counts()
-```
-
-
-
-
-    0    1062
-    1     106
-    Name: failure, dtype: int64
-
-
-
 
 ```python
 device_group.info()
@@ -1084,7 +677,12 @@ sns.heatmap(myBasicCorr, ax= ax)
 
 ![png](/assets/output_46_1.png)
 
-
+```python
+device_group['failure'].value_counts()
+```
+    0    1062
+    1     106
+    Name: failure, dtype: int64
 
 ```python
 from sklearn.model_selection import train_test_split
@@ -1143,23 +741,6 @@ gbc = GradientBoostingClassifier()
 gbc.fit(x_train_res, y_train_res)
 ```
 
-
-
-
-    GradientBoostingClassifier(ccp_alpha=0.0, criterion='friedman_mse', init=None,
-                               learning_rate=0.1, loss='deviance', max_depth=3,
-                               max_features=None, max_leaf_nodes=None,
-                               min_impurity_decrease=0.0, min_impurity_split=None,
-                               min_samples_leaf=1, min_samples_split=2,
-                               min_weight_fraction_leaf=0.0, n_estimators=100,
-                               n_iter_no_change=None, presort='deprecated',
-                               random_state=None, subsample=1.0, tol=0.0001,
-                               validation_fraction=0.1, verbose=0,
-                               warm_start=False)
-
-
-
-
 ```python
 y_pred = gbc.predict(X_test)
 print(classification_report(y_test, y_pred))
@@ -1176,6 +757,6 @@ print(classification_report(y_test, y_pred))
     
 
 
-## Conclusion
+# Conclusion
 
 Looking at the classification report, with the recall as the most important metric to accurately predict which devices will fail about 74% on the next trip. The model will help to increase the company's ability to save money on preventative maintenance  the amount of time devices are out in the field.
