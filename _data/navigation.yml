@@ -1,10 +1,11 @@
 # main links links
 main:
-  - title: "Publications"
-    url: /publications/
+  - title: "CV"
+    url: /cv/
+    url: /files//Victor_Chen_Resume.pdf
 
-  - title: "Talks"
-    url: /talks/    
+  - title: "Projects"
+    url: /projects/    
 
   - title: "Teaching"
     url: /teaching/    
