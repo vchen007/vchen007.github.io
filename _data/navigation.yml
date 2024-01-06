@@ -4,8 +4,8 @@ main:
     #url: /cv/
     url: /files//Victor_Chen_Resume.pdf
 
-  - title: "Projects"
-    url: /projects/    
+  - title: "Portfolio Projects"
+    url: /portfolio/    
 
   #- title: "Talks"
   #  url: /talks/    
