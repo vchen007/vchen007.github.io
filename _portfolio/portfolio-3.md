@@ -368,7 +368,7 @@ loan = df.corr()['Loan Status']
 sns.countplot(x='Loan Status', data=df)
 ```
 
-![png](/assets/output_29_1.png)
+![png](images/output_29_1.png)
 
 
 
