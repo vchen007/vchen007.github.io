@@ -368,7 +368,7 @@ loan = df.corr()['Loan Status']
 sns.countplot(x='Loan Status', data=df)
 ```
 
-![png](images/output_29_1.png)
+![png](/images/output_29_1.png)
 
 
 
@@ -377,7 +377,7 @@ sns.scatterplot(x='Credit Score', y='Annual Income', data=df)
 ```
 
 
-![png](/assets/output_30_1.png)
+![png](/images/output_30_1.png)
 
 
 
@@ -493,7 +493,7 @@ df['Loan Status'] = loan_status
 sns.countplot(x='Loan Status', data=df)
 ```
 
-![png](/assets/output_52_1.png)
+![png](/images/output_52_1.png)
 
 
 ## Imbalanced Data
@@ -526,7 +526,7 @@ plt.show()
 ```
 
 
-![png](/assets/output_56_0.png)
+![png](/images/output_56_0.png)
 
 
 
@@ -610,7 +610,7 @@ plt.show()
 ```
 
 
-![png](/assets/output_65_0.png)
+![png](/images/output_65_0.png)
 
 
 ## Conclusion
