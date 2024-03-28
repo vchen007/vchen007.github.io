@@ -834,13 +834,13 @@ df.hist(column='RST%')
 
 
 
-    array([[<Axes: title={'center': 'RST%'}>]], dtype=object)
+<!--     array([[<Axes: title={'center': 'RST%'}>]], dtype=object)
 
 
 
 
     
-<!-- ![png](images/DFS_optimization_pyomo_files:DFS_optimization_pyomo_18_1.png) -->
+![png](images/DFS_optimization_pyomo_files:DFS_optimization_pyomo_18_1.png) -->
 
 <br/><img src='/images/DFS_optimization_pyomo_files:DFS_optimization_pyomo_18_1.png'>
 
