@@ -1,4 +1,10 @@
-# Looking at optimizing daily fantasy sports using python and the pyomo library
+---
+title: "Using python and the pyomo library for optimization"
+excerpt: "Creating an optimized Daily Fantasy Sports Lineup"
+collection: portfolio
+---
+
+## Creating an optimized lineup for DFS NFL football
 - Daily Fantasy Sports games are considered a skill-based game where participants can choose players in a sports league and earn points based on cerntain statistics. There is an entry fee for each line up submitted and the lineup with the most points wins the prize pool.
 - The National Football League is the most popular of the fantasy sports.
 - There are many different contests users can enter and select players such as single games, entire weekly games, and certain periods such as morning or afternoon slate of games.
