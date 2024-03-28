@@ -579,7 +579,7 @@ df.head()
     </tr>
   </tbody>
 </table>
-<!-- </div> -->
+ </div> 
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
@@ -784,11 +784,11 @@ df.head()
       quickchartButtonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
     })();
-  </script> -->
+  </script> 
 </div>
 
     </div>
-  </div>
+  </div> -->
 
 
 
