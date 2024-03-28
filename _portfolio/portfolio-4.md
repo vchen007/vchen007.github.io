@@ -52,12 +52,12 @@ df.head()
 
   <div id="df-f971b098-3985-4475-84cf-7365cc0d7b96" class="colab-df-container">
     <div>
-<style scoped>
+<!--  <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
 
-<!--    .dataframe tbody tr th {
+   .dataframe tbody tr th {
         vertical-align: top;
     }
 
@@ -174,7 +174,7 @@ df.head()
   </svg>
     </button>
 
-  <style>
+<!--   <style>
     .colab-df-container {
       display:flex;
       gap: 12px;
@@ -372,7 +372,7 @@ df.head()
     </div>
   </div>
 
-
+-->
 
 
 ### Going through each column of the dataset
@@ -438,7 +438,8 @@ df.head()
 
   <div id="df-a1da94d7-2321-4df0-875e-c2b4678abfd7" class="colab-df-container">
     <div>
-<style scoped>
+
+<!-- <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
@@ -450,7 +451,7 @@ df.head()
     .dataframe thead th {
         text-align: right;
     }
-</style>
+</style> -->
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -590,7 +591,7 @@ df.head()
   </svg>
     </button>
 
-  <style>
+  <!-- <style>
     .colab-df-container {
       display:flex;
       gap: 12px;
@@ -783,7 +784,7 @@ df.head()
         google.colab.kernel.accessAllowed ? 'block' : 'none';
     })();
   </script>
-</div>
+</div> -->
 
     </div>
   </div>
@@ -921,7 +922,7 @@ model.pprint()
               4 :     0 :  None :     1 : False :  True : Binary
               5 :     0 :  None :     1 : False :  True : Binary
               6 :     0 :  None :     1 : False :  True : Binary
-              7 :     0 :  None :     1 : False :  True : Binary
+<!--              7 :     0 :  None :     1 : False :  True : Binary
               8 :     0 :  None :     1 : False :  True : Binary
               9 :     0 :  None :     1 : False :  True : Binary
              10 :     0 :  None :     1 : False :  True : Binary
@@ -1336,7 +1337,7 @@ model.pprint()
             None :  -Inf : 0*x[0] + 0*x[1] + 0*x[2] + 0*x[3] + 0*x[4] + 0*x[5] + x[6] + x[7] + x[8] + 0*x[9] + x[10] + x[11] + 0*x[12] + 0*x[13] + 0*x[14] + x[15] + x[16] + x[17] + x[18] + 0*x[19] + x[20] + 0*x[21] + 0*x[22] + x[23] + 0*x[24] + 0*x[25] + x[26] + x[27] + 0*x[28] + 0*x[29] + 0*x[30] + x[31] + x[32] + x[33] + 0*x[34] + 0*x[35] + x[36] + x[37] + 0*x[38] + x[39] + x[40] + 0*x[41] + x[42] + x[43] + 0*x[44] + 0*x[45] + 0*x[46] + 0*x[47] + 0*x[48] + 0*x[49] + 0*x[50] + 0*x[51] + x[52] + x[53] + 0*x[54] + x[55] + x[56] + 0*x[57] + 0*x[58] + x[59] + x[60] + 0*x[61] + 0*x[62] + 0*x[63] + x[64] + 0*x[65] + 0*x[66] + 0*x[67] + 0*x[68] + x[69] + 0*x[70] + 0*x[71] + x[72] + x[73] + x[74] + x[75] + 0*x[76] + x[77] + 0*x[78] + 0*x[79] + 0*x[80] + 0*x[81] + 0*x[82] + x[83] + 0*x[84] + 0*x[85] + 0*x[86] + 0*x[87] + 0*x[88] + 0*x[89] + 0*x[90] + 0*x[91] + 0*x[92] + 0*x[93] + x[94] + 0*x[95] + 0*x[96] + 0*x[97] + x[98] + 0*x[99] + 0*x[100] + x[101] + 0*x[102] + x[103] + 0*x[104] + 0*x[105] + x[106] + x[107] + 0*x[108] + 0*x[109] + 0*x[110] + x[111] + 0*x[112] + x[113] + 0*x[114] + 0*x[115] + 0*x[116] + x[117] + 0*x[118] + 0*x[119] + 0*x[120] + 0*x[121] + x[122] + 0*x[123] + 0*x[124] + 0*x[125] + 0*x[126] + x[127] + x[128] + 0*x[129] + 0*x[130] + 0*x[131] + 0*x[132] + 0*x[133] + x[134] + 0*x[135] + 0*x[136] + x[137] + 0*x[138] + x[139] + x[140] + 0*x[141] + x[142] + 0*x[143] + x[144] + x[145] + 0*x[146] + 0*x[147] + 0*x[148] + x[149] + x[150] + 0*x[151] + x[152] + 0*x[153] + 0*x[154] + 0*x[155] + x[156] + x[157] + x[158] + x[159] + 0*x[160] + x[161] + 0*x[162] + 0*x[163] + 0*x[164] + 0*x[165] + x[166] + 0*x[167] + 0*x[168] + 0*x[169] + 0*x[170] + 0*x[171] + 0*x[172] + x[173] + 0*x[174] + x[175] + x[176] + 0*x[177] + x[178] + 0*x[179] + 0*x[180] + 0*x[181] + 0*x[182] + 0*x[183] + x[184] + 0*x[185] + x[186] + 0*x[187] + 0*x[188] + 0*x[189] + 0*x[190] + 0*x[191] + x[192] + x[193] + 0*x[194] + x[195] + x[196] + x[197] + x[198] + 0*x[199] + 0*x[200] + x[201] + x[202] + x[203] + 0*x[204] + x[205] + 0*x[206] + 0*x[207] + x[208] + 0*x[209] + x[210] + x[211] + 0*x[212] + 0*x[213] + x[214] + 0*x[215] + x[216] + 0*x[217] + 0*x[218] + x[219] + 0*x[220] + x[221] + 0*x[222] + 0*x[223] + 0*x[224] + x[225] + x[226] + x[227] + x[228] + x[229] + x[230] + 0*x[231] + 0*x[232] + 0*x[233] + x[234] + 0*x[235] + x[236] + x[237] + 0*x[238] + x[239] + x[240] + 0*x[241] + 0*x[242] + 0*x[243] + x[244] + 0*x[245] + 0*x[246] + x[247] + 0*x[248] + 0*x[249] + x[250] + 0*x[251] + x[252] + 0*x[253] + 0*x[254] + 0*x[255] + x[256] + 0*x[257] + 0*x[258] + 0*x[259] + 0*x[260] + 0*x[261] + x[262] + x[263] + 0*x[264] + 0*x[265] + x[266] + x[267] + x[268] + 0*x[269] + 0*x[270] + x[271] + x[272] + 0*x[273] + 0*x[274] + 0*x[275] + x[276] + 0*x[277] + 0*x[278] + x[279] + x[280] + 0*x[281] + 0*x[282] + x[283] + 0*x[284] + 0*x[285] + x[286] + x[287] + 0*x[288] + 0*x[289] + 0*x[290] + 0*x[291] + 0*x[292] + x[293] + 0*x[294] + 0*x[295] + 0*x[296] + 0*x[297] + 0*x[298] + x[299] + 0*x[300] + 0*x[301] + x[302] + 0*x[303] + 0*x[304] + x[305] + 0*x[306] + 0*x[307] + x[308] + x[309] + 0*x[310] + x[311] + 0*x[312] + 0*x[313] + x[314] + 0*x[315] + 0*x[316] + x[317] + 0*x[318] + 0*x[319] + x[320] + 0*x[321] + 0*x[322] + 0*x[323] + 0*x[324] + 0*x[325] + x[326] + 0*x[327] + 0*x[328] + 0*x[329] + 0*x[330] + 0*x[331] + 0*x[332] + 0*x[333] + 0*x[334] + x[335] + x[336] + 0*x[337] + 0*x[338] + 0*x[339] + 0*x[340] + x[341] + 0*x[342] + 0*x[343] + x[344] + 0*x[345] + x[346] + 0*x[347] + 0*x[348] + 0*x[349] + 0*x[350] + 0*x[351] + x[352] + 0*x[353] + 0*x[354] + 0*x[355] + 0*x[356] + 0*x[357] + 0*x[358] + 0*x[359] + 0*x[360] + x[361] + x[362] + 0*x[363] + x[364] + 0*x[365] + 0*x[366] + 0*x[367] + x[368] + 0*x[369] + 0*x[370] + 0*x[371] + 0*x[372] + 0*x[373] + x[374] + 0*x[375] + 0*x[376] + 0*x[377] + 0*x[378] + x[379] + x[380] + x[381] + x[382] + 0*x[383] + 0*x[384] + 0*x[385] + 0*x[386] + x[387] + 0*x[388] + 0*x[389] + 0*x[390] + x[391] :   4.0 :   True
         num_positionConstraint : Size=1, Index=None, Active=True
             Key  : Lower : Body                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    : Upper : Active
-            None :   9.0 : x[0] + x[1] + x[2] + x[3] + x[4] + x[5] + x[6] + x[7] + x[8] + x[9] + x[10] + x[11] + x[12] + x[13] + x[14] + x[15] + x[16] + x[17] + x[18] + x[19] + x[20] + x[21] + x[22] + x[23] + x[24] + x[25] + x[26] + x[27] + x[28] + x[29] + x[30] + x[31] + x[32] + x[33] + x[34] + x[35] + x[36] + x[37] + x[38] + x[39] + x[40] + x[41] + x[42] + x[43] + x[44] + x[45] + x[46] + x[47] + x[48] + x[49] + x[50] + x[51] + x[52] + x[53] + x[54] + x[55] + x[56] + x[57] + x[58] + x[59] + x[60] + x[61] + x[62] + x[63] + x[64] + x[65] + x[66] + x[67] + x[68] + x[69] + x[70] + x[71] + x[72] + x[73] + x[74] + x[75] + x[76] + x[77] + x[78] + x[79] + x[80] + x[81] + x[82] + x[83] + x[84] + x[85] + x[86] + x[87] + x[88] + x[89] + x[90] + x[91] + x[92] + x[93] + x[94] + x[95] + x[96] + x[97] + x[98] + x[99] + x[100] + x[101] + x[102] + x[103] + x[104] + x[105] + x[106] + x[107] + x[108] + x[109] + x[110] + x[111] + x[112] + x[113] + x[114] + x[115] + x[116] + x[117] + x[118] + x[119] + x[120] + x[121] + x[122] + x[123] + x[124] + x[125] + x[126] + x[127] + x[128] + x[129] + x[130] + x[131] + x[132] + x[133] + x[134] + x[135] + x[136] + x[137] + x[138] + x[139] + x[140] + x[141] + x[142] + x[143] + x[144] + x[145] + x[146] + x[147] + x[148] + x[149] + x[150] + x[151] + x[152] + x[153] + x[154] + x[155] + x[156] + x[157] + x[158] + x[159] + x[160] + x[161] + x[162] + x[163] + x[164] + x[165] + x[166] + x[167] + x[168] + x[169] + x[170] + x[171] + x[172] + x[173] + x[174] + x[175] + x[176] + x[177] + x[178] + x[179] + x[180] + x[181] + x[182] + x[183] + x[184] + x[185] + x[186] + x[187] + x[188] + x[189] + x[190] + x[191] + x[192] + x[193] + x[194] + x[195] + x[196] + x[197] + x[198] + x[199] + x[200] + x[201] + x[202] + x[203] + x[204] + x[205] + x[206] + x[207] + x[208] + x[209] + x[210] + x[211] + x[212] + x[213] + x[214] + x[215] + x[216] + x[217] + x[218] + x[219] + x[220] + x[221] + x[222] + x[223] + x[224] + x[225] + x[226] + x[227] + x[228] + x[229] + x[230] + x[231] + x[232] + x[233] + x[234] + x[235] + x[236] + x[237] + x[238] + x[239] + x[240] + x[241] + x[242] + x[243] + x[244] + x[245] + x[246] + x[247] + x[248] + x[249] + x[250] + x[251] + x[252] + x[253] + x[254] + x[255] + x[256] + x[257] + x[258] + x[259] + x[260] + x[261] + x[262] + x[263] + x[264] + x[265] + x[266] + x[267] + x[268] + x[269] + x[270] + x[271] + x[272] + x[273] + x[274] + x[275] + x[276] + x[277] + x[278] + x[279] + x[280] + x[281] + x[282] + x[283] + x[284] + x[285] + x[286] + x[287] + x[288] + x[289] + x[290] + x[291] + x[292] + x[293] + x[294] + x[295] + x[296] + x[297] + x[298] + x[299] + x[300] + x[301] + x[302] + x[303] + x[304] + x[305] + x[306] + x[307] + x[308] + x[309] + x[310] + x[311] + x[312] + x[313] + x[314] + x[315] + x[316] + x[317] + x[318] + x[319] + x[320] + x[321] + x[322] + x[323] + x[324] + x[325] + x[326] + x[327] + x[328] + x[329] + x[330] + x[331] + x[332] + x[333] + x[334] + x[335] + x[336] + x[337] + x[338] + x[339] + x[340] + x[341] + x[342] + x[343] + x[344] + x[345] + x[346] + x[347] + x[348] + x[349] + x[350] + x[351] + x[352] + x[353] + x[354] + x[355] + x[356] + x[357] + x[358] + x[359] + x[360] + x[361] + x[362] + x[363] + x[364] + x[365] + x[366] + x[367] + x[368] + x[369] + x[370] + x[371] + x[372] + x[373] + x[374] + x[375] + x[376] + x[377] + x[378] + x[379] + x[380] + x[381] + x[382] + x[383] + x[384] + x[385] + x[386] + x[387] + x[388] + x[389] + x[390] + x[391] :   9.0 :   True
+            None :   9.0 : x[0] + x[1] + x[2] + x[3] + x[4] + x[5] + x[6] + x[7] + x[8] + x[9] + x[10] + x[11] + x[12] + x[13] + x[14] + x[15] + x[16] + x[17] + x[18] + x[19] + x[20] + x[21] + x[22] + x[23] + x[24] + x[25] + x[26] + x[27] + x[28] + x[29] + x[30] + x[31] + x[32] + x[33] + x[34] + x[35] + x[36] + x[37] + x[38] + x[39] + x[40] + x[41] + x[42] + x[43] + x[44] + x[45] + x[46] + x[47] + x[48] + x[49] + x[50] + x[51] + x[52] + x[53] + x[54] + x[55] + x[56] + x[57] + x[58] + x[59] + x[60] + x[61] + x[62] + x[63] + x[64] + x[65] + x[66] + x[67] + x[68] + x[69] + x[70] + x[71] + x[72] + x[73] + x[74] + x[75] + x[76] + x[77] + x[78] + x[79] + x[80] + x[81] + x[82] + x[83] + x[84] + x[85] + x[86] + x[87] + x[88] + x[89] + x[90] + x[91] + x[92] + x[93] + x[94] + x[95] + x[96] + x[97] + x[98] + x[99] + x[100] + x[101] + x[102] + x[103] + x[104] + x[105] + x[106] + x[107] + x[108] + x[109] + x[110] + x[111] + x[112] + x[113] + x[114] + x[115] + x[116] + x[117] + x[118] + x[119] + x[120] + x[121] + x[122] + x[123] + x[124] + x[125] + x[126] + x[127] + x[128] + x[129] + x[130] + x[131] + x[132] + x[133] + x[134] + x[135] + x[136] + x[137] + x[138] + x[139] + x[140] + x[141] + x[142] + x[143] + x[144] + x[145] + x[146] + x[147] + x[148] + x[149] + x[150] + x[151] + x[152] + x[153] + x[154] + x[155] + x[156] + x[157] + x[158] + x[159] + x[160] + x[161] + x[162] + x[163] + x[164] + x[165] + x[166] + x[167] + x[168] + x[169] + x[170] + x[171] + x[172] + x[173] + x[174] + x[175] + x[176] + x[177] + x[178] + x[179] + x[180] + x[181] + x[182] + x[183] + x[184] + x[185] + x[186] + x[187] + x[188] + x[189] + x[190] + x[191] + x[192] + x[193] + x[194] + x[195] + x[196] + x[197] + x[198] + x[199] + x[200] + x[201] + x[202] + x[203] + x[204] + x[205] + x[206] + x[207] + x[208] + x[209] + x[210] + x[211] + x[212] + x[213] + x[214] + x[215] + x[216] + x[217] + x[218] + x[219] + x[220] + x[221] + x[222] + x[223] + x[224] + x[225] + x[226] + x[227] + x[228] + x[229] + x[230] + x[231] + x[232] + x[233] + x[234] + x[235] + x[236] + x[237] + x[238] + x[239] + x[240] + x[241] + x[242] + x[243] + x[244] + x[245] + x[246] + x[247] + x[248] + x[249] + x[250] + x[251] + x[252] + x[253] + x[254] + x[255] + x[256] + x[257] + x[258] + x[259] + x[260] + x[261] + x[262] + x[263] + x[264] + x[265] + x[266] + x[267] + x[268] + x[269] + x[270] + x[271] + x[272] + x[273] + x[274] + x[275] + x[276] + x[277] + x[278] + x[279] + x[280] + x[281] + x[282] + x[283] + x[284] + x[285] + x[286] + x[287] + x[288] + x[289] + x[290] + x[291] + x[292] + x[293] + x[294] + x[295] + x[296] + x[297] + x[298] + x[299] + x[300] + x[301] + x[302] + x[303] + x[304] + x[305] + x[306] + x[307] + x[308] + x[309] + x[310] + x[311] + x[312] + x[313] + x[314] + x[315] + x[316] + x[317] + x[318] + x[319] + x[320] + x[321] + x[322] + x[323] + x[324] + x[325] + x[326] + x[327] + x[328] + x[329] + x[330] + x[331] + x[332] + x[333] + x[334] + x[335] + x[336] + x[337] + x[338] + x[339] + x[340] + x[341] + x[342] + x[343] + x[344] + x[345] + x[346] + x[347] + x[348] + x[349] + x[350] + x[351] + x[352] + x[353] + x[354] + x[355] + x[356] + x[357] + x[358] + x[359] + x[360] + x[361] + x[362] + x[363] + x[364] + x[365] + x[366] + x[367] + x[368] + x[369] + x[370] + x[371] + x[372] + x[373] + x[374] + x[375] + x[376] + x[377] + x[378] + x[379] + x[380] + x[381] + x[382] + x[383] + x[384] + x[385] + x[386] + x[387] + x[388] + x[389] + x[390] + x[391] :   9.0 :   True -->
     
     10 Declarations: x Objective BudgetConstraint num_positionConstraint QBConstraint RBConstraint WRConstraint TEConstraint DEFConstraint RSTConstraint
 
@@ -1624,7 +1625,7 @@ excel_output
 
   <div id="df-bde818b5-d25a-4aa0-9326-2a86762b7eef" class="colab-df-container">
     <div>
-<style scoped>
+<!-- <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
@@ -1636,7 +1637,7 @@ excel_output
     .dataframe thead th {
         text-align: right;
     }
-</style>
+</style> -->
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1716,7 +1717,7 @@ excel_output
   </svg>
     </button>
 
-  <style>
+ <!-- <style>
     .colab-df-container {
       display:flex;
       gap: 12px;
@@ -1781,7 +1782,7 @@ excel_output
         element.appendChild(docLink);
       }
     </script>
-  </div>
+  </div> 
 
 
 <div id="df-56ab5c20-acca-4621-9975-8e6737535498">
@@ -1967,7 +1968,7 @@ excel_output
   </div>
 
     </div>
-  </div>
+  </div> -->
 
 
 
@@ -1977,63 +1978,3 @@ excel_output
 excel_output.to_excel('output.xlsx', sheet_name='Lineup 1', index=False)
 ```
 
-
-```python
-!pip install https://github.com/aaren/notedown/tarball/master
-```
-
-    Collecting https://github.com/aaren/notedown/tarball/master
-      Downloading https://github.com/aaren/notedown/tarball/master
-    [2K     [32m\[0m [32m79.6 kB[0m [31m593.6 kB/s[0m [33m0:00:00[0m
-    [?25h  Preparing metadata (setup.py) ... [?25l[?25hdone
-    Requirement already satisfied: nbformat in /usr/local/lib/python3.10/dist-packages (from notedown==1.5.1) (5.10.3)
-    Requirement already satisfied: nbconvert in /usr/local/lib/python3.10/dist-packages (from notedown==1.5.1) (6.5.4)
-    Collecting pandoc-attributes (from notedown==1.5.1)
-      Downloading pandoc-attributes-0.1.7.tar.gz (2.6 kB)
-      Preparing metadata (setup.py) ... [?25l[?25hdone
-    Requirement already satisfied: six in /usr/local/lib/python3.10/dist-packages (from notedown==1.5.1) (1.16.0)
-    Requirement already satisfied: lxml in /usr/local/lib/python3.10/dist-packages (from nbconvert->notedown==1.5.1) (4.9.4)
-    Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.10/dist-packages (from nbconvert->notedown==1.5.1) (4.12.3)
-    Requirement already satisfied: bleach in /usr/local/lib/python3.10/dist-packages (from nbconvert->notedown==1.5.1) (6.1.0)
-    Requirement already satisfied: defusedxml in /usr/local/lib/python3.10/dist-packages (from nbconvert->notedown==1.5.1) (0.7.1)
-    Requirement already satisfied: entrypoints>=0.2.2 in /usr/local/lib/python3.10/dist-packages (from nbconvert->notedown==1.5.1) (0.4)
-    Requirement already satisfied: jinja2>=3.0 in /usr/local/lib/python3.10/dist-packages (from nbconvert->notedown==1.5.1) (3.1.3)
-    Requirement already satisfied: jupyter-core>=4.7 in /usr/local/lib/python3.10/dist-packages (from nbconvert->notedown==1.5.1) (5.7.2)
-    Requirement already satisfied: jupyterlab-pygments in /usr/local/lib/python3.10/dist-packages (from nbconvert->notedown==1.5.1) (0.3.0)
-    Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.10/dist-packages (from nbconvert->notedown==1.5.1) (2.1.5)
-    Requirement already satisfied: mistune<2,>=0.8.1 in /usr/local/lib/python3.10/dist-packages (from nbconvert->notedown==1.5.1) (0.8.4)
-    Requirement already satisfied: nbclient>=0.5.0 in /usr/local/lib/python3.10/dist-packages (from nbconvert->notedown==1.5.1) (0.10.0)
-    Requirement already satisfied: packaging in /usr/local/lib/python3.10/dist-packages (from nbconvert->notedown==1.5.1) (24.0)
-    Requirement already satisfied: pandocfilters>=1.4.1 in /usr/local/lib/python3.10/dist-packages (from nbconvert->notedown==1.5.1) (1.5.1)
-    Requirement already satisfied: pygments>=2.4.1 in /usr/local/lib/python3.10/dist-packages (from nbconvert->notedown==1.5.1) (2.16.1)
-    Requirement already satisfied: tinycss2 in /usr/local/lib/python3.10/dist-packages (from nbconvert->notedown==1.5.1) (1.2.1)
-    Requirement already satisfied: traitlets>=5.0 in /usr/local/lib/python3.10/dist-packages (from nbconvert->notedown==1.5.1) (5.7.1)
-    Requirement already satisfied: fastjsonschema in /usr/local/lib/python3.10/dist-packages (from nbformat->notedown==1.5.1) (2.19.1)
-    Requirement already satisfied: jsonschema>=2.6 in /usr/local/lib/python3.10/dist-packages (from nbformat->notedown==1.5.1) (4.19.2)
-    Requirement already satisfied: attrs>=22.2.0 in /usr/local/lib/python3.10/dist-packages (from jsonschema>=2.6->nbformat->notedown==1.5.1) (23.2.0)
-    Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /usr/local/lib/python3.10/dist-packages (from jsonschema>=2.6->nbformat->notedown==1.5.1) (2023.12.1)
-    Requirement already satisfied: referencing>=0.28.4 in /usr/local/lib/python3.10/dist-packages (from jsonschema>=2.6->nbformat->notedown==1.5.1) (0.34.0)
-    Requirement already satisfied: rpds-py>=0.7.1 in /usr/local/lib/python3.10/dist-packages (from jsonschema>=2.6->nbformat->notedown==1.5.1) (0.18.0)
-    Requirement already satisfied: platformdirs>=2.5 in /usr/local/lib/python3.10/dist-packages (from jupyter-core>=4.7->nbconvert->notedown==1.5.1) (4.2.0)
-    Requirement already satisfied: jupyter-client>=6.1.12 in /usr/local/lib/python3.10/dist-packages (from nbclient>=0.5.0->nbconvert->notedown==1.5.1) (6.1.12)
-    Requirement already satisfied: soupsieve>1.2 in /usr/local/lib/python3.10/dist-packages (from beautifulsoup4->nbconvert->notedown==1.5.1) (2.5)
-    Requirement already satisfied: webencodings in /usr/local/lib/python3.10/dist-packages (from bleach->nbconvert->notedown==1.5.1) (0.5.1)
-    Requirement already satisfied: pyzmq>=13 in /usr/local/lib/python3.10/dist-packages (from jupyter-client>=6.1.12->nbclient>=0.5.0->nbconvert->notedown==1.5.1) (23.2.1)
-    Requirement already satisfied: python-dateutil>=2.1 in /usr/local/lib/python3.10/dist-packages (from jupyter-client>=6.1.12->nbclient>=0.5.0->nbconvert->notedown==1.5.1) (2.8.2)
-    Requirement already satisfied: tornado>=4.1 in /usr/local/lib/python3.10/dist-packages (from jupyter-client>=6.1.12->nbclient>=0.5.0->nbconvert->notedown==1.5.1) (6.3.3)
-    Building wheels for collected packages: notedown, pandoc-attributes
-      Building wheel for notedown (setup.py) ... [?25l[?25hdone
-      Created wheel for notedown: filename=notedown-1.5.1-py3-none-any.whl size=17485 sha256=20ab67002c2d46b73bc558632ddcd8b267579f9b80800261320e36c0e6606d35
-      Stored in directory: /tmp/pip-ephem-wheel-cache-biogvrfk/wheels/10/0b/7a/1acb72b14499e4fd1d902ad09e49f89247c8298e83305ed460
-      Building wheel for pandoc-attributes (setup.py) ... [?25l[?25hdone
-      Created wheel for pandoc-attributes: filename=pandoc_attributes-0.1.7-py3-none-any.whl size=3008 sha256=27f9e9d20ef95952d8a2cefd7ea6d0609db873008625f01162019a46ac5c303c
-      Stored in directory: /root/.cache/pip/wheels/ae/5c/5d/6346b51a40a6d9b39033c221fa2f84ef110a067be865b22322
-    Successfully built notedown pandoc-attributes
-    Installing collected packages: pandoc-attributes, notedown
-    Successfully installed notedown-1.5.1 pandoc-attributes-0.1.7
-
-
-
-```python
-!notedown
-```
