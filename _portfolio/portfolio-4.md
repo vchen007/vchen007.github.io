@@ -1625,7 +1625,7 @@ excel_output
 
   <div id="df-bde818b5-d25a-4aa0-9326-2a86762b7eef" class="colab-df-container">
     <div>
-<!-- <style scoped>
+ <style scoped> <!--
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
@@ -1636,7 +1636,7 @@ excel_output
 
     .dataframe thead th {
         text-align: right;
-    } 
+    } -->
 </style> 
 <table border="1" class="dataframe">
   <thead>
