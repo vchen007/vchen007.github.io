@@ -58,7 +58,7 @@ df.head()
     .dataframe thead th {
         text-align: right;
     }
-</style> 
+</style> -->
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -168,7 +168,7 @@ df.head()
   </svg>
     </button>
 
-  <style>
+<!--  <style>
     .colab-df-container {
       display:flex;
       gap: 12px;
@@ -366,7 +366,7 @@ df.head()
     </div>
   </div>
 
-
+-->
 
 
 ### Going through each column of the dataset
@@ -432,7 +432,8 @@ df.head()
 
   <div id="df-a1da94d7-2321-4df0-875e-c2b4678abfd7" class="colab-df-container">
     <div>
-<style scoped>
+        
+<!-- <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
@@ -444,7 +445,7 @@ df.head()
     .dataframe thead th {
         text-align: right;
     }
-</style>
+</style> -->
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -584,7 +585,7 @@ df.head()
   </svg>
     </button>
 
-  <style>
+<!--  <style>
     .colab-df-container {
       display:flex;
       gap: 12px;
@@ -648,7 +649,7 @@ df.head()
         docLink.innerHTML = docLinkHtml;
         element.appendChild(docLink);
       }
-    </script>
+    </script> 
   </div>
 
 
@@ -776,7 +777,7 @@ df.head()
       quickchartButtonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
     })();
-  </script>
+  </script> -->
 </div>
 
     </div>
