@@ -840,8 +840,9 @@ df.hist(column='RST%')
 
 
     
-![png](images/DFS_optimization_pyomo_files:DFS_optimization_pyomo_18_1.png)
-    
+<!-- ![png](images/DFS_optimization_pyomo_files:DFS_optimization_pyomo_18_1.png) -->
+
+<br/><img src='/images/DFS_optimization_pyomo_files:DFS_optimization_pyomo_18_1.png'>
 
 
 ### The budget can be adjusted based on the Daily Fantasy Sports site as well as the number of positions.
