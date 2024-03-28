@@ -52,7 +52,8 @@ df.head()
 
   <div id="df-f971b098-3985-4475-84cf-7365cc0d7b96" class="colab-df-container">
     <div>
- <style scoped>
+        
+ <!-- <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
@@ -64,7 +65,7 @@ df.head()
     .dataframe thead th {
         text-align: right;
     }
-</style> 
+</style> -->
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
