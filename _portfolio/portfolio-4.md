@@ -57,14 +57,14 @@ df.head()
         vertical-align: middle;
     }
 
-    .dataframe tbody tr th {
+<!--    .dataframe tbody tr th {
         vertical-align: top;
     }
 
     .dataframe thead th {
         text-align: right;
-    }
-</style>
+    } 
+</style> -->
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
