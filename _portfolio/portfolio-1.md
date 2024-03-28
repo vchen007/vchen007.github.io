@@ -1720,7 +1720,7 @@ excel_output
   </svg>
     </button>
 
-  <style>
+ <!-- <style>
     .colab-df-container {
       display:flex;
       gap: 12px;
@@ -1971,7 +1971,7 @@ excel_output
   </div>
 
     </div>
-  </div>
+  </div> -->
 
 
 
@@ -1979,65 +1979,4 @@ excel_output
 
 ```python
 excel_output.to_excel('output.xlsx', sheet_name='Lineup 1', index=False)
-```
-
-
-```python
-!pip install https://github.com/aaren/notedown/tarball/master
-```
-
-    Collecting https://github.com/aaren/notedown/tarball/master
-      Downloading https://github.com/aaren/notedown/tarball/master
-    [2K     [32m\[0m [32m79.6 kB[0m [31m593.6 kB/s[0m [33m0:00:00[0m
-    [?25h  Preparing metadata (setup.py) ... [?25l[?25hdone
-    Requirement already satisfied: nbformat in /usr/local/lib/python3.10/dist-packages (from notedown==1.5.1) (5.10.3)
-    Requirement already satisfied: nbconvert in /usr/local/lib/python3.10/dist-packages (from notedown==1.5.1) (6.5.4)
-    Collecting pandoc-attributes (from notedown==1.5.1)
-      Downloading pandoc-attributes-0.1.7.tar.gz (2.6 kB)
-      Preparing metadata (setup.py) ... [?25l[?25hdone
-    Requirement already satisfied: six in /usr/local/lib/python3.10/dist-packages (from notedown==1.5.1) (1.16.0)
-    Requirement already satisfied: lxml in /usr/local/lib/python3.10/dist-packages (from nbconvert->notedown==1.5.1) (4.9.4)
-    Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.10/dist-packages (from nbconvert->notedown==1.5.1) (4.12.3)
-    Requirement already satisfied: bleach in /usr/local/lib/python3.10/dist-packages (from nbconvert->notedown==1.5.1) (6.1.0)
-    Requirement already satisfied: defusedxml in /usr/local/lib/python3.10/dist-packages (from nbconvert->notedown==1.5.1) (0.7.1)
-    Requirement already satisfied: entrypoints>=0.2.2 in /usr/local/lib/python3.10/dist-packages (from nbconvert->notedown==1.5.1) (0.4)
-    Requirement already satisfied: jinja2>=3.0 in /usr/local/lib/python3.10/dist-packages (from nbconvert->notedown==1.5.1) (3.1.3)
-    Requirement already satisfied: jupyter-core>=4.7 in /usr/local/lib/python3.10/dist-packages (from nbconvert->notedown==1.5.1) (5.7.2)
-    Requirement already satisfied: jupyterlab-pygments in /usr/local/lib/python3.10/dist-packages (from nbconvert->notedown==1.5.1) (0.3.0)
-    Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.10/dist-packages (from nbconvert->notedown==1.5.1) (2.1.5)
-    Requirement already satisfied: mistune<2,>=0.8.1 in /usr/local/lib/python3.10/dist-packages (from nbconvert->notedown==1.5.1) (0.8.4)
-    Requirement already satisfied: nbclient>=0.5.0 in /usr/local/lib/python3.10/dist-packages (from nbconvert->notedown==1.5.1) (0.10.0)
-    Requirement already satisfied: packaging in /usr/local/lib/python3.10/dist-packages (from nbconvert->notedown==1.5.1) (24.0)
-    Requirement already satisfied: pandocfilters>=1.4.1 in /usr/local/lib/python3.10/dist-packages (from nbconvert->notedown==1.5.1) (1.5.1)
-    Requirement already satisfied: pygments>=2.4.1 in /usr/local/lib/python3.10/dist-packages (from nbconvert->notedown==1.5.1) (2.16.1)
-    Requirement already satisfied: tinycss2 in /usr/local/lib/python3.10/dist-packages (from nbconvert->notedown==1.5.1) (1.2.1)
-    Requirement already satisfied: traitlets>=5.0 in /usr/local/lib/python3.10/dist-packages (from nbconvert->notedown==1.5.1) (5.7.1)
-    Requirement already satisfied: fastjsonschema in /usr/local/lib/python3.10/dist-packages (from nbformat->notedown==1.5.1) (2.19.1)
-    Requirement already satisfied: jsonschema>=2.6 in /usr/local/lib/python3.10/dist-packages (from nbformat->notedown==1.5.1) (4.19.2)
-    Requirement already satisfied: attrs>=22.2.0 in /usr/local/lib/python3.10/dist-packages (from jsonschema>=2.6->nbformat->notedown==1.5.1) (23.2.0)
-    Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /usr/local/lib/python3.10/dist-packages (from jsonschema>=2.6->nbformat->notedown==1.5.1) (2023.12.1)
-    Requirement already satisfied: referencing>=0.28.4 in /usr/local/lib/python3.10/dist-packages (from jsonschema>=2.6->nbformat->notedown==1.5.1) (0.34.0)
-    Requirement already satisfied: rpds-py>=0.7.1 in /usr/local/lib/python3.10/dist-packages (from jsonschema>=2.6->nbformat->notedown==1.5.1) (0.18.0)
-    Requirement already satisfied: platformdirs>=2.5 in /usr/local/lib/python3.10/dist-packages (from jupyter-core>=4.7->nbconvert->notedown==1.5.1) (4.2.0)
-    Requirement already satisfied: jupyter-client>=6.1.12 in /usr/local/lib/python3.10/dist-packages (from nbclient>=0.5.0->nbconvert->notedown==1.5.1) (6.1.12)
-    Requirement already satisfied: soupsieve>1.2 in /usr/local/lib/python3.10/dist-packages (from beautifulsoup4->nbconvert->notedown==1.5.1) (2.5)
-    Requirement already satisfied: webencodings in /usr/local/lib/python3.10/dist-packages (from bleach->nbconvert->notedown==1.5.1) (0.5.1)
-    Requirement already satisfied: pyzmq>=13 in /usr/local/lib/python3.10/dist-packages (from jupyter-client>=6.1.12->nbclient>=0.5.0->nbconvert->notedown==1.5.1) (23.2.1)
-    Requirement already satisfied: python-dateutil>=2.1 in /usr/local/lib/python3.10/dist-packages (from jupyter-client>=6.1.12->nbclient>=0.5.0->nbconvert->notedown==1.5.1) (2.8.2)
-    Requirement already satisfied: tornado>=4.1 in /usr/local/lib/python3.10/dist-packages (from jupyter-client>=6.1.12->nbclient>=0.5.0->nbconvert->notedown==1.5.1) (6.3.3)
-    Building wheels for collected packages: notedown, pandoc-attributes
-      Building wheel for notedown (setup.py) ... [?25l[?25hdone
-      Created wheel for notedown: filename=notedown-1.5.1-py3-none-any.whl size=17485 sha256=20ab67002c2d46b73bc558632ddcd8b267579f9b80800261320e36c0e6606d35
-      Stored in directory: /tmp/pip-ephem-wheel-cache-biogvrfk/wheels/10/0b/7a/1acb72b14499e4fd1d902ad09e49f89247c8298e83305ed460
-      Building wheel for pandoc-attributes (setup.py) ... [?25l[?25hdone
-      Created wheel for pandoc-attributes: filename=pandoc_attributes-0.1.7-py3-none-any.whl size=3008 sha256=27f9e9d20ef95952d8a2cefd7ea6d0609db873008625f01162019a46ac5c303c
-      Stored in directory: /root/.cache/pip/wheels/ae/5c/5d/6346b51a40a6d9b39033c221fa2f84ef110a067be865b22322
-    Successfully built notedown pandoc-attributes
-    Installing collected packages: pandoc-attributes, notedown
-    Successfully installed notedown-1.5.1 pandoc-attributes-0.1.7
-
-
-
-```python
-!notedown
 ```
