@@ -1,4 +1,10 @@
-# Looking at optimizing daily fantasy sports using python and the pyomo library
+---
+title: "Using python and the pyomo library for optimization"
+excerpt: "Creating an optimized Daily Fantasy Sports Lineup"
+collection: portfolio
+---
+
+## Creating an optimized lineup for DFS NFL football
 - Daily Fantasy Sports games are considered a skill-based game where participants can choose players in a sports league and earn points based on cerntain statistics. There is an entry fee for each line up submitted and the lineup with the most points wins the prize pool.
 - The National Football League is the most popular of the fantasy sports.
 - There are many different contests users can enter and select players such as single games, entire weekly games, and certain periods such as morning or afternoon slate of games.
@@ -46,7 +52,8 @@ df.head()
 
   <div id="df-e8d7b28f-2850-48ce-99d7-3f8998592d93" class="colab-df-container">
     <div>
-<style scoped>
+        
+ <!-- <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
@@ -58,7 +65,7 @@ df.head()
     .dataframe thead th {
         text-align: right;
     }
-</style>
+</style> -->
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -168,7 +175,7 @@ df.head()
   </svg>
     </button>
 
-  <style>
+ <!-- <style>
     .colab-df-container {
       display:flex;
       gap: 12px;
@@ -366,7 +373,7 @@ df.head()
     </div>
   </div>
 
-
+-->
 
 
 ### Going through each column of the dataset
@@ -432,7 +439,8 @@ df.head()
 
   <div id="df-4834f81e-659f-4f3b-a74a-4e45b64594f1" class="colab-df-container">
     <div>
-<style scoped>
+        
+<!-- <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
@@ -444,7 +452,7 @@ df.head()
     .dataframe thead th {
         text-align: right;
     }
-</style>
+</style> -->
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -584,7 +592,7 @@ df.head()
   </svg>
     </button>
 
-  <style>
+ <!-- <style>
     .colab-df-container {
       display:flex;
       gap: 12px;
@@ -781,7 +789,7 @@ df.head()
 
     </div>
   </div>
-
+-->
 
 
 
@@ -826,18 +834,27 @@ df.hist(column='RST%')
 
 
 
-    array([[<Axes: title={'center': 'RST%'}>]], dtype=object)
+<!--     array([[<Axes: title={'center': 'RST%'}>]], dtype=object)
 
 
 
 
     
-![png](DFS_optimization_pyomo_files/DFS_optimization_pyomo_18_1.png)
+![png](images/DFS_optimization_pyomo_files:DFS_optimization_pyomo_18_1.png) -->
+
+<br/><img src='/images/DFS_optimization_pyomo_files:DFS_optimization_pyomo_18_1.png'>
     
 
 
 ### The budget can be adjusted based on the Daily Fantasy Sports site as well as the number of positions.
-
+- Objective: maximize the projected fantasy points
+- Decision Variables: selecting the players in the data set (binary)
+- Constarints:
+- <ol>
+  <li>Select the correct number of positions: 1 quarterback, 2 running backs, 3 wide receivers, 1 tight end, 1 team defense and 1 flex</li>
+  <li>Budget: the entire lineup needs to have a total salary or cost of up to $50,000</li>
+  <li>Rostership: we can select players that are entire popular or unpopular to take advantage of market inefficiencies and create a competitive edge from other lineups</li>
+</ol>
 
 ```python
 # Total Budget for the entire lineup
@@ -918,7 +935,7 @@ model.pprint()
               7 :     0 :  None :     1 : False :  True : Binary
               8 :     0 :  None :     1 : False :  True : Binary
               9 :     0 :  None :     1 : False :  True : Binary
-             10 :     0 :  None :     1 : False :  True : Binary
+   <!--          10 :     0 :  None :     1 : False :  True : Binary
              11 :     0 :  None :     1 : False :  True : Binary
              12 :     0 :  None :     1 : False :  True : Binary
              13 :     0 :  None :     1 : False :  True : Binary
@@ -1331,7 +1348,7 @@ model.pprint()
         num_positionConstraint : Size=1, Index=None, Active=True
             Key  : Lower : Body                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    : Upper : Active
             None :   9.0 : x[0] + x[1] + x[2] + x[3] + x[4] + x[5] + x[6] + x[7] + x[8] + x[9] + x[10] + x[11] + x[12] + x[13] + x[14] + x[15] + x[16] + x[17] + x[18] + x[19] + x[20] + x[21] + x[22] + x[23] + x[24] + x[25] + x[26] + x[27] + x[28] + x[29] + x[30] + x[31] + x[32] + x[33] + x[34] + x[35] + x[36] + x[37] + x[38] + x[39] + x[40] + x[41] + x[42] + x[43] + x[44] + x[45] + x[46] + x[47] + x[48] + x[49] + x[50] + x[51] + x[52] + x[53] + x[54] + x[55] + x[56] + x[57] + x[58] + x[59] + x[60] + x[61] + x[62] + x[63] + x[64] + x[65] + x[66] + x[67] + x[68] + x[69] + x[70] + x[71] + x[72] + x[73] + x[74] + x[75] + x[76] + x[77] + x[78] + x[79] + x[80] + x[81] + x[82] + x[83] + x[84] + x[85] + x[86] + x[87] + x[88] + x[89] + x[90] + x[91] + x[92] + x[93] + x[94] + x[95] + x[96] + x[97] + x[98] + x[99] + x[100] + x[101] + x[102] + x[103] + x[104] + x[105] + x[106] + x[107] + x[108] + x[109] + x[110] + x[111] + x[112] + x[113] + x[114] + x[115] + x[116] + x[117] + x[118] + x[119] + x[120] + x[121] + x[122] + x[123] + x[124] + x[125] + x[126] + x[127] + x[128] + x[129] + x[130] + x[131] + x[132] + x[133] + x[134] + x[135] + x[136] + x[137] + x[138] + x[139] + x[140] + x[141] + x[142] + x[143] + x[144] + x[145] + x[146] + x[147] + x[148] + x[149] + x[150] + x[151] + x[152] + x[153] + x[154] + x[155] + x[156] + x[157] + x[158] + x[159] + x[160] + x[161] + x[162] + x[163] + x[164] + x[165] + x[166] + x[167] + x[168] + x[169] + x[170] + x[171] + x[172] + x[173] + x[174] + x[175] + x[176] + x[177] + x[178] + x[179] + x[180] + x[181] + x[182] + x[183] + x[184] + x[185] + x[186] + x[187] + x[188] + x[189] + x[190] + x[191] + x[192] + x[193] + x[194] + x[195] + x[196] + x[197] + x[198] + x[199] + x[200] + x[201] + x[202] + x[203] + x[204] + x[205] + x[206] + x[207] + x[208] + x[209] + x[210] + x[211] + x[212] + x[213] + x[214] + x[215] + x[216] + x[217] + x[218] + x[219] + x[220] + x[221] + x[222] + x[223] + x[224] + x[225] + x[226] + x[227] + x[228] + x[229] + x[230] + x[231] + x[232] + x[233] + x[234] + x[235] + x[236] + x[237] + x[238] + x[239] + x[240] + x[241] + x[242] + x[243] + x[244] + x[245] + x[246] + x[247] + x[248] + x[249] + x[250] + x[251] + x[252] + x[253] + x[254] + x[255] + x[256] + x[257] + x[258] + x[259] + x[260] + x[261] + x[262] + x[263] + x[264] + x[265] + x[266] + x[267] + x[268] + x[269] + x[270] + x[271] + x[272] + x[273] + x[274] + x[275] + x[276] + x[277] + x[278] + x[279] + x[280] + x[281] + x[282] + x[283] + x[284] + x[285] + x[286] + x[287] + x[288] + x[289] + x[290] + x[291] + x[292] + x[293] + x[294] + x[295] + x[296] + x[297] + x[298] + x[299] + x[300] + x[301] + x[302] + x[303] + x[304] + x[305] + x[306] + x[307] + x[308] + x[309] + x[310] + x[311] + x[312] + x[313] + x[314] + x[315] + x[316] + x[317] + x[318] + x[319] + x[320] + x[321] + x[322] + x[323] + x[324] + x[325] + x[326] + x[327] + x[328] + x[329] + x[330] + x[331] + x[332] + x[333] + x[334] + x[335] + x[336] + x[337] + x[338] + x[339] + x[340] + x[341] + x[342] + x[343] + x[344] + x[345] + x[346] + x[347] + x[348] + x[349] + x[350] + x[351] + x[352] + x[353] + x[354] + x[355] + x[356] + x[357] + x[358] + x[359] + x[360] + x[361] + x[362] + x[363] + x[364] + x[365] + x[366] + x[367] + x[368] + x[369] + x[370] + x[371] + x[372] + x[373] + x[374] + x[375] + x[376] + x[377] + x[378] + x[379] + x[380] + x[381] + x[382] + x[383] + x[384] + x[385] + x[386] + x[387] + x[388] + x[389] + x[390] + x[391] :   9.0 :   True
-    
+    -->
     10 Declarations: x Objective BudgetConstraint num_positionConstraint QBConstraint RBConstraint WRConstraint TEConstraint DEFConstraint RSTConstraint
 
 
@@ -1618,7 +1635,8 @@ excel_output
 
   <div id="df-14a01906-56aa-4d72-ab66-dd5d57fcfae6" class="colab-df-container">
     <div>
-<style scoped>
+        
+<!-- <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
@@ -1630,7 +1648,7 @@ excel_output
     .dataframe thead th {
         text-align: right;
     }
-</style>
+</style> -->
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1710,7 +1728,7 @@ excel_output
   </svg>
     </button>
 
-  <style>
+ <!-- <style>
     .colab-df-container {
       display:flex;
       gap: 12px;
@@ -1961,7 +1979,7 @@ excel_output
   </div>
 
     </div>
-  </div>
+  </div> -->
 
 
 
@@ -1969,205 +1987,4 @@ excel_output
 
 ```python
 excel_output.to_excel('output.xlsx', sheet_name='Lineup 1', index=False)
-```
-
-
-```python
-!jupyter nbconvert --to markdown DFS_optimization_pyomo.ipynb
-```
-
-    [NbConvertApp] WARNING | pattern 'DFS_optimization_pyomo.ipynb' matched no files
-    This application is used to convert notebook files (*.ipynb)
-            to various other formats.
-    
-            WARNING: THE COMMANDLINE INTERFACE MAY CHANGE IN FUTURE RELEASES.
-    
-    Options
-    =======
-    The options below are convenience aliases to configurable class-options,
-    as listed in the "Equivalent to" description-line of the aliases.
-    To see all configurable class-options for some <cmd>, use:
-        <cmd> --help-all
-    
-    --debug
-        set log level to logging.DEBUG (maximize logging output)
-        Equivalent to: [--Application.log_level=10]
-    --show-config
-        Show the application's configuration (human-readable format)
-        Equivalent to: [--Application.show_config=True]
-    --show-config-json
-        Show the application's configuration (json format)
-        Equivalent to: [--Application.show_config_json=True]
-    --generate-config
-        generate default config file
-        Equivalent to: [--JupyterApp.generate_config=True]
-    -y
-        Answer yes to any questions instead of prompting.
-        Equivalent to: [--JupyterApp.answer_yes=True]
-    --execute
-        Execute the notebook prior to export.
-        Equivalent to: [--ExecutePreprocessor.enabled=True]
-    --allow-errors
-        Continue notebook execution even if one of the cells throws an error and include the error message in the cell output (the default behaviour is to abort conversion). This flag is only relevant if '--execute' was specified, too.
-        Equivalent to: [--ExecutePreprocessor.allow_errors=True]
-    --stdin
-        read a single notebook file from stdin. Write the resulting notebook with default basename 'notebook.*'
-        Equivalent to: [--NbConvertApp.from_stdin=True]
-    --stdout
-        Write notebook output to stdout instead of files.
-        Equivalent to: [--NbConvertApp.writer_class=StdoutWriter]
-    --inplace
-        Run nbconvert in place, overwriting the existing notebook (only
-                relevant when converting to notebook format)
-        Equivalent to: [--NbConvertApp.use_output_suffix=False --NbConvertApp.export_format=notebook --FilesWriter.build_directory=]
-    --clear-output
-        Clear output of current file and save in place,
-                overwriting the existing notebook.
-        Equivalent to: [--NbConvertApp.use_output_suffix=False --NbConvertApp.export_format=notebook --FilesWriter.build_directory= --ClearOutputPreprocessor.enabled=True]
-    --no-prompt
-        Exclude input and output prompts from converted document.
-        Equivalent to: [--TemplateExporter.exclude_input_prompt=True --TemplateExporter.exclude_output_prompt=True]
-    --no-input
-        Exclude input cells and output prompts from converted document.
-                This mode is ideal for generating code-free reports.
-        Equivalent to: [--TemplateExporter.exclude_output_prompt=True --TemplateExporter.exclude_input=True --TemplateExporter.exclude_input_prompt=True]
-    --allow-chromium-download
-        Whether to allow downloading chromium if no suitable version is found on the system.
-        Equivalent to: [--WebPDFExporter.allow_chromium_download=True]
-    --disable-chromium-sandbox
-        Disable chromium security sandbox when converting to PDF..
-        Equivalent to: [--WebPDFExporter.disable_sandbox=True]
-    --show-input
-        Shows code input. This flag is only useful for dejavu users.
-        Equivalent to: [--TemplateExporter.exclude_input=False]
-    --embed-images
-        Embed the images as base64 dataurls in the output. This flag is only useful for the HTML/WebPDF/Slides exports.
-        Equivalent to: [--HTMLExporter.embed_images=True]
-    --sanitize-html
-        Whether the HTML in Markdown cells and cell outputs should be sanitized..
-        Equivalent to: [--HTMLExporter.sanitize_html=True]
-    --log-level=<Enum>
-        Set the log level by value or name.
-        Choices: any of [0, 10, 20, 30, 40, 50, 'DEBUG', 'INFO', 'WARN', 'ERROR', 'CRITICAL']
-        Default: 30
-        Equivalent to: [--Application.log_level]
-    --config=<Unicode>
-        Full path of a config file.
-        Default: ''
-        Equivalent to: [--JupyterApp.config_file]
-    --to=<Unicode>
-        The export format to be used, either one of the built-in formats
-                ['asciidoc', 'custom', 'html', 'latex', 'markdown', 'notebook', 'pdf', 'python', 'rst', 'script', 'slides', 'webpdf']
-                or a dotted object name that represents the import path for an
-                ``Exporter`` class
-        Default: ''
-        Equivalent to: [--NbConvertApp.export_format]
-    --template=<Unicode>
-        Name of the template to use
-        Default: ''
-        Equivalent to: [--TemplateExporter.template_name]
-    --template-file=<Unicode>
-        Name of the template file to use
-        Default: None
-        Equivalent to: [--TemplateExporter.template_file]
-    --theme=<Unicode>
-        Template specific theme(e.g. the name of a JupyterLab CSS theme distributed
-        as prebuilt extension for the lab template)
-        Default: 'light'
-        Equivalent to: [--HTMLExporter.theme]
-    --sanitize_html=<Bool>
-        Whether the HTML in Markdown cells and cell outputs should be sanitized.This
-        should be set to True by nbviewer or similar tools.
-        Default: False
-        Equivalent to: [--HTMLExporter.sanitize_html]
-    --writer=<DottedObjectName>
-        Writer class used to write the
-                                            results of the conversion
-        Default: 'FilesWriter'
-        Equivalent to: [--NbConvertApp.writer_class]
-    --post=<DottedOrNone>
-        PostProcessor class used to write the
-                                            results of the conversion
-        Default: ''
-        Equivalent to: [--NbConvertApp.postprocessor_class]
-    --output=<Unicode>
-        overwrite base name use for output files.
-                    can only be used when converting one notebook at a time.
-        Default: ''
-        Equivalent to: [--NbConvertApp.output_base]
-    --output-dir=<Unicode>
-        Directory to write output(s) to. Defaults
-                                      to output to the directory of each notebook. To recover
-                                      previous default behaviour (outputting to the current
-                                      working directory) use . as the flag value.
-        Default: ''
-        Equivalent to: [--FilesWriter.build_directory]
-    --reveal-prefix=<Unicode>
-        The URL prefix for reveal.js (version 3.x).
-                This defaults to the reveal CDN, but can be any url pointing to a copy
-                of reveal.js.
-                For speaker notes to work, this must be a relative path to a local
-                copy of reveal.js: e.g., "reveal.js".
-                If a relative path is given, it must be a subdirectory of the
-                current directory (from which the server is run).
-                See the usage documentation
-                (https://nbconvert.readthedocs.io/en/latest/usage.html#reveal-js-html-slideshow)
-                for more details.
-        Default: ''
-        Equivalent to: [--SlidesExporter.reveal_url_prefix]
-    --nbformat=<Enum>
-        The nbformat version to write.
-                Use this to downgrade notebooks.
-        Choices: any of [1, 2, 3, 4]
-        Default: 4
-        Equivalent to: [--NotebookExporter.nbformat_version]
-    
-    Examples
-    --------
-    
-        The simplest way to use nbconvert is
-    
-                > jupyter nbconvert mynotebook.ipynb --to html
-    
-                Options include ['asciidoc', 'custom', 'html', 'latex', 'markdown', 'notebook', 'pdf', 'python', 'rst', 'script', 'slides', 'webpdf'].
-    
-                > jupyter nbconvert --to latex mynotebook.ipynb
-    
-                Both HTML and LaTeX support multiple output templates. LaTeX includes
-                'base', 'article' and 'report'.  HTML includes 'basic', 'lab' and
-                'classic'. You can specify the flavor of the format used.
-    
-                > jupyter nbconvert --to html --template lab mynotebook.ipynb
-    
-                You can also pipe the output to stdout, rather than a file
-    
-                > jupyter nbconvert mynotebook.ipynb --stdout
-    
-                PDF is generated via latex
-    
-                > jupyter nbconvert mynotebook.ipynb --to pdf
-    
-                You can get (and serve) a Reveal.js-powered slideshow
-    
-                > jupyter nbconvert myslides.ipynb --to slides --post serve
-    
-                Multiple notebooks can be given at the command line in a couple of
-                different ways:
-    
-                > jupyter nbconvert notebook*.ipynb
-                > jupyter nbconvert notebook1.ipynb notebook2.ipynb
-    
-                or you can specify the notebooks list in a config file, containing::
-    
-                    c.NbConvertApp.notebooks = ["my_notebook.ipynb"]
-    
-                > jupyter nbconvert --config mycfg.py
-    
-    To see all available configurables, use `--help-all`.
-    
-
-
-
-```python
-
 ```
