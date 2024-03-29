@@ -368,16 +368,16 @@ df.head()
         google.colab.kernel.accessAllowed ? 'block' : 'none';
     })();
   </script>
-</div>
+</div> 
 
     </div>
-  </div>
-
--->
+  </div> -->
 
 
-### Going through each column of the dataset
 
+
+<h3>Going through each column of the dataset </h3>
+<ol>
 1. Player - NFL player's name
 2. POS - The skilled position which include
 {QB: quaterback, RB: running back, WR: wide receiver, TE: tight end, D: team defense}
@@ -391,7 +391,7 @@ df.head()
 10. FPTS - the fantasy points predicted
 11. VAL - FPTS divided by the SAL times 1000
 12. RST% - the percent of daily fantasy teams that the player is rostered on
-
+</ol>
 
 
 ```python
