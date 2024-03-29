@@ -378,19 +378,19 @@ df.head()
 
 <h3>Going through each column of the dataset </h3>
 <ol>
-1. Player - NFL player's name
-2. POS - The skilled position which include
-{QB: quaterback, RB: running back, WR: wide receiver, TE: tight end, D: team defense}
-3. TEAM - team the position player plays for
-4. OPP - the opposing team for that week
-5. ML - the moneyline odds of the team winning. Minus odds are favorite while plus odds are underdog
-6. O/U - the betting total of the game that week
-7. SPRD - the point spread of that game.  Minus points are favorite while plus points are underdog
-8. TM/P - points per game for that team
-9. SAL - the Daily Fantasy Sports salary for choosing that player
-10. FPTS - the fantasy points predicted
-11. VAL - FPTS divided by the SAL times 1000
-12. RST% - the percent of daily fantasy teams that the player is rostered on
+<li>Player - NFL player's name</li>
+<li>POS - The skilled position which include
+{QB: quaterback, RB: running back, WR: wide receiver, TE: tight end, D: team defense}</li>
+<li>TEAM - team the position player plays for</li>
+<li>OPP - the opposing team for that week</li>
+<li>ML - the moneyline odds of the team winning. Minus odds are favorite while plus odds are underdog</li>
+<li>O/U - the betting total of the game that week</li>
+<li>SPRD - the point spread of that game.  Minus points are favorite while plus points are underdog</li>
+<li>TM/P - points per game for that team</li>
+<li>SAL - the Daily Fantasy Sports salary for choosing that player</li>
+<li>FPTS - the fantasy points predicted</li>
+<li>VAL - FPTS divided by the SAL times 1000</li>
+<li>RST% - the percent of daily fantasy teams that the player is rostered on</li>
 </ol>
 
 
