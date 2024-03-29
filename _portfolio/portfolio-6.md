@@ -842,15 +842,14 @@ df.hist(column='RST%')
     
 
 
-### The budget can be adjusted based on the Daily Fantasy Sports site as well as the number of positions.
+## Optimization Process
 - Objective: maximize the projected fantasy points
 - Decision Variables: selecting the players in the data set (binary)
-- Constarints:
-- <ol>
-  <li>Select the correct number of positions: 1 quarterback, 2 running backs, 3 wide receivers, 1 tight end, 1 team defense and 1 flex</li>
-  <li>Budget: the entire lineup needs to have a total salary or cost of up to $50,000</li>
-  <li>Rostership: we can select players that are entire popular or unpopular to take advantage of market inefficiencies and create a competitive edge from other lineups</li>
-</ol>
+- Constraints:
+    1. Select the correct number of positions: 1 quarterback, 2 running backs, 3 wide receivers, 1 tight end, 1 team defense and 1 flex
+    2. Budget: the entire lineup needs to have a total salary or cost of $50,000 or under. The budget can be adjusted based on the Daily Fantasy Sports site as well as the number of positions.
+    3. Rostership: we can select players that are popular or unpopular depending on the risk factor of the lineup
+
 
 
 ```python
