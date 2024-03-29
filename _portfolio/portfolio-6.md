@@ -838,7 +838,7 @@ df.hist(column='RST%')
 
 
     
-![png](output_18_1.png)
+<br/><img src='/images/DFS_optimization_pyomo_files:DFS_optimization_pyomo_18_1.png'>
     
 
 
