@@ -9,3 +9,4 @@ redirect_from:
 ---
 
 Welcome to my portfolio!
+Please see the CV tab for my current resume and the Portfolio Projects tab to see my current projects
