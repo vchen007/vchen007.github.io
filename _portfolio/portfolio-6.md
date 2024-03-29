@@ -1557,7 +1557,7 @@ results = opt.solve(model, tee=True)
     
 
 
-### This is the optimized lineup with the highest projected fantasy points based on the budget of $50,000 and the roster percentage greater than or equal to 4 percent.
+### This is the optimized lineup with the highest projected fantasy points based on a budget of $50,000 and a roster percentage greater than or equal to 6 percent.
 
 
 ```python
