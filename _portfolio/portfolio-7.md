@@ -1,5 +1,5 @@
 ---
-title: "Snowflake ETL Process for baseball Hall of Fame"
+title: "Snowflake ETL Process for baseball Hall of Fame Inductees"
 excerpt: "ETL process to create a data set of MLB player's career statistics"
 collection: portfolio
 ---
