@@ -6,9 +6,9 @@ collection: portfolio
 
 ## Using Snowflake to extract, load and transform the Lahman Baseball Database from a S3 Bucket
 
-## For this project, I wanted to create a table to predict Hall Of Fame inductees using the Lahman Baseball Database. The database includes all participating players in Major League Baseball from 1871 to 2023. Statistics such as on base percentage, birth country, height, weight, and career totals in hits, homeruns as well as hall of fame inducted status are incorporated in the final data set. I was able to extract the data from a S3 bucket, load it into Snowflake and transform the columns using snowflake functions. 
+## For this project, I wanted to create a table to predict Hall Of Fame inductees using the Lahman Baseball Database. The database includes all participating players in Major League Baseball from 1871 to 2023. Statistics such as on base percentage, birth country, height, weight, and career totals in hits, homeruns as well as hall of fame inducted status are incorporated in the final data set. I was able to extract the data from a S3 bucket, load it into Snowflake and transform the columns using snowflake functions
 
-## After the ETL process, I was able to export my data using Snowflake integration to the S3 bucket used.
+## After the ETL process, I was able to export my data using Snowflake integration to the S3 bucket used
 
 ### First, I set up my snowflake environment by creating a database, warehouse for loading and querying data, and adding database tables
 
