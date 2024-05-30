@@ -2,7 +2,7 @@
 main:
   - title: "CV"
     #url: /cv/
-    url: /files//Victor_Chen_Resume.pdf
+    url: /files/Resume Victor Chen.pdf
 
   - title: "Portfolio Projects"
     url: /portfolio/    
