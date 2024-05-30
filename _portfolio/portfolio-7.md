@@ -1,5 +1,5 @@
 ---
-title: "Snowflake Lahman Baseball Database Hall of Fame Inductees"
+title: "Using Snowflake for Lahman Baseball Database Hall of Fame Inductees"
 excerpt: "ETL process to create a data set of MLB player's career statistics"
 collection: portfolio
 ---
