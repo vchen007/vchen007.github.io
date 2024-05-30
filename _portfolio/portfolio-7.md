@@ -4,9 +4,9 @@ excerpt: "ETL process to create a data set of MLB player's career statistics"
 collection: portfolio
 ---
 
-# Using Snowflake to extract, load and transform using Lahman Database from a S3 Bucket
+## Using Snowflake to extract, load and transform the Lahman Baseball Database from a S3 Bucket
 
-## For this project, I wanted to create a table to predict Hall Of Fame inductees using the Lahman Database. The database includes all participating players in Major League Baseball from 1871 to 2023. Statistics such as on base percentage, birth country, height, weight, and career totals in hits, homeruns as well as hall of fame inducted status are incorporated in the final data set. I was able to extract the data from a S3 bucket, load it into Snowflake and transform the columns using snowflake functions. 
+## For this project, I wanted to create a table to predict Hall Of Fame inductees using the Lahman Baseball Database. The database includes all participating players in Major League Baseball from 1871 to 2023. Statistics such as on base percentage, birth country, height, weight, and career totals in hits, homeruns as well as hall of fame inducted status are incorporated in the final data set. I was able to extract the data from a S3 bucket, load it into Snowflake and transform the columns using snowflake functions. 
 
 ## After the ETL process, I was able to export my data using Snowflake integration to the S3 bucket used.
 
@@ -477,7 +477,3 @@ DROP TABLE hof_dev;
 |aaronha01|1976|3298|12364|2174|3771|624|98|755|2297|240|73|1402|1383|293|32|21|121|328|0.373949|0.766773|Hank Aaron|USA|180|72|R|R|of|Y|
 |aaronto01|1971|437|944|102|216|42|6|13|94|9|8|86|145|3|0|9|6|36|0.291506|0.529412|Tommie Aaron|USA|190|75|R|R|1b|N|
 
-
-```python
-
-```
