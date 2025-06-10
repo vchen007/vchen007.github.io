@@ -5,7 +5,7 @@ collection: portfolio
 ---
 
 # Is LeBron James worth his contract?
-## Taking a look at his NBA career earnings, LBJ has been paid a grand total of \$ 531,322,773 pre-tax (not including playoff bonuses) with his yearly salary increasing every season. According to basketball reference, the Chosen One is set to earn over \$ 52 million next season. But if we take a look and compare his Salary to the number of regular season games played and win percentage of those games, we can see that LBJ might not be worth his contract on the court. The number of games played is in decline while his win percentage in games played seems to be consistent over his career at about .642.    
+## Taking a look at his NBA career earnings, LBJ has been paid a grand total of \$531,322,773 pre-tax (not including playoff bonuses) with his yearly salary increasing every season. According to basketball reference, the Chosen One is set to earn over \$52 million next season. But if we take a look and compare his Salary to the number of regular season games played and win percentage of those games, we can see that LBJ might not be worth his contract on the court. The number of games played is in decline while his win percentage in games played seems to be consistent over his career at about .642.    
 
 
 ![png](/images/000027.png)
