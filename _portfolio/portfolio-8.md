@@ -24,3 +24,8 @@ collection: portfolio
 ![png](/images/000022.png)
 
 ### Overall, I believe LBJ is a great player but I believe he commands too much of the team salary cap and team wins have decrease but his career stats remain steady. Should the Lakers trade LeBron? When a player takes up so much salary cap, I believe there is no room for error when selecting role players that will fit the team's goals and strategy. Also, with the trade for Luka Dončić, who is in the prime of his career and taking up an additional \$46 million in cap space, the Lakers need to trade LeBron. 
+
+#### Reference: 
+- Lebron James stats, height, weight, position, draft status and more. Basketball. (n.d.). https://www.basketball-reference.com/players/j/jamesle01.html 
+
+- NBA CBAS & Cap history. (n.d.). https://www.spotrac.com/nba/cba 
