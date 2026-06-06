@@ -10,4 +10,4 @@ redirect_from:
 
 Welcome to my portfolio!
 Please see the CV tab for my current resume and the Portfolio Projects tab to see my current projects.
-Currently a graduate of the Wisconsin School of Business with a Master's of Science in Business Analytics.
+A graduate of the Wisconsin School of Business with a Master's of Science in Business Analytics. Currently working as a NBA charter, watching  basketball games and submitting reports on play-by-play data.
