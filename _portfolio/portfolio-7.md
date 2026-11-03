@@ -1,479 +1,622 @@
 ---
-title: "Snowflake ETL Process for baseball Hall of Fame Inductees"
-excerpt: "ETL process to create a data set of MLB player's career statistics"
+title: "Loan Default Project"
+excerpt: "Predicting loan default from bank data"
 collection: portfolio
 ---
 
-## Using Snowflake to extract, load and transform the Lahman Baseball Database from a S3 Bucket
+# Business Objective
+A bank has given us a data set and would like us to find which potential customers will likely repay a bank loan and what questions to ask on future applications based off of previous loan data.
+1. Data set of Loans and if they were paid or defaulted. 
+2. Look for the Customers who have paid and predict if future customers will pay back or default loan.
+3. Come up with questions for customer when they are applying for loan
 
-## For this project, I wanted to create a table to predict Hall Of Fame inductees using the Lahman Baseball Database. The database includes all participating players in Major League Baseball from 1871 to 2023. Statistics such as on base percentage, birth country, height, weight, and career totals in hits, homeruns as well as hall of fame inducted status are incorporated in the final data set. I was able to extract the data from a S3 bucket, load it into Snowflake and transform the columns using snowflake functions
 
-## After the ETL process, I was able to export my data using Snowflake integration to the S3 bucket used
-
-### First, I set up my snowflake environment by creating a database, warehouse for loading and querying data, and adding database tables
-
-``` sql
------------------------------
------------------------------
--- CREATE THE DATABASE
------------------------------
------------------------------
-
--- Select the role to use.
-USE ROLE sysadmin;
-
--- Create the database.
-CREATE OR REPLACE DATABASE lahman_db;
-
------------------------------
------------------------------
--- CREATE WAREHOUSES
------------------------------
------------------------------
-
--- Create a new warehouse for loading data.
-CREATE OR REPLACE WAREHOUSE lahman_loading_wh WITH
-    WAREHOUSE_SIZE='SMALL'
-    AUTO_RESUME = TRUE
-    AUTO_SUSPEND = 300;
-
--- Create a new warehouse for loading data.
-CREATE OR REPLACE WAREHOUSE lahman_query_wh WITH
-    WAREHOUSE_SIZE='SMALL'
-    -- MIN_CLUSTER_COUNT = 3
-    -- MAX_CLUSTER_COUNT = 3
-    AUTO_RESUME = TRUE
-    AUTO_SUSPEND = 300;
-
-USE WAREHOUSE lahman_loading_wh;
+```python
+import pandas as pd
 ```
 
-### Next, I created the tables to upload the data from an AWS S3 bucket
 
-``` sql
------------------------------
------------------------------
--- CREATE TABLES
------------------------------
------------------------------
-
--- Reset the context.
-USE ROLE sysadmin;
-USE DATABASE lahman_db;
-USE WAREHOUSE lahman_loading_wh;
-
--- Create the database tables.
-CREATE OR REPLACE TABLE batting (
-    playerID string,
-    yearID integer,
-    stint integer,
-    teamID string,
-    lgID string,
-    G integer,
-    G_batting integer,
-    AB integer,	
-    R integer,
-    H integer,
-    doubles	integer,
-    triples integer,	
-    HR integer,
-    RBI	integer,
-    SB integer,
-    CS integer,	
-    BB integer,	
-    SO integer,	
-    IBB integer,	
-    HBP integer,	
-    SH integer,	
-    SF integer,
-    GIDP integer,
-    G_old integer
-);
-
-CREATE OR REPLACE TABLE appearances (
-    yearID integer,
-    teamID string,	
-    lgID string,
-    playerID string,
-    G_all integer,
-    GS integer,
-    G_batting integer,	
-    G_defense integer,	
-    G_p integer,	
-    G_c integer,	
-    G_1b integer,	
-    G_2b integer,	
-    G_3b integer,	
-    G_ss integer,	
-    G_lf integer,	
-    G_cf integer,	
-    G_rf integer,	
-    G_of integer,	
-    G_dh integer,	
-    G_ph integer,	
-    G_pr integer
-);
-
-CREATE OR REPLACE TABLE people (
-    ID integer,
-    playerID string,
-    birthYear integer,
-    birthMonth integer,
-    birthDay string,
-    birthCity string,
-    birthCountry string,
-    birthState string,
-    deathYear integer,
-    deathMonth integer,
-    deathDay integer,
-    deathCountry string,
-    deathState string,
-    deathCity string,
-    nameFirst string,
-    nameLast string,
-    nameGiven string,
-    weight integer,
-    height integer,
-    bats string,
-    throws string,
-    debut date,
-    bbrefID	string,
-    finalGame date,
-    retroID string
-);
-
-CREATE OR REPLACE TABLE halloffame (
-    playerID string,
-    yearid integer,
-    votedBy	string,
-    ballots	integer,
-    needed integer,
-    votes integer,
-    inducted string,
-    category string,
-    needed_note string
-);
+```python
+df = pd.read_csv('1533148983_LoansTrainingSet.csv')
 ```
 
-### After creating the tables, I prepared the staging environment to load the data into the tables
+## Taking a Look at the Data
 
-``` sql
------------------------------
------------------------------
--- PREPARE FOR DATA LOADING
------------------------------
------------------------------
-
--- Create the staging environment.
-CREATE OR REPLACE STAGE lahman_stage
-    url = 's3://lahman*****/lahman_1871-2023_csv/';
-
-LIST @lahman_stage;
-
--- Create new file formats for csv files
-CREATE OR REPLACE FILE FORMAT lahman_csv
-    type='csv'
-    skip_header = 1
-    null_if = ('')
-    field_optionally_enclosed_by = '\042'
-;
-
--- Create file format for people table because of accents in string
-CREATE OR REPLACE FILE FORMAT lahman_people_csv
-    type='csv'
-    skip_header = 1
-    null_if = ()
-    field_optionally_enclosed_by = '\042'
-    ENCODING = 'ISO-8859-1'
-;
+```python
+df.info()
 ```
 
-### Loading the data into the tables from the S3 bucket
+    <class 'pandas.core.frame.DataFrame'>
+    RangeIndex: 256984 entries, 0 to 256983
+    Data columns (total 19 columns):
+    Loan ID                         256984 non-null object
+    Customer ID                     256984 non-null object
+    Loan Status                     256984 non-null object
+    Current Loan Amount             256984 non-null int64
+    Term                            256984 non-null object
+    Credit Score                    195308 non-null float64
+    Years in current job            245508 non-null object
+    Home Ownership                  256984 non-null object
+    Annual Income                   195308 non-null float64
+    Purpose                         256984 non-null object
+    Monthly Debt                    256984 non-null object
+    Years of Credit History         256984 non-null float64
+    Months since last delinquent    116601 non-null float64
+    Number of Open Accounts         256984 non-null int64
+    Number of Credit Problems       256984 non-null int64
+    Current Credit Balance          256984 non-null int64
+    Maximum Open Credit             256984 non-null object
+    Bankruptcies                    256455 non-null float64
+    Tax Liens                       256961 non-null float64
+    dtypes: float64(6), int64(4), object(9)
+    memory usage: 37.3+ MB
 
-``` sql
------------------------------
------------------------------
--- LOAD THE DATA
------------------------------
------------------------------
 
--- Copy into batting table (comma-delimited).
-COPY INTO batting
-    FROM @lahman_stage/Batting.csv
-    file_format = lahman_csv
-    -- VALIDATION_MODE = RETURN_ERRORS -- checks all rows
-    -- VALIDATION_MODE = RETURN_10_ROWS -- checks first 10 rows  
-    ON_ERROR = ABORT_STATEMENT -- will not load it any errors (default)
-    -- ON_ERROR = SKIP_FILE_5 -- will not load if 5 or more errors
-;
 
--- Copy into appearances table (comma-delimited).
-COPY INTO appearances
-    FROM @lahman_stage/Appearances.csv
-    file_format = lahman_csv
-    -- VALIDATION_MODE = RETURN_ERRORS -- checks all rows
-    -- VALIDATION_MODE = RETURN_10_ROWS -- checks first 10 rows  
-    ON_ERROR = ABORT_STATEMENT -- will not load it any errors (default)
-    -- ON_ERROR = SKIP_FILE_5 -- will not load if 5 or more errors
-;
-
--- Copy into people table (comma-delimited).
-COPY INTO people
-    FROM @lahman_stage/People.csv
-    file_format = lahman_people_csv
-    -- VALIDATION_MODE = RETURN_ERRORS -- checks all rows
-    -- VALIDATION_MODE = RETURN_10_ROWS -- checks first 10 rows  
-    ON_ERROR = ABORT_STATEMENT -- will not load it any errors (default)
-    -- ON_ERROR = SKIP_FILE_5 -- will not load if 5 or more errors
-;
-
--- Copy into people table (comma-delimited).
-COPY INTO halloffame
-    FROM @lahman_stage/HallOfFame.csv
-    file_format = lahman_csv
-    -- VALIDATION_MODE = RETURN_ERRORS -- checks all rows
-    -- VALIDATION_MODE = RETURN_10_ROWS -- checks first 10 rows  
-    ON_ERROR = ABORT_STATEMENT -- will not load it any errors (default)
-    -- ON_ERROR = SKIP_FILE_5 -- will not load if 5 or more errors
-;
+```python
+df.head()
 ```
 
-### Transforming the data after loading. I used zero-copy cloned tables for efficiency, saving time and storage space
 
-``` sql
------------------------------
------------------------------
--- TRANSFORM DATA (AFTER LOADING)
------------------------------
------------------------------
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-USE WAREHOUSE lahman_query_wh;
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
--- BATTING table
--- Create a development table to avoid impacting production
-CREATE OR REPLACE TABLE batting_dev 
-CLONE batting;
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Loan ID</th>
+      <th>Customer ID</th>
+      <th>Loan Status</th>
+      <th>Current Loan Amount</th>
+      <th>Term</th>
+      <th>Credit Score</th>
+      <th>Years in current job</th>
+      <th>Home Ownership</th>
+      <th>Annual Income</th>
+      <th>Purpose</th>
+      <th>Monthly Debt</th>
+      <th>Years of Credit History</th>
+      <th>Months since last delinquent</th>
+      <th>Number of Open Accounts</th>
+      <th>Number of Credit Problems</th>
+      <th>Current Credit Balance</th>
+      <th>Maximum Open Credit</th>
+      <th>Bankruptcies</th>
+      <th>Tax Liens</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>000025bb-5694-4cff-b17d-192b1a98ba44</td>
+      <td>5ebc8bb1-5eb9-4404-b11b-a6eebc401a19</td>
+      <td>Fully Paid</td>
+      <td>11520</td>
+      <td>Short Term</td>
+      <td>741.0</td>
+      <td>10+ years</td>
+      <td>Home Mortgage</td>
+      <td>33694.0</td>
+      <td>Debt Consolidation</td>
+      <td>$584.03</td>
+      <td>12.3</td>
+      <td>41.0</td>
+      <td>10</td>
+      <td>0</td>
+      <td>6760</td>
+      <td>16056</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>00002c49-3a29-4bd4-8f67-c8f8fbc1048c</td>
+      <td>927b388d-2e01-423f-a8dc-f7e42d668f46</td>
+      <td>Fully Paid</td>
+      <td>3441</td>
+      <td>Short Term</td>
+      <td>734.0</td>
+      <td>4 years</td>
+      <td>Home Mortgage</td>
+      <td>42269.0</td>
+      <td>other</td>
+      <td>$1,106.04</td>
+      <td>26.3</td>
+      <td>NaN</td>
+      <td>17</td>
+      <td>0</td>
+      <td>6262</td>
+      <td>19149</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>00002d89-27f3-409b-aa76-90834f359a65</td>
+      <td>defce609-c631-447d-aad6-1270615e89c4</td>
+      <td>Fully Paid</td>
+      <td>21029</td>
+      <td>Short Term</td>
+      <td>747.0</td>
+      <td>10+ years</td>
+      <td>Home Mortgage</td>
+      <td>90126.0</td>
+      <td>Debt Consolidation</td>
+      <td>$1,321.85</td>
+      <td>28.8</td>
+      <td>NaN</td>
+      <td>5</td>
+      <td>0</td>
+      <td>20967</td>
+      <td>28335</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>00005222-b4d8-45a4-ad8c-186057e24233</td>
+      <td>070bcecb-aae7-4485-a26a-e0403e7bb6c5</td>
+      <td>Fully Paid</td>
+      <td>18743</td>
+      <td>Short Term</td>
+      <td>747.0</td>
+      <td>10+ years</td>
+      <td>Own Home</td>
+      <td>38072.0</td>
+      <td>Debt Consolidation</td>
+      <td>$751.92</td>
+      <td>26.2</td>
+      <td>NaN</td>
+      <td>9</td>
+      <td>0</td>
+      <td>22529</td>
+      <td>43915</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>0000757f-a121-41ed-b17b-162e76647c1f</td>
+      <td>dde79588-12f0-4811-bab0-e2b07f633fcd</td>
+      <td>Fully Paid</td>
+      <td>11731</td>
+      <td>Short Term</td>
+      <td>746.0</td>
+      <td>4 years</td>
+      <td>Rent</td>
+      <td>50025.0</td>
+      <td>Debt Consolidation</td>
+      <td>$355.18</td>
+      <td>11.5</td>
+      <td>NaN</td>
+      <td>12</td>
+      <td>0</td>
+      <td>17391</td>
+      <td>37081</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
--- Explore development (“dev”) table looking at all of Hank Aaron's seasons
-SELECT *
-FROM batting_dev
-WHERE playerID = 'aaronha01'
-;
 
--- Explore development (“dev”) table looking at Hank Aaron's total At-bats, Runs, Hits, On base percentage,
--- Stolen bases, caught stealing and steal percentage
-SELECT playerID,
-        SUM(ZEROIFNULL(AB)) as total_AB,
-        SUM(ZEROIFNULL(H)) as total_H,
-        SUM(ZEROIFNULL(BB)) as total_BB,
-        SUM(ZEROIFNULL(HBP)) as total_HBP,
-        SUM(ZEROIFNULL(SF)) as total_SF,
-        DIV0((total_H + total_BB + total_HBP), (total_AB + total_BB + total_SF + total_HBP)) as on_base_percent,
-        SUM(ZEROIFNULL(SB)) as total_SB,
-        SUM(ZEROIFNULL(CS)) as total_CS,
-        DIV0(total_SB, (total_SB + total_CS)) as steal_percent
-FROM batting_dev
-WHERE playerID = 'aaronha01'
-GROUP BY playerID
-;
 
--- CREATE VIEW for career statistics for each player by playerID
-CREATE OR REPLACE VIEW batting_view AS
-SELECT playerID,
-        MAX(yearID) as last_year_played,
-        SUM(ZEROIFNULL(G)) as total_games,
-        SUM(ZEROIFNULL(AB)) as total_AB,
-        SUM(ZEROIFNULL(R)) as total_R,
-        SUM(ZEROIFNULL(H)) as total_H,
-        SUM(ZEROIFNULL(doubles)) as total_doubles,
-        SUM(ZEROIFNULL(triples)) as total_triples,
-        SUM(ZEROIFNULL(HR)) as total_HR,
-        SUM(ZEROIFNULL(RBI)) as total_RBI,
-        SUM(ZEROIFNULL(SB)) as total_SB,
-        SUM(ZEROIFNULL(CS)) as total_CS,
-        SUM(ZEROIFNULL(BB)) as total_BB,
-        SUM(ZEROIFNULL(SO)) as total_SO,
-        SUM(ZEROIFNULL(IBB)) as total_IBB,
-        SUM(ZEROIFNULL(HBP)) as total_HBP,
-        SUM(ZEROIFNULL(SH)) as total_SH,
-        SUM(ZEROIFNULL(SF)) as total_SF,
-        SUM(ZEROIFNULL(GIDP)) as total_GIDP,
-        DIV0((total_H + total_BB + total_HBP), (total_AB + total_BB + total_SF + total_HBP)) as on_base_percent,
-        DIV0(total_SB, (total_SB + total_CS)) as steal_percent
-FROM batting_dev
-GROUP BY playerID
-;
+Going through each column, duplicate values have been recorded, missing information needs to be filled in multiple columns and object columns need to be convereted to numbers. Also, the 'credit score' column has a recording error. The column most important column we need for analysis is 'Loan Status'. Which is our column that shows if a loan was paid off or defaulted.
 
--- Confirm the calculations is correct.
-SELECT * 
-FROM batting_view
-WHERE playerID = 'aaronha01'
-;
+
+```python
+# drop exact duplicate rows 
+df.drop_duplicates(keep='first', inplace=True)
 ```
 
-``` sql
--- Appearances table is needed to get players primary position played
--- Create a development table for appearances to avoid impacting production
-CREATE OR REPLACE TABLE appearances_dev 
-CLONE appearances;
 
--- Using CASE statement from Appearances table to get player position
--- Window function to group the games played by playerID
-CREATE OR REPLACE VIEW position_view AS
-SELECT playerID,
-    CASE GREATEST(G_p, G_c, G_1b, G_2b, G_3b, G_ss, G_of, G_dh, G_ph, G_pr)
-        WHEN G_p THEN 'p'
-        WHEN G_c THEN 'c'
-        WHEN G_1b THEN '1b'
-        WHEN G_2b THEN '2b'
-        WHEN G_3b THEN '3b'
-        WHEN G_ss THEN 'ss'
-        WHEN G_of THEN 'of'
-        WHEN G_p THEN 'dh'
-        WHEN G_p THEN 'ph'
-        WHEN G_p THEN 'pr'
-    END player_position
-FROM (
-SELECT playerID, SUM(G_p) as G_p, SUM(G_c) as G_c, SUM(G_1b) as G_1b, SUM(G_2b) G_2b, SUM(G_3b) as G_3b, SUM(G_ss) as G_ss, 
-SUM(G_of) as G_of, SUM(G_dh) as G_dh, SUM(G_ph) as G_ph, SUM(G_pr) as G_pr
-FROM appearances_dev
-GROUP BY playerID
-)
-;
-
--- Confirming CASE statement is correct
-SELECT *
-FROM position_view
-WHERE playerID = 'aaronha01'
-;
+```python
+# Split Columns between numbers and objects to groupby 'Loan ID' so we can fill in missing values
+df_obj = df.select_dtypes(include='object')
+df_num = df.select_dtypes(exclude='object')
 ```
 
-``` sql
--- People Table to get name, weight, height, birth country, 
--- Create a development table to avoid impacting production
-CREATE OR REPLACE TABLE people_dev 
-CLONE people;
-
--- CREATE VIEW for group by playerID
-CREATE OR REPLACE VIEW people_view AS
-SELECT playerID, 
-        CONCAT_WS(' ',nameFirst, nameLast) as name,
-        birthCountry,
-        weight, 
-        height, 
-        bats, 
-        throws
-FROM people_dev
-;
-
--- Confirm the people view is correct.
-SELECT *
-FROM people_view;
+```python
+# Loan ID to numbers data frame so can use groupby
+df_num['Loan ID'] = df['Loan ID']
+```
+```python
+# groupby Loan ID and takes the max of each loan
+df_num = df_num.groupby('Loan ID').max().reset_index()
+df_obj = df_obj.drop_duplicates(subset='Loan ID')
+df = df_obj.merge(df_num) 
 ```
 
-``` sql
--- Hall of Fame table to get inducted status
--- Create a Hall of fame development table to avoid impacting production
-CREATE OR REPLACE TABLE hof_dev 
-CLONE halloffame;
 
--- Creating view for all hall of fame inducted status for each playerID
-CREATE OR REPLACE VIEW hof_view AS
-SELECT playerid, 
-        MAX(inducted) as inducted
-FROM hof_dev
-GROUP BY playerid
-;
-
--- Confirm Hall of fame table is correct
-SELECT *
-FROM hof_view
-ORDER BY playerid
-;
+```python
+# grabbing Loan and Customer ID
+loan_cust_id = df[['Loan ID', 'Customer ID']]
+df.drop(['Loan ID', 'Customer ID'], axis=1, inplace=True)
 ```
 
-### Finally, I joined the tables together for the final view
+## Filling in Missing Data
+Columns with NaN values were filled with values similar to data in the row
 
-``` sql
--- Create a View to JOIN the tables together 
-CREATE OR REPLACE VIEW final_view AS
-SELECT *
-FROM batting_view
-LEFT JOIN people_view
-USING (playerid)
-LEFT JOIN position_view
-USING (playerid)
-LEFT JOIN hof_view
-USING (playerid)
-ORDER BY playerid;
 
--- confirm final view is correct
-SELECT *
-FROM final_view;
-
+```python
+# BANKRUPTCIES
+df['Bankruptcies'].fillna(0.0, inplace=True)
+df['Tax Liens'].fillna(0.0, inplace=True)
+# Months since last delinquent
+df['Months since last delinquent'].fillna(0.0, inplace = True)
+# Replace Column Years in current job == < 1 Year to .5 integer
+df['Years in current job'].replace('< 1 year', 0.5, inplace=True)
+# Replace Column Years in current job == 10+ Year to 15 year
+df['Years in current job'].replace('10+ years', '15 year', inplace=True)
+# Fill NaN Values in Years in current job column to '0 year' string
+df['Years in current job'] = df['Years in current job'].fillna(value='0 years')
+# Extracts digit from Years in current job and changes Years in current job to int
+df['Years in current job'] = df['Years in current job'].str.extract('(\d+)').astype(float)
+# Fill NaN Values in Years to 0.5 for < 1 year
+df['Years in current job'] = df['Years in current job'].fillna(value=0.5)
 ```
 
-### Unloading the data to my S3 bucket using Snowflake integration
+### CORRECTING DATA INPUT ERRORS
 
-``` sql
-----------------------------------
--- UNLOADING DATA
-----------------------------------
 
--- SETTING UP S3 intergration
-
-USE ROLE ACCOUNTADMIN;
-SELECT SYSTEM$GET_SNOWFLAKE_PLATFORM_INFO();
-
--- Create INTERGRATION TO S3 bucket
-CREATE STORAGE INTEGRATION s3_int
-  TYPE = EXTERNAL_STAGE
-  STORAGE_PROVIDER = 'S3'
-  ENABLED = TRUE
-  STORAGE_AWS_ROLE_ARN = 'arn:aws:iam::**************:role/mysnowflakerole'
-  STORAGE_ALLOWED_LOCATIONS = ('s3://lahman****/lahman_1871-2023_csv/', 's3://lahman****/lahman_1871-2023_csv/');
-
--- describe integration 
-DESC INTEGRATION s3_int;
-
--- Create a stage for exporting data
-USE ROLE sysadmin;
-CREATE OR REPLACE STAGE lahman_export_stage
-    URL = 's3://lahman****/lahman_1871-2023_csv/'
-    STORAGE_INTEGRATION = s3_int;
-
--- copy final view into staging
-COPY INTO @lahman_export_stage
-FROM final_view;
-
--- Examine the files in the NAMED STAGE.
-LIST @lahman_export_stage;
-
--- Verify there is data in the file.
-SELECT $1, $2, $3, $4 FROM @lahman_export_stage/data_0_0_0.csv.gz LIMIT 10;
-
+```python
+# replace other to Other
+df.replace('other', 'Other', inplace=True)
+# Changes #VALUE! in Maximum Open Credit to 0
+df.loc[df['Maximum Open Credit'] == '#VALUE!', 'Maximum Open Credit'] = df['Current Loan Amount'].median()
+# found median of Loan Amount without the 99999999 values
+loan_median = df[df['Current Loan Amount'] < 99999999]['Current Loan Amount'].median()
+# Change the 9999999 Loan Amount Values to loan median
+df.loc[df['Current Loan Amount'] == 99999999, 'Current Loan Amount'] = loan_median
+# replace HaveMortgage to Home Mortgage
+df.replace('HaveMortgage', 'Home Mortgage', inplace=True)
 ```
 
-### Removing clones and staging after use.
+### For a score with a range between 300-850, a credit score of 700 or above is generally considered good. A score of 800 or above on the same range is considered to be excellent. Most credit scores fall between 600 and 750
 
-``` sql
--- Remove the file from staging, and drop the stage.
-REMOVE @lahman_export_stage/data_0_0_0.csv.gz;
-LIST @lahman_export_stage;
-DROP STAGE lahman_export_stage;
 
--- Drop the development tables (no longer needed).
-DROP TABLE batting_dev;
-DROP TABLE appearances_dev;
-DROP TABLE people_dev;
-DROP TABLE hof_dev;
+```python
+df['Credit Score'].describe()
 ```
 
-### Sample of the final data set
 
-|PLAYERID|LAST_YEAR_PLAYED|TOTAL_GAMES|TOTAL_AB|TOTAL_R|TOTAL_H|TOTAL_DOUBLES|TOTAL_TRIPLES|TOTAL_HR|TOTAL_RBI|TOTAL_SB|TOTAL_CS|TOTAL_BB|TOTAL_SO|TOTAL_IBB|TOTAL_HBP|TOTAL_SH|TOTAL_SF|TOTAL_GIDP|ON_BASE_PERCENT|STEAL_PERCENT|NAME|BIRTHCOUNTRY|WEIGHT|HEIGHT|BATS|THROWS|PLAYER_POSITION|INDUCTED|
-|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|
-|aardsda01|2015|331|4|0|0|0|0|0|0|0|0|0|2|0|0|1|0|0|0|0|David Aardsma|USA|215|75|R|R|p|N|
-|aaronha01|1976|3298|12364|2174|3771|624|98|755|2297|240|73|1402|1383|293|32|21|121|328|0.373949|0.766773|Hank Aaron|USA|180|72|R|R|of|Y|
-|aaronto01|1971|437|944|102|216|42|6|13|94|9|8|86|145|3|0|9|6|36|0.291506|0.529412|Tommie Aaron|USA|190|75|R|R|1b|N|
 
+
+    count    171202.000000
+    mean       1261.776013
+    std        1775.229972
+    min         585.000000
+    25%         716.000000
+    50%         735.000000
+    75%         745.000000
+    max        7510.000000
+    Name: Credit Score, dtype: float64
+
+
+
+
+```python
+df['Credit Score'] = df['Credit Score'].apply(lambda x : x / 10 if x > 1000 else x)
+```
+
+
+```python
+df['Credit Score'].describe()
+```
+
+
+
+
+    count    171202.000000
+    mean        722.755698
+    std          26.827283
+    min         585.000000
+    25%         712.000000
+    50%         732.000000
+    75%         742.000000
+    max         751.000000
+    Name: Credit Score, dtype: float64
+
+
+### Changing Object Columns to numeric 
+Many of the columns have object data types including: Term, Home Ownership, Purpose, Loan Status, Monthly Debt and Maximum Open Credit. Those that will be changed to nonordinal datatype include Term, Home Ownership, Purpose. The other columns will be changed to numerical. Loan Status, which is our target, will be converted to 0 based on being paid off and 1 being unpaid.
+
+
+```python
+d = {'Fully Paid': 0, 'Charged Off': 1}
+df['Loan Status'] = df['Loan Status'].map(d)
+```
+
+
+```python
+# removing , and $ from Monthly Debt and changing to float
+df['Monthly Debt'] = df['Monthly Debt'].str.replace(',','')
+df['Monthly Debt'] = df['Monthly Debt'].str.replace('$','')
+df['Monthly Debt'] = df['Monthly Debt'].astype(float)
+```
+
+
+```python
+df['Maximum Open Credit'] = df['Maximum Open Credit'].astype(float)
+```
+
+### Creating Dummies for the Columns: Term, Home Ownership and Purpose
+
+
+```python
+df = pd.get_dummies(df, drop_first=True)
+```
+
+```python
+loan = df.corr()['Loan Status']
+```
+
+```python
+sns.countplot(x='Loan Status', data=df)
+```
+
+![png](/images/output_29_1.png)
+
+
+
+```python
+sns.scatterplot(x='Credit Score', y='Annual Income', data=df)
+```
+
+
+![png](/images/output_30_1.png)
+
+
+
+```python
+# Take out Loan Status and Annual Income to predict them
+loan_status = df['Loan Status']
+income = df['Annual Income']
+df.drop(['Loan Status', 'Annual Income'], axis=1, inplace=True)
+```
+
+```python
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import r2_score, mean_squared_error
+```
+
+```python
+filled = df[df['Credit Score'].notnull()]
+missing = df[df['Credit Score'].isnull()]
+```
+
+```python
+X_train, X_test, y_train, y_test = train_test_split(filled.drop('Credit Score', axis=1), 
+                                                    filled['Credit Score'], test_size=0.4, random_state=101)
+```
+
+```python
+L = LinearRegression()
+```
+
+```python
+L.fit(X_train, y_train)
+```
+
+```python
+r2_score(y_train, L.predict(X_train))
+```
+    0.28462988125672517
+
+
+```python
+mean_squared_error(y_train, L.predict(X_train))**.5
+```
+
+    22.740334260998736
+
+
+
+```python
+predict = L.predict(X_test)
+```
+
+
+```python
+predictions = L.predict(missing.drop('Credit Score', axis=1))
+```
+
+
+```python
+missing['Credit Score'] = predictions
+df = pd.concat([missing, filled])
+```
+
+```python
+# Adding Annual Income Column back
+df['Annual Income'] = income
+```
+
+
+```python
+filled = df[df['Annual Income'].notnull()]
+missing = df[df['Annual Income'].isnull()]
+```
+
+
+```python
+X_train, X_test, y_train, y_test = train_test_split(filled.drop('Annual Income', axis=1), 
+                                                    filled['Annual Income'], test_size=0.4, random_state=101)
+```
+
+
+```python
+L.fit(X_train, y_train)
+```
+
+```python
+print(r2_score(y_test, L.predict(X_test)))
+print(mean_squared_error(y_test, L.predict(X_test))**.5)
+```
+
+    0.3833735024596715
+    38215.97609792463
+
+
+
+```python
+prediction = L.predict(missing.drop('Annual Income', axis=1))
+missing['Annual Income'] = prediction
+```
+
+
+```python
+df = pd.concat([missing, filled])
+```
+
+
+```python
+df['Loan Status'] = loan_status
+```
+
+
+```python
+sns.countplot(x='Loan Status', data=df)
+```
+
+![png](/images/output_52_1.png)
+
+
+## Imbalanced Data
+
+
+Using undersampling to balance out the number of Loans that were paid off and unpaid. The under sampled 'Loan Status' which is the charged off loans will match the number of  paid off loans.
+
+
+```python
+# Shuffle the Dataset.
+shuffled_df = df.sample(frac=1,random_state=4)
+
+# Put all the charged off loan class in a separate dataset.
+upaid_df = shuffled_df.loc[shuffled_df['Loan Status'] == 1]
+
+#Randomly select 492 observations from the paid off (majority class)
+paid_df = shuffled_df.loc[shuffled_df['Loan Status'] == 0].sample(n=39509,random_state=42)
+
+# Concatenate both dataframes again
+normalized_df = pd.concat([upaid_df, paid_df])
+```
+
+
+```python
+#plot the dataset after the undersampling
+plt.figure(figsize=(8, 8))
+sns.countplot('Loan Status', data=normalized_df)
+plt.title('Balanced Classes')
+plt.show()
+```
+
+
+![png](/images/output_56_0.png)
+
+
+
+```python
+X = normalized_df.drop('Loan Status', axis=1)
+y = normalized_df['Loan Status']
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.4, random_state=101, 
+                                                    stratify=normalized_df['Loan Status'])
+```
+
+
+```python
+from sklearn.linear_model import LogisticRegression
+log = LogisticRegression()
+```
+
+
+```python
+log.fit(X_train, y_train)
+```
+
+
+
+
+    LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                       intercept_scaling=1, l1_ratio=None, max_iter=100,
+                       multi_class='auto', n_jobs=None, penalty='l2',
+                       random_state=None, solver='lbfgs', tol=0.0001, verbose=0,
+                       warm_start=False)
+
+
+
+
+```python
+predictions = log.predict(X_test)
+```
+
+
+```python
+from sklearn.metrics import classification_report, confusion_matrix
+```
+
+
+```python
+print(classification_report(y_test, predictions))
+```
+
+                  precision    recall  f1-score   support
+    
+               0       0.59      0.60      0.60     15804
+               1       0.60      0.59      0.59     15804
+    
+        accuracy                           0.59     31608
+       macro avg       0.59      0.59      0.59     31608
+    weighted avg       0.59      0.59      0.59     31608
+    
+
+
+Based off the classification report, we scored about 60% accuracy that people will both pay back their loans and if they will default on their loans. 
+
+
+```python
+import numpy as np   
+```
+
+```python
+feature_importance = abs(log.coef_[0])
+feature_importance = 100.0 * (feature_importance / feature_importance.max())
+sorted_idx = np.argsort(feature_importance)
+pos = np.arange(sorted_idx.shape[0]) + .5
+
+featfig = plt.figure()
+featax = featfig.add_subplot(1, 1, 1)
+featax.barh(pos, feature_importance[sorted_idx], align='center')
+featax.set_yticks(pos)
+featax.set_yticklabels(np.array(X.columns)[sorted_idx], fontsize=8)
+featax.set_xlabel('Relative Feature Importance')
+
+plt.tight_layout()   
+plt.show()
+```
+
+
+![png](/images/output_65_0.png)
+
+
+## Conclusion
+
+After looking at the chart above which feature importance that is based off of the column coefficients, the most important questions to ask future loan applicants are:
+1. How much is their monthly debt?
+2. What is their credit score?
+3. How much is their current loan amount?
+4. What is their annual income?
