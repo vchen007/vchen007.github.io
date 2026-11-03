@@ -2,9 +2,55 @@
 title: "Tableau Dashboard Updated"
 excerpt: "Looking at First Down Plays in the NFL - updated 2026 live dashboard"
 collection: portfolio
+author_profile: false
 ---
 
-<div class='tableauPlaceholder' id='viz2026LiveFirstDown' style='position: relative'><noscript><a href='https://public.tableau.com/app/profile/victor.c4632/viz/2026LiveFirstDownDashboard/Dashboard2'><img alt='2026 Live First Down Dashboard' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;20&#47;2026LiveFirstDownDashboard&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='2026LiveFirstDownDashboard&#47;Dashboard2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;20&#47;2026LiveFirstDownDashboard&#47;Dashboard2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz2026LiveFirstDown');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*1.5)+'px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+<style>
+  /* This dashboard is ~1250px wide, so let this page use the full width instead of the
+     narrow column next to the profile sidebar (the sidebar is turned off in the front matter). */
+  #main .page { float: none; width: 100%; margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
+  .viz-intro { max-width: 60em; margin-bottom: 1em; }
+  /* The frame centers the dashboard and clips it to the scaled size (see the script below). */
+  #viz2026LiveFirstDown-frame { max-width: 1250px; margin: 0 auto; overflow: hidden; }
+  #viz2026LiveFirstDown { transform-origin: 0 0; }
+</style>
 
+<div class="viz-intro">
 An updated version of the First Down dashboard (the 2026 Live First Down Dashboard), looking at how often NFL teams run or pass on first down plays.
 <a href="https://public.tableau.com/app/profile/victor.c4632/viz/2026LiveFirstDownDashboard/Dashboard2" target="_blank" rel="noopener">Here is the link to the Tableau Public Dashboard</a>
+</div>
+
+<div id='viz2026LiveFirstDown-frame'>
+<div class='tableauPlaceholder' id='viz2026LiveFirstDown' style='position: relative'><noscript><a href='https://public.tableau.com/app/profile/victor.c4632/viz/2026LiveFirstDownDashboard/Dashboard2'><img alt='2026 Live First Down Dashboard' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;20&#47;2026LiveFirstDownDashboard&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='2026LiveFirstDownDashboard&#47;Dashboard2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;20&#47;2026LiveFirstDownDashboard&#47;Dashboard2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>
+</div>
+<script type='text/javascript'>
+  (function () {
+    // The dashboard is a fixed-size layout. If you resize it in Tableau, update these two numbers.
+    var NATIVE_W = 1250, NATIVE_H = 4030;
+
+    var frame = document.getElementById('viz2026LiveFirstDown-frame');
+    var divElement = document.getElementById('viz2026LiveFirstDown');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+
+    // Show the dashboard at its full size...
+    divElement.style.width = NATIVE_W + 'px';
+    vizElement.style.width = NATIVE_W + 'px';
+    vizElement.style.height = NATIVE_H + 'px';
+
+    // ...and shrink it to fit on screens narrower than the dashboard. If it is only a few
+    // pixels too wide, keep it at full size (sharper text) and let it spill into the page margin.
+    function fit() {
+      var scale = Math.min(1, frame.clientWidth / NATIVE_W);
+      if (scale >= 0.97) scale = 1;
+      divElement.style.transform = scale < 1 ? 'scale(' + scale + ')' : 'none';
+      frame.style.overflow = scale < 1 ? 'hidden' : 'visible';
+      frame.style.height = Math.ceil(NATIVE_H * scale) + 'px';
+    }
+    fit();
+    window.addEventListener('resize', fit);
+
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  })();
+</script>
