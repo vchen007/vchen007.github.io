@@ -17,8 +17,9 @@ every date combination in the travel window and summarize the best options.
 | Trip | Round trip, every depart/return pair in the window (28 pairs) |
 | Travelers | 1 adult, economy, USD |
 
-All dates are departure dates. Flights from SNA usually land in Taipei two
-calendar days later (date line), so a Nov 25 departure arrives about Nov 27.
+All dates are departure dates. Because of the date line, flights from SNA land
+in Taipei the next day (morning departures) or two days later (late-night
+departures), so a Nov 25 departure arrives Nov 26 or Nov 27.
 
 ## Setup (first run only)
 

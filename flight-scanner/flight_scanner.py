@@ -13,8 +13,9 @@ Price sources:
   links    No prices, just a search link for every date pair
 
 Default trip: Nov 25 - Dec 2, 2026, round trip, 1 adult, economy, USD.
-All dates are the dates you DEPART (SNA -> TPE flights usually land in Taipei
-two calendar days later because of the date line).
+All dates are the dates you DEPART. Because of the date line, SNA -> TPE
+flights land the next day (morning departures) or two days later (late-night
+departures).
 
 Examples:
   python flight_scanner.py                       # round trip, every date pair

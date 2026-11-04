@@ -60,7 +60,8 @@ export SERPAPI_KEY=your_key_here
 ```
 
 Run `python flight_scanner.py --help` for all flags. All dates are departure
-dates; SNA → TPE flights usually land two calendar days later.
+dates. Because of the date line, SNA → TPE flights land the next day (morning
+departures) or two days later (late-night departures).
 
 ## Use it from Claude Code
 
