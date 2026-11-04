@@ -3,3 +3,6 @@ price_history.json
 results*.json
 __pycache__/
 .venv/
+email/
+fares*.json
+last_email.txt
