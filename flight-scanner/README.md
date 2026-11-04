@@ -8,6 +8,7 @@ keeps the cheapest itinerary, then prints:
 - the best option with a Google Flights link to book or verify
 - fares under your target price (`--max-price`)
 - price changes since the last run (saved in `price_history.json`)
+- the 6 shortest flights, each with its price on every departure date (`--fastest N`)
 - optionally, an email report with day-over-day changes (`--email-dir`)
 
 With `--round-trip` it prices every departure/return pair instead and adds a
@@ -53,6 +54,7 @@ export SERPAPI_KEY=your_key_here
 ```bash
 .venv/bin/python flight_scanner.py --max-stops 1           # 1 stop or fewer (SNA has no nonstop to TPE)
 .venv/bin/python flight_scanner.py --max-price 600         # flag fares at or under $600
+.venv/bin/python flight_scanner.py --fastest 10            # list the 10 shortest flights (0 hides them)
 .venv/bin/python flight_scanner.py --round-trip --min-nights 5
 .venv/bin/python flight_scanner.py --cabin business --adults 2
 .venv/bin/python flight_scanner.py --csv sna_tpe.csv --json sna_tpe.json
@@ -72,7 +74,8 @@ python3 flight_scanner.py --source firecrawl --firecrawl-json fares.json \
     --email-dir email --previous last_email.txt
 ```
 
-This writes `email/subject.txt`, `email/body.txt` and `email/body.html`. The
+This writes `email/subject.txt`, `email/body.txt` and `email/body.html`: the
+cheapest fare per day, then the shortest flights with their prices. The
 plain-text body ends with a `FARES BY DATE` block; pass a previous report's
 plain-text body as `--previous` and the new report shows each day's price
 change and calls out moves of $25 or more.

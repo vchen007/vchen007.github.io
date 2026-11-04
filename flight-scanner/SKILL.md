@@ -58,6 +58,7 @@ Map the user's request to flags:
 | "round trip" / "coming back on ..." | `--round-trip`, plus `--min-nights N` / `--max-nights N` for stay length |
 | "nonstop" / "max 1 stop" | `--max-stops 0` / `--max-stops 1` (SNA has no nonstop to TPE) |
 | "under $600" / "alert me below X" | `--max-price 600` |
+| "fastest flights" / "shortest flight time" | `--fastest N` (default 6 shortest flights, each with its price per date) |
 | "business class" / "premium economy" | `--cabin business` / `--cabin premium-economy` |
 | "2 people" | `--adults 2` |
 | "in TWD" | `--currency TWD` |
@@ -94,13 +95,16 @@ it instead:
    airlines, stops, and its Google Flights link. If several dates tie, say so.
 2. Show the cheapest fare for each departure day from the "Cheapest options"
    table.
-3. Point out patterns across dates, for example "leaving Tue Dec 1 instead of
+3. From the "Shortest flights" table, point out fast options that cost little
+   more than the cheapest fare (e.g. "United via SFO is 4 hours shorter for
+   $25 more").
+4. Point out patterns across dates, for example "leaving Tue Dec 1 instead of
    Wed Nov 25 saves about $120", or "Thanksgiving week costs more".
-4. If the output has a "Changes since last run" section, summarize the
+5. If the output has a "Changes since last run" section, summarize the
    biggest drops and rises.
-5. If `--max-price` was given, list the fares under the threshold, or say
+6. If `--max-price` was given, list the fares under the threshold, or say
    none were found.
-6. Say that prices come from Google Flights at scan time, can change, and
+7. Say that prices come from Google Flights at scan time, can change, and
    should be confirmed on the booking link before buying. Never claim a fare
    is booked or guaranteed.
 

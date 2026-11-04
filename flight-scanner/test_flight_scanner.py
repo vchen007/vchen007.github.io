@@ -137,6 +137,48 @@ def test_email_report_round_trips_prices():
     assert "First report, nothing to compare yet." in first
 
 
+def _it(price, dep, arr, minutes, airlines=("STARLUX Airlines",), route="SNA-SFO-TPE"):
+    return fs.Itinerary(price, list(airlines), len(route.split("-")) - 2, minutes, dep, arr, route)
+
+
+def test_shortest_flights_groups_same_flight_across_dates():
+    d1, d2 = date(2026, 11, 27), date(2026, 11, 28)
+    r1 = fs.ScanResult(fs.DatePair(d1, None), "u1")
+    r1.itineraries = [
+        _it(1416, "2026-11-27 19:56", "2026-11-29 05:15", 1039),
+        _it(503, "2026-11-27 07:00", "2026-11-28 20:30", 1290, ("Delta",), "SNA-SEA-TPE"),
+    ]
+    r2 = fs.ScanResult(fs.DatePair(d2, None), "u2")
+    r2.itineraries = [
+        _it(662, "2026-11-28 19:56", "2026-11-30 05:15", 1039),
+        _it(700, "2026-11-28 19:56", "2026-11-30 05:15", 1039),  # same flight listed twice
+        _it(503, "2026-11-28 07:00", "2026-11-29 20:30", 1290, ("Delta",), "SNA-SEA-TPE"),
+    ]
+    top = fs.shortest_flights([r1, r2], n=6)
+    assert [g["itinerary"].airlines for g in top] == [["STARLUX Airlines"], ["Delta"]]
+    fastest = top[0]
+    assert fastest["offset"] == 2
+    assert [(r.pair.depart, p) for r, p in fastest["prices"]] == [(d2, 662), (d1, 1416)]  # cheapest first
+    assert len(fs.shortest_flights([r1, r2], n=1)) == 1 and fs.shortest_flights([r1, r2], n=0) == []
+    table = fs.render_shortest([r1, r2], S)
+    assert "17h 19m" in table and "7:56 PM -> 5:15 AM (+2 days)" in table
+    assert "Sat Nov 28 $662, Fri Nov 27 $1,416" in table
+
+
+def test_email_lists_shortest_flights():
+    parsed = fs.parse_firecrawl(FIRECRAWL)
+    pairs = fs.build_pairs(date(2026, 11, 25), date(2026, 11, 25), one_way=True)
+    res = fs.scan(pairs, S, "firecrawl", fetch=fs.firecrawl_fetcher(parsed), delay=0, retries=0,
+                  log=lambda *a, **k: None)
+    _, text, html_body = fs.render_email(res, S, None, datetime(2026, 11, 4, 13, 15), date(2026, 11, 4))
+    assert "Shortest flights (the 2 fastest" in text
+    assert "18h 10m - United · 1 stop (SFO), 7:35 PM -> 5:45 AM (+2 days)\n  Wed Nov 25 $528" in text
+    assert "Shortest flights</h3>" in html_body and "Wed Nov 25 $528</a>" in html_body
+    assert fs.parse_fares_block(text) == {"2026-11-25": 503.0}  # still readable by the next run
+    _, text, html_body = fs.render_email(res, S, None, datetime(2026, 11, 4, 13, 15), date(2026, 11, 4), fastest=0)
+    assert "Shortest flights" not in text and "Shortest flights" not in html_body
+
+
 if __name__ == "__main__":
     import pathlib, tempfile
     for name, fn in list(globals().items()):

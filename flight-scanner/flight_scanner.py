@@ -98,7 +98,7 @@ class ScanResult:
     best: Itinerary | None = None
     options: int = 0
     error: str = ""
-    extra: dict = field(default_factory=dict)
+    itineraries: list[Itinerary] = field(default_factory=list)  # every option found
 
 
 @dataclass
@@ -418,6 +418,7 @@ def scan(
             for attempt in range(retries + 1):
                 try:
                     options = fetch(pair, s)
+                    res.itineraries = list(options)
                     res.options = len(options)
                     res.best = min(options, key=lambda it: it.price) if options else None
                     res.error = ""
@@ -479,6 +480,11 @@ def render_table(results: list[ScanResult], s: Settings, top: int | None = None)
             b.route,
         ]
         rows.append(tuple(row))
+    return _text_table(rows)
+
+
+def _text_table(rows: list[tuple[str, ...]]) -> str:
+    """Left-aligned columns with a dashed line under the header row."""
     widths = [max(len(row[c]) for row in rows) for c in range(len(rows[0]))]
     lines = []
     for j, row in enumerate(rows):
@@ -518,6 +524,58 @@ def render_grid(results: list[ScanResult], s: Settings) -> str:
     if low is not None:
         lines.append("* = cheapest")
     return "\n".join(lines)
+
+
+def _day_offset(it: Itinerary) -> int:
+    """Calendar days between departure and arrival, in local dates."""
+    try:
+        return (date.fromisoformat(it.arrive_time[:10]) - date.fromisoformat(it.depart_time[:10])).days
+    except ValueError:
+        return 0
+
+
+def shortest_flights(results: list[ScanResult], n: int = 6) -> list[dict]:
+    """The n fastest distinct flights across all dates, with each date's price.
+
+    The same airlines, route and departure/arrival times on several dates count
+    as one flight, so the list shows n different flights instead of one fast
+    flight repeated for every day. Each entry is {"itinerary", "offset",
+    "prices"}, where prices is [(ScanResult, price), ...], cheapest first.
+    """
+    groups: dict[tuple, dict] = {}
+    for r in results:
+        for it in r.itineraries:
+            if not it.duration_min:
+                continue
+            offset = _day_offset(it)
+            key = (tuple(it.airlines), it.route, it.depart_time[11:16], it.arrive_time[11:16],
+                   offset, it.duration_min, it.note)
+            g = groups.setdefault(key, {"itinerary": it, "offset": offset, "prices": {}})
+            prev = g["prices"].get(r.pair.key)
+            if prev is None or it.price < prev[1]:  # Google can list a flight twice
+                g["prices"][r.pair.key] = (r, it.price)
+    flights = []
+    for g in groups.values():
+        prices = sorted(g["prices"].values(), key=lambda x: (x[1], x[0].pair.key))
+        flights.append({"itinerary": g["itinerary"], "offset": g["offset"], "prices": prices})
+    flights.sort(key=lambda g: (g["itinerary"].duration_min, g["prices"][0][1]))
+    return flights[:n] if n > 0 else []
+
+
+def render_shortest(results: list[ScanResult], s: Settings, n: int = 6) -> str:
+    flights = shortest_flights(results, n)
+    if not flights:
+        return ""
+    rows = [("Duration", "Flight", "Departs -> Arrives", "Prices by date (cheapest first)")]
+    for g in flights:
+        it = g["itinerary"]
+        rows.append((
+            fmt_duration(it.duration_min),
+            flight_summary(it, duration=False),
+            flight_times(it, g["offset"], "->"),
+            ", ".join(f"{pair_label(r.pair)} {money(p, s.currency)}" for r, p in g["prices"]),
+        ))
+    return _text_table(rows)
 
 
 def render_links(results: list[ScanResult], s: Settings) -> str:
@@ -582,14 +640,29 @@ def pair_label(pair: DatePair) -> str:
     return day_label(pair.depart) + (f" → {day_label(pair.ret)}" if pair.ret else "")
 
 
-def clock(stamp: str, ref: date | None = None) -> str:
-    """'2026-11-26 20:30' -> '8:30 PM' when on `ref`, else 'Thu Nov 26 8:30 PM'."""
+def hour_min(stamp: str) -> str:
+    """'2026-11-27 19:56' -> '7:56 PM'."""
     try:
         dt = datetime.strptime(stamp[:16], "%Y-%m-%d %H:%M")
     except ValueError:
         return stamp
-    t = f"{dt.hour % 12 or 12}:{dt.minute:02d} {'AM' if dt.hour < 12 else 'PM'}"
-    return t if ref and dt.date() == ref else f"{day_label(dt.date())} {t}"
+    return f"{dt.hour % 12 or 12}:{dt.minute:02d} {'AM' if dt.hour < 12 else 'PM'}"
+
+
+def clock(stamp: str, ref: date | None = None) -> str:
+    """'2026-11-26 20:30' -> '8:30 PM' when on `ref`, else 'Thu Nov 26 8:30 PM'."""
+    try:
+        day = date.fromisoformat(stamp[:10])
+    except ValueError:
+        return stamp
+    t = hour_min(stamp)
+    return t if ref and day == ref else f"{day_label(day)} {t}"
+
+
+def flight_times(it: Itinerary, offset: int, arrow: str = "→") -> str:
+    """'7:56 PM → 5:15 AM (+2 days)'."""
+    plus = f" (+{offset} day{'' if offset == 1 else 's'})" if offset else ""
+    return f"{hour_min(it.depart_time)} {arrow} {hour_min(it.arrive_time)}{plus}"
 
 
 def stops_text(it: Itinerary, via: bool = True) -> str:
@@ -598,8 +671,10 @@ def stops_text(it: Itinerary, via: bool = True) -> str:
     return text + (f" ({', '.join(airports)})" if via and airports else "")
 
 
-def flight_summary(it: Itinerary) -> str:
-    parts = [", ".join(it.airlines) or "?", stops_text(it), fmt_duration(it.duration_min)]
+def flight_summary(it: Itinerary, duration: bool = True) -> str:
+    parts = [", ".join(it.airlines) or "?", stops_text(it)]
+    if duration:
+        parts.append(fmt_duration(it.duration_min))
     if it.note:
         parts.append(it.note)
     return " · ".join(parts)
@@ -639,8 +714,10 @@ def render_email(
     today: date,
     note: str | None = None,
     max_price: float | None = None,
+    fastest: int = 6,
 ) -> tuple[str, str, str]:
     """Subject, plain-text body and HTML body for a fare report email."""
+    fast = shortest_flights(results, fastest)
     rows = sorted(results, key=lambda r: r.pair.key)
     priced = [r for r in rows if r.best]
     one_way = all(r.pair.ret is None for r in rows)
@@ -721,13 +798,22 @@ def render_email(
     t.append("")
     for line in ([changes] if changes else []) + extra:
         t += [line, ""]
+    if fast:
+        t.append(f"Shortest flights (the {len(fast)} fastest, with each departure date's price, cheapest first)")
+        for g in fast:
+            it = g["itinerary"]
+            t.append(f"{fmt_duration(it.duration_min)} - {flight_summary(it, duration=False)}, "
+                     f"{flight_times(it, g['offset'], '->')}")
+            t.append("  " + ", ".join(f"{pair_label(r.pair)} {money(p, s.currency)}" for r, p in g["prices"]))
+        t.append("")
     t += [footer, "", fares_block(results, s), ""]
     text = "\n".join(t)
 
     # HTML
     e = html.escape
     muted = "color:#57606a;"
-    cell = "padding:6px;border-bottom:1px solid #d8dee4;vertical-align:top;"
+    cell = "border-bottom:1px solid #d8dee4;"  # padding and alignment come from the table/row attributes
+    table = '<table cellpadding="6" style="border-collapse:collapse;width:100%;font-size:13px;line-height:1.35;">'
     link = "color:#0969da;"
     h = [
         '<div style="font-family:-apple-system,BlinkMacSystemFont,\'Segoe UI\',Roboto,Helvetica,Arial,sans-serif;'
@@ -757,9 +843,9 @@ def render_email(
     else:
         h.append('<p style="font-size:15px;font-weight:600;">No prices found today.</p>')
     h.append(f'<h3 style="font-size:15px;margin:0 0 6px;">{e(table_title)}</h3>')
-    h.append('<table style="border-collapse:collapse;width:100%;font-size:13px;line-height:1.35;">')
+    h.append(table)
     heads = ["Date", "Price"] + (["Change"] if previous is not None else []) + ["Flight", "Departs → Arrives", ""]
-    h.append("<tr>" + "".join(f'<th style="{cell}text-align:left;font-weight:600;{muted}">{e(x)}</th>' for x in heads) + "</tr>")
+    h.append('<tr valign="bottom">' + "".join(f'<th style="{cell}text-align:left;font-weight:600;{muted}">{e(x)}</th>' for x in heads) + "</tr>")
     for r in rows:
         if r.best:
             b = r.best
@@ -778,11 +864,35 @@ def render_email(
             tds += [e(r.error), "", f'<a href="{e(r.link)}" style="{link}">Search</a>']
         # Highlight the cheapest row(s), unless every date costs the same.
         highlight = r.best is not None and r.best.price == low and len(ties) + 1 < len(priced)
-        style = "font-weight:700;background:#f6f8fa;" if highlight else ""
-        h.append(f'<tr style="{style}">' + "".join(f'<td style="{cell}">{x}</td>' for x in tds) + "</tr>")
+        style = ' style="font-weight:700;background:#f6f8fa;"' if highlight else ""
+        h.append(f'<tr valign="top"{style}>' + "".join(f'<td style="{cell}">{x}</td>' for x in tds) + "</tr>")
     h.append("</table>")
     for line in ([changes] if changes else []) + extra:
         h.append(f'<p style="font-size:14px;margin:14px 0 0;">{e(line)}</p>')
+    if fast:
+        h += [
+            '<h3 style="font-size:15px;margin:24px 0 2px;">Shortest flights</h3>',
+            f'<p style="font-size:13px;{muted}margin:0 0 6px;">The {len(fast)} fastest flights, with their price on '
+            "each departure date (cheapest first).</p>",
+            table,
+            '<tr valign="bottom">' + "".join(f'<th style="{cell}text-align:left;font-weight:600;{muted}">{e(x)}</th>'
+                             for x in ["Duration", "Flight", "Departs → Arrives", "Price by departure date"]) + "</tr>",
+        ]
+        for g in fast:
+            it = g["itinerary"]
+            prices = " · ".join(
+                f'<a href="{e(r.link)}" style="{link}white-space:nowrap;">'
+                f"{e(pair_label(r.pair))} {e(money(p, s.currency))}</a>"
+                for r, p in g["prices"]
+            )
+            tds = [
+                f'<span style="white-space:nowrap;font-weight:600;">{e(fmt_duration(it.duration_min))}</span>',
+                e(flight_summary(it, duration=False)),
+                e(flight_times(it, g["offset"])),
+                prices,
+            ]
+            h.append('<tr valign="top">' + "".join(f'<td style="{cell}">{x}</td>' for x in tds) + "</tr>")
+        h.append("</table>")
     h += [f'<p style="font-size:12px;{muted}margin:16px 0 0;">{e(footer)}</p>', "</div>"]
     return subject, text, "\n".join(h)
 
@@ -880,6 +990,8 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     p.add_argument("--tz", default=DEFAULT_TZ, help="time zone for today's date and the checked-at time")
     p.add_argument("--delay", type=float, default=2.0, help="seconds between lookups")
     p.add_argument("--top", type=int, default=15, help="rows to show in the ranked table")
+    p.add_argument("--fastest", type=int, default=6,
+                   help="list this many of the shortest flights with their prices (0 hides the list)")
     p.add_argument("--csv", type=Path, default=None, help="write all results to this CSV")
     p.add_argument("--json", type=Path, default=None, help="write all results to this JSON")
     p.add_argument("--history", type=Path, default=HERE / "price_history.json",
@@ -943,6 +1055,10 @@ def main(argv: list[str] | None = None) -> int:
     if grid:
         print("\nPrice grid")
         print(grid)
+    fast = render_shortest(results, s, a.fastest)
+    if fast:
+        print("\nShortest flights")
+        print(fast)
 
     priced = sorted([r for r in results if r.best], key=lambda r: r.best.price)
     if priced:
@@ -989,7 +1105,7 @@ def main(argv: list[str] | None = None) -> int:
             if previous is None and not note:
                 note = "Couldn't find the price list in the previous report, so changes aren't shown."
         checked_at = _observed_at(parsed, tz) or datetime.now(tz)
-        subject, text, html_body = render_email(results, s, previous, checked_at, today, note, a.max_price)
+        subject, text, html_body = render_email(results, s, previous, checked_at, today, note, a.max_price, a.fastest)
         a.email_dir.mkdir(parents=True, exist_ok=True)
         (a.email_dir / "subject.txt").write_text(subject + "\n")
         (a.email_dir / "body.txt").write_text(text)
