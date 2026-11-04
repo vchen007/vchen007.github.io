@@ -1,0 +1,5 @@
+# "google" source (no API key): scrapes Google Flights
+fast-flights==3.1.0
+typing_extensions>=4.12
+# "serpapi" source (needs SERPAPI_KEY)
+requests>=2.31

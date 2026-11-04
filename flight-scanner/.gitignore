@@ -1,0 +1,5 @@
+price_history.json
+*.csv
+results*.json
+__pycache__/
+.venv/
