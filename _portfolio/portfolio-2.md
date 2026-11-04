@@ -2,6 +2,8 @@
 title: "Prediction Market Whale Tracker"
 excerpt: "Real-time dashboard tracking large trades on Kalshi and Polymarket prediction markets"
 collection: portfolio
+redirect_from:
+  - /portfolio/portfolio-9/
 ---
 
 ## Prediction Market Whale Tracker
