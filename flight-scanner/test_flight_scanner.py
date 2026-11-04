@@ -179,6 +179,43 @@ def test_email_lists_shortest_flights():
     assert "Shortest flights" not in text and "Shortest flights" not in html_body
 
 
+OLD_REPORT = """SNA to TPE one-way fares, Wed Nov 4
+
+Google Flights prices checked Wed Nov 4 at 1:07 PM PST for 1 adult in economy.
+
+FARES BY DATE
+2026-11-25: $503 (Delta, 1 stop)
+2026-11-26: $503 (Delta, 1 stop)
+"""
+
+
+def test_price_history_carries_forward():
+    today = date(2026, 11, 5)
+    history = fs.parse_history(OLD_REPORT, today)  # older report: no PRICE HISTORY block yet
+    assert history == {"2026-11-04": {"2026-11-25": 503.0, "2026-11-26": 503.0}}
+    r1 = fs.ScanResult(fs.DatePair(date(2026, 11, 25), None), "u1", fs.Itinerary(510, ["Delta"], 1, 1290))
+    r2 = fs.ScanResult(fs.DatePair(date(2026, 11, 26), None), "u2")  # no price today
+    history["2026-11-05"] = {"2026-11-25": 510.0, "2026-11-26": None}
+    _, text, html_body = fs.render_email([r1, r2], S, fs.parse_fares_block(OLD_REPORT), datetime(2026, 11, 5, 6, 40),
+                                         today, history=history)
+    assert "Price trend since Wed Nov 4" in text and "Price trend since Wed Nov 4</h3>" in html_body
+    assert "The cheapest fare in your window is up $7 since Wed Nov 4 ($503 → $510)." in text
+    assert "Wed Nov 25: $510 now, ▲ $7 since Wed Nov 4, range $503-$510  ▁▂" in text
+    assert "Price trend since Wed Nov 4 (cheapest fare at each daily check)" in text
+    assert "Thu Nov 26: no price now  ▁·" in text
+    # the next run reads both checks back, and the history lines don't leak into the day-over-day prices
+    assert fs.parse_history(text, date(2026, 11, 6)) == history
+    assert fs.parse_fares_block(text) == {"2026-11-25": 510.0, "2026-11-26": None}
+
+
+def test_no_trend_until_two_checks():
+    r1 = fs.ScanResult(fs.DatePair(date(2026, 11, 25), None), "u1", fs.Itinerary(503, ["Delta"], 1, 1290))
+    history = {"2026-11-04": {"2026-11-25": 503.0}}
+    _, text, html_body = fs.render_email([r1], S, None, datetime(2026, 11, 4, 13, 7), date(2026, 11, 4), history=history)
+    assert "Price trend" not in text and "Price trend" not in html_body
+    assert "PRICE HISTORY" in text and "checked 2026-11-04: 2026-11-25=503" in text
+
+
 if __name__ == "__main__":
     import pathlib, tempfile
     for name, fn in list(globals().items()):

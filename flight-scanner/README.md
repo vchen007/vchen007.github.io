@@ -9,7 +9,7 @@ keeps the cheapest itinerary, then prints:
 - fares under your target price (`--max-price`)
 - price changes since the last run (saved in `price_history.json`)
 - the 6 shortest flights, each with its price on every departure date (`--fastest N`)
-- optionally, an email report with day-over-day changes (`--email-dir`)
+- optionally, an email report with day-over-day changes and a running price trend (`--email-dir`)
 
 With `--round-trip` it prices every departure/return pair instead and adds a
 departure × return price grid.
@@ -79,6 +79,12 @@ cheapest fare per day, then the shortest flights with their prices. The
 plain-text body ends with a `FARES BY DATE` block; pass a previous report's
 plain-text body as `--previous` and the new report shows each day's price
 change and calls out moves of $25 or more.
+
+Each report also carries a `PRICE HISTORY` block with the cheapest fare per
+departure date at every check so far. Once there are two checks, the report
+adds a **Price trend** section: each date's price now, its change since the
+first check, its low and high, and a small bar sparkline (one shared scale for
+all dates), plus a one-line verdict on the cheapest fare in the window.
 
 ## Use it from Claude Code
 

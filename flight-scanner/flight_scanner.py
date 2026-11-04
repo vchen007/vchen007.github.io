@@ -698,12 +698,82 @@ def parse_fares_block(text: str) -> dict[str, float | None] | None:
     if FARES_HEADER not in text:
         return None
     out: dict[str, float | None] = {}
-    for line in text.split(FARES_HEADER, 1)[1].splitlines():
+    for line in text.split(FARES_HEADER, 1)[1].splitlines()[1:]:  # [0] is the rest of the header line
+        if not line.strip():
+            break  # the block ends at the first blank line
         m = _FARE_LINE.match(line)
         if m:
             key = m.group(1) + (f"_{m.group(2)}" if m.group(2) else "")
             out[key] = float(m.group(3).replace(",", "")) if m.group(3) else None
     return out
+
+
+HISTORY_HEADER = "PRICE HISTORY"
+_HISTORY_LINE = re.compile(r"^\s*checked (\d{4}-\d{2}-\d{2}):\s*(.*)$")
+_HISTORY_ITEM = re.compile(r"(\d{4}-\d{2}-\d{2}(?:_\d{4}-\d{2}-\d{2})?)=(\d+(?:\.\d+)?|-)")
+_CHECKED_AT = re.compile(r"prices checked \w{3} (\w{3}) (\d{1,2}) at")
+SPARK = "▁▂▃▄▅▆▇█"
+SPARK_MIN_SPAN = 40  # dollars: moves smaller than this stay low on the sparkline
+SPARK_MAX_POINTS = 14  # the email shows the most recent checks only
+
+
+def history_block(history: dict[str, dict[str, float | None]]) -> str:
+    """Every check's cheapest fare per date, carried forward from report to report."""
+    lines = [f"{HISTORY_HEADER} (cheapest fare per departure date at each check)"]
+    for checked in sorted(history):
+        items = " ".join(f"{k}={'-' if v is None else f'{v:.0f}'}" for k, v in sorted(history[checked].items()))
+        lines.append(f"checked {checked}: {items}")
+    return "\n".join(lines)
+
+
+def parse_history(text: str, today: date) -> dict[str, dict[str, float | None]]:
+    """Price history from a previous report.
+
+    Reads its PRICE HISTORY block. A report sent before that block existed only
+    has FARES BY DATE, which is used as one check on the date its footer gives.
+    """
+    history: dict[str, dict[str, float | None]] = {}
+    if HISTORY_HEADER in text:
+        for line in text.split(HISTORY_HEADER, 1)[1].splitlines():
+            m = _HISTORY_LINE.match(line)
+            if m:
+                history[m.group(1)] = {k: None if v == "-" else float(v) for k, v in _HISTORY_ITEM.findall(m.group(2))}
+    if history:
+        return history
+    fares = parse_fares_block(text)
+    m = _CHECKED_AT.search(text)
+    if fares and m:
+        checked = date(today.year, datetime.strptime(m.group(1), "%b").month, int(m.group(2)))
+        if checked > today:  # a December report read in January
+            checked = checked.replace(year=today.year - 1)
+        history[checked.isoformat()] = fares
+    return history
+
+
+def price_trend(results: list[ScanResult], history: dict | None) -> dict | None:
+    """Each date's cheapest fare across checks; None until there are two checks."""
+    if not history or len(history) < 2:
+        return None
+    checks = sorted(history)
+    rows_in = sorted(results, key=lambda r: r.pair.key)
+    keys = [r.pair.key for r in rows_in]
+    values = [history[c][k] for c in checks for k in keys if history[c].get(k) is not None]
+    if not values:
+        return None
+    lo = min(values)
+    span = max(max(values) - lo, SPARK_MIN_SPAN)
+    rows = []
+    for r in rows_in:
+        series = [history[c].get(r.pair.key) for c in checks]
+        known = [v for v in series if v is not None]
+        recent = series[-SPARK_MAX_POINTS:]
+        spark = "".join("·" if v is None else SPARK[round((v - lo) / span * (len(SPARK) - 1))] for v in recent)
+        rows.append({
+            "result": r, "now": series[-1], "first": known[0] if known else None,
+            "low": min(known) if known else None, "high": max(known) if known else None, "spark": spark,
+        })
+    overall = [min((history[c][k] for k in keys if history[c].get(k) is not None), default=None) for c in checks]
+    return {"checks": checks, "rows": rows, "overall": overall, "truncated": len(checks) > SPARK_MAX_POINTS}
 
 
 def render_email(
@@ -715,9 +785,38 @@ def render_email(
     note: str | None = None,
     max_price: float | None = None,
     fastest: int = 6,
+    history: dict[str, dict[str, float | None]] | None = None,
 ) -> tuple[str, str, str]:
     """Subject, plain-text body and HTML body for a fare report email."""
     fast = shortest_flights(results, fastest)
+    trend = price_trend(results, history)
+    if trend:
+        since = day_label(date.fromisoformat(trend["checks"][0]))
+        o_first = next((v for v in trend["overall"] if v is not None), None)
+        o_now = trend["overall"][-1]
+        if o_first is None or o_now is None:
+            trend_summary = ""
+        elif abs(o_now - o_first) < 1:
+            trend_summary = f"The cheapest fare in your window has held at {money(o_now, s.currency)} since {since}."
+        else:
+            trend_summary = (
+                f"The cheapest fare in your window is {'down' if o_now < o_first else 'up'} "
+                f"{money(abs(o_now - o_first), s.currency)} since {since} "
+                f"({money(o_first, s.currency)} → {money(o_now, s.currency)})."
+            )
+        trend_note = (f"Trend shows the last {SPARK_MAX_POINTS} of {len(trend['checks'])} daily checks."
+                      if trend["truncated"] else f"Trend shows all {len(trend['checks'])} daily checks.")
+
+    def price_range(row: dict, dash: str) -> str:
+        if abs(row["high"] - row["low"]) < 1:
+            return money(row["low"], s.currency)
+        return f"{money(row['low'], s.currency)}{dash}{money(row['high'], s.currency)}"
+
+    def since_text(row: dict) -> str:
+        if row["now"] is None or row["first"] is None:
+            return "—"
+        d = row["now"] - row["first"]
+        return "no change" if abs(d) < 1 else f"{'▼' if d < 0 else '▲'} {money(abs(d), s.currency)}"
     rows = sorted(results, key=lambda r: r.pair.key)
     priced = [r for r in rows if r.best]
     one_way = all(r.pair.ret is None for r in rows)
@@ -798,6 +897,18 @@ def render_email(
     t.append("")
     for line in ([changes] if changes else []) + extra:
         t += [line, ""]
+    if trend:
+        t.append(f"Price trend since {since} (cheapest fare at each daily check)")
+        if trend_summary:
+            t.append(trend_summary)
+        for row in trend["rows"]:
+            r = row["result"]
+            if row["now"] is None:
+                t.append(f"{pair_label(r.pair)}: no price now  {row['spark']}")
+                continue
+            t.append(f"{pair_label(r.pair)}: {money(row['now'], s.currency)} now, {since_text(row)} since {since}, "
+                     f"range {price_range(row, '-')}  {row['spark']}")
+        t += [trend_note, ""]
     if fast:
         t.append(f"Shortest flights (the {len(fast)} fastest, with each departure date's price, cheapest first)")
         for g in fast:
@@ -807,6 +918,8 @@ def render_email(
             t.append("  " + ", ".join(f"{pair_label(r.pair)} {money(p, s.currency)}" for r, p in g["prices"]))
         t.append("")
     t += [footer, "", fares_block(results, s), ""]
+    if history:
+        t += [history_block(history), ""]
     text = "\n".join(t)
 
     # HTML
@@ -869,6 +982,30 @@ def render_email(
     h.append("</table>")
     for line in ([changes] if changes else []) + extra:
         h.append(f'<p style="font-size:14px;margin:14px 0 0;">{e(line)}</p>')
+    if trend:
+        h.append(f'<h3 style="font-size:15px;margin:24px 0 2px;">Price trend since {e(since)}</h3>')
+        if trend_summary:
+            h.append(f'<p style="font-size:14px;margin:0 0 6px;">{e(trend_summary)}</p>')
+        h.append(table)
+        h.append('<tr valign="bottom">' + "".join(
+            f'<th style="{cell}text-align:left;font-weight:600;{muted}">{e(x)}</th>'
+            for x in ["Date", "Now", f"Since {since}", "Low – high", "Trend"]) + "</tr>")
+        for row in trend["rows"]:
+            r = row["result"]
+            d = None if row["now"] is None or row["first"] is None else row["now"] - row["first"]
+            color = "#1a7f37" if d is not None and d <= -1 else "#cf222e" if d is not None and d >= 1 else "#57606a"
+            tds = [
+                e(pair_label(r.pair)),
+                e(money(row["now"], s.currency)) if row["now"] is not None else "no price",
+                f'<span style="color:{color};white-space:nowrap;">{e(since_text(row))}</span>',
+                e(price_range(row, " – ")) if row["low"] is not None else "—",
+                f'<span style="font-family:Menlo,Consolas,monospace;font-size:14px;color:#2a78d6;white-space:nowrap;">'
+                f"{e(row['spark'])}</span>",
+            ]
+            h.append('<tr valign="top">' + "".join(f'<td style="{cell}">{x}</td>' for x in tds) + "</tr>")
+        h.append("</table>")
+        h.append(f'<p style="font-size:12px;{muted}margin:6px 0 0;">{e(trend_note)} Taller bars mean higher prices; '
+                 "the bars share one scale across all dates.</p>")
     if fast:
         h += [
             '<h3 style="font-size:15px;margin:24px 0 2px;">Shortest flights</h3>',
@@ -1099,13 +1236,18 @@ def main(argv: list[str] | None = None) -> int:
 
     if a.email_dir:
         previous = None
+        history: dict[str, dict[str, float | None]] = {}
         note = a.note
         if a.previous:
-            previous = parse_fares_block(a.previous.read_text())
+            prev_text = a.previous.read_text()
+            previous = parse_fares_block(prev_text)
+            history = parse_history(prev_text, today)
             if previous is None and not note:
                 note = "Couldn't find the price list in the previous report, so changes aren't shown."
+        history[today.isoformat()] = {r.pair.key: r.best.price if r.best else None for r in results}
         checked_at = _observed_at(parsed, tz) or datetime.now(tz)
-        subject, text, html_body = render_email(results, s, previous, checked_at, today, note, a.max_price, a.fastest)
+        subject, text, html_body = render_email(results, s, previous, checked_at, today, note, a.max_price,
+                                                a.fastest, history)
         a.email_dir.mkdir(parents=True, exist_ok=True)
         (a.email_dir / "subject.txt").write_text(subject + "\n")
         (a.email_dir / "body.txt").write_text(text)

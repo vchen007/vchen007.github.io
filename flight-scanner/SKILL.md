@@ -86,8 +86,10 @@ it instead:
    `python3 flight_scanner.py --source firecrawl --firecrawl-json <saved result file>`
 3. For an email report add `--email-dir DIR` (writes `subject.txt`, `body.txt`,
    `body.html`), and `--previous FILE` with the last report's plain-text body to
-   show price changes. The plain-text body ends with a `FARES BY DATE` block
-   that the next report reads back.
+   show price changes. The plain-text body ends with `FARES BY DATE` and
+   `PRICE HISTORY` blocks that the next report reads back, so each report
+   carries the whole price history and shows a Price trend section once
+   there are two checks.
 
 ## How to report results
 
