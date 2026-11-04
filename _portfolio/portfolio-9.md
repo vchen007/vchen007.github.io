@@ -12,6 +12,20 @@ A live, full-stack web application that monitors large trades ("whale" trades) a
 
 ![Prediction Market Whale Tracker](/images/whale_tracker.png)
 
+### Screenshots
+
+**Trades:** large trades from Kalshi and Polymarket, filterable by time range, minimum dollar value, category, and side, and sortable by size or recency.
+
+[![Trades view of the Prediction Market Whale Tracker](/images/whale_tracker_trades.webp)](/images/whale_tracker_trades.webp)
+
+**Top Markets:** markets ranked by total whale volume over the selected time range, with the YES/NO split for each.
+
+[![Top Markets view of the Prediction Market Whale Tracker](/images/whale_tracker_top_markets.webp)](/images/whale_tracker_top_markets.webp)
+
+**MLB Win Prob:** a game's Kalshi price (de-vigged) plotted inning by inning against a win-probability model and a team-agnostic MLB baseline.
+
+[![MLB Win Prob view of the Prediction Market Whale Tracker](/images/whale_tracker_mlb_win_prob.webp)](/images/whale_tracker_mlb_win_prob.webp)
+
 ### Features
 
 - **Real-time trade streaming** via WebSocket connection to Kalshi and REST polling for Polymarket
@@ -36,7 +50,7 @@ The application uses a two-process monorepo architecture:
 
 **Client (Vite + React)**
 - Real-time WebSocket connection for live trade updates
-- Two main views: Trades feed and Top Markets aggregation
+- Three main views: Trades feed, Top Markets aggregation, and MLB win probability charts
 - Responsive dark theme with CSS custom properties
 - Sortable columns by size, recency, and notional value
 
