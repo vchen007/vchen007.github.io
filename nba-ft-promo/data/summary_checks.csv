@@ -1,0 +1,11 @@
+key,group,label,kind,value
+team_promo_1,Visiting team,"Road promo rate, 2023-24 to 2024-25",correlation,0.032
+team_ft_1,Visiting team,"Road free throw %, 2023-24 to 2024-25",correlation,0.257
+team_promo_2,Visiting team,"Road promo rate, 2024-25 to 2025-26",correlation,0.009
+team_ft_2,Visiting team,"Road free throw %, 2024-25 to 2025-26",correlation,0.286
+arena_promo_1,Arena,"Visitor promo rate at arena, 2023-24 to 2024-25",correlation,0.177
+arena_promo_2,Arena,"Visitor promo rate at arena, 2024-25 to 2025-26",correlation,-0.099
+arena_perm_promo,Arena,Arena promo rates vs. random shuffle,p-value,0.43
+arena_perm_ftoe,Arena,"Arena FT% vs. expected, vs. random shuffle",p-value,0.06
+road_minus_home,Road effect,"Same team, road minus home Q4 FT% vs. expected (pts)",points,-0.77
+road_minus_home_p,Road effect,"Road vs. home difference, paired test",p-value,0.049

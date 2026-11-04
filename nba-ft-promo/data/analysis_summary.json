@@ -1,0 +1,170 @@
+{
+  "home_road": {
+    "Away": {
+      "games": 3676.0,
+      "q4_fta": 23349.0,
+      "q4_ftm": 18012.0,
+      "q4_ft_pct": 0.7714,
+      "q4_xft_pct": 0.7839,
+      "ftoe_pts": -1.2436,
+      "ftoe_z": -4.5873,
+      "promos": 826.0,
+      "promo_rate": 0.2247,
+      "promo_same_trip_rate": 0.1542,
+      "xpromos": 732.1315,
+      "promo_z": 4.1549
+    },
+    "Home": {
+      "games": 3676.0,
+      "q4_fta": 23176.0,
+      "q4_ftm": 18094.0,
+      "q4_ft_pct": 0.7807,
+      "q4_xft_pct": 0.7856,
+      "ftoe_pts": -0.4836,
+      "ftoe_z": -1.7771,
+      "promos": 751.0,
+      "promo_rate": 0.2043,
+      "promo_same_trip_rate": 0.1368,
+      "xpromos": 719.9992,
+      "promo_z": 1.3808
+    }
+  },
+  "road_minus_home_ftoe_pts": -0.77,
+  "road_minus_home_p": 0.04869475062233866,
+  "arena_dispersion": {
+    "chi2_ftoe": 63.8,
+    "p_ftoe": 0.0,
+    "chi2_promo": 48.1,
+    "p_promo": 0.02,
+    "perm_p_ftoe": 0.06,
+    "perm_p_promo": 0.43,
+    "yoy": [
+      {
+        "from": "2023-24",
+        "to": "2024-25",
+        "arena_ftoe_r": -0.073,
+        "arena_ftoe_p": 0.701,
+        "arena_promo_rate_r": 0.177,
+        "arena_promo_rate_p": 0.349
+      },
+      {
+        "from": "2024-25",
+        "to": "2025-26",
+        "arena_ftoe_r": 0.047,
+        "arena_ftoe_p": 0.805,
+        "arena_promo_rate_r": -0.099,
+        "arena_promo_rate_p": 0.602
+      }
+    ]
+  },
+  "team_yoy": [
+    {
+      "from": "2023-24",
+      "to": "2024-25",
+      "road_promo_rate_r": 0.032,
+      "road_q4_ft_pct_r": 0.096,
+      "road_full_game_ft_pct_r": 0.257
+    },
+    {
+      "from": "2024-25",
+      "to": "2025-26",
+      "road_promo_rate_r": 0.009,
+      "road_q4_ft_pct_r": -0.229,
+      "road_full_game_ft_pct_r": 0.286
+    }
+  ],
+  "context": [
+    {
+      "q3_bucket": "Trailing 15+",
+      "games": 699,
+      "promo_rate": 0.2561,
+      "q4_fta": 6.329,
+      "ft_pct": 0.7484
+    },
+    {
+      "q3_bucket": "Trailing 6-14",
+      "games": 735,
+      "promo_rate": 0.2313,
+      "q4_fta": 6.3728,
+      "ft_pct": 0.7669
+    },
+    {
+      "q3_bucket": "Within 5",
+      "games": 1083,
+      "promo_rate": 0.2114,
+      "q4_fta": 6.7267,
+      "ft_pct": 0.785
+    },
+    {
+      "q3_bucket": "Leading 6-14",
+      "games": 658,
+      "promo_rate": 0.2295,
+      "q4_fta": 6.4012,
+      "ft_pct": 0.7768
+    },
+    {
+      "q3_bucket": "Leading 15+",
+      "games": 501,
+      "promo_rate": 0.1936,
+      "q4_fta": 5.477,
+      "ft_pct": 0.7719
+    }
+  ],
+  "timing_quartiles_min_left": [
+    1.58,
+    4.4,
+    7.74
+  ],
+  "prediction": {
+    "train": "2023-24 + 2024-25",
+    "test": "2025-26",
+    "n_train": 1851,
+    "n_test": 1225,
+    "test_rate": 0.2457,
+    "results": [
+      {
+        "model": "league average only",
+        "auc": 0.5,
+        "brier": 0.1872,
+        "log_loss": 0.5629,
+        "brier_skill_pct": 0.0
+      },
+      {
+        "model": "visitor FT% (last 40 g)",
+        "auc": 0.527,
+        "brier": 0.1871,
+        "log_loss": 0.5629,
+        "brier_skill_pct": 0.05
+      },
+      {
+        "model": "visitor FT% + Q4 FT volume",
+        "auc": 0.543,
+        "brier": 0.1871,
+        "log_loss": 0.5627,
+        "brier_skill_pct": 0.05
+      },
+      {
+        "model": "+ visitor road promo rate",
+        "auc": 0.51,
+        "brier": 0.187,
+        "log_loss": 0.5625,
+        "brier_skill_pct": 0.11
+      },
+      {
+        "model": "+ arena promo rate",
+        "auc": 0.521,
+        "brier": 0.187,
+        "log_loss": 0.5624,
+        "brier_skill_pct": 0.11
+      },
+      {
+        "model": "live: + score margin after Q3",
+        "auc": 0.519,
+        "brier": 0.187,
+        "log_loss": 0.5627,
+        "brier_skill_pct": 0.11
+      }
+    ],
+    "auc_shooter_sequence": 0.734
+  }
+}
