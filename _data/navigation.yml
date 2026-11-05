@@ -1,26 +1,7 @@
-# main links links
+# Links in the top navigation bar. The site title (left) always links home.
 main:
-  - title: "CV"
-    #url: /cv/
-    url: /files/Resume Victor Chen.pdf
+  - title: "Projects"
+    url: /portfolio/
 
-  - title: "Portfolio Projects"
-    url: /portfolio/    
-
-  #- title: "Talks"
-  #  url: /talks/    
-
-  #- title: "Teaching"
-  #  url: /teaching/    
-    
-  #- title: "Portfolio"
-  #  url: /portfolio/
-        
-  #- title: "Blog Posts"
-  #  url: /year-archive/
-    
-  #- title: "CV"
-  #  url: /cv/
-    
-  #- title: "Guide"
-  #  url: /markdown/
+  - title: "Résumé"
+    url: /files/Resume%20Victor%20Chen.pdf
