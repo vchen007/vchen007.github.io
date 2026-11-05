@@ -1,18 +1,29 @@
 ---
 title: "Prediction Market Whale Tracker"
-excerpt: "Real-time dashboard tracking large trades on Kalshi and Polymarket prediction markets"
+excerpt: "A real-time web app that surfaces large trades on the Kalshi and Polymarket prediction markets."
+kicker: "Full-stack web app"
 collection: portfolio
+featured: true
+teaser: whale_tracker.png
+og_image: og/portfolio-2.png
+tools: [React, Node.js, SQLite, WebSockets]
+summary:
+  question: "Where is the big money moving on prediction markets right now?"
+  data: "Live trades from Kalshi (WebSocket and REST) and Polymarket (REST), ESPN scoreboard data for game start times, and 6 GB+ of stored trade history."
+  approach: "A Node.js/Fastify server normalizes trades from both exchanges, filters for trades of $10K or more with meaningful price signals, sorts them into 50+ market categories and streams them to a React dashboard over WebSockets."
+  result: "A live site with a whale-trade feed, a top-markets ranking and MLB win-probability charts, plus an auto-trader module that copies whale trades with stop-loss protection."
+links:
+  - label: "Visit pmwhaletracker.com"
+    url: "https://pmwhaletracker.com"
 redirect_from:
   - /portfolio/portfolio-9/
 ---
 
-## Prediction Market Whale Tracker
-
 A live, full-stack web application that monitors large trades ("whale" trades) across prediction market exchanges in real time. The dashboard streams trades from Kalshi and Polymarket, filtering for high-value activity to surface where the smart money is moving.
 
-<a href="https://pmwhaletracker.com" target="_blank">View the live site at pmwhaletracker.com</a>
+<a href="https://pmwhaletracker.com" target="_blank" rel="noopener">View the live site at pmwhaletracker.com</a>
 
-![Prediction Market Whale Tracker](/images/whale_tracker.png)
+![The Whale Tracker's landing screen: a whale logo above the title "Whale Tracker, prediction market intelligence" on a dark background](/images/whale_tracker.png)
 
 ### Screenshots
 

@@ -1,0 +1,27 @@
+{% comment %}
+  Case-study summary box shown at the top of a project page. Filled from the
+  page's front matter:
+    summary:
+      question: ... (or goal: ...)   approach: ...
+      data: ...       result: ...
+    tools: [...]
+    links: [{ label: ..., url: ... }]
+{% endcomment %}
+{% if page.summary %}
+<aside class="case-summary" aria-label="Project summary">
+  <h2 class="case-summary__title">At a glance</h2>
+  <dl>
+    {% if page.summary.goal %}<dt>Goal</dt><dd>{{ page.summary.goal | markdownify | remove: "<p>" | remove: "</p>" }}</dd>{% endif %}
+    {% if page.summary.question %}<dt>Question</dt><dd>{{ page.summary.question | markdownify | remove: "<p>" | remove: "</p>" }}</dd>{% endif %}
+    {% if page.summary.data %}<dt>Data</dt><dd>{{ page.summary.data | markdownify | remove: "<p>" | remove: "</p>" }}</dd>{% endif %}
+    {% if page.summary.approach %}<dt>Approach</dt><dd>{{ page.summary.approach | markdownify | remove: "<p>" | remove: "</p>" }}</dd>{% endif %}
+    {% if page.summary.result %}<dt>Result</dt><dd>{{ page.summary.result | markdownify | remove: "<p>" | remove: "</p>" }}</dd>{% endif %}
+    {% if page.tools %}<dt>Tools</dt><dd><ul class="chips">{% for tool in page.tools %}<li><span class="chip">{{ tool }}</span></li>{% endfor %}</ul></dd>{% endif %}
+  </dl>
+  {% if page.links %}
+    <div class="case-summary__links">
+      {% for link in page.links %}<a class="btn{% unless forloop.first %} btn--ghost{% endunless %}" href="{{ link.url }}"{% if link.url contains "://" %} target="_blank" rel="noopener"{% endif %}>{{ link.label }}</a>{% endfor %}
+    </div>
+  {% endif %}
+</aside>
+{% endif %}

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">Lahman Baseball Database ETL pipeline</title>
+  <desc id="d">CSV files in an S3 bucket are loaded into Snowflake tables, transformed on zero-copy clones into four views, joined into a final view and unloaded back to S3.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#5b646c"/></marker>
+  </defs>
+  <rect width="960" height="400" fill="#ffffff"/>
+  <!-- Snowflake account boundary -->
+  <rect x="200" y="22" width="560" height="356" rx="14" fill="#eef7fb" stroke="#29b5e8" stroke-width="2" stroke-dasharray="7 5"/>
+  <text x="222" y="50" font-size="15" font-weight="700" fill="#0b6f8c">Snowflake · lahman_db</text>
+
+  <!-- S3 source -->
+  <rect x="20" y="138" width="150" height="124" rx="12" fill="#fff7ed" stroke="#f59e0b" stroke-width="2"/>
+  <text x="95" y="172" font-size="15" font-weight="700" fill="#7c4a03" text-anchor="middle">AWS S3</text>
+  <text x="95" y="196" font-size="13" fill="#2e3338" text-anchor="middle">Lahman CSVs</text>
+  <text x="95" y="216" font-size="13" fill="#2e3338" text-anchor="middle">1871–2023</text>
+  <text x="95" y="242" font-size="12" fill="#5b646c" text-anchor="middle">Batting · People ·</text>
+  <text x="95" y="257" font-size="12" fill="#5b646c" text-anchor="middle">Appearances · HOF</text>
+
+  <!-- stage + raw tables -->
+  <rect x="222" y="138" width="150" height="124" rx="12" fill="#ffffff" stroke="#9ec9d8" stroke-width="2"/>
+  <text x="297" y="172" font-size="15" font-weight="700" fill="#14181c" text-anchor="middle">Stage + load</text>
+  <text x="297" y="198" font-size="12.5" fill="#2e3338" text-anchor="middle">CREATE STAGE</text>
+  <text x="297" y="218" font-size="12.5" fill="#2e3338" text-anchor="middle">FILE FORMAT</text>
+  <text x="297" y="238" font-size="12.5" fill="#2e3338" text-anchor="middle">COPY INTO 4 tables</text>
+
+  <!-- clones -> views -->
+  <rect x="404" y="70" width="168" height="62" rx="10" fill="#ffffff" stroke="#9ec9d8" stroke-width="2"/>
+  <text x="488" y="97" font-size="13.5" font-weight="700" fill="#14181c" text-anchor="middle">batting_view</text>
+  <text x="488" y="117" font-size="11.5" fill="#5b646c" text-anchor="middle">career totals, OBP, SB%</text>
+  <rect x="404" y="148" width="168" height="62" rx="10" fill="#ffffff" stroke="#9ec9d8" stroke-width="2"/>
+  <text x="488" y="175" font-size="13.5" font-weight="700" fill="#14181c" text-anchor="middle">position_view</text>
+  <text x="488" y="195" font-size="11.5" fill="#5b646c" text-anchor="middle">primary position</text>
+  <rect x="404" y="226" width="168" height="62" rx="10" fill="#ffffff" stroke="#9ec9d8" stroke-width="2"/>
+  <text x="488" y="253" font-size="13.5" font-weight="700" fill="#14181c" text-anchor="middle">people_view</text>
+  <text x="488" y="273" font-size="11.5" fill="#5b646c" text-anchor="middle">name, height, weight, bats</text>
+  <rect x="404" y="304" width="168" height="62" rx="10" fill="#ffffff" stroke="#9ec9d8" stroke-width="2"/>
+  <text x="488" y="331" font-size="13.5" font-weight="700" fill="#14181c" text-anchor="middle">hof_view</text>
+  <text x="488" y="351" font-size="11.5" fill="#5b646c" text-anchor="middle">inducted Y/N</text>
+  <text x="488" y="58" font-size="12" fill="#0b6f8c" text-anchor="middle" font-style="italic">built on zero-copy clones</text>
+
+  <!-- final view -->
+  <rect x="600" y="148" width="140" height="104" rx="12" fill="#0b6f8c"/>
+  <text x="670" y="186" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">final_view</text>
+  <text x="670" y="210" font-size="12.5" fill="#d8f1f8" text-anchor="middle">1 row per player</text>
+  <text x="670" y="230" font-size="12.5" fill="#d8f1f8" text-anchor="middle">29 columns</text>
+
+  <!-- S3 export -->
+  <rect x="790" y="138" width="150" height="124" rx="12" fill="#fff7ed" stroke="#f59e0b" stroke-width="2"/>
+  <text x="865" y="172" font-size="15" font-weight="700" fill="#7c4a03" text-anchor="middle">AWS S3</text>
+  <text x="865" y="198" font-size="13" fill="#2e3338" text-anchor="middle">Exported data set</text>
+  <text x="865" y="222" font-size="12" fill="#5b646c" text-anchor="middle">via storage</text>
+  <text x="865" y="238" font-size="12" fill="#5b646c" text-anchor="middle">integration</text>
+
+  <!-- arrows -->
+  <g stroke="#5b646c" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <path d="M170 200 H218"/>
+    <path d="M372 186 C388 186 388 101 400 101"/>
+    <path d="M372 194 C388 194 388 179 400 179"/>
+    <path d="M372 206 C388 206 388 257 400 257"/>
+    <path d="M372 214 C388 214 388 335 400 335"/>
+    <path d="M572 101 C588 101 584 182 596 182"/>
+    <path d="M572 179 H596"/>
+    <path d="M572 257 C588 257 584 218 596 218"/>
+    <path d="M572 335 C590 335 586 236 596 236"/>
+    <path d="M740 200 H786"/>
+  </g>
+</svg>

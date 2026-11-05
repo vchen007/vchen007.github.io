@@ -1,14 +1,17 @@
 ---
 layout: archive
-title: "Portfolio"
+title: "Projects"
 permalink: /portfolio/
+excerpt: "Sports and business analytics projects by Victor Chen: Tableau dashboards, a real-time prediction-market tracker, a Snowflake ETL pipeline, optimization and machine-learning notebooks."
 author_profile: true
 ---
 
 {% include base_path %}
 
+<p class="archive__lead">Dashboards, data pipelines, models and a full-stack app. Each project opens with a short summary of the question, data, approach and result, followed by the full walkthrough.</p>
 
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
+<div class="project-grid">
+{% for project in site.portfolio %}
+  {% include project-card.html project=project level=2 %}
 {% endfor %}
-
+</div>

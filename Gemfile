@@ -20,8 +20,10 @@ gem "wdm", "~> 0.1.0" if Gem.win_platform?
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  # gem "jekyll-archives"
-  gem "jekyll-feed"
   gem 'jekyll-sitemap'
-  gem 'hawkins'
+end
+
+# Link checking for the GitHub Actions workflow (.github/workflows/site-check.yml)
+group :test do
+  gem "html-proofer", "~> 5.0"
 end
