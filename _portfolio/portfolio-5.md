@@ -837,7 +837,7 @@ df.hist(column='RST%')
 
 
     
-<br/><img src='/images/DFS_optimization_pyomo_files:DFS_optimization_pyomo_18_1.png'>
+<br/><img src='/images/dfs_roster_percent_histogram.png'>
     
 ### Looking at the roster percentage, we can see that the majority of players are at 0 percent. We can create a constraint where we can have the average roster percentage be over or under a certain value using roster_low as the average of the roster percent as a whole percent.
 
