@@ -15,7 +15,7 @@
   {% endif %}
   <div class="project-card__body">
     {% if project.kicker %}<p class="project-card__kicker">{{ project.kicker }}</p>{% endif %}
-    <h3 class="project-card__title"><a href="{{ base_path }}{{ project.url }}">{{ project.title }}</a></h3>
+    {% assign level = include.level | default: 3 %}<h{{ level }} class="project-card__title"><a href="{{ base_path }}{{ project.url }}">{{ project.title }}</a></h{{ level }}>
     {% if project.excerpt %}<p class="project-card__excerpt">{{ project.excerpt | markdownify | strip_html | strip_newlines }}</p>{% endif %}
     {% if project.tools %}
       <ul class="chips" aria-label="Tools">

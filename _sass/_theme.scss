@@ -58,13 +58,13 @@
   --c-shadow-hover: 0 2px 4px rgba(16, 24, 40, 0.08), 0 10px 24px rgba(16, 24, 40, 0.12);
   --c-img-bg: transparent;
   --syn-base: #586e75;
-  --syn-comment: #7f8f8f;
-  --syn-green: #6f8000;
-  --syn-blue: #1b8fc0;
-  --syn-cyan: #228a83;
-  --syn-orange: #cb4b16;
-  --syn-red: #dc322f;
-  --syn-yellow: #a77d00;
+  --syn-comment: #5f6f6f;
+  --syn-green: #5b7a00;
+  --syn-blue: #1677a3;
+  --syn-cyan: #1d7a74;
+  --syn-orange: #b8430f;
+  --syn-red: #c42b28;
+  --syn-yellow: #8a6700;
 }
 
 html[data-theme="dark"] {
@@ -230,7 +230,8 @@ thead {
   }
 
   &.disabled {
-    color: var(--c-border-strong);
+    color: var(--c-muted);
+    opacity: 1;
   }
 }
 

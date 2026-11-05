@@ -9,7 +9,7 @@ teaser: first-down-epa.png
 og_image: og/portfolio-0.png
 tools: [Python, pandas, nflverse, JavaScript, SVG]
 summary:
-  question: "My Tableau dashboards show how often NFL teams run or pass on first down. Which choice actually gains more?"
+  question: "Over a decade of NFL play-by-play, does a first-down pass or run gain more, and has play-calling caught up?"
   data: "Every regular-season first-down run and pass from 2016 through Week 8 of 2026 (157,728 plays), from nflverse play-by-play, which includes expected points added (EPA) for each play."
   approach: "A Python pipeline filters the plays, sorts each one by game situation and field position, and writes a compact data file. The charts below are drawn in plain JavaScript and SVG, so every filter recalculates in the browser."
   result: "In neutral game situations, first-down passes averaged +0.10 EPA per play and runs −0.10, a gap that shows up in every season. Teams still passed only 47% of the time, and runs beat passes in just 23 of 352 team-seasons."
@@ -20,7 +20,7 @@ links:
     url: "https://github.com/vchen007/vchen007.github.io/blob/master/_scripts/first_down_epa.py"
 ---
 
-My [first-down dashboards](/portfolio/portfolio-6/) show how often teams run or pass on first down. This follow-up asks the next question: what does each choice gain? I measure that with **expected points added (EPA)**, which compares the expected points of the next play's down, distance and field position with those before the snap. A 5-yard run on 1st & 10 is worth a little; a 20-yard completion is worth a lot; a sack or interception costs points.
+My [first-down dashboard](/portfolio/portfolio-6/) shows how often teams run or pass on first down, and the [2026 live version](/portfolio/portfolio-1/) tracks this season's run/pass split and EPA. This page steps back to ten-plus seasons and asks whether the choice pays off, and whether play-calling has changed because of it. I measure the payoff with **expected points added (EPA)**, which compares the expected points of the next play's down, distance and field position with those before the snap. A 5-yard run on 1st & 10 is worth a little; a 20-yard completion is worth a lot; a sack or interception costs points.
 
 <div class="fd-tiles" id="fd-tiles" aria-live="polite">
   <div class="fd-tile"><span class="fd-tile__value" data-tile="passRate">47%</span><span class="fd-tile__label">of first-down plays were passes</span></div>
@@ -58,17 +58,17 @@ My [first-down dashboards](/portfolio/portfolio-6/) show how often teams run or 
 
   <figure class="fd-chart">
     <figcaption><strong>EPA per play on first down, by season</strong><span class="fd-legend"><span class="fd-key fd-key--pass"></span>Passes <span class="fd-key fd-key--run"></span>Runs</span></figcaption>
-    <div class="fd-svg" id="fd-trend" role="img" aria-label="Line chart of EPA per play for first-down passes and runs by season"></div>
+    <div class="fd-svg" id="fd-trend" role="group" aria-label="Line chart of EPA per play for first-down passes and runs by season"></div>
   </figure>
 
   <figure class="fd-chart">
     <figcaption><strong>Share of first-down plays that were passes</strong></figcaption>
-    <div class="fd-svg" id="fd-rate" role="img" aria-label="Line chart of the first-down pass rate by season"></div>
+    <div class="fd-svg" id="fd-rate" role="group" aria-label="Line chart of the first-down pass rate by season"></div>
   </figure>
 
   <figure class="fd-chart">
     <figcaption><strong>Teams: pass rate vs. EPA per first-down play</strong><span class="fd-sub" id="fd-scatter-sub"></span></figcaption>
-    <div class="fd-svg" id="fd-scatter" role="img" aria-label="Scatter plot of each team's first-down pass rate against its EPA per first-down play"></div>
+    <div class="fd-svg" id="fd-scatter" role="group" aria-label="Scatter plot of each team's first-down pass rate against its EPA per first-down play"></div>
   </figure>
 
   <p class="fd-team-note" id="fd-team-note" aria-live="polite"></p>

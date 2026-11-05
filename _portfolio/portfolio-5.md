@@ -78,7 +78,7 @@ df.head()
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
+      <th><span class="sr-only">Row</span></th>
       <th>PLAYER</th>
       <th>POS</th>
       <th>TEAM</th>
@@ -253,7 +253,7 @@ df.head()
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
+      <th><span class="sr-only">Row</span></th>
       <th>PLAYER</th>
       <th>TEAM</th>
       <th>OPP</th>
@@ -1248,7 +1248,7 @@ excel_output
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
+      <th><span class="sr-only">Row</span></th>
       <th>Position</th>
       <th>Player</th>
       <th>Projected Points</th>

@@ -124,7 +124,7 @@
     });
     /* crosshair + tooltip */
     var tip = tooltip(host), cross = el('line', { y1: m.t, y2: H - m.b, 'class': 'crosshair', visibility: 'hidden' }, svg);
-    var hit = el('rect', { x: m.l - 10, y: 0, width: W - m.l - m.r + 20, height: H, fill: 'transparent', tabindex: 0, 'aria-label': 'Chart values: move across to read each season' }, svg);
+    var hit = el('rect', { x: m.l - 10, y: 0, width: W - m.l - m.r + 20, height: H, fill: 'transparent', tabindex: 0, role: 'img', 'aria-label': 'Chart values: use the left and right arrow keys to read each season' }, svg);
     function at(i) {
       var p = points[i]; cross.setAttribute('x1', x(i)); cross.setAttribute('x2', x(i)); cross.setAttribute('visibility', 'visible');
       var rows = series.filter(function (s) { return isFinite(s.get(p)); }).map(function (s) { return { key: s.key, value: opts.fmt(s.get(p), true), label: s.tipLabel }; });
@@ -173,7 +173,7 @@
       var hl = p.team === state.team, cx = x(p.st.passRate), cy = y(p.st.all);
       el('circle', { cx: cx, cy: cy, r: hl ? 7 : 5, 'class': 'dot' + (hl ? ' dot--hl' : '') }, svg);
       if (hl || W >= 560) text(svg, cx, cy - (hl ? 11 : 8), p.team, 'dot-label' + (hl ? ' dot-label--hl' : ''));
-      var hit = el('circle', { cx: cx, cy: cy, r: 12, 'class': 'hit', tabindex: 0, 'aria-label': p.team + ': ' + fmtPct(p.st.passRate) + ' passes, ' + fmtEpa(p.st.all) + ' EPA per play' }, svg);
+      var hit = el('circle', { cx: cx, cy: cy, r: 12, 'class': 'hit', tabindex: 0, role: 'button', 'aria-label': p.team + ': ' + fmtPct(p.st.passRate) + ' passes, ' + fmtEpa(p.st.all) + ' EPA per play' }, svg);
       var show = function () { tip.show(p.team, [
         { value: fmtPct(p.st.passRate), label: 'pass rate' },
         { key: 'pass', value: fmtEpa(p.st.pass), label: 'EPA per pass' },

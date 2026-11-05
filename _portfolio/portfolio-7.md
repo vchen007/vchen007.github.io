@@ -85,7 +85,7 @@ df.head()
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
+      <th><span class="sr-only">Row</span></th>
       <th>Loan ID</th>
       <th>Customer ID</th>
       <th>Loan Status</th>
