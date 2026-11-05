@@ -1,10 +1,20 @@
 ---
-title: "Loan Default Project"
-excerpt: "Predicting loan default from bank data"
+title: "Predicting Loan Defaults"
+excerpt: "Cleaning 257,000 bank loan records and fitting a logistic regression to see which applicants are likely to default, and what to ask on future applications."
+kicker: "Machine learning · Python"
 collection: portfolio
+teaser: output_65_0.png
+teaser_fit: contain
+og_image: og/portfolio-7.png
+tools: [Python, pandas, scikit-learn, seaborn]
+summary:
+  question: "Which loan applicants are likely to repay, and what should future applications ask?"
+  data: "A bank's historical loan file: 256,984 rows and 19 columns, including loan status, amount, term, credit score, income, debt and credit history."
+  approach: "Removed duplicate rows; fixed data-entry errors (credit scores recorded ten times too large, 99,999,999 placeholder loan amounts, `#VALUE!` cells); filled missing credit scores and incomes with linear-regression estimates; undersampled paid-off loans to balance the classes; then fit a logistic regression."
+  result: "59% accuracy on a balanced hold-out set, with precision and recall of 0.59–0.60 for both classes. Monthly debt, credit score, current loan amount and annual income carried the most weight, so those are the questions to ask applicants."
 ---
 
-# Business Objective
+## Business objective
 A bank has given us a data set and would like us to find which potential customers will likely repay a bank loan and what questions to ask on future applications based off of previous loan data.
 1. Data set of Loans and if they were paid or defaulted. 
 2. Look for the Customers who have paid and predict if future customers will pay back or default loan.
@@ -20,7 +30,7 @@ import pandas as pd
 df = pd.read_csv('1533148983_LoansTrainingSet.csv')
 ```
 
-## Taking a Look at the Data
+## Taking a look at the data
 
 ```python
 df.info()
@@ -214,7 +224,7 @@ df.head()
 
 
 
-Going through each column, duplicate values have been recorded, missing information needs to be filled in multiple columns and object columns need to be convereted to numbers. Also, the 'credit score' column has a recording error. The column most important column we need for analysis is 'Loan Status'. Which is our column that shows if a loan was paid off or defaulted.
+Going through each column, duplicate values have been recorded, missing information needs to be filled in multiple columns and object columns need to be converted to numbers. Also, the 'credit score' column has a recording error. The column most important column we need for analysis is 'Loan Status'. Which is our column that shows if a loan was paid off or defaulted.
 
 
 ```python
@@ -247,7 +257,7 @@ loan_cust_id = df[['Loan ID', 'Customer ID']]
 df.drop(['Loan ID', 'Customer ID'], axis=1, inplace=True)
 ```
 
-## Filling in Missing Data
+## Filling in missing data
 Columns with NaN values were filled with values similar to data in the row
 
 
@@ -269,7 +279,7 @@ df['Years in current job'] = df['Years in current job'].str.extract('(\d+)').ast
 df['Years in current job'] = df['Years in current job'].fillna(value=0.5)
 ```
 
-### CORRECTING DATA INPUT ERRORS
+### Correcting data input errors
 
 
 ```python
@@ -285,7 +295,7 @@ df.loc[df['Current Loan Amount'] == 99999999, 'Current Loan Amount'] = loan_medi
 df.replace('HaveMortgage', 'Home Mortgage', inplace=True)
 ```
 
-### For a score with a range between 300-850, a credit score of 700 or above is generally considered good. A score of 800 or above on the same range is considered to be excellent. Most credit scores fall between 600 and 750
+For a score with a range between 300 and 850, a credit score of 700 or above is generally considered good. A score of 800 or above on the same range is considered to be excellent. Most credit scores fall between 600 and 750.
 
 
 ```python
@@ -331,7 +341,7 @@ df['Credit Score'].describe()
     Name: Credit Score, dtype: float64
 
 
-### Changing Object Columns to numeric 
+### Changing object columns to numeric
 Many of the columns have object data types including: Term, Home Ownership, Purpose, Loan Status, Monthly Debt and Maximum Open Credit. Those that will be changed to nonordinal datatype include Term, Home Ownership, Purpose. The other columns will be changed to numerical. Loan Status, which is our target, will be converted to 0 based on being paid off and 1 being unpaid.
 
 
@@ -353,7 +363,7 @@ df['Monthly Debt'] = df['Monthly Debt'].astype(float)
 df['Maximum Open Credit'] = df['Maximum Open Credit'].astype(float)
 ```
 
-### Creating Dummies for the Columns: Term, Home Ownership and Purpose
+### Creating dummies for the columns Term, Home Ownership and Purpose
 
 
 ```python
@@ -368,7 +378,7 @@ loan = df.corr()['Loan Status']
 sns.countplot(x='Loan Status', data=df)
 ```
 
-![png](/images/output_29_1.png)
+![Bar chart of loan status before balancing: about 176,000 paid-off loans (0) and about 40,000 charged-off loans (1)](/images/output_29_1.png)
 
 
 
@@ -377,7 +387,7 @@ sns.scatterplot(x='Credit Score', y='Annual Income', data=df)
 ```
 
 
-![png](/images/output_30_1.png)
+![Scatter plot of annual income against credit score (585 to 751), with incomes mostly under $2 million and a few outliers up to $8.7 million](/images/output_30_1.png)
 
 
 
@@ -493,10 +503,10 @@ df['Loan Status'] = loan_status
 sns.countplot(x='Loan Status', data=df)
 ```
 
-![png](/images/output_52_1.png)
+![Bar chart of loan status after filling missing values: still about 176,000 paid-off and 40,000 charged-off loans](/images/output_52_1.png)
 
 
-## Imbalanced Data
+## Imbalanced data
 
 
 Using undersampling to balance out the number of Loans that were paid off and unpaid. The under sampled 'Loan Status' which is the charged off loans will match the number of  paid off loans.
@@ -526,7 +536,7 @@ plt.show()
 ```
 
 
-![png](/images/output_56_0.png)
+![Bar chart titled Balanced Classes: about 39,500 loans in each class after undersampling](/images/output_56_0.png)
 
 
 
@@ -585,7 +595,7 @@ print(classification_report(y_test, predictions))
     
 
 
-Based off the classification report, we scored about 60% accuracy that people will both pay back their loans and if they will default on their loans. 
+Based on the classification report, the model is about 60% accurate at predicting both who will pay back their loans and who will default. 
 
 
 ```python
@@ -610,12 +620,12 @@ plt.show()
 ```
 
 
-![png](/images/output_65_0.png)
+![Relative feature importance from the logistic regression coefficients: monthly debt is highest (100), then credit score (about 45), current loan amount (about 11) and annual income (about 3); all other features are near zero](/images/output_65_0.png)
 
 
 ## Conclusion
 
-After looking at the chart above which feature importance that is based off of the column coefficients, the most important questions to ask future loan applicants are:
+Based on the chart above, which ranks feature importance by the size of each column's coefficient, the most important questions to ask future loan applicants are:
 1. How much is their monthly debt?
 2. What is their credit score?
 3. How much is their current loan amount?

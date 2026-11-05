@@ -1,8 +1,23 @@
 ---
-title: "Tableau Dashboard Updated"
-excerpt: "Looking at First Down Plays in the NFL - updated 2026 live dashboard"
+title: "2026 Live NFL First-Down Dashboard"
+excerpt: "My first-down run/pass dashboard rebuilt for the 2026 NFL season on Tableau Public."
+kicker: "Tableau dashboard"
 collection: portfolio
+featured: true
 author_profile: false
+teaser: "https://public.tableau.com/static/images/20/2026LiveFirstDownDashboard/Dashboard2/1.png"
+og_image: og/portfolio-1.png
+tools: [Tableau]
+summary:
+  question: "How often are NFL teams running or passing on first down in the 2026 season?"
+  data: "NFL play-by-play data for the 2026 season."
+  approach: "An updated version of my original [first-down dashboard](/portfolio/portfolio-6/), rebuilt for the 2026 season and published on Tableau Public."
+  result: "The full-size interactive dashboard below. For what those first-down calls actually gain, see [Does passing on first down pay off?](/portfolio/first-down-epa/)"
+links:
+  - label: "Open in Tableau Public"
+    url: "https://public.tableau.com/app/profile/victor.c4632/viz/2026LiveFirstDownDashboard/Dashboard2"
+  - label: "Original dashboard"
+    url: "/portfolio/portfolio-6/"
 redirect_from:
   - /portfolio/portfolio-2a/
 ---
@@ -11,7 +26,7 @@ redirect_from:
   /* This dashboard is ~1250px wide, so let this page use the full width instead of the
      narrow column next to the profile sidebar (the sidebar is turned off in the front matter). */
   #main .page { float: none; width: 100%; margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
-  .viz-intro { max-width: 60em; margin-bottom: 1em; }
+  .viz-intro, #main .page .case-summary { max-width: 60em; margin-bottom: 1em; }
   /* The frame centers the dashboard and clips it to the scaled size (see the script below). */
   #viz2026LiveFirstDown-frame { max-width: 1250px; margin: 0 auto; overflow: hidden; }
   #viz2026LiveFirstDown { transform-origin: 0 0; }
@@ -19,7 +34,6 @@ redirect_from:
 
 <div class="viz-intro">
 An updated version of the First Down dashboard (the 2026 Live First Down Dashboard), looking at how often NFL teams run or pass on first down plays.
-<a href="https://public.tableau.com/app/profile/victor.c4632/viz/2026LiveFirstDownDashboard/Dashboard2" target="_blank" rel="noopener">Here is the link to the Tableau Public Dashboard</a>
 </div>
 
 <div id='viz2026LiveFirstDown-frame' class='fitvidsignore'>

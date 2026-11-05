@@ -1,16 +1,31 @@
 ---
-title: "Snowflake ETL Process for baseball Hall of Fame Inductees"
-excerpt: "ETL process to create a data set of MLB player's career statistics"
+title: "Snowflake ETL Pipeline for Baseball Hall of Fame Data"
+excerpt: "An S3 → Snowflake → S3 pipeline that turns the Lahman Baseball Database into one row of career stats per MLB player."
+kicker: "Data engineering · SQL"
 collection: portfolio
+featured: true
+teaser: snowflake-pipeline.svg
+teaser_fit: contain
+og_image: og/portfolio-4.png
+tools: [Snowflake, SQL, AWS S3]
+summary:
+  goal: "Build one clean, player-level table for predicting Baseball Hall of Fame inductees."
+  data: "The Lahman Baseball Database (every MLB player from 1871 to 2023) as CSV files in an AWS S3 bucket."
+  approach: "Staged the CSVs in Snowflake, loaded the batting, appearances, people and Hall of Fame tables with COPY INTO, transformed zero-copy clones (career totals, on-base and stolen-base percentages, primary position, induction status), joined them into one view and unloaded it back to S3 through a storage integration."
+  result: "A 29-column data set with one row per player: career batting totals, biographical details, primary position and Hall of Fame status."
 ---
 
-## Using Snowflake to extract, load and transform the Lahman Baseball Database from a S3 Bucket
+## Overview
 
-## For this project, I wanted to create a table to predict Hall Of Fame inductees using the Lahman Baseball Database. The database includes all participating players in Major League Baseball from 1871 to 2023. Statistics such as on base percentage, birth country, height, weight, and career totals in hits, homeruns as well as hall of fame inducted status are incorporated in the final data set. I was able to extract the data from a S3 bucket, load it into Snowflake and transform the columns using snowflake functions
+For this project, I wanted to create a table to predict Hall of Fame inductees using the Lahman Baseball Database. The database includes all participating players in Major League Baseball from 1871 to 2023. Statistics such as on-base percentage, birth country, height, weight, and career totals in hits and home runs, as well as Hall of Fame inducted status, are incorporated in the final data set. I extracted the data from an S3 bucket, loaded it into Snowflake and transformed the columns using Snowflake functions. After the ETL process, I exported the data back to the S3 bucket using a Snowflake storage integration.
 
-## After the ETL process, I was able to export my data using Snowflake integration to the S3 bucket used
+<figure class="pipeline-figure">
+  <img src="/images/snowflake-pipeline.svg" alt="Pipeline diagram: Lahman CSV files in an S3 bucket are staged and loaded into Snowflake tables with COPY INTO, transformed on zero-copy clones into batting, position, people and Hall of Fame views, joined into a final view, and unloaded back to S3 through a storage integration">
+</figure>
 
-### First, I set up my snowflake environment by creating a database, warehouse for loading and querying data, and adding database tables
+## 1. Set up the Snowflake environment
+
+First, I set up my Snowflake environment by creating a database, warehouses for loading and querying data, and the database tables.
 
 ``` sql
 -----------------------------
@@ -48,7 +63,12 @@ CREATE OR REPLACE WAREHOUSE lahman_query_wh WITH
 USE WAREHOUSE lahman_loading_wh;
 ```
 
-### Next, I created the tables to upload the data from an AWS S3 bucket
+## 2. Create the tables
+
+Next, I created the tables to upload the data from an AWS S3 bucket.
+
+<details class="notebook-output" markdown="1">
+<summary>Show the CREATE TABLE statements (batting, appearances, people, halloffame)</summary>
 
 ``` sql
 -----------------------------
@@ -155,7 +175,11 @@ CREATE OR REPLACE TABLE halloffame (
 );
 ```
 
-### After creating the tables, I prepared the staging environment to load the data into the tables
+</details>
+
+## 3. Stage the files
+
+After creating the tables, I prepared the staging environment to load the data into the tables.
 
 ``` sql
 -----------------------------
@@ -188,7 +212,9 @@ CREATE OR REPLACE FILE FORMAT lahman_people_csv
 ;
 ```
 
-### Loading the data into the tables from the S3 bucket
+## 4. Load the data
+
+Loading the data into the tables from the S3 bucket.
 
 ``` sql
 -----------------------------
@@ -238,7 +264,9 @@ COPY INTO halloffame
 ;
 ```
 
-### Transforming the data after loading. I used zero-copy cloned tables for efficiency, saving time and storage space
+## 5. Transform the data on zero-copy clones
+
+Transforming the data after loading. I used zero-copy cloned tables for efficiency, saving time and storage space.
 
 ``` sql
 -----------------------------
@@ -392,7 +420,9 @@ ORDER BY playerid
 ;
 ```
 
-### Finally, I joined the tables together for the final view
+## 6. Join everything into the final view
+
+Finally, I joined the tables together for the final view.
 
 ``` sql
 -- Create a View to JOIN the tables together 
@@ -413,7 +443,9 @@ FROM final_view;
 
 ```
 
-### Unloading the data to my S3 bucket using Snowflake integration
+## 7. Unload the result to S3
+
+Unloading the data to my S3 bucket using a Snowflake storage integration.
 
 ``` sql
 ----------------------------------
@@ -454,7 +486,9 @@ SELECT $1, $2, $3, $4 FROM @lahman_export_stage/data_0_0_0.csv.gz LIMIT 10;
 
 ```
 
-### Removing clones and staging after use.
+## 8. Clean up
+
+Removing clones and staging after use.
 
 ``` sql
 -- Remove the file from staging, and drop the stage.
@@ -469,7 +503,7 @@ DROP TABLE people_dev;
 DROP TABLE hof_dev;
 ```
 
-### Sample of the final data set
+## Sample of the final data set
 
 |PLAYERID|LAST_YEAR_PLAYED|TOTAL_GAMES|TOTAL_AB|TOTAL_R|TOTAL_H|TOTAL_DOUBLES|TOTAL_TRIPLES|TOTAL_HR|TOTAL_RBI|TOTAL_SB|TOTAL_CS|TOTAL_BB|TOTAL_SO|TOTAL_IBB|TOTAL_HBP|TOTAL_SH|TOTAL_SF|TOTAL_GIDP|ON_BASE_PERCENT|STEAL_PERCENT|NAME|BIRTHCOUNTRY|WEIGHT|HEIGHT|BATS|THROWS|PLAYER_POSITION|INDUCTED|
 |:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|
