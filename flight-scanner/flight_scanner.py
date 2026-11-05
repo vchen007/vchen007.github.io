@@ -708,6 +708,25 @@ def parse_fares_block(text: str) -> dict[str, float | None] | None:
     return out
 
 
+_VERDICT_WORD = re.compile(r"\b(low|typical|high)\b", re.I)
+VERDICT_ICON = {"high": ("▲", "#cf222e"), "low": ("▼", "#1a7f37"), "typical": ("●", "#57606a")}
+
+
+def parse_verdicts(items: list[str]) -> dict[str, str]:
+    """'2026-11-25=Prices are currently high' -> {'2026-11-25': 'high'}.
+
+    The value is Google Flights' price insight for that departure date; any
+    text holding low, typical or high works, so a quoted sentence can be passed.
+    """
+    out = {}
+    for item in items or []:
+        key, _, value = item.partition("=")
+        m = _VERDICT_WORD.search(value)
+        if key.strip() and m:
+            out[key.strip()] = m.group(1).lower()
+    return out
+
+
 HISTORY_HEADER = "PRICE HISTORY"
 _HISTORY_LINE = re.compile(r"^\s*checked (\d{4}-\d{2}-\d{2}):\s*(.*)$")
 _HISTORY_ITEM = re.compile(r"(\d{4}-\d{2}-\d{2}(?:_\d{4}-\d{2}-\d{2})?)=(\d+(?:\.\d+)?|-)")
@@ -786,9 +805,17 @@ def render_email(
     max_price: float | None = None,
     fastest: int = 6,
     history: dict[str, dict[str, float | None]] | None = None,
+    verdicts: dict[str, str] | None = None,
 ) -> tuple[str, str, str]:
     """Subject, plain-text body and HTML body for a fare report email."""
     fast = shortest_flights(results, fastest)
+    # Google's price insight, for dates still being checked, in date order.
+    judged = [(r, verdicts[r.pair.key]) for r in sorted(results, key=lambda r: r.pair.key)
+              if verdicts and r.pair.key in verdicts]
+    if judged:
+        parts = [f"{word} for {pair_label(r.pair)}" for r, word in judged]
+        joined = parts[0] if len(parts) == 1 else ", ".join(parts[:-1]) + " and " + parts[-1]
+        verdict_line = f"Google says prices are currently {joined}, compared with usual prices for each date."
     trend = price_trend(results, history)
     if trend:
         since = day_label(date.fromisoformat(trend["checks"][0]))
@@ -882,6 +909,8 @@ def render_email(
             t.append("Same price on: " + ", ".join(pair_label(r.pair) for r in ties))
     else:
         t.append("No prices found today.")
+    if judged:
+        t += ["", verdict_line]
     t += ["", table_title]
     for r in rows:
         if r.best:
@@ -955,6 +984,15 @@ def render_email(
         ]
     else:
         h.append('<p style="font-size:15px;font-weight:600;">No prices found today.</p>')
+    if judged:
+        badges = " · ".join(
+            f'<span style="white-space:nowrap;">{e(pair_label(r.pair))}: '
+            f'<span style="color:{VERDICT_ICON[word][1]};">{VERDICT_ICON[word][0]}</span> {e(word)}</span>'
+            for r, word in judged
+        )
+        h.append(f'<p style="font-size:14px;margin:0 0 18px;"><strong>Google&#x27;s price check:</strong> {badges}'
+                 f'<br><span style="font-size:12px;{muted}">Compared with usual prices for each date, '
+                 "from Google Flights&#x27; price insights.</span></p>")
     h.append(f'<h3 style="font-size:15px;margin:0 0 6px;">{e(table_title)}</h3>')
     h.append(table)
     heads = ["Date", "Price"] + (["Change"] if previous is not None else []) + ["Flight", "Departs → Arrives", ""]
@@ -1124,6 +1162,9 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     p.add_argument("--previous", type=Path, default=None,
                    help="plain-text body of the previous email report, used to show price changes")
     p.add_argument("--note", default=None, help="extra line to show near the top of the email report")
+    p.add_argument("--verdict", action="append", default=[], metavar="DATE=VERDICT",
+                   help="Google Flights' price insight for a departure date, e.g. 2026-11-25=high "
+                        "(repeatable); shown in the email report")
     p.add_argument("--tz", default=DEFAULT_TZ, help="time zone for today's date and the checked-at time")
     p.add_argument("--delay", type=float, default=2.0, help="seconds between lookups")
     p.add_argument("--top", type=int, default=15, help="rows to show in the ranked table")
@@ -1247,7 +1288,7 @@ def main(argv: list[str] | None = None) -> int:
         history[today.isoformat()] = {r.pair.key: r.best.price if r.best else None for r in results}
         checked_at = _observed_at(parsed, tz) or datetime.now(tz)
         subject, text, html_body = render_email(results, s, previous, checked_at, today, note, a.max_price,
-                                                a.fastest, history)
+                                                a.fastest, history, parse_verdicts(a.verdict))
         a.email_dir.mkdir(parents=True, exist_ok=True)
         (a.email_dir / "subject.txt").write_text(subject + "\n")
         (a.email_dir / "body.txt").write_text(text)

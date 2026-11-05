@@ -216,6 +216,19 @@ def test_no_trend_until_two_checks():
     assert "PRICE HISTORY" in text and "checked 2026-11-04: 2026-11-25=503" in text
 
 
+def test_google_verdicts():
+    v = fs.parse_verdicts(["2026-11-25=Prices are currently high", "2026-12-01=typical", "2026-11-30=no insight"])
+    assert v == {"2026-11-25": "high", "2026-12-01": "typical"}
+    rs = [fs.ScanResult(fs.DatePair(date(2026, 11, d), None), "u", fs.Itinerary(503, ["Delta"], 1, 1290)) for d in (25, 26)]
+    v["2026-11-20"] = "low"  # a date the report doesn't cover is left out
+    _, text, html_body = fs.render_email(rs, S, None, datetime(2026, 11, 5, 6, 40), date(2026, 11, 5), verdicts=v)
+    assert "Google says prices are currently high for Wed Nov 25, compared with usual prices for each date." in text
+    assert "Google&#x27;s price check:" in html_body and "Wed Nov 25: <span style=" in html_body
+    assert "Nov 20" not in text
+    _, text, _ = fs.render_email(rs, S, None, datetime(2026, 11, 5, 6, 40), date(2026, 11, 5))
+    assert "Google says" not in text
+
+
 if __name__ == "__main__":
     import pathlib, tempfile
     for name, fn in list(globals().items()):

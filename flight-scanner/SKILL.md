@@ -90,6 +90,11 @@ it instead:
    `PRICE HISTORY` blocks that the next report reads back, so each report
    carries the whole price history and shows a Price trend section once
    there are two checks.
+4. For Google's own verdict on a date (low, typical or high), scrape that
+   date's `search_url` from step 1 with `firecrawl_scrape`, formats `["query"]`
+   and the prompt "Quote exactly what the Price insights section says about
+   whether prices are currently low, typical or high" (5 credits), then pass
+   `--verdict YYYY-MM-DD=<answer>`.
 
 ## How to report results
 

@@ -86,6 +86,11 @@ adds a **Price trend** section: each date's price now, its change since the
 first check, its low and high, and a small bar sparkline (one shared scale for
 all dates), plus a one-line verdict on the cheapest fare in the window.
 
+`--verdict 2026-11-25=high` (repeatable) adds Google Flights' price insight for
+that departure date (low, typical or high compared with usual prices) under the
+cheapest fare. The value can be the whole sentence Google shows, such as
+"Prices are currently high".
+
 ## Use it from Claude Code
 
 `SKILL.md` makes this folder a Claude Code skill. Copy the whole folder into
