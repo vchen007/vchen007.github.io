@@ -1,0 +1,26 @@
+{% comment %}
+  One project card. Usage: {% include project-card.html project=doc %}
+  Reads these front matter fields from the project: title, excerpt, kicker,
+  teaser (file in /images/ or a full URL), teaser_fit ("contain" shows the
+  whole image instead of cropping it) and tools (list).
+{% endcomment %}
+{% include base_path %}
+{% assign project = include.project %}
+<article class="project-card">
+  {% if project.teaser %}
+    {% if project.teaser contains "://" %}{% assign teaser_src = project.teaser %}{% else %}{% assign teaser_src = project.teaser | prepend: "/images/" | prepend: base_path %}{% endif %}
+    <div class="project-card__media{% if project.teaser_fit == 'contain' %} project-card__media--contain{% endif %}">
+      <img src="{{ teaser_src }}" alt="" loading="lazy">
+    </div>
+  {% endif %}
+  <div class="project-card__body">
+    {% if project.kicker %}<p class="project-card__kicker">{{ project.kicker }}</p>{% endif %}
+    <h3 class="project-card__title"><a href="{{ base_path }}{{ project.url }}">{{ project.title }}</a></h3>
+    {% if project.excerpt %}<p class="project-card__excerpt">{{ project.excerpt | markdownify | strip_html | strip_newlines }}</p>{% endif %}
+    {% if project.tools %}
+      <ul class="chips" aria-label="Tools">
+        {% for tool in project.tools limit: 4 %}<li><span class="chip">{{ tool }}</span></li>{% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+</article>

@@ -1,0 +1,13 @@
+# Skills shown on the home page, grouped. Edit freely; each item becomes a tag.
+- group: "Languages"
+  items: ["SQL", "Python", "R"]
+- group: "Visualization & BI"
+  items: ["Tableau", "Power BI", "Excel (pivot tables, VLOOKUP, what-if)"]
+- group: "Data platforms"
+  items: ["Snowflake", "AWS S3", "MySQL", "SQLite"]
+- group: "Analysis & modeling"
+  items: ["pandas", "scikit-learn", "Pyomo (optimization)", "ETL pipelines"]
+- group: "Notebooks & tools"
+  items: ["Jupyter", "Google Colab", "RStudio", "SAS Enterprise", "Claude Code"]
+- group: "Web apps"
+  items: ["React", "Node.js", "WebSockets", "JavaScript"]
