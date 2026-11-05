@@ -104,7 +104,17 @@ Limits: rosters and availability are a snapshot of each team's last three games 
 | `data/summary_*.csv` | The exact tables behind each dashboard chart (`season = All` is every season combined). |
 | `data/analysis_summary.json`, `data/analysis_output.txt` | Significance and stability tests. |
 
-## Rebuild (or refresh with the latest games)
+## Daily refresh
+
+```bash
+bash nba-ft-promo/scripts/refresh.sh
+```
+
+Run it from the repository root. It does everything below in one step: downloads the archives, rebuilds the tables, reruns the analysis and model, and writes the dashboard datasets. It prints `NO_NEW_GAMES` when the archive has nothing newer than the last refresh (`data/refresh_state.json`). `data/dashboard_manifest.json` records which dataset files are live on the dashboard, so a refresh uploads only what changed.
+
+The Claude Code command `.claude/commands/refresh-nba-promo.md` (run `/refresh-nba-promo`) wraps the script with checks, the dashboard upload and the commit. A scheduled task runs the same steps every day at 12:39 PM Eastern.
+
+## Rebuild step by step
 
 ```bash
 pip install -r requirements.txt

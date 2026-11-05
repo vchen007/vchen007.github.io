@@ -91,4 +91,4 @@ Leading 6-14     658       0.138   6.401
 Leading 15+      501       0.126   5.477
 Promo timing, minutes left (25/50/75%): [1.7, 4.63, 8.18]
 
-wrote /tmp/claude-0/-home-user-vchen007-github-io/2e1f385b-6778-5bae-9377-b956afcf1bc1/scratchpad/final/analysis_summary.json
+wrote /home/user/vchen007.github.io/nba-ft-promo/data/analysis_summary.json
