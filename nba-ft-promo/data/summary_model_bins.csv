@@ -1,0 +1,6 @@
+key,bin,label,games,predicted,actual,promos
+0,0,Lowest fifth,245,0.1033,0.1143,28
+1,1,Second,245,0.1243,0.151,37
+2,2,Middle,245,0.1399,0.2082,51
+3,3,Fourth,245,0.1603,0.2041,50
+4,4,Highest fifth,245,0.1912,0.2082,51

@@ -1,0 +1,88 @@
+{
+  "results": [
+    {
+      "model": "League average",
+      "auc": 0.5,
+      "brier_skill_pct": 0.0,
+      "log_loss": 0.4739
+    },
+    {
+      "model": "Visitor's promo rate so far",
+      "auc": 0.538,
+      "brier_skill_pct": 0.48,
+      "log_loss": 0.4715
+    },
+    {
+      "model": "Players: trips x miss chance",
+      "auc": 0.559,
+      "brier_skill_pct": 0.52,
+      "log_loss": 0.4712
+    },
+    {
+      "model": "Players + home team's fouling",
+      "auc": 0.572,
+      "brier_skill_pct": 1.12,
+      "log_loss": 0.4674
+    }
+  ],
+  "bins": [
+    {
+      "bin": 0,
+      "label": "Lowest fifth",
+      "games": 245,
+      "predicted": 0.1033,
+      "actual": 0.1143,
+      "promos": 28
+    },
+    {
+      "bin": 1,
+      "label": "Second",
+      "games": 245,
+      "predicted": 0.1243,
+      "actual": 0.151,
+      "promos": 37
+    },
+    {
+      "bin": 2,
+      "label": "Middle",
+      "games": 245,
+      "predicted": 0.1399,
+      "actual": 0.2082,
+      "promos": 51
+    },
+    {
+      "bin": 3,
+      "label": "Fourth",
+      "games": 245,
+      "predicted": 0.1603,
+      "actual": 0.2041,
+      "promos": 50
+    },
+    {
+      "bin": 4,
+      "label": "Highest fifth",
+      "games": 245,
+      "predicted": 0.1912,
+      "actual": 0.2082,
+      "promos": 51
+    }
+  ],
+  "calibration": {
+    "intercept": 0.19349875503638397,
+    "slope": 0.9998537074866554
+  },
+  "constants_2026_27": {
+    "lg_ft": 0.7828669391147746,
+    "lg_trip_app": 0.2604311152764761,
+    "lg_trips_team": 2.8258746948738813,
+    "w3": 0.03742622714840939
+  },
+  "data_through": "2026-11-02",
+  "games_so_far": 107,
+  "scored_after_utc": "2026-11-05T00:04Z",
+  "train": "2024-25",
+  "test": "2025-26",
+  "n_test": 1225,
+  "n_train": 1225,
+  "test_rate": 0.17714285714285713
+}

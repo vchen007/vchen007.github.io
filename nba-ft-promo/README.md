@@ -1,71 +1,110 @@
 # Miss Two, Win Chicken: NBA visiting-team free throw project
 
-Goal: predict whether the **visiting team will miss two free throws in a row in the 4th quarter**, the trigger for a free chicken sandwich for everyone in the arena. This folder holds the data pipeline, a first analysis, and Tableau-ready tables for the dashboard.
+Goal: predict which upcoming games give the crowd a free chicken sandwich. The trigger: **in the 4th quarter, one visiting player misses two free throws in a row on the same trip to the line**. This folder holds the data pipeline, the analysis, the upcoming-game model and Tableau-ready tables.
 
-## The promo, as measured here
+## The promo rule
 
-- **Any two in a row (default).** Two consecutive visitor free throw attempts in the 4th quarter are both missed. The streak can span trips to the line, e.g. a miss on the second shot of one trip followed by a miss on the first shot of the next.
-- **Same trip only (stricter).** Both misses come on one trip to the line (0-for-2, or two straight misses on a three-shot trip).
-- Both misses must happen in the 4th quarter. Overtime is excluded. Technical free throws count.
+- Both shots of a two-shot trip missed, or two straight misses on a three-shot trip, by the same visiting player.
+- 4th quarter only; overtime does not count. Single free throws (and-ones, technicals) cannot trigger it.
+- A teammate's technical shot in the middle of the trip does not break it.
+- `any_two` in the tables is a broader reference flag: any two straight visitor misses in the 4th, across trips or players.
 
 ## Data
 
-- Play-by-play from the NBA live data feed (cdn.nba.com), as archived by the open [shufinskiy/nba_data](https://github.com/shufinskiy/nba_data) project: files `cdnnba_2023`, `cdnnba_2024` and `cdnnba_2025`, which cover the 2023-24, 2024-25 and 2025-26 regular seasons. The 2026-27 season is not in the archive yet.
-- 3,690 games in total. 14 neutral-site games are removed because no home crowd is running a promo: the Mexico City, Paris, Berlin and London games, and the Las Vegas NBA Cup semifinals. That leaves 3,676.
-- The home team is inferred from which team's baskets move the home score column.
-- Spot checks: opening-night scores for all three seasons match the published results, and Giannis Antetokounmpo's 2023-24 line comes out 514/784 against the published 514/783.
-- Arena names are the 2025-26 names (Rocket Arena, Xfinity Mobile Arena, Mortgage Matchup Center). The Clippers played 2023-24 at Crypto.com Arena and moved to Intuit Dome in 2024-25.
+| Seasons | Source |
+|---|---|
+| 2023-24, 2024-25, 2025-26 | NBA live play-by-play feed, archived by [shufinskiy/nba_data](https://github.com/shufinskiy/nba_data) (`cdnnba_<start year>`) |
+| 2026-27 so far, and the remaining schedule | ESPN play-by-play and schedule, archived daily by [sportsdataverse](https://github.com/sportsdataverse) (`play_by_play_2027.parquet`, `nba_schedule_2027.parquet`) |
 
-## What the first pass found (2023-24 through 2025-26)
+- **The two feeds agree.** Both cover 2025-26. On all 1,229 shared games they match exactly on every visitor 4th-quarter free throw, trip and promo flag (217 promo nights in each).
+- **Player IDs.** ESPN and the NBA feed number players differently. `player_id_crosswalk.csv` maps them through 2025-26 player lines (562 of 563 matched). ESPN players with no NBA match, mostly rookies, get `10,000,000 + ESPN id`.
+- **Excluded games.** Neutral-site games (Mexico City, Paris, Berlin, London, Manchester and the NBA Cup semifinals) are excluded because no home crowd runs a promo. All-Star games and the NBA Cup final are not counted as regular season.
+- **Freshness.** The current-season snapshot covers games through **Nov 2, 2026** (107 games). There were no games on Nov 3.
 
-**How often it happens.** Visitors set off the promo in **22.5%** of road games (826 of 3,676), about **9.2 free-sandwich nights per 41-game home season**. Under the same-trip rule it's 15.4% (6.3 nights). 2025-26 was the highest of the three seasons at 24.6%.
+## Findings, three complete seasons (2023-24 to 2025-26)
 
-**Road teams do shoot a little worse.** Visitors made 77.1% of 4th-quarter free throws, home teams 78.1%. The baseline is each shooter's own season FT%. Against that, visitors set off **12.8% more promos than expected** (826 actual vs. 732 expected); home teams set off 4% more (751 vs. 720). For the same team, road minus home is −0.77 points of FT% vs. expected (paired test, p = 0.049).
+**How often it happens.** Visitors set it off in **15.5%** of road games (569 of 3,676), about **6.3 nights per 41-game home season**. By season: 15.2%, 13.6%, then 17.7%. 2026-27 has started hot, at 25.2% (27 of 107), but that is a small sample.
 
-**Worst visiting teams, by promo rate on the road**
+**Road teams miss a bit more.** Visitors make 77.1% of 4th-quarter free throws to home teams' 78.1%. Visitors set off 15% more promos than their shooters' usual FT% predicts (569 vs. 495 expected). For the same team, road minus home is −0.77 points of FT% against expected (paired test, p = 0.049).
+
+**Worst visiting teams (promo rate on the road)**
 
 | Scope | 1 | 2 | 3 | 4 | 5 |
 |---|---|---|---|---|---|
-| All three seasons | DAL 30.1% | IND 29.8% | MEM 29.5% | POR 29.3% | NOP 28.5% |
-| 2025-26 | IND 43.9% | DET 41.5% | DAL 40.0% | LAC 34.2% | LAL 31.7% |
-| 2024-25 | POR 41.5% | NOP 36.6% | MEM 34.2% | GSW 34.2% | CLE 26.8% |
-| 2023-24 | HOU 36.6% | CHI 36.6% | DAL 31.7% | SAC 31.7% | CHA 31.7% |
+| Three seasons | POR 22.8% | GSW 22.0% | DAL 21.1% | NOP 20.3% | IND 19.8% |
+| 2025-26 | IND 34.2% | DAL 32.5% | DET 31.7% | NOP 26.8% | LAL 24.4% |
+| 2024-25 | GSW 31.7% | POR 31.7% | NOP 22.0% | MEM 22.0% | MIL 20.0% |
+| 2023-24 | CHA 26.8% | DAL 24.4% | SAC 24.4% | HOU 24.4% | MIN 22.0% |
 
-Worst road 4th-quarter FT% in 2025-26: Dallas 67.8% (181/267), Indiana 69.6% (167/240), Detroit 72.2% (223/309).
+**Arenas.** Visitors set it off most at Toyota Center, HOU (22.0%), Madison Square Garden (19.7%), Fiserv Forum (19.5%) and Delta Center (19.5%). They set it off least at State Farm Arena, ATL (9.8%), Golden 1 Center (10.6%) and Crypto.com Arena for Lakers games (10.6%). These gaps are consistent with chance: shuffling arena labels across games produces spreads this wide 46% of the time, and arena rates do not carry over from season to season (r = 0.06, then 0.11).
 
-**Arenas where visitors set it off most (three seasons):** Toyota Center, HOU 29.3%; Delta Center, UTA 27.6%; United Center, CHI 26.8%. Least: Golden 1 Center, SAC 14.6%; Crypto.com Arena, LAL 15.4%; State Farm Arena, ATL 16.4%.
+**Players.** The most promo nights as a visitor over three seasons:
 
-These arena gaps are mostly noise. A permutation test that shuffles arena labels across games produces spreads this wide 43% of the time, and an arena's rate one season does not predict the next (r = 0.18, then −0.10). Houston is the one arena worth watching: visitors shot below their usual FT% there in all three seasons (−7.9, −2.2 and −4.5 points).
+| Player | Promo nights | Season FT% |
+|---|---|---|
+| Giannis Antetokounmpo | 14 | 64% |
+| Rudy Gobert | 9 | 61% |
+| Alperen Şengün | 7 | 69% |
+| Pascal Siakam | 7 | 72% |
+| Zion Williamson | 6 | 70% |
+| Evan Mobley | 6 | 68% |
 
-**Visitor at a given arena.** A pair has a median of 3 games over three seasons, so pair-level "worst" lists are anecdotes. The most promo nights by one visitor at one arena is 4, which happened seven times. Two examples: Dallas at Target Center (4 of 5 games, 22/38 in the 4th) and Dallas at Chase Center (4 of 6, 28/47). The worst visitor at every arena is in `data/summary_matchups.csv` and on the dashboard's "By arena" tab.
+Luka Dončić and Jaylen Brown also had 6.
 
-**Who misses them (visitors, three seasons):** Giannis Antetokounmpo 18 promo nights, Pascal Siakam 13, Zion Williamson 13, Domantas Sabonis 11, Paolo Banchero 11, Rudy Gobert 10.
+**Game context.**
+- Visitors trailing by 15+ entering the 4th set it off 18.6% of the time, against 12.6% when leading by 15+. Bench players go to the line in blowouts.
+- The median trigger comes with 4:38 left.
 
-**Game context.** When the visitor trails by 15+ entering the 4th, the rate is 25.6%: bench players go to the line. When the visitor leads by 15+, it's 19.4%. The median trigger comes with 4:24 left in the 4th.
+## The upcoming-game model (`scripts/predict.py`)
 
-## What this means for the prediction model
+For each visiting player who has been playing (share of the team's last three games), the model estimates two things:
 
-- Team-level history barely carries over. A visitor's road promo rate correlates 0.03 and 0.01 with its rate the next season. Team FT% carries over better (0.26 and 0.29).
-- A season-holdout test (train 2023-24 and 2024-25, test on 2025-26) gives pre-game team features an AUC of at most 0.543, barely above a coin flip. Knowing which players actually shot in the 4th reaches 0.734.
-- So build the model from **players, not teams or arenas**: the visitors' expected free throw shooters and their FT%, plus a **live** update as the 4th quarter unfolds (who is at the line, attempts so far, score margin).
+- **Late trips.** His 4th-quarter two- or three-shot trips per game: this season blended with last season, worth 10 games of weight.
+- **Miss chance.** 1 − FT%, from this season and last, pulled toward the league average by 20 attempts.
+
+Expected two-miss trips = Σ trips × miss² (adjusted for three-shot trips) × the home team's late-fouling factor. That factor is visitors' 4th-quarter trips against that team relative to the league, shrunk by 15 games. A logistic fit on past seasons turns the total into a probability. Uncalibrated, the chance runs low (14.2% on average vs. 15.6% actual in the backtest seasons), in line with the road effect above.
+
+**Backtest.** Trained on 2024-25 and scored on every 2025-26 game, using only information available before each game:
+
+| Model | AUC | Brier skill |
+|---|---|---|
+| League average | 0.500 | 0.0% |
+| Visitor's promo rate so far | 0.538 | 0.5% |
+| Players: trips × miss chance | 0.559 | 0.5% |
+| Players + home team's fouling | **0.572** | **1.1%** |
+
+The top-rated fifth of 2025-26 games hit 20.8% of the time; the lowest fifth hit 11.4%. Scored the same way, 2024-25 gives the same AUC (0.571). The promo is mostly luck. The model is a useful lean, not a lock.
+
+**Upcoming games as of Nov 4, 2026** (1,088 remaining games; average chance 16.2%):
+
+| Date | Game | Chance | Most likely to miss |
+|---|---|---|---|
+| Nov 4 | MIA at LAC | 28.2% | Giannis Antetokounmpo (65%), Donovan Mitchell (68%) |
+| Nov 11 | LAL at MIL | 26.0% | Walker Kessler (66%), Luka Dončić (79%) |
+| Nov 10 | MIA at UTA | 25.9% | Antetokounmpo, Mitchell |
+| Nov 6 | MIN at NOP | 24.1% | Rudy Gobert (53%), Jonathan Kuminga (71%) |
+| Nov 9 | LAL at ATL | 23.8% | Kessler, Dončić |
+
+Visitors with the highest average chance on the road this season: Miami (24.7%), the Lakers (23.9%), Cleveland (22.2%) and Minnesota (22.0%). The lowest are Orlando (9.8%), Oklahoma City (10.4%) and New York (10.7%).
+
+Limits: rosters and availability are a snapshot of each team's last three games through Nov 2. Injuries, trades and minutes changes since then are not reflected. Far-off games carry today's form.
 
 ## Files
 
 | File | What it is |
 |---|---|
-| `data/team_games.csv` | One row per team per game (Home and Away). Main Tableau source. |
-| `data/games.csv` | One row per game, home and visitor columns side by side. |
-| `data/q4_free_throws.csv` | Every 4th-quarter free throw attempt: shooter, trip position, make, expected make chance, whether it was part of the triggering pair. |
-| `data/player_seasons.csv` | Player season FT lines with road and home 4th-quarter splits. |
-| `data/summary_*.csv` | The exact tables behind each dashboard chart, by season and for all three seasons (`season = All`). |
-| `data/analysis_summary.json`, `data/analysis_output.txt` | Significance tests, stability checks and model results. |
-| `scripts/build_dataset.py` | Play-by-play to game, team-game, attempt and player tables. |
-| `scripts/analyze.py` | Rankings, permutation test, stability, model test. |
-| `scripts/export_dashboard.py` | Aggregates the dashboard tables (JSON) and the `summary_*.csv` files. |
+| `data/upcoming_predictions.csv` | Every remaining 2026-27 game: `promo_chance`, the three visiting players carrying the most risk (FT% and share of risk), expected 4th-quarter trips, home fouling factor. |
+| `data/team_games.csv` | One row per team per game since 2023-24 (Home and Away). Main Tableau source. Key columns: `promo`, `promo_xprob`, `promo_min_left`, `promo_shooter`, `q4_fta`, `q4_ftm`, `q4_trips`, `margin_after_q3`, `source`. |
+| `data/games.csv` | One row per game, both teams side by side. |
+| `data/q4_free_throws.csv` | Every 4th-quarter free throw attempt: shooter, trip position, make, expected make chance, `promo_pair`. |
+| `data/player_games.csv` | Every player appearance with free throws and 4th-quarter trips (the model's input). |
+| `data/player_seasons.csv` | Player season lines with road and home 4th-quarter splits and road promo nights. |
+| `data/player_id_crosswalk.csv` | ESPN id to NBA id. |
+| `data/model_backtest.csv`, `data/model_meta.json` | Game-by-game backtest scores and model results. |
+| `data/summary_*.csv` | The exact tables behind each dashboard chart (`season = All` is every season combined). |
+| `data/analysis_summary.json`, `data/analysis_output.txt` | Significance and stability tests. |
 
-Key columns in `team_games.csv`: `role` (Home/Away), `arena_home_team` (whose building), `neutral_site`, `q4_fta`, `q4_ftm`, `q4_xftm` (expected makes), `promo_any`, `promo_same_trip`, `promo_xprob` (chance of the promo given who shot), `promo_min_left`, `promo_shooters`, `margin_after_q3`.
-
-## Rebuild
+## Rebuild (or refresh with the latest games)
 
 ```bash
 pip install -r requirements.txt
@@ -76,7 +115,23 @@ mkdir -p raw && for y in 2023 2024 2025; do curl -sSL -o raw/cdnnba_$y.tar.xz ht
 ```
 
 ```bash
-python scripts/build_dataset.py data raw/cdnnba_2023.csv raw/cdnnba_2024.csv raw/cdnnba_2025.csv
+for y in 2026 2027; do curl -sSL -o raw/play_by_play_$y.parquet https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_nba_pbp/play_by_play_$y.parquet && curl -sSL -o raw/nba_schedule_$y.parquet https://raw.githubusercontent.com/sportsdataverse/hoopR-nba-raw/main/nba/schedules/parquet/nba_schedule_$y.parquet; done
+```
+
+```bash
+python scripts/build_dataset.py build/nba --nba raw/cdnnba_2023.csv raw/cdnnba_2024.csv raw/cdnnba_2025.csv
+```
+
+```bash
+python scripts/build_dataset.py build/espn26 --espn raw/play_by_play_2026.parquet,raw/nba_schedule_2026.parquet
+```
+
+```bash
+python scripts/build_dataset.py build/espn27 --espn raw/play_by_play_2027.parquet,raw/nba_schedule_2027.parquet
+```
+
+```bash
+python scripts/combine.py data build/nba build/espn26 build/espn27
 ```
 
 ```bash
@@ -84,12 +139,22 @@ python scripts/analyze.py data > data/analysis_output.txt
 ```
 
 ```bash
-python scripts/export_dashboard.py data dashboard_json data
+python scripts/predict.py build/model --history build/nba --prior build/espn26 --current build/espn27 --schedule raw/nba_schedule_2027.parquet
 ```
+
+```bash
+cp build/model/upcoming_predictions.csv build/model/model_meta.json data/ && cp build/model/backtest.csv data/model_backtest.csv
+```
+
+```bash
+python scripts/export_dashboard.py data build/model dashboard_json data
+```
+
+To refresh during the season, re-download the two 2027 files and rerun every command after the downloads.
 
 ## Tableau notes
 
-- Promo rate: filter `role = "Away"` and `neutral_site = FALSE`, then `SUM(INT([promo_any])) / COUNTD([game_id])`.
-- Arena × visitor heatmap: `arena_home_team` on columns, `team` on rows, promo rate as color, and `COUNTD([game_id])` in the tooltip so small samples stay visible.
-- Road vs. home: the same calculation with `role` on color, per `team`.
-- Expected vs. actual: `SUM([promo_xprob])` against `SUM(INT([promo_any]))` shows whether a team or arena misses more than its shooters' usual FT% predicts.
+- **Upcoming slate.** Use `upcoming_predictions.csv`: sort by `promo_chance`, filter `home` for one arena, and show `shooter_1` and `shooter_2` in the tooltip.
+- **Promo rate.** Filter `role = "Away"` and `neutral_site = FALSE` in `team_games.csv`, then use `SUM(INT([promo])) / COUNTD([game_id])`.
+- **Arena × visitor heatmap.** Put `arena_home_team` on columns and `team` on rows, color by promo rate, and keep `COUNTD([game_id])` in the tooltip so small samples stay visible.
+- **Expected vs. actual.** Compare `SUM([promo_xprob])` with `SUM(INT([promo]))` to see who misses more than their usual FT% predicts.
