@@ -77,9 +77,9 @@
     "lg_trips_team": 2.8258746948738813,
     "w3": 0.03742622714840939
   },
-  "data_through": "2026-11-02",
-  "games_so_far": 107,
-  "scored_after_utc": "2026-11-05T06:21Z",
+  "data_through": "2026-11-04",
+  "games_so_far": 121,
+  "scored_after_utc": "2026-11-05T17:41Z",
   "train": "2024-25",
   "test": "2025-26",
   "n_test": 1225,
