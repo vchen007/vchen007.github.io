@@ -1,31 +1,68 @@
-A Github Pages template for academic websites. This was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License. See LICENSE.md.
+# vchen007.github.io
 
-I think I've got things running smoothly and fixed some major bugs, but feel free to file issues or make pull requests if you want to improve the generic template / theme.
+Victor Chen's portfolio site: <https://vchen007.github.io>. Built with Jekyll on GitHub Pages, starting from the [AcademicPages](https://github.com/academicpages/academicpages.github.io) template (a fork of [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/), MIT licensed; see `LICENSE`).
 
-### Note: if you are using this repo and now get a notification about a security vulnerability, delete the Gemfile.lock file. 
+## Where things live
 
-# Instructions
+| What | Where |
+| --- | --- |
+| Home page (intro, featured projects, skills, experience) | `_pages/about.md` |
+| Skills shown on the home page | `_data/skills.yml` |
+| Top navigation | `_data/navigation.yml` |
+| Name, bio, social links, site description | `_config.yml` |
+| Projects (one file each; file name sets the order, `portfolio-0` is first) | `_portfolio/` |
+| Résumé PDF (linked from the nav, `/cv/` and `/resume`) | `files/Resume Victor Chen.pdf` |
+| Colours, dark mode and page components | `_sass/_theme.scss` |
+| Images, link-preview cards (`images/og/`) | `images/` |
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this repository](https://github.com/academicpages/academicpages.github.io) by clicking the "fork" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+## Adding a project
 
-See more info at https://academicpages.github.io/
+Create `_portfolio/portfolio-N.md` with front matter like this, then write the walkthrough below it:
 
-## To run locally (not on GitHub Pages, to serve on your own computer)
+```yaml
+---
+title: "Project title"
+excerpt: "One sentence for the project card, search results and link previews."
+kicker: "Tableau dashboard"        # small label above the title on the card
+collection: portfolio
+featured: true                     # also show it on the home page
+teaser: my-chart.png               # card image in /images/ (or a full URL)
+teaser_fit: contain                # optional: show the whole image instead of cropping
+og_image: og/portfolio-N.png       # link-preview image (generate it, see below)
+tools: [Python, SQL]
+summary:                           # the "At a glance" box at the top of the page
+  question: "..."                  # or goal: "..."
+  data: "..."
+  approach: "..."
+  result: "..."
+links:                             # optional buttons in the box
+  - label: "Open in Tableau Public"
+    url: "https://..."
+---
+```
 
-1. Clone the repository and made updates as detailed above
-1. Make sure you have ruby-dev, bundler, and nodejs installed: `sudo apt install ruby-dev ruby-bundler nodejs`
-1. Run `bundle clean` to clean up the directory (no need to run `--force`)
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-1. Run `bundle exec jekyll liveserve` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
+Then regenerate the link-preview cards: `node _scripts/make-social-images.js` (needs Playwright: `npm i -D playwright && npx playwright install chromium`).
 
-# Changelog -- bugfixes and enhancements
+## Updating the first-down EPA project
 
-There is one logistical issue with a ready-to-fork template theme like academic pages that makes it a little tricky to get bug fixes and updates to the core theme. If you fork this repository, customize it, then pull again, you'll probably get merge conflicts. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch. 
+`_scripts/first_down_epa.py` downloads nflverse play-by-play and rebuilds the data behind `/portfolio/first-down-epa/`:
 
-To support this, all changes to the underlying code appear as a closed issue with the tag 'code change' -- get the list [here](https://github.com/academicpages/academicpages.github.io/issues?q=is%3Aclosed%20is%3Aissue%20label%3A%22code%20change%22%20). Each issue thread includes a comment linking to the single commit or a diff across multiple commits, so those with forked repositories can easily identify what they need to patch.
+```bash
+pip install pandas pyarrow
+python3 _scripts/first_down_epa.py --seasons 2016-2026
+```
+
+Update the dates and numbers in `_portfolio/portfolio-0.md` if they change.
+
+## Running locally
+
+```bash
+bundle install
+bundle exec jekyll serve
+```
+
+Then open <http://localhost:4000>.
+
+## Checks
+
+`.github/workflows/site-check.yml` builds the site and checks internal links, images and scripts on every push and pull request, and links to other sites every Monday. To run the same check locally after a build: `bundle exec htmlproofer ./_site --disable-external --swap-urls '^https\://vchen007\.github\.io:'`.
