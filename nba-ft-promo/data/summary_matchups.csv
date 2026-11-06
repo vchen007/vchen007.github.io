@@ -2638,6 +2638,7 @@ key,season,home,team,team_name,games,q4_fta,q4_ftm,q4_line,q4_ft_pct,promos,rate
 2026-27|GSW|LAC,2026-27,GSW,LAC,LA Clippers,1,6,6,6/6,1.0,0,0.0
 2026-27|GSW|LAL,2026-27,GSW,LAL,Los Angeles Lakers,1,7,4,4/7,0.5714,1,1.0
 2026-27|GSW|MEM,2026-27,GSW,MEM,Memphis Grizzlies,1,8,7,7/8,0.875,0,0.0
+2026-27|GSW|MIA,2026-27,GSW,MIA,Miami Heat,1,5,4,4/5,0.8,0,0.0
 2026-27|GSW|PHX,2026-27,GSW,PHX,Phoenix Suns,1,4,3,3/4,0.75,0,0.0
 2026-27|HOU|ATL,2026-27,HOU,ATL,Atlanta Hawks,1,7,4,4/7,0.5714,0,0.0
 2026-27|HOU|BOS,2026-27,HOU,BOS,Boston Celtics,1,2,1,1/2,0.5,0,0.0
@@ -2698,6 +2699,7 @@ key,season,home,team,team_name,games,q4_fta,q4_ftm,q4_line,q4_ft_pct,promos,rate
 2026-27|PHI|NYK,2026-27,PHI,NYK,New York Knicks,1,4,2,2/4,0.5,0,0.0
 2026-27|PHX|DEN,2026-27,PHX,DEN,Denver Nuggets,1,7,7,7/7,1.0,0,0.0
 2026-27|PHX|GSW,2026-27,PHX,GSW,Golden State Warriors,1,7,4,4/7,0.5714,1,1.0
+2026-27|PHX|ORL,2026-27,PHX,ORL,Orlando Magic,1,0,0,0/0,,0,0.0
 2026-27|PHX|POR,2026-27,PHX,POR,Portland Trail Blazers,1,15,10,10/15,0.6667,1,1.0
 2026-27|POR|MEM,2026-27,POR,MEM,Memphis Grizzlies,1,4,4,4/4,1.0,0,0.0
 2026-27|POR|PHX,2026-27,POR,PHX,Phoenix Suns,1,5,3,3/5,0.6,0,0.0
@@ -2996,7 +2998,7 @@ All|GSW|IND,All,GSW,IND,Indiana Pacers,3,11,9,9/11,0.8182,0,0.0
 All|GSW|LAC,All,GSW,LAC,LA Clippers,7,49,40,40/49,0.8163,0,0.0
 All|GSW|LAL,All,GSW,LAL,Los Angeles Lakers,7,46,36,36/46,0.7826,3,0.4286
 All|GSW|MEM,All,GSW,MEM,Memphis Grizzlies,6,35,30,30/35,0.8571,0,0.0
-All|GSW|MIA,All,GSW,MIA,Miami Heat,3,16,10,10/16,0.625,1,0.3333
+All|GSW|MIA,All,GSW,MIA,Miami Heat,4,21,14,14/21,0.6667,1,0.25
 All|GSW|MIL,All,GSW,MIL,Milwaukee Bucks,3,12,8,8/12,0.6667,1,0.3333
 All|GSW|MIN,All,GSW,MIN,Minnesota Timberwolves,6,41,31,31/41,0.7561,2,0.3333
 All|GSW|NOP,All,GSW,NOP,New Orleans Pelicans,5,38,29,29/38,0.7632,0,0.0
@@ -3409,7 +3411,7 @@ All|PHX|MIN,All,PHX,MIN,Minnesota Timberwolves,5,48,37,37/48,0.7708,2,0.4
 All|PHX|NOP,All,PHX,NOP,New Orleans Pelicans,5,37,29,29/37,0.7838,1,0.2
 All|PHX|NYK,All,PHX,NYK,New York Knicks,3,21,16,16/21,0.7619,1,0.3333
 All|PHX|OKC,All,PHX,OKC,Oklahoma City Thunder,5,32,26,26/32,0.8125,0,0.0
-All|PHX|ORL,All,PHX,ORL,Orlando Magic,3,14,11,11/14,0.7857,0,0.0
+All|PHX|ORL,All,PHX,ORL,Orlando Magic,4,14,11,11/14,0.7857,0,0.0
 All|PHX|PHI,All,PHX,PHI,Philadelphia 76ers,3,24,18,18/24,0.75,1,0.3333
 All|PHX|POR,All,PHX,POR,Portland Trail Blazers,6,42,29,29/42,0.6905,4,0.6667
 All|PHX|SAC,All,PHX,SAC,Sacramento Kings,7,51,35,35/51,0.6863,1,0.1429
