@@ -198,17 +198,61 @@ def _fast_flights_query(pair: DatePair, s: Settings):
     )
 
 
+def parse_google_html(html: str) -> list:
+    """Parse every flight on a Google Flights results page.
+
+    Google puts results in two blocks of the page's data: "Top flights"
+    (payload[2]) and "Other flights" (payload[3]). fast-flights 3.1.0 only
+    reads payload[3], which drops the Top flights block, and that block
+    usually holds the cheapest fares. So run fast-flights' parser once per
+    block and merge the results, dropping repeats.
+    """
+    from fast_flights import FlightsNotFound
+    from fast_flights.parser import parse_js
+    from selectolax.lexbor import LexborHTMLParser
+
+    script = LexborHTMLParser(html).css_first(r"script.ds\:1")
+    if script is None:
+        raise FlightsNotFound("no flight data on the Google Flights page")
+    js = script.text()
+    data = js.split("data:", 1)[1].rsplit(",", 1)[0]
+    if data.endswith("errorHasStatus: true"):
+        raise FlightsNotFound("no flights found; received error")
+    payload = json.loads(data)
+
+    flights, seen = [], set()
+    for block in (2, 3):
+        if len(payload) <= block or not payload[block] or not payload[block][0]:
+            continue
+        # parse_js reads flights from payload[3], so point it at this block.
+        view = list(payload)
+        view[3] = payload[block]
+        for f in parse_js("data:" + json.dumps(view) + ",0"):
+            key = (
+                f.price,
+                tuple(
+                    (g.from_airport.code, g.to_airport.code, g.departure.date, g.departure.time)
+                    for g in f.flights
+                ),
+            )
+            if key not in seen:
+                seen.add(key)
+                flights.append(f)
+    return flights
+
+
 def fetch_google(pair: DatePair, s: Settings) -> list[Itinerary]:
     """Scrape Google Flights via fast-flights (no API key)."""
     try:
-        from fast_flights import FlightsNotFound, get_flights
+        from fast_flights import FlightsNotFound
+        from fast_flights.fetcher import fetch_flights_html
     except ImportError as e:  # pragma: no cover - depends on environment
         raise RuntimeError(
             "the 'google' source needs fast-flights: pip install -r requirements.txt"
         ) from e
 
     try:
-        results = get_flights(_fast_flights_query(pair, s))
+        results = parse_google_html(fetch_flights_html(_fast_flights_query(pair, s)))
     except FlightsNotFound:
         return []
     out = []

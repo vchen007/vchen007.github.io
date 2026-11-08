@@ -229,6 +229,37 @@ def test_google_verdicts():
     assert "Google says" not in text
 
 
+def _google_page(payload) -> str:
+    data = json.dumps(payload)
+    return (
+        "<html><body><script class=\"ds:1\">AF_initDataCallback({key: 'ds:1', hash: '9', data:"
+        + data + ", sideChannel: {}});</script></body></html>"
+    )
+
+
+def test_google_parser_reads_top_and_other_flights():
+    # Trimmed from a real SNA->TPE Nov 28 page: one "Top flights" entry
+    # (Delta $503, payload[2]) and one "Other flights" entry (Alaska/EVA
+    # $630, payload[3]). fast-flights alone only returns the $630 one.
+    try:
+        import fast_flights  # noqa: F401
+    except ImportError:
+        return
+    import pathlib
+    payload = json.loads((pathlib.Path(__file__).parent / "testdata" / "google_page_payload.json").read_text())
+    flights = fs.parse_google_html(_google_page(payload))
+    assert sorted(f.price for f in flights) == [503, 630]
+    assert {tuple(f.airlines) for f in flights} == {("Delta",), ("Alaska", "EVA Air")}
+
+    # A flight listed in both blocks is kept once.
+    payload[3][0].append(payload[2][0][0])
+    assert len(fs.parse_google_html(_google_page(payload))) == 2
+
+    # No Top flights block still works.
+    payload[2] = None
+    assert [f.price for f in fs.parse_google_html(_google_page(payload))] == [630, 503]
+
+
 if __name__ == "__main__":
     import pathlib, tempfile
     for name, fn in list(globals().items()):
