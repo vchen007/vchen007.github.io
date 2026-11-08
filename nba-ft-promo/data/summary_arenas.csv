@@ -89,63 +89,63 @@ key,season,home,home_name,arena,arena_note,games,q4_fta,q4_ftm,q4_line,q4_ft_pct
 2025-26|TOR,2025-26,TOR,Toronto Raptors,Scotiabank Arena,,41,244,185,185/244,0.7582,0.7829,-2.47,9,0.2195,5.7,0.139,9.0
 2025-26|UTA,2025-26,UTA,Utah Jazz,Delta Center,,41,345,267,267/345,0.7739,0.7813,-0.74,9,0.2195,7.6,0.1854,9.0
 2025-26|WAS,2025-26,WAS,Washington Wizards,Capital One Arena,,41,266,221,221/266,0.8308,0.7712,5.96,8,0.1951,6.3,0.1537,8.0
-2026-27|ATL,2026-27,ATL,Atlanta Hawks,State Farm Arena,,4,39,29,29/39,0.7436,0.7832,-3.96,1,0.25,0.8,0.2,10.2
-2026-27|BKN,2026-27,BKN,Brooklyn Nets,Barclays Center,,4,23,15,15/23,0.6522,0.8109,-15.87,1,0.25,0.3,0.075,10.2
-2026-27|BOS,2026-27,BOS,Boston Celtics,TD Garden,,5,44,24,24/44,0.5455,0.7497,-20.43,4,0.8,1.1,0.22,32.8
-2026-27|CHA,2026-27,CHA,Charlotte Hornets,Spectrum Center,,6,28,20,20/28,0.7143,0.7683,-5.4,2,0.3333,0.7,0.1167,13.7
-2026-27|CHI,2026-27,CHI,Chicago Bulls,United Center,,2,14,13,13/14,0.9286,0.8198,10.88,0,0.0,0.2,0.1,0.0
-2026-27|CLE,2026-27,CLE,Cleveland Cavaliers,Rocket Arena,,5,26,20,20/26,0.7692,0.7659,0.33,1,0.2,0.7,0.14,8.2
-2026-27|DAL,2026-27,DAL,Dallas Mavericks,American Airlines Center,,5,40,29,29/40,0.725,0.8023,-7.73,2,0.4,0.7,0.14,16.4
-2026-27|DEN,2026-27,DEN,Denver Nuggets,Ball Arena,,4,31,24,24/31,0.7742,0.7788,-0.46,1,0.25,0.7,0.175,10.2
+2026-27|ATL,2026-27,ATL,Atlanta Hawks,State Farm Arena,,5,44,31,31/44,0.7045,0.7747,-7.02,2,0.4,1.0,0.2,16.4
+2026-27|BKN,2026-27,BKN,Brooklyn Nets,Barclays Center,,4,23,15,15/23,0.6522,0.811,-15.88,1,0.25,0.3,0.075,10.2
+2026-27|BOS,2026-27,BOS,Boston Celtics,TD Garden,,5,44,24,24/44,0.5455,0.7507,-20.53,4,0.8,1.1,0.22,32.8
+2026-27|CHA,2026-27,CHA,Charlotte Hornets,Spectrum Center,,6,28,20,20/28,0.7143,0.7672,-5.29,2,0.3333,0.7,0.1167,13.7
+2026-27|CHI,2026-27,CHI,Chicago Bulls,United Center,,2,14,13,13/14,0.9286,0.8192,10.94,0,0.0,0.2,0.1,0.0
+2026-27|CLE,2026-27,CLE,Cleveland Cavaliers,Rocket Arena,,6,30,23,23/30,0.7667,0.7708,-0.42,1,0.1667,0.7,0.1167,6.8
+2026-27|DAL,2026-27,DAL,Dallas Mavericks,American Airlines Center,,5,40,29,29/40,0.725,0.8054,-8.03,2,0.4,0.7,0.14,16.4
+2026-27|DEN,2026-27,DEN,Denver Nuggets,Ball Arena,,4,31,24,24/31,0.7742,0.7789,-0.47,1,0.25,0.7,0.175,10.2
 2026-27|DET,2026-27,DET,Detroit Pistons,Little Caesars Arena,,3,13,10,10/13,0.7692,0.7956,-2.64,1,0.3333,0.3,0.1,13.7
-2026-27|GSW,2026-27,GSW,Golden State Warriors,Chase Center,,5,30,24,24/30,0.8,0.7793,2.07,1,0.2,0.7,0.14,8.2
-2026-27|HOU,2026-27,HOU,Houston Rockets,Toyota Center,,5,30,19,19/30,0.6333,0.7701,-13.68,0,0.0,0.7,0.14,0.0
-2026-27|IND,2026-27,IND,Indiana Pacers,Gainbridge Fieldhouse,,4,28,23,23/28,0.8214,0.7819,3.95,0,0.0,0.6,0.15,0.0
-2026-27|LAC,2026-27,LAC,LA Clippers,Intuit Dome,,4,56,37,37/56,0.6607,0.7398,-7.91,3,0.75,1.5,0.375,30.8
-2026-27|LAL,2026-27,LAL,Los Angeles Lakers,Crypto.com Arena,,6,64,45,45/64,0.7031,0.7563,-5.31,1,0.1667,1.5,0.25,6.8
-2026-27|MEM,2026-27,MEM,Memphis Grizzlies,FedExForum,,5,27,21,21/27,0.7778,0.7764,0.14,2,0.4,0.6,0.12,16.4
-2026-27|MIA,2026-27,MIA,Miami Heat,Kaseya Center,,4,35,24,24/35,0.6857,0.7559,-7.02,1,0.25,0.9,0.225,10.2
-2026-27|MIL,2026-27,MIL,Milwaukee Bucks,Fiserv Forum,,5,35,30,30/35,0.8571,0.7648,9.23,0,0.0,0.9,0.18,0.0
-2026-27|MIN,2026-27,MIN,Minnesota Timberwolves,Target Center,,4,31,25,25/31,0.8065,0.818,-1.16,1,0.25,0.4,0.1,10.2
-2026-27|NOP,2026-27,NOP,New Orleans Pelicans,Smoothie King Center,,6,48,35,35/48,0.7292,0.757,-2.78,2,0.3333,1.2,0.2,13.7
-2026-27|NYK,2026-27,NYK,New York Knicks,Madison Square Garden,,5,48,34,34/48,0.7083,0.7683,-6.0,1,0.2,1.1,0.22,8.2
-2026-27|OKC,2026-27,OKC,Oklahoma City Thunder,Paycom Center,,4,24,16,16/24,0.6667,0.7785,-11.19,1,0.25,0.5,0.125,10.2
-2026-27|ORL,2026-27,ORL,Orlando Magic,Kia Center,,4,32,23,23/32,0.7188,0.738,-1.93,1,0.25,0.9,0.225,10.2
-2026-27|PHI,2026-27,PHI,Philadelphia 76ers,Xfinity Mobile Arena,,5,37,25,25/37,0.6757,0.7818,-10.61,2,0.4,0.7,0.14,16.4
-2026-27|PHX,2026-27,PHX,Phoenix Suns,Mortgage Matchup Center,,4,29,21,21/29,0.7241,0.7812,-5.71,2,0.5,0.6,0.15,20.5
-2026-27|POR,2026-27,POR,Portland Trail Blazers,Moda Center,,2,9,7,7/9,0.7778,0.8024,-2.47,0,0.0,0.2,0.1,0.0
-2026-27|SAC,2026-27,SAC,Sacramento Kings,Golden 1 Center,,4,37,34,34/37,0.9189,0.7761,14.28,0,0.0,0.9,0.225,0.0
-2026-27|SAS,2026-27,SAS,San Antonio Spurs,Frost Bank Center,,6,38,30,30/38,0.7895,0.7829,0.66,1,0.1667,0.8,0.1333,6.8
-2026-27|TOR,2026-27,TOR,Toronto Raptors,Scotiabank Arena,,3,28,25,25/28,0.8929,0.7785,11.43,0,0.0,0.6,0.2,0.0
-2026-27|UTA,2026-27,UTA,Utah Jazz,Delta Center,,5,42,36,36/42,0.8571,0.806,5.11,1,0.2,0.8,0.16,8.2
+2026-27|GSW,2026-27,GSW,Golden State Warriors,Chase Center,,6,37,31,31/37,0.8378,0.7797,5.81,1,0.1667,0.8,0.1333,6.8
+2026-27|HOU,2026-27,HOU,Houston Rockets,Toyota Center,,5,30,19,19/30,0.6333,0.77,-13.66,0,0.0,0.7,0.14,0.0
+2026-27|IND,2026-27,IND,Indiana Pacers,Gainbridge Fieldhouse,,4,28,23,23/28,0.8214,0.7834,3.8,0,0.0,0.5,0.125,0.0
+2026-27|LAC,2026-27,LAC,LA Clippers,Intuit Dome,,4,56,37,37/56,0.6607,0.7399,-7.91,3,0.75,1.5,0.375,30.8
+2026-27|LAL,2026-27,LAL,Los Angeles Lakers,Crypto.com Arena,,6,64,45,45/64,0.7031,0.7571,-5.4,1,0.1667,1.5,0.25,6.8
+2026-27|MEM,2026-27,MEM,Memphis Grizzlies,FedExForum,,5,27,21,21/27,0.7778,0.7768,0.1,2,0.4,0.6,0.12,16.4
+2026-27|MIA,2026-27,MIA,Miami Heat,Kaseya Center,,4,35,24,24/35,0.6857,0.756,-7.03,1,0.25,0.9,0.225,10.2
+2026-27|MIL,2026-27,MIL,Milwaukee Bucks,Fiserv Forum,,5,35,30,30/35,0.8571,0.7656,9.15,0,0.0,0.9,0.18,0.0
+2026-27|MIN,2026-27,MIN,Minnesota Timberwolves,Target Center,,4,31,25,25/31,0.8065,0.8192,-1.28,1,0.25,0.4,0.1,10.2
+2026-27|NOP,2026-27,NOP,New Orleans Pelicans,Smoothie King Center,,6,48,35,35/48,0.7292,0.7553,-2.61,2,0.3333,1.3,0.2167,13.7
+2026-27|NYK,2026-27,NYK,New York Knicks,Madison Square Garden,,5,48,34,34/48,0.7083,0.7707,-6.24,1,0.2,1.1,0.22,8.2
+2026-27|OKC,2026-27,OKC,Oklahoma City Thunder,Paycom Center,,5,26,17,17/26,0.6538,0.7752,-12.13,1,0.2,0.6,0.12,8.2
+2026-27|ORL,2026-27,ORL,Orlando Magic,Kia Center,,4,32,23,23/32,0.7188,0.7356,-1.69,1,0.25,0.9,0.225,10.2
+2026-27|PHI,2026-27,PHI,Philadelphia 76ers,Xfinity Mobile Arena,,5,37,25,25/37,0.6757,0.7789,-10.32,2,0.4,0.7,0.14,16.4
+2026-27|PHX,2026-27,PHX,Phoenix Suns,Mortgage Matchup Center,,5,31,23,23/31,0.7419,0.7817,-3.98,2,0.4,0.7,0.14,16.4
+2026-27|POR,2026-27,POR,Portland Trail Blazers,Moda Center,,3,13,11,11/13,0.8462,0.783,6.32,0,0.0,0.3,0.1,0.0
+2026-27|SAC,2026-27,SAC,Sacramento Kings,Golden 1 Center,,4,37,34,34/37,0.9189,0.7778,14.11,0,0.0,0.9,0.225,0.0
+2026-27|SAS,2026-27,SAS,San Antonio Spurs,Frost Bank Center,,6,38,30,30/38,0.7895,0.7854,0.41,1,0.1667,0.8,0.1333,6.8
+2026-27|TOR,2026-27,TOR,Toronto Raptors,Scotiabank Arena,,3,28,25,25/28,0.8929,0.7834,10.94,0,0.0,0.6,0.2,0.0
+2026-27|UTA,2026-27,UTA,Utah Jazz,Delta Center,,5,42,36,36/42,0.8571,0.8075,4.97,1,0.2,0.7,0.14,8.2
 2026-27|WAS,2026-27,WAS,Washington Wizards,Capital One Arena,,4,19,13,13/19,0.6842,0.7679,-8.37,1,0.25,0.4,0.1,10.2
-All|ATL,All,ATL,Atlanta Hawks,State Farm Arena,,126,828,645,645/828,0.779,0.7826,-0.36,13,0.1032,17.3,0.1373,4.2
+All|ATL,All,ATL,Atlanta Hawks,State Farm Arena,,127,833,647,647/833,0.7767,0.7821,-0.54,14,0.1102,17.5,0.1378,4.5
 All|BKN,All,BKN,Brooklyn Nets,Barclays Center,,127,798,618,618/798,0.7744,0.7826,-0.82,15,0.1181,17.2,0.1354,4.8
-All|BOS,All,BOS,Boston Celtics,TD Garden,,128,750,555,555/750,0.74,0.7794,-3.94,19,0.1484,16.1,0.1258,6.1
+All|BOS,All,BOS,Boston Celtics,TD Garden,,128,750,555,555/750,0.74,0.7795,-3.95,19,0.1484,16.1,0.1258,6.1
 All|CHA,All,CHA,Charlotte Hornets,Spectrum Center,,129,752,594,594/752,0.7899,0.7997,-0.98,17,0.1318,13.7,0.1062,5.4
 All|CHI,All,CHI,Chicago Bulls,United Center,,125,794,607,607/794,0.7645,0.783,-1.85,19,0.152,17.1,0.1368,6.2
-All|CLE,All,CLE,Cleveland Cavaliers,Rocket Arena,,127,779,633,633/779,0.8126,0.7877,2.48,17,0.1339,16.0,0.126,5.5
-All|DAL,All,DAL,Dallas Mavericks,American Airlines Center,,127,749,567,567/749,0.757,0.7844,-2.74,19,0.1496,15.2,0.1197,6.1
+All|CLE,All,CLE,Cleveland Cavaliers,Rocket Arena,,128,783,636,636/783,0.8123,0.7878,2.45,17,0.1328,16.1,0.1258,5.4
+All|DAL,All,DAL,Dallas Mavericks,American Airlines Center,,127,749,567,567/749,0.757,0.7845,-2.75,19,0.1496,15.2,0.1197,6.1
 All|DEN,All,DEN,Denver Nuggets,Ball Arena,,127,881,661,661/881,0.7503,0.7749,-2.46,23,0.1811,20.0,0.1575,7.4
 All|DET,All,DET,Detroit Pistons,Little Caesars Arena,,124,913,712,712/913,0.7798,0.7823,-0.25,24,0.1935,19.3,0.1556,7.9
-All|GSW,All,GSW,Golden State Warriors,Chase Center,,128,766,593,593/766,0.7742,0.7816,-0.74,21,0.1641,16.7,0.1305,6.7
+All|GSW,All,GSW,Golden State Warriors,Chase Center,,129,773,600,600/773,0.7762,0.7816,-0.54,21,0.1628,16.9,0.131,6.7
 All|HOU,All,HOU,Houston Rockets,Toyota Center,,128,880,641,641/880,0.7284,0.7801,-5.17,27,0.2109,19.0,0.1484,8.6
-All|IND,All,IND,Indiana Pacers,Gainbridge Fieldhouse,,126,866,653,653/866,0.754,0.7801,-2.61,17,0.1349,19.2,0.1524,5.5
+All|IND,All,IND,Indiana Pacers,Gainbridge Fieldhouse,,126,866,653,653/866,0.754,0.7802,-2.61,17,0.1349,19.2,0.1524,5.5
 All|LAC,All,LAC,LA Clippers,Intuit Dome,Crypto.com Arena in 2023-24,127,783,585,585/783,0.7471,0.7817,-3.46,25,0.1969,16.8,0.1323,8.1
-All|LAL,All,LAL,Los Angeles Lakers,Crypto.com Arena,,129,698,539,539/698,0.7722,0.7846,-1.24,14,0.1085,14.3,0.1109,4.4
+All|LAL,All,LAL,Los Angeles Lakers,Crypto.com Arena,,129,698,539,539/698,0.7722,0.7847,-1.25,14,0.1085,14.3,0.1109,4.4
 All|MEM,All,MEM,Memphis Grizzlies,FedExForum,,127,792,603,603/792,0.7614,0.7806,-1.93,21,0.1654,17.5,0.1378,6.8
 All|MIA,All,MIA,Miami Heat,Kaseya Center,,127,776,586,586/776,0.7552,0.7863,-3.11,20,0.1575,16.1,0.1268,6.5
-All|MIL,All,MIL,Milwaukee Bucks,Fiserv Forum,,128,903,712,712/903,0.7885,0.7883,0.02,24,0.1875,18.3,0.143,7.7
+All|MIL,All,MIL,Milwaukee Bucks,Fiserv Forum,,128,903,712,712/903,0.7885,0.7883,0.02,24,0.1875,18.2,0.1422,7.7
 All|MIN,All,MIN,Minnesota Timberwolves,Target Center,,127,810,622,622/810,0.7679,0.7835,-1.56,22,0.1732,17.3,0.1362,7.1
-All|NOP,All,NOP,New Orleans Pelicans,Smoothie King Center,,128,839,647,647/839,0.7712,0.7824,-1.13,24,0.1875,17.9,0.1398,7.7
-All|NYK,All,NYK,New York Knicks,Madison Square Garden,,127,826,628,628/826,0.7603,0.7817,-2.14,25,0.1969,18.2,0.1433,8.1
-All|OKC,All,OKC,Oklahoma City Thunder,Paycom Center,,127,773,582,582/773,0.7529,0.7767,-2.38,24,0.189,17.8,0.1402,7.7
-All|ORL,All,ORL,Orlando Magic,Kia Center,,125,781,603,603/781,0.7721,0.7882,-1.62,15,0.12,15.8,0.1264,4.9
-All|PHI,All,PHI,Philadelphia 76ers,Xfinity Mobile Arena,,128,776,603,603/776,0.7771,0.7829,-0.59,24,0.1875,16.2,0.1266,7.7
-All|PHX,All,PHX,Phoenix Suns,Mortgage Matchup Center,,127,870,653,653/870,0.7506,0.7877,-3.71,24,0.189,17.4,0.137,7.7
-All|POR,All,POR,Portland Trail Blazers,Moda Center,,125,820,662,662/820,0.8073,0.7848,2.26,14,0.112,17.8,0.1424,4.6
-All|SAC,All,SAC,Sacramento Kings,Golden 1 Center,,127,868,704,704/868,0.8111,0.7832,2.79,13,0.1024,18.4,0.1449,4.2
-All|SAS,All,SAS,San Antonio Spurs,Frost Bank Center,,127,707,552,552/707,0.7808,0.7908,-1.01,21,0.1654,14.1,0.111,6.8
-All|TOR,All,TOR,Toronto Raptors,Scotiabank Arena,,126,739,575,575/739,0.7781,0.781,-0.3,18,0.1429,16.2,0.1286,5.9
-All|UTA,All,UTA,Utah Jazz,Delta Center,,128,931,709,709/931,0.7615,0.786,-2.45,25,0.1953,19.8,0.1547,8.0
+All|NOP,All,NOP,New Orleans Pelicans,Smoothie King Center,,128,839,647,647/839,0.7712,0.7824,-1.12,24,0.1875,17.9,0.1398,7.7
+All|NYK,All,NYK,New York Knicks,Madison Square Garden,,127,826,628,628/826,0.7603,0.7818,-2.15,25,0.1969,18.2,0.1433,8.1
+All|OKC,All,OKC,Oklahoma City Thunder,Paycom Center,,128,775,583,583/775,0.7523,0.7766,-2.43,24,0.1875,17.9,0.1398,7.7
+All|ORL,All,ORL,Orlando Magic,Kia Center,,125,781,603,603/781,0.7721,0.7881,-1.61,15,0.12,15.8,0.1264,4.9
+All|PHI,All,PHI,Philadelphia 76ers,Xfinity Mobile Arena,,128,776,603,603/776,0.7771,0.7828,-0.57,24,0.1875,16.3,0.1273,7.7
+All|PHX,All,PHX,Phoenix Suns,Mortgage Matchup Center,,128,872,655,655/872,0.7511,0.7877,-3.66,24,0.1875,17.4,0.1359,7.7
+All|POR,All,POR,Portland Trail Blazers,Moda Center,,126,824,666,666/824,0.8083,0.7845,2.37,14,0.1111,17.9,0.1421,4.6
+All|SAC,All,SAC,Sacramento Kings,Golden 1 Center,,127,868,704,704/868,0.8111,0.7833,2.78,13,0.1024,18.4,0.1449,4.2
+All|SAS,All,SAS,San Antonio Spurs,Frost Bank Center,,127,707,552,552/707,0.7808,0.791,-1.02,21,0.1654,14.1,0.111,6.8
+All|TOR,All,TOR,Toronto Raptors,Scotiabank Arena,,126,739,575,575/739,0.7781,0.7812,-0.31,18,0.1429,16.2,0.1286,5.9
+All|UTA,All,UTA,Utah Jazz,Delta Center,,128,931,709,709/931,0.7615,0.7861,-2.46,25,0.1953,19.8,0.1547,8.0
 All|WAS,All,WAS,Washington Wizards,Capital One Arena,,126,886,699,699/886,0.7889,0.7775,1.14,19,0.1508,19.7,0.1563,6.2
