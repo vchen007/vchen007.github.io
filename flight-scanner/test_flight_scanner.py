@@ -119,6 +119,26 @@ def test_firecrawl_source():
     assert res[1].best is None and "no Firecrawl result" in res[1].error
 
 
+LISTING = """D|2026-11-25|1793826400000|https://www.google.com/travel/flights?tfs=A&curr=USD
+F|2026-11-25|528|1|1090|true|false|United,United|SNA-SFO-TPE|2026-11-25T19:35:00|2026-11-27T05:45:00
+F|2026-11-25|503|1|1290|true|false|Delta,Delta|SNA-SEA-TPE|2026-11-25T07:00:00|2026-11-26T20:30:00
+F|2026-11-25|614|2|1810|false|true|Alaska,Alaska,STARLUX Airlines|SNA-SEA-LAX-TPE|2026-11-25T06:45:00|null
+E|error
+"""
+
+
+def test_firecrawl_listing_matches_json():
+    from_json = fs.parse_firecrawl(FIRECRAWL)["2026-11-25"]
+    parsed = fs.parse_firecrawl_listing(LISTING)
+    assert parsed["_errors"] == ["error"] and set(parsed) == {"_errors", "2026-11-25"}
+    day = parsed["2026-11-25"]
+    assert day["url"] == from_json["url"] and day["observed_at_ms"] == from_json["observed_at_ms"]
+    assert day["itineraries"][:2] == from_json["itineraries"]
+    odd = day["itineraries"][2]
+    assert odd.airlines == ["Alaska", "STARLUX Airlines"] and odd.stops == 2 and odd.arrive_time == ""
+    assert odd.note == "different cabin, airport change"
+
+
 def test_email_report_round_trips_prices():
     parsed = fs.parse_firecrawl(FIRECRAWL)
     pairs = fs.build_pairs(date(2026, 11, 25), date(2026, 11, 26), one_way=True)
@@ -203,6 +223,7 @@ def test_price_history_carries_forward():
     assert "Wed Nov 25: $510 now, ▲ $7 since Wed Nov 4, range $503-$510  ▁▂" in text
     assert "Price trend since Wed Nov 4 (cheapest fare at each daily check)" in text
     assert "Thu Nov 26: no price now  ▁·" in text
+    assert "Trend shows both daily checks." in text
     # the next run reads both checks back, and the history lines don't leak into the day-over-day prices
     assert fs.parse_history(text, date(2026, 11, 6)) == history
     assert fs.parse_fares_block(text) == {"2026-11-25": 510.0, "2026-11-26": None}

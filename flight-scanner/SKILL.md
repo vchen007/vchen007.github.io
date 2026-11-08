@@ -81,9 +81,19 @@ it instead:
    departure date (up to 10 per call; each entry costs 5 Firecrawl credits):
    `{"provider": "flights-google-com", "capability": "flights/search_flights", "options": {"origin": "SNA", "destination": "TPE", "departure_date": "YYYY-MM-DD", "adults": 1, "cabin_class": "economy", "currency": "USD", "limit": 50}}`
    Add `"return_date"` for round trips.
-2. The result is large, so it is usually saved to a file. Pass that file to the
-   scanner, which needs no installed packages for this:
-   `python3 flight_scanner.py --source firecrawl --firecrawl-json <saved result file>`
+2. Pass the result to the scanner, which needs no installed packages for this.
+   If it came back as JSON, save it and use
+   `python3 flight_scanner.py --source firecrawl --firecrawl-json <saved result file>`.
+   Results over about 20K tokens are kept on Firecrawl's side instead (the
+   response says `"delivery": "retained"` and gives a `workspaceId`). Then call
+   `firecrawl_scrape` with `{"provider": "firecrawl", "capability": "bash", "options": {"workspaceId": "<id>", "command": "<the jq below>"}}`,
+   save the lines it prints to a file, and use `--firecrawl-listing <file>`
+   instead of `--firecrawl-json` (one-way searches only):
+   ```
+   jq -r '.data.alexandria[] | .data as $d | if ($d.query.departure_date // null) == null then "E|error" else ("D|\($d.query.departure_date)|\($d.observed_at_ms)|\($d.search_url)", (($d.flights // [])[] | "F|\($d.query.departure_date)|\(.price.amount)|\(.stops)|\(.duration_minutes)|\(.cabin_matches_request)|\(.airport_change)|\([.segments[].airline_name] | join(","))|\(([.segments[0].origin] + [.segments[].destination]) | join("-"))|\(.segments[0].departure_local)|\(.segments[-1].arrival_local)")) end' response.json
+   ```
+   Firecrawl's jq lacks some builtins (`to_entries`, `unique_by`, `sort_by`
+   came back empty), so keep to the ones above.
 3. For an email report add `--email-dir DIR` (writes `subject.txt`, `body.txt`,
    `body.html`), and `--previous FILE` with the last report's plain-text body to
    show price changes. The plain-text body ends with `FARES BY DATE` and

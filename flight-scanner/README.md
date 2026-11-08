@@ -41,7 +41,7 @@ Cheapest options
 |---|---|---|
 | `google` (default without a key) | nothing | Reads Google Flights with [`fast-flights`](https://github.com/AWeirdDev/fast-flights). Free, but Google can rate-limit or change its page. Duration is air time without layovers. |
 | `serpapi` (default when `SERPAPI_KEY` is set) | [SerpApi key](https://serpapi.com) | Google Flights results as JSON. More reliable; free tier is 250 searches/month and a one-way scan uses 8. |
-| `firecrawl` | a saved Firecrawl result | For Claude sessions that can't reach Google: Claude calls the Firecrawl connector's Google Flights capability (`flights-google-com` / `flights/search_flights`, 5 credits per date) and passes the saved result with `--firecrawl-json`. Needs no installed packages. |
+| `firecrawl` | a saved Firecrawl result | For Claude sessions that can't reach Google: Claude calls the Firecrawl connector's Google Flights capability (`flights-google-com` / `flights/search_flights`, 5 credits per date) and passes the saved result with `--firecrawl-json`, or a compact listing of it with `--firecrawl-listing` when Firecrawl keeps a large result on its side (see `SKILL.md`). Needs no installed packages. |
 | `links` | nothing | No prices; prints a Google Flights and Kayak link for every date. |
 
 ```bash

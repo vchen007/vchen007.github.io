@@ -347,11 +347,6 @@ def parse_firecrawl(data) -> dict:
                 name = g.get("airline_name") or g.get("airline")
                 if name and name not in airlines:
                     airlines.append(name)
-            notes = []
-            if f.get("cabin_matches_request") is False:
-                notes.append("different cabin")
-            if f.get("airport_change"):
-                notes.append("airport change")
             its.append(
                 Itinerary(
                     price=float(price),
@@ -361,11 +356,65 @@ def parse_firecrawl(data) -> dict:
                     depart_time=_fmt_local(segs[0].get("departure_local")),
                     arrive_time=_fmt_local(segs[-1].get("arrival_local")),
                     route="-".join([segs[0].get("origin", "?")] + [g.get("destination", "?") for g in segs]),
-                    note=", ".join(notes),
+                    note=_firecrawl_note(f.get("cabin_matches_request"), f.get("airport_change")),
                 )
             )
         out[key] = {"itineraries": its, "url": r.get("search_url", ""), "observed_at_ms": r.get("observed_at_ms")}
     return out
+
+
+def parse_firecrawl_listing(text: str) -> dict:
+    """Read the compact one-way listing made from a Firecrawl search_flights result.
+
+    Firecrawl keeps large results on its own side; running the jq projection in
+    SKILL.md in that workspace turns one into a line per date and per flight:
+      D|date|observed_at_ms|search_url
+      F|date|price|stops|minutes|cabin_matches_request|airport_change|airline,...|SNA-SEA-TPE|departure_local|arrival_local
+      E|error            (a date whose lookup failed)
+    The F line names one airline per leg. Returns the same shape as parse_firecrawl().
+    """
+    out: dict = {"_errors": []}
+
+    def entry(day: str) -> dict:
+        return out.setdefault(day, {"itineraries": [], "url": "", "observed_at_ms": None})
+
+    for line in text.splitlines():
+        kind, _, rest = line.strip().partition("|")
+        if kind == "D":
+            day, ms, url = (rest.split("|", 2) + ["", ""])[:3]
+            e = entry(day)
+            e["url"], e["observed_at_ms"] = url, int(ms) if ms.isdigit() else None
+        elif kind == "F":
+            p = rest.split("|")
+            if len(p) != 10:
+                raise ValueError(f"listing line has {len(p) + 1} fields, expected 11: {line[:120]}")
+            day, price, stops, minutes, cabin, change, names, route, dep, arr = p
+            if price in ("", "null"):
+                continue
+            entry(day)["itineraries"].append(
+                Itinerary(
+                    price=float(price),
+                    airlines=list(dict.fromkeys(n for n in names.split(",") if n not in ("", "null"))),
+                    stops=int(stops) if stops.isdigit() else max(route.count("-") - 1, 0),
+                    duration_min=int(minutes) if minutes.isdigit() else None,
+                    depart_time=_fmt_local(None if dep == "null" else dep),
+                    arrive_time=_fmt_local(None if arr == "null" else arr),
+                    route=route,
+                    note=_firecrawl_note({"true": True, "false": False}.get(cabin), change == "true"),
+                )
+            )
+        elif kind == "E":
+            out["_errors"].append(rest[:200])
+    return out
+
+
+def _firecrawl_note(cabin_matches_request, airport_change) -> str:
+    notes = []
+    if cabin_matches_request is False:
+        notes.append("different cabin")
+    if airport_change:
+        notes.append("airport change")
+    return ", ".join(notes)
 
 
 def _fmt_local(value: str | None) -> str:
@@ -831,8 +880,10 @@ def render_email(
                 f"{money(abs(o_now - o_first), s.currency)} since {since} "
                 f"({money(o_first, s.currency)} → {money(o_now, s.currency)})."
             )
-        trend_note = (f"Trend shows the last {SPARK_MAX_POINTS} of {len(trend['checks'])} daily checks."
-                      if trend["truncated"] else f"Trend shows all {len(trend['checks'])} daily checks.")
+        n_checks = len(trend["checks"])
+        trend_note = (f"Trend shows the last {SPARK_MAX_POINTS} of {n_checks} daily checks." if trend["truncated"]
+                      else "Trend shows both daily checks." if n_checks == 2
+                      else f"Trend shows all {n_checks} daily checks.")
 
     def price_range(row: dict, dash: str) -> str:
         if abs(row["high"] - row["low"]) < 1:
@@ -1153,10 +1204,13 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         "--source",
         choices=["auto", "serpapi", "google", "firecrawl", "links"],
         default="auto",
-        help="auto = serpapi when SERPAPI_KEY is set, otherwise google; firecrawl reads --firecrawl-json",
+        help="auto = serpapi when SERPAPI_KEY is set, otherwise google; "
+             "firecrawl reads --firecrawl-json or --firecrawl-listing",
     )
     p.add_argument("--firecrawl-json", type=Path, default=None,
                    help="saved result of Firecrawl's flights-google-com / flights/search_flights capability")
+    p.add_argument("--firecrawl-listing", type=Path, default=None,
+                   help="one-way D|/F| listing made from that result with the jq projection in SKILL.md")
     p.add_argument("--email-dir", type=Path, default=None,
                    help="write an email report here: subject.txt, body.txt and body.html")
     p.add_argument("--previous", type=Path, default=None,
@@ -1189,8 +1243,8 @@ def main(argv: list[str] | None = None) -> int:
     source = a.source
     if source == "auto":
         source = "serpapi" if os.environ.get("SERPAPI_KEY") else "google"
-    if source == "firecrawl" and not a.firecrawl_json:
-        print("--source firecrawl needs --firecrawl-json FILE", file=sys.stderr)
+    if source == "firecrawl" and not (a.firecrawl_json or a.firecrawl_listing):
+        print("--source firecrawl needs --firecrawl-json FILE or --firecrawl-listing FILE", file=sys.stderr)
         return 2
     one_way = not a.round_trip
 
@@ -1211,7 +1265,8 @@ def main(argv: list[str] | None = None) -> int:
     parsed = None
     fetch = None
     if source == "firecrawl":
-        parsed = parse_firecrawl(json.loads(a.firecrawl_json.read_text()))
+        parsed = (parse_firecrawl_listing(a.firecrawl_listing.read_text()) if a.firecrawl_listing
+                  else parse_firecrawl(json.loads(a.firecrawl_json.read_text())))
         fetch = firecrawl_fetcher(parsed)
     live = source not in ("links", "firecrawl")
     results = scan(pairs, s, source, fetch=fetch, delay=a.delay if live else 0, retries=2 if live else 0)
