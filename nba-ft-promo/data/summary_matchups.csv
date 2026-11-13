@@ -2695,6 +2695,7 @@ key,season,home,team,team_name,games,q4_fta,q4_ftm,q4_line,q4_ft_pct,promos,rate
 2026-27|MIL|IND,2026-27,MIL,IND,Indiana Pacers,1,11,8,8/11,0.7273,0,0.0
 2026-27|MIL|LAL,2026-27,MIL,LAL,Los Angeles Lakers,1,9,9,9/9,1.0,0,0.0
 2026-27|MIL|TOR,2026-27,MIL,TOR,Toronto Raptors,1,7,6,6/7,0.8571,0,0.0
+2026-27|MIN|DAL,2026-27,MIN,DAL,Dallas Mavericks,1,5,4,4/5,0.8,0,0.0
 2026-27|MIN|GSW,2026-27,MIN,GSW,Golden State Warriors,1,14,12,12/14,0.8571,0,0.0
 2026-27|MIN|LAC,2026-27,MIN,LAC,LA Clippers,1,5,5,5/5,1.0,0,0.0
 2026-27|MIN|MIL,2026-27,MIN,MIL,Milwaukee Bucks,1,3,2,2/3,0.6667,0,0.0
@@ -2729,6 +2730,8 @@ key,season,home,team,team_name,games,q4_fta,q4_ftm,q4_line,q4_ft_pct,promos,rate
 2026-27|PHI|DET,2026-27,PHI,DET,Detroit Pistons,1,9,6,6/9,0.6667,1,1.0
 2026-27|PHI|MIL,2026-27,PHI,MIL,Milwaukee Bucks,1,4,3,3/4,0.75,0,0.0
 2026-27|PHI|NYK,2026-27,PHI,NYK,New York Knicks,1,4,2,2/4,0.5,0,0.0
+2026-27|PHI|TOR,2026-27,PHI,TOR,Toronto Raptors,1,10,8,8/10,0.8,0,0.0
+2026-27|PHX|CHA,2026-27,PHX,CHA,Charlotte Hornets,1,7,5,5/7,0.7143,0,0.0
 2026-27|PHX|DEN,2026-27,PHX,DEN,Denver Nuggets,1,7,7,7/7,1.0,0,0.0
 2026-27|PHX|GSW,2026-27,PHX,GSW,Golden State Warriors,1,7,4,4/7,0.5714,1,1.0
 2026-27|PHX|HOU,2026-27,PHX,HOU,Houston Rockets,1,2,2,2/2,1.0,0,0.0
@@ -2765,6 +2768,7 @@ key,season,home,team,team_name,games,q4_fta,q4_ftm,q4_line,q4_ft_pct,promos,rate
 2026-27|UTA|SAS,2026-27,UTA,SAS,San Antonio Spurs,1,5,4,4/5,0.8,0,0.0
 2026-27|WAS|ATL,2026-27,WAS,ATL,Atlanta Hawks,1,3,3,3/3,1.0,0,0.0
 2026-27|WAS|CHA,2026-27,WAS,CHA,Charlotte Hornets,1,4,1,1/4,0.25,1,1.0
+2026-27|WAS|DET,2026-27,WAS,DET,Detroit Pistons,1,10,9,9/10,0.9,0,0.0
 2026-27|WAS|MIL,2026-27,WAS,MIL,Milwaukee Bucks,1,4,3,3/4,0.75,0,0.0
 2026-27|WAS|TOR,2026-27,WAS,TOR,Toronto Raptors,1,8,6,6/8,0.75,0,0.0
 All|ATL|BKN,All,ATL,BKN,Brooklyn Nets,6,35,24,24/35,0.6857,2,0.3333
@@ -3266,7 +3270,7 @@ All|MIN|BOS,All,MIN,BOS,Boston Celtics,3,17,12,12/17,0.7059,1,0.3333
 All|MIN|CHA,All,MIN,CHA,Charlotte Hornets,3,8,7,7/8,0.875,0,0.0
 All|MIN|CHI,All,MIN,CHI,Chicago Bulls,3,16,10,10/16,0.625,1,0.3333
 All|MIN|CLE,All,MIN,CLE,Cleveland Cavaliers,3,24,23,23/24,0.9583,0,0.0
-All|MIN|DAL,All,MIN,DAL,Dallas Mavericks,5,38,22,22/38,0.5789,4,0.8
+All|MIN|DAL,All,MIN,DAL,Dallas Mavericks,6,43,26,26/43,0.6047,4,0.6667
 All|MIN|DEN,All,MIN,DEN,Denver Nuggets,6,47,32,32/47,0.6809,1,0.1667
 All|MIN|DET,All,MIN,DET,Detroit Pistons,3,12,10,10/12,0.8333,0,0.0
 All|MIN|GSW,All,MIN,GSW,Golden State Warriors,6,58,49,49/58,0.8448,0,0.0
@@ -3431,13 +3435,13 @@ All|PHI|PHX,All,PHI,PHX,Phoenix Suns,3,23,20,20/23,0.8696,0,0.0
 All|PHI|POR,All,PHI,POR,Portland Trail Blazers,3,13,10,10/13,0.7692,1,0.3333
 All|PHI|SAC,All,PHI,SAC,Sacramento Kings,3,18,15,15/18,0.8333,0,0.0
 All|PHI|SAS,All,PHI,SAS,San Antonio Spurs,3,8,8,8/8,1.0,0,0.0
-All|PHI|TOR,All,PHI,TOR,Toronto Raptors,6,23,20,20/23,0.8696,1,0.1667
+All|PHI|TOR,All,PHI,TOR,Toronto Raptors,7,33,28,28/33,0.8485,1,0.1429
 All|PHI|UTA,All,PHI,UTA,Utah Jazz,3,21,16,16/21,0.7619,0,0.0
 All|PHI|WAS,All,PHI,WAS,Washington Wizards,6,33,16,16/33,0.4848,3,0.5
 All|PHX|ATL,All,PHX,ATL,Atlanta Hawks,3,33,29,29/33,0.8788,0,0.0
 All|PHX|BKN,All,PHX,BKN,Brooklyn Nets,3,13,12,12/13,0.9231,0,0.0
 All|PHX|BOS,All,PHX,BOS,Boston Celtics,3,9,6,6/9,0.6667,1,0.3333
-All|PHX|CHA,All,PHX,CHA,Charlotte Hornets,3,5,5,5/5,1.0,0,0.0
+All|PHX|CHA,All,PHX,CHA,Charlotte Hornets,4,12,10,10/12,0.8333,0,0.0
 All|PHX|CHI,All,PHX,CHI,Chicago Bulls,3,16,11,11/16,0.6875,0,0.0
 All|PHX|CLE,All,PHX,CLE,Cleveland Cavaliers,3,20,15,15/20,0.75,1,0.3333
 All|PHX|DAL,All,PHX,DAL,Dallas Mavericks,5,24,19,19/24,0.7917,1,0.2
@@ -3616,7 +3620,7 @@ All|WAS|CHI,All,WAS,CHI,Chicago Bulls,5,45,33,33/45,0.7333,0,0.0
 All|WAS|CLE,All,WAS,CLE,Cleveland Cavaliers,6,52,41,41/52,0.7885,2,0.3333
 All|WAS|DAL,All,WAS,DAL,Dallas Mavericks,3,27,18,18/27,0.6667,1,0.3333
 All|WAS|DEN,All,WAS,DEN,Denver Nuggets,3,27,20,20/27,0.7407,1,0.3333
-All|WAS|DET,All,WAS,DET,Detroit Pistons,5,30,22,22/30,0.7333,1,0.2
+All|WAS|DET,All,WAS,DET,Detroit Pistons,6,40,31,31/40,0.775,1,0.1667
 All|WAS|GSW,All,WAS,GSW,Golden State Warriors,3,33,26,26/33,0.7879,2,0.6667
 All|WAS|HOU,All,WAS,HOU,Houston Rockets,3,32,30,30/32,0.9375,0,0.0
 All|WAS|IND,All,WAS,IND,Indiana Pacers,5,21,16,16/21,0.7619,2,0.4
