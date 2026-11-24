@@ -7379,499 +7379,519 @@ season,source,game_id,game_date,team,team_name,opponent,role,arena,arena_home_te
 2025-26,nba_cdn,0022501199,2026-04-12,LAC,LA Clippers,GSW,Home,Intuit Dome,LAC,False,7,7,5.587,3,False,0.1143,,,False,19,17,2,5
 2025-26,nba_cdn,0022501200,2026-04-12,SAC,Sacramento Kings,POR,Away,Moda Center,POR,False,9,8,6.803,4,False,0.2871,,,False,31,23,-12,-12
 2025-26,nba_cdn,0022501200,2026-04-12,POR,Portland Trail Blazers,SAC,Home,Moda Center,POR,False,8,7,6.308,4,False,0.1759,,,False,15,12,12,12
-2026-27,espn,401909088,2026-10-20,BOS,Boston Celtics,DET,Away,Little Caesars Arena,DET,False,5,2,3.544,2,True,0.2078,8.73,M. Robinson,True,21,16,6,-8
-2026-27,espn,401909088,2026-10-20,DET,Detroit Pistons,BOS,Home,Little Caesars Arena,DET,False,14,12,11.442,5,False,0.1897,,,False,32,28,-6,8
-2026-27,espn,401909089,2026-10-20,PHI,Philadelphia 76ers,NYK,Away,Madison Square Garden,NYK,False,11,8,8.894,5,False,0.1876,,,False,27,21,7,6
+2026-27,espn,401909088,2026-10-20,BOS,Boston Celtics,DET,Away,Little Caesars Arena,DET,False,5,2,3.546,2,True,0.2073,8.73,M. Robinson,True,21,16,6,-8
+2026-27,espn,401909088,2026-10-20,DET,Detroit Pistons,BOS,Home,Little Caesars Arena,DET,False,14,12,11.447,5,False,0.1891,,,False,32,28,-6,8
+2026-27,espn,401909089,2026-10-20,PHI,Philadelphia 76ers,NYK,Away,Madison Square Garden,NYK,False,11,8,8.934,5,False,0.1832,,,False,27,21,7,6
 2026-27,espn,401909089,2026-10-20,NYK,New York Knicks,PHI,Home,Madison Square Garden,NYK,False,0,0,0.0,0,False,0.0,,,False,27,19,-7,-6
-2026-27,espn,401909090,2026-10-20,OKC,Oklahoma City Thunder,SAS,Away,Frost Bank Center,SAS,False,2,1,1.591,1,False,0.0416,,,False,20,16,13,12
-2026-27,espn,401909090,2026-10-20,SAS,San Antonio Spurs,OKC,Home,Frost Bank Center,SAS,False,6,6,4.934,3,False,0.0935,,,False,25,22,-13,-12
-2026-27,espn,401909091,2026-10-21,MIN,Minnesota Timberwolves,MIA,Away,Kaseya Center,MIA,False,11,6,8.415,5,True,0.2494,3.05,T. Shannon Jr.,True,29,18,18,25
-2026-27,espn,401909091,2026-10-21,MIA,Miami Heat,MIN,Home,Kaseya Center,MIA,False,10,10,7.521,4,False,0.2369,,,False,26,20,-18,-25
-2026-27,espn,401909092,2026-10-21,GSW,Golden State Warriors,LAL,Away,crypto.com Arena,LAL,False,12,8,9.426,5,False,0.2175,,,True,27,21,-34,-22
-2026-27,espn,401909092,2026-10-21,LAL,Los Angeles Lakers,GSW,Home,crypto.com Arena,LAL,False,4,4,3.047,2,False,0.1432,,,False,27,24,34,22
-2026-27,espn,401909834,2026-10-21,ATL,Atlanta Hawks,ORL,Away,Kia Center,ORL,False,8,7,6.359,3,False,0.1606,,,False,36,30,-1,7
-2026-27,espn,401909834,2026-10-21,ORL,Orlando Magic,ATL,Home,Kia Center,ORL,False,2,2,1.513,0,False,0.0,,,False,39,30,1,-7
-2026-27,espn,401909835,2026-10-21,MIL,Milwaukee Bucks,WAS,Away,Capital One Arena,WAS,False,4,3,3.176,2,False,0.0837,,,False,23,19,3,-12
-2026-27,espn,401909835,2026-10-21,WAS,Washington Wizards,MIL,Home,Capital One Arena,WAS,False,7,6,5.817,3,False,0.0792,,,False,41,32,-3,12
-2026-27,espn,401909836,2026-10-21,CHA,Charlotte Hornets,BKN,Away,Barclays Center,BKN,False,5,3,4.033,2,False,0.0539,,,True,15,13,5,7
-2026-27,espn,401909836,2026-10-21,BKN,Brooklyn Nets,CHA,Home,Barclays Center,BKN,False,3,2,2.363,1,False,0.0444,,,False,25,19,-5,-7
-2026-27,espn,401909837,2026-10-21,CHI,Chicago Bulls,TOR,Away,Scotiabank Arena,TOR,False,16,13,13.145,8,False,0.2541,,,True,47,34,-32,-43
-2026-27,espn,401909837,2026-10-21,TOR,Toronto Raptors,CHI,Home,Scotiabank Arena,TOR,False,8,6,6.369,3,False,0.1275,,,False,46,37,32,43
-2026-27,espn,401909838,2026-10-21,UTA,Utah Jazz,MEM,Away,FedExForum,MEM,False,12,9,9.578,6,True,0.2252,8.13,J. Hayes,True,33,22,-19,-20
-2026-27,espn,401909838,2026-10-21,MEM,Memphis Grizzlies,UTA,Home,FedExForum,MEM,False,6,4,5.124,3,False,0.0645,,,False,28,22,19,20
-2026-27,espn,401909839,2026-10-21,IND,Indiana Pacers,NOP,Away,Smoothie King Center,NOP,False,15,9,11.876,6,True,0.2492,11.82,P. Siakam,True,29,20,-6,3
-2026-27,espn,401909839,2026-10-21,NOP,New Orleans Pelicans,IND,Home,Smoothie King Center,NOP,False,9,8,7.301,3,False,0.1101,,,False,37,34,6,-3
-2026-27,espn,401909840,2026-10-21,DAL,Dallas Mavericks,HOU,Away,Toyota Center (Houston),HOU,False,13,8,10.177,4,False,0.2371,,,True,26,17,-24,-18
-2026-27,espn,401909840,2026-10-21,HOU,Houston Rockets,DAL,Home,Toyota Center (Houston),HOU,False,3,2,2.478,1,False,0.019,,,False,25,18,24,18
-2026-27,espn,401909841,2026-10-21,PHX,Phoenix Suns,POR,Away,Moda Center,POR,False,5,3,3.715,2,False,0.1434,,,False,23,17,-41,-41
+2026-27,espn,401909090,2026-10-20,OKC,Oklahoma City Thunder,SAS,Away,Frost Bank Center,SAS,False,2,1,1.592,1,False,0.0413,,,False,20,16,13,12
+2026-27,espn,401909090,2026-10-20,SAS,San Antonio Spurs,OKC,Home,Frost Bank Center,SAS,False,6,6,4.936,3,False,0.093,,,False,25,22,-13,-12
+2026-27,espn,401909091,2026-10-21,MIN,Minnesota Timberwolves,MIA,Away,Kaseya Center,MIA,False,11,6,8.43,5,True,0.247,3.05,T. Shannon Jr.,True,29,18,18,25
+2026-27,espn,401909091,2026-10-21,MIA,Miami Heat,MIN,Home,Kaseya Center,MIA,False,10,10,7.525,4,False,0.2362,,,False,26,20,-18,-25
+2026-27,espn,401909092,2026-10-21,GSW,Golden State Warriors,LAL,Away,crypto.com Arena,LAL,False,12,8,9.432,5,False,0.2167,,,True,27,21,-34,-22
+2026-27,espn,401909092,2026-10-21,LAL,Los Angeles Lakers,GSW,Home,crypto.com Arena,LAL,False,4,4,3.02,2,False,0.153,,,False,27,24,34,22
+2026-27,espn,401909834,2026-10-21,ATL,Atlanta Hawks,ORL,Away,Kia Center,ORL,False,8,7,6.361,3,False,0.1602,,,False,36,30,-1,7
+2026-27,espn,401909834,2026-10-21,ORL,Orlando Magic,ATL,Home,Kia Center,ORL,False,2,2,1.514,0,False,0.0,,,False,39,30,1,-7
+2026-27,espn,401909835,2026-10-21,MIL,Milwaukee Bucks,WAS,Away,Capital One Arena,WAS,False,4,3,3.177,2,False,0.0835,,,False,23,19,3,-12
+2026-27,espn,401909835,2026-10-21,WAS,Washington Wizards,MIL,Home,Capital One Arena,WAS,False,7,6,5.819,3,False,0.079,,,False,41,32,-3,12
+2026-27,espn,401909836,2026-10-21,CHA,Charlotte Hornets,BKN,Away,Barclays Center,BKN,False,5,3,4.067,2,False,0.0509,,,True,15,13,5,7
+2026-27,espn,401909836,2026-10-21,BKN,Brooklyn Nets,CHA,Home,Barclays Center,BKN,False,3,2,2.389,1,False,0.041,,,False,25,19,-5,-7
+2026-27,espn,401909837,2026-10-21,CHI,Chicago Bulls,TOR,Away,Scotiabank Arena,TOR,False,16,13,13.043,8,False,0.2643,,,True,47,34,-32,-43
+2026-27,espn,401909837,2026-10-21,TOR,Toronto Raptors,CHI,Home,Scotiabank Arena,TOR,False,8,6,6.344,3,False,0.1328,,,False,46,37,32,43
+2026-27,espn,401909838,2026-10-21,UTA,Utah Jazz,MEM,Away,FedExForum,MEM,False,12,9,9.552,6,True,0.2289,8.13,J. Hayes,True,33,22,-19,-20
+2026-27,espn,401909838,2026-10-21,MEM,Memphis Grizzlies,UTA,Home,FedExForum,MEM,False,6,4,5.131,3,False,0.0635,,,False,28,22,19,20
+2026-27,espn,401909839,2026-10-21,IND,Indiana Pacers,NOP,Away,Smoothie King Center,NOP,False,15,9,11.882,6,True,0.2481,11.82,P. Siakam,True,29,20,-6,3
+2026-27,espn,401909839,2026-10-21,NOP,New Orleans Pelicans,IND,Home,Smoothie King Center,NOP,False,9,8,7.313,3,False,0.109,,,False,37,34,6,-3
+2026-27,espn,401909840,2026-10-21,DAL,Dallas Mavericks,HOU,Away,Toyota Center (Houston),HOU,False,13,8,10.181,4,False,0.2365,,,True,26,17,-24,-18
+2026-27,espn,401909840,2026-10-21,HOU,Houston Rockets,DAL,Home,Toyota Center (Houston),HOU,False,3,2,2.484,1,False,0.0174,,,False,25,18,24,18
+2026-27,espn,401909841,2026-10-21,PHX,Phoenix Suns,POR,Away,Moda Center,POR,False,5,3,3.632,2,False,0.1677,,,False,23,17,-41,-41
 2026-27,espn,401909841,2026-10-21,POR,Portland Trail Blazers,PHX,Home,Moda Center,POR,False,1,1,0.743,0,False,0.0,,,False,18,15,41,41
-2026-27,espn,401909842,2026-10-21,SAC,Sacramento Kings,LAC,Away,Intuit Dome,LAC,False,6,3,4.431,3,True,0.2176,8.68,Z. LaVine,True,28,16,-23,-25
-2026-27,espn,401909842,2026-10-21,LAC,LA Clippers,SAC,Home,Intuit Dome,LAC,False,4,3,3.24,2,False,0.0735,,,False,31,21,23,25
-2026-27,espn,401909093,2026-10-22,CLE,Cleveland Cavaliers,PHI,Away,Xfinity Mobile Arena,PHI,False,6,4,4.876,3,True,0.105,1.32,D. Mitchell,True,28,21,8,-8
-2026-27,espn,401909093,2026-10-22,PHI,Philadelphia 76ers,CLE,Home,Xfinity Mobile Arena,PHI,False,5,5,4.077,2,False,0.0818,,,False,30,23,-8,8
-2026-27,espn,401909094,2026-10-22,DEN,Denver Nuggets,OKC,Away,Paycom Center,OKC,False,8,4,6.692,4,False,0.1061,,,False,22,14,-6,-12
-2026-27,espn,401909094,2026-10-22,OKC,Oklahoma City Thunder,DEN,Home,Paycom Center,OKC,False,4,4,3.112,2,False,0.0961,,,False,14,13,6,12
-2026-27,espn,401909095,2026-10-23,NYK,New York Knicks,BOS,Away,TD Garden,BOS,False,7,4,5.81,3,True,0.0753,0.06,J. Brunson,True,21,15,-10,-4
-2026-27,espn,401909095,2026-10-23,BOS,Boston Celtics,NYK,Home,TD Garden,BOS,False,3,2,2.318,1,False,0.0263,,,False,16,12,10,4
-2026-27,espn,401909096,2026-10-23,HOU,Houston Rockets,SAS,Away,Moody Center,SAS,False,11,10,8.467,4,False,0.2031,,,False,31,28,4,4
-2026-27,espn,401909096,2026-10-23,SAS,San Antonio Spurs,HOU,Home,Moody Center,SAS,False,6,5,4.979,2,False,0.0534,,,False,25,18,-4,-4
-2026-27,espn,401909843,2026-10-23,ATL,Atlanta Hawks,CHA,Away,Spectrum Center,CHA,False,4,1,2.969,2,True,0.1292,7.3,A. Newell,True,22,14,35,47
-2026-27,espn,401909843,2026-10-23,CHA,Charlotte Hornets,ATL,Home,Spectrum Center,CHA,False,5,4,3.942,2,False,0.0854,,,False,12,10,-35,-47
-2026-27,espn,401909844,2026-10-23,DAL,Dallas Mavericks,IND,Away,Gainbridge Fieldhouse,IND,False,2,1,1.486,1,False,0.0656,,,False,23,19,22,16
-2026-27,espn,401909844,2026-10-23,IND,Indiana Pacers,DAL,Home,Gainbridge Fieldhouse,IND,False,11,7,8.624,4,True,0.2491,4.38,J. Slawson,True,28,20,-22,-16
-2026-27,espn,401909845,2026-10-23,MIN,Minnesota Timberwolves,ORL,Away,Kia Center,ORL,False,17,9,11.908,8,True,0.6059,5.38,J. Kuminga,True,30,17,26,22
-2026-27,espn,401909845,2026-10-23,ORL,Orlando Magic,MIN,Home,Kia Center,ORL,False,5,3,3.973,2,False,0.0816,,,False,19,11,-26,-22
-2026-27,espn,401909846,2026-10-23,TOR,Toronto Raptors,WAS,Away,Capital One Arena,WAS,False,8,6,5.918,3,False,0.1974,,,False,21,17,4,10
-2026-27,espn,401909846,2026-10-23,WAS,Washington Wizards,TOR,Home,Capital One Arena,WAS,False,10,8,7.809,5,False,0.2228,,,False,35,30,-4,-10
-2026-27,espn,401909847,2026-10-23,DET,Detroit Pistons,MIA,Away,Kaseya Center,MIA,False,7,6,5.981,3,False,0.0804,,,False,20,16,23,17
-2026-27,espn,401909847,2026-10-23,MIA,Miami Heat,DET,Home,Kaseya Center,MIA,False,6,3,4.488,2,False,0.111,,,True,28,18,-23,-17
-2026-27,espn,401909848,2026-10-23,CHI,Chicago Bulls,MIL,Away,Fiserv Forum,MIL,False,12,11,9.239,6,False,0.2824,,,False,30,28,-2,7
-2026-27,espn,401909848,2026-10-23,MIL,Milwaukee Bucks,CHI,Home,Fiserv Forum,MIL,False,8,3,6.179,4,True,0.1941,1.87,J. Jaquez Jr.,True,26,14,2,-7
-2026-27,espn,401909849,2026-10-23,NOP,New Orleans Pelicans,UTA,Away,Delta Center,UTA,False,7,7,5.431,3,False,0.1594,,,False,27,23,4,-1
-2026-27,espn,401909849,2026-10-23,UTA,Utah Jazz,NOP,Home,Delta Center,UTA,False,13,12,9.89,6,False,0.3132,,,False,33,25,-4,1
-2026-27,espn,401909850,2026-10-23,MEM,Memphis Grizzlies,GSW,Away,Chase Center,GSW,False,8,7,6.782,3,False,0.067,,,False,22,16,-6,3
-2026-27,espn,401909850,2026-10-23,GSW,Golden State Warriors,MEM,Home,Chase Center,GSW,False,2,2,1.524,1,False,0.0567,,,False,29,26,6,-3
-2026-27,espn,401909851,2026-10-23,LAC,LA Clippers,LAL,Away,crypto.com Arena,LAL,False,6,4,5.087,3,False,0.0679,,,False,25,19,-13,-8
-2026-27,espn,401909851,2026-10-23,LAL,Los Angeles Lakers,LAC,Home,crypto.com Arena,LAL,False,4,4,2.789,2,False,0.1829,,,False,25,19,13,8
-2026-27,espn,401909852,2026-10-23,POR,Portland Trail Blazers,SAC,Away,Golden 1 Center,SAC,False,8,7,5.94,4,False,0.2605,,,False,30,22,13,8
-2026-27,espn,401909852,2026-10-23,SAC,Sacramento Kings,POR,Home,Golden 1 Center,SAC,False,6,6,4.855,1,False,0.0624,,,False,30,28,-13,-8
-2026-27,espn,401909853,2026-10-24,MIA,Miami Heat,CHA,Away,Spectrum Center,CHA,False,6,6,4.548,2,False,0.1133,,,False,25,23,-21,-5
-2026-27,espn,401909853,2026-10-24,CHA,Charlotte Hornets,MIA,Home,Spectrum Center,CHA,False,11,10,9.389,5,False,0.1085,,,False,25,23,21,5
-2026-27,espn,401909854,2026-10-24,BKN,Brooklyn Nets,CLE,Away,Rocket Arena,CLE,False,7,6,5.471,3,False,0.141,,,False,27,23,-16,-4
-2026-27,espn,401909854,2026-10-24,CLE,Cleveland Cavaliers,BKN,Home,Rocket Arena,CLE,False,15,11,12.064,6,False,0.2547,,,True,38,29,16,4
-2026-27,espn,401909855,2026-10-24,MIL,Milwaukee Bucks,PHI,Away,Xfinity Mobile Arena,PHI,False,4,3,3.091,1,False,0.0503,,,False,28,21,-10,-11
-2026-27,espn,401909855,2026-10-24,PHI,Philadelphia 76ers,MIL,Home,Xfinity Mobile Arena,PHI,False,9,6,7.454,4,True,0.1495,3.3,D. Wade,True,34,28,10,11
-2026-27,espn,401909856,2026-10-24,HOU,Houston Rockets,ATL,Away,State Farm Arena,ATL,False,4,3,3.217,2,False,0.0822,,,False,23,21,11,7
-2026-27,espn,401909856,2026-10-24,ATL,Atlanta Hawks,HOU,Home,State Farm Arena,ATL,False,10,8,7.915,5,False,0.2087,,,False,21,15,-11,-7
-2026-27,espn,401909857,2026-10-24,WAS,Washington Wizards,CHI,Away,United Center,CHI,False,10,10,8.322,4,False,0.1014,,,False,28,24,15,4
-2026-27,espn,401909857,2026-10-24,CHI,Chicago Bulls,WAS,Home,United Center,CHI,False,10,9,7.64,3,False,0.2082,,,False,30,28,-15,-4
-2026-27,espn,401909858,2026-10-24,SAS,San Antonio Spurs,DAL,Away,American Airlines Center,DAL,False,5,4,4.018,2,False,0.0728,,,False,16,11,3,16
+2026-27,espn,401909842,2026-10-21,SAC,Sacramento Kings,LAC,Away,Intuit Dome,LAC,False,6,3,4.424,3,True,0.2204,8.68,Z. LaVine,True,28,16,-23,-25
+2026-27,espn,401909842,2026-10-21,LAC,LA Clippers,SAC,Home,Intuit Dome,LAC,False,4,3,3.241,2,False,0.0733,,,False,31,21,23,25
+2026-27,espn,401909093,2026-10-22,CLE,Cleveland Cavaliers,PHI,Away,Xfinity Mobile Arena,PHI,False,6,4,4.949,3,True,0.0923,1.32,D. Mitchell,True,28,21,8,-8
+2026-27,espn,401909093,2026-10-22,PHI,Philadelphia 76ers,CLE,Home,Xfinity Mobile Arena,PHI,False,5,5,4.09,2,False,0.08,,,False,30,23,-8,8
+2026-27,espn,401909094,2026-10-22,DEN,Denver Nuggets,OKC,Away,Paycom Center,OKC,False,8,4,6.694,4,False,0.1059,,,False,22,14,-6,-12
+2026-27,espn,401909094,2026-10-22,OKC,Oklahoma City Thunder,DEN,Home,Paycom Center,OKC,False,4,4,3.114,2,False,0.0957,,,False,14,13,6,12
+2026-27,espn,401909095,2026-10-23,NYK,New York Knicks,BOS,Away,TD Garden,BOS,False,7,4,5.812,3,True,0.0751,0.06,J. Brunson,True,21,15,-10,-4
+2026-27,espn,401909095,2026-10-23,BOS,Boston Celtics,NYK,Home,TD Garden,BOS,False,3,2,2.319,1,False,0.0262,,,False,16,12,10,4
+2026-27,espn,401909096,2026-10-23,HOU,Houston Rockets,SAS,Away,Moody Center,SAS,False,11,10,8.46,4,False,0.2042,,,False,31,28,4,4
+2026-27,espn,401909096,2026-10-23,SAS,San Antonio Spurs,HOU,Home,Moody Center,SAS,False,6,5,4.999,2,False,0.0532,,,False,25,18,-4,-4
+2026-27,espn,401909843,2026-10-23,ATL,Atlanta Hawks,CHA,Away,Spectrum Center,CHA,False,4,1,2.972,2,True,0.1285,7.3,A. Newell,True,22,14,35,47
+2026-27,espn,401909843,2026-10-23,CHA,Charlotte Hornets,ATL,Home,Spectrum Center,CHA,False,5,4,3.921,2,False,0.0849,,,False,12,10,-35,-47
+2026-27,espn,401909844,2026-10-23,DAL,Dallas Mavericks,IND,Away,Gainbridge Fieldhouse,IND,False,2,1,1.488,1,False,0.0652,,,False,23,19,22,16
+2026-27,espn,401909844,2026-10-23,IND,Indiana Pacers,DAL,Home,Gainbridge Fieldhouse,IND,False,11,7,8.616,4,True,0.2491,4.38,J. Slawson,True,28,20,-22,-16
+2026-27,espn,401909845,2026-10-23,MIN,Minnesota Timberwolves,ORL,Away,Kia Center,ORL,False,17,9,11.95,8,True,0.6004,5.38,J. Kuminga,True,30,17,26,22
+2026-27,espn,401909845,2026-10-23,ORL,Orlando Magic,MIN,Home,Kia Center,ORL,False,5,3,3.975,2,False,0.0812,,,False,19,11,-26,-22
+2026-27,espn,401909846,2026-10-23,TOR,Toronto Raptors,WAS,Away,Capital One Arena,WAS,False,8,6,5.945,3,False,0.1909,,,False,21,17,4,10
+2026-27,espn,401909846,2026-10-23,WAS,Washington Wizards,TOR,Home,Capital One Arena,WAS,False,10,8,7.813,5,False,0.222,,,False,35,30,-4,-10
+2026-27,espn,401909847,2026-10-23,DET,Detroit Pistons,MIA,Away,Kaseya Center,MIA,False,7,6,5.983,3,False,0.0801,,,False,20,16,23,17
+2026-27,espn,401909847,2026-10-23,MIA,Miami Heat,DET,Home,Kaseya Center,MIA,False,6,3,4.49,2,False,0.1106,,,True,28,18,-23,-17
+2026-27,espn,401909848,2026-10-23,CHI,Chicago Bulls,MIL,Away,Fiserv Forum,MIL,False,12,11,9.27,6,False,0.278,,,False,30,28,-2,7
+2026-27,espn,401909848,2026-10-23,MIL,Milwaukee Bucks,CHI,Home,Fiserv Forum,MIL,False,8,3,6.212,4,True,0.1889,1.87,J. Jaquez Jr.,True,26,14,2,-7
+2026-27,espn,401909849,2026-10-23,NOP,New Orleans Pelicans,UTA,Away,Delta Center,UTA,False,7,7,5.455,3,False,0.1491,,,False,27,23,4,-1
+2026-27,espn,401909849,2026-10-23,UTA,Utah Jazz,NOP,Home,Delta Center,UTA,False,13,12,9.888,6,False,0.3096,,,False,33,25,-4,1
+2026-27,espn,401909850,2026-10-23,MEM,Memphis Grizzlies,GSW,Away,Chase Center,GSW,False,8,7,6.788,3,False,0.0668,,,False,22,16,-6,3
+2026-27,espn,401909850,2026-10-23,GSW,Golden State Warriors,MEM,Home,Chase Center,GSW,False,2,2,1.524,1,False,0.0566,,,False,29,26,6,-3
+2026-27,espn,401909851,2026-10-23,LAC,LA Clippers,LAL,Away,crypto.com Arena,LAL,False,6,4,5.101,3,False,0.0658,,,False,25,19,-13,-8
+2026-27,espn,401909851,2026-10-23,LAL,Los Angeles Lakers,LAC,Home,crypto.com Arena,LAL,False,4,4,2.8,2,False,0.1848,,,False,25,19,13,8
+2026-27,espn,401909852,2026-10-23,POR,Portland Trail Blazers,SAC,Away,Golden 1 Center,SAC,False,8,7,5.861,4,False,0.2841,,,False,30,22,13,8
+2026-27,espn,401909852,2026-10-23,SAC,Sacramento Kings,POR,Home,Golden 1 Center,SAC,False,6,6,4.86,1,False,0.0598,,,False,30,28,-13,-8
+2026-27,espn,401909853,2026-10-24,MIA,Miami Heat,CHA,Away,Spectrum Center,CHA,False,6,6,4.55,2,False,0.1132,,,False,25,23,-21,-5
+2026-27,espn,401909853,2026-10-24,CHA,Charlotte Hornets,MIA,Home,Spectrum Center,CHA,False,11,10,9.432,5,False,0.1022,,,False,25,23,21,5
+2026-27,espn,401909854,2026-10-24,BKN,Brooklyn Nets,CLE,Away,Rocket Arena,CLE,False,7,6,5.536,3,False,0.1297,,,False,27,23,-16,-4
+2026-27,espn,401909854,2026-10-24,CLE,Cleveland Cavaliers,BKN,Home,Rocket Arena,CLE,False,15,11,12.188,6,False,0.2428,,,True,38,29,16,4
+2026-27,espn,401909855,2026-10-24,MIL,Milwaukee Bucks,PHI,Away,Xfinity Mobile Arena,PHI,False,4,3,3.092,1,False,0.0502,,,False,28,21,-10,-11
+2026-27,espn,401909855,2026-10-24,PHI,Philadelphia 76ers,MIL,Home,Xfinity Mobile Arena,PHI,False,9,6,7.517,4,True,0.136,3.3,D. Wade,True,34,28,10,11
+2026-27,espn,401909856,2026-10-24,HOU,Houston Rockets,ATL,Away,State Farm Arena,ATL,False,4,3,3.225,2,False,0.0816,,,False,23,21,11,7
+2026-27,espn,401909856,2026-10-24,ATL,Atlanta Hawks,HOU,Home,State Farm Arena,ATL,False,10,8,7.918,5,False,0.2083,,,False,21,15,-11,-7
+2026-27,espn,401909857,2026-10-24,WAS,Washington Wizards,CHI,Away,United Center,CHI,False,10,10,8.323,4,False,0.1013,,,False,28,24,15,4
+2026-27,espn,401909857,2026-10-24,CHI,Chicago Bulls,WAS,Home,United Center,CHI,False,10,9,7.634,3,False,0.2078,,,False,30,28,-15,-4
+2026-27,espn,401909858,2026-10-24,SAS,San Antonio Spurs,DAL,Away,American Airlines Center,DAL,False,5,4,4.019,2,False,0.0727,,,False,16,11,3,16
 2026-27,espn,401909858,2026-10-24,DAL,Dallas Mavericks,SAS,Home,American Airlines Center,DAL,False,0,0,0.0,0,False,0.0,,,False,8,5,-3,-16
-2026-27,espn,401909859,2026-10-24,NOP,New Orleans Pelicans,DEN,Away,Ball Arena,DEN,False,11,9,8.708,5,False,0.1984,,,False,30,24,19,-6
-2026-27,espn,401909859,2026-10-24,DEN,Denver Nuggets,NOP,Home,Ball Arena,DEN,False,11,8,8.955,5,False,0.1873,,,False,39,30,-19,6
-2026-27,espn,401909860,2026-10-24,GSW,Golden State Warriors,PHX,Away,Mortgage Matchup Center,PHX,False,7,4,5.756,3,True,0.0976,11.17,B. Williams,True,32,23,-10,-9
-2026-27,espn,401909860,2026-10-24,PHX,Phoenix Suns,GSW,Home,Mortgage Matchup Center,PHX,False,4,3,3.283,1,False,0.0342,,,False,22,17,10,9
-2026-27,espn,401909861,2026-10-25,LAL,Los Angeles Lakers,UTA,Away,Delta Center,UTA,False,14,10,12.171,6,True,0.1172,5.07,S. Mamukelashvili,True,38,32,3,9
-2026-27,espn,401909861,2026-10-25,UTA,Utah Jazz,LAL,Home,Delta Center,UTA,False,8,6,6.408,4,False,0.1549,,,False,27,21,-3,-9
-2026-27,espn,401909862,2026-10-25,IND,Indiana Pacers,BKN,Away,Barclays Center,BKN,False,9,6,7.239,4,False,0.1495,,,False,22,17,22,27
-2026-27,espn,401909862,2026-10-25,BKN,Brooklyn Nets,IND,Home,Barclays Center,BKN,False,7,4,5.284,3,True,0.1672,7.15,D. Powell,True,37,26,-22,-27
-2026-27,espn,401909863,2026-10-25,ORL,Orlando Magic,NYK,Away,Madison Square Garden,NYK,False,13,11,10.678,6,False,0.1776,,,False,21,17,-4,9
-2026-27,espn,401909863,2026-10-25,NYK,New York Knicks,ORL,Home,Madison Square Garden,NYK,False,10,6,8.274,4,True,0.1116,1.87,J. Brunson,True,24,17,4,-9
-2026-27,espn,401909864,2026-10-25,TOR,Toronto Raptors,MIN,Away,Target Center,MIN,False,9,6,6.778,3,True,0.2006,10.22,R. Barrett,True,21,14,-28,-23
-2026-27,espn,401909864,2026-10-25,MIN,Minnesota Timberwolves,TOR,Home,Target Center,MIN,False,6,5,4.627,2,False,0.1376,,,False,25,16,28,23
-2026-27,espn,401909865,2026-10-25,LAC,LA Clippers,OKC,Away,Paycom Center,OKC,False,6,3,4.479,2,True,0.1416,6.82,I. Jackson,True,15,12,-1,-7
-2026-27,espn,401909865,2026-10-25,OKC,Oklahoma City Thunder,LAC,Home,Paycom Center,OKC,False,13,12,10.659,6,False,0.1798,,,False,17,16,1,7
-2026-27,espn,401909866,2026-10-25,DET,Detroit Pistons,PHI,Away,Xfinity Mobile Arena,PHI,False,9,6,7.308,4,True,0.1429,9.1,P. Reed,True,25,16,10,13
-2026-27,espn,401909866,2026-10-25,PHI,Philadelphia 76ers,DET,Home,Xfinity Mobile Arena,PHI,False,4,3,3.427,2,False,0.0406,,,False,23,14,-10,-13
-2026-27,espn,401909867,2026-10-25,MEM,Memphis Grizzlies,SAC,Away,Golden 1 Center,SAC,False,4,4,3.463,1,False,0.0166,,,False,27,24,6,11
-2026-27,espn,401909867,2026-10-25,SAC,Sacramento Kings,MEM,Home,Golden 1 Center,SAC,False,2,1,1.393,1,False,0.0,,,False,22,14,-6,-11
+2026-27,espn,401909859,2026-10-24,NOP,New Orleans Pelicans,DEN,Away,Ball Arena,DEN,False,11,9,8.624,5,False,0.2122,,,False,30,24,19,-6
+2026-27,espn,401909859,2026-10-24,DEN,Denver Nuggets,NOP,Home,Ball Arena,DEN,False,11,8,8.959,5,False,0.1867,,,False,39,30,-19,6
+2026-27,espn,401909860,2026-10-24,GSW,Golden State Warriors,PHX,Away,Mortgage Matchup Center,PHX,False,7,4,5.759,3,True,0.0971,11.17,B. Williams,True,32,23,-10,-9
+2026-27,espn,401909860,2026-10-24,PHX,Phoenix Suns,GSW,Home,Mortgage Matchup Center,PHX,False,4,3,3.256,1,False,0.0401,,,False,22,17,10,9
+2026-27,espn,401909861,2026-10-25,LAL,Los Angeles Lakers,UTA,Away,Delta Center,UTA,False,14,10,12.184,6,True,0.1155,5.07,S. Mamukelashvili,True,38,32,3,9
+2026-27,espn,401909861,2026-10-25,UTA,Utah Jazz,LAL,Home,Delta Center,UTA,False,8,6,6.381,4,False,0.159,,,False,27,21,-3,-9
+2026-27,espn,401909862,2026-10-25,IND,Indiana Pacers,BKN,Away,Barclays Center,BKN,False,9,6,7.243,4,False,0.1489,,,False,22,17,22,27
+2026-27,espn,401909862,2026-10-25,BKN,Brooklyn Nets,IND,Home,Barclays Center,BKN,False,7,4,5.31,3,True,0.1617,7.15,D. Powell,True,37,26,-22,-27
+2026-27,espn,401909863,2026-10-25,ORL,Orlando Magic,NYK,Away,Madison Square Garden,NYK,False,13,11,10.681,6,False,0.1771,,,False,21,17,-4,9
+2026-27,espn,401909863,2026-10-25,NYK,New York Knicks,ORL,Home,Madison Square Garden,NYK,False,10,6,8.276,4,True,0.1114,1.87,J. Brunson,True,24,17,4,-9
+2026-27,espn,401909864,2026-10-25,TOR,Toronto Raptors,MIN,Away,Target Center,MIN,False,9,6,6.767,3,True,0.2,10.22,R. Barrett,True,21,14,-28,-23
+2026-27,espn,401909864,2026-10-25,MIN,Minnesota Timberwolves,TOR,Home,Target Center,MIN,False,6,5,4.63,2,False,0.1371,,,False,25,16,28,23
+2026-27,espn,401909865,2026-10-25,LAC,LA Clippers,OKC,Away,Paycom Center,OKC,False,6,3,4.444,2,True,0.1505,6.82,I. Jackson,True,15,12,-1,-7
+2026-27,espn,401909865,2026-10-25,OKC,Oklahoma City Thunder,LAC,Home,Paycom Center,OKC,False,13,12,10.662,6,False,0.1803,,,False,17,16,1,7
+2026-27,espn,401909866,2026-10-25,DET,Detroit Pistons,PHI,Away,Xfinity Mobile Arena,PHI,False,9,6,7.31,4,True,0.1425,9.1,P. Reed,True,25,16,10,13
+2026-27,espn,401909866,2026-10-25,PHI,Philadelphia 76ers,DET,Home,Xfinity Mobile Arena,PHI,False,4,3,3.452,2,False,0.0371,,,False,23,14,-10,-13
+2026-27,espn,401909867,2026-10-25,MEM,Memphis Grizzlies,SAC,Away,Golden 1 Center,SAC,False,4,4,3.473,1,False,0.0157,,,False,27,24,6,11
+2026-27,espn,401909867,2026-10-25,SAC,Sacramento Kings,MEM,Home,Golden 1 Center,SAC,False,2,1,1.381,1,False,0.0,,,False,22,14,-6,-11
 2026-27,espn,401909868,2026-10-26,WAS,Washington Wizards,CHA,Away,Spectrum Center,CHA,False,0,0,0.0,0,False,0.0,,,False,15,12,-12,-7
-2026-27,espn,401909868,2026-10-26,CHA,Charlotte Hornets,WAS,Home,Spectrum Center,CHA,False,7,5,5.883,3,False,0.0545,,,True,17,14,12,7
-2026-27,espn,401909869,2026-10-26,MIN,Minnesota Timberwolves,CLE,Away,Rocket Arena,CLE,False,2,1,1.38,1,False,0.096,,,False,23,14,0,-2
+2026-27,espn,401909868,2026-10-26,CHA,Charlotte Hornets,WAS,Home,Spectrum Center,CHA,False,7,5,5.917,3,False,0.0515,,,True,17,14,12,7
+2026-27,espn,401909869,2026-10-26,MIN,Minnesota Timberwolves,CLE,Away,Rocket Arena,CLE,False,2,1,1.377,1,False,0.097,,,False,23,14,0,-2
 2026-27,espn,401909869,2026-10-26,CLE,Cleveland Cavaliers,MIN,Home,Rocket Arena,CLE,False,0,0,0.0,0,False,0.0,,,False,23,17,0,2
-2026-27,espn,401909870,2026-10-26,CHI,Chicago Bulls,BOS,Away,TD Garden,BOS,False,9,4,6.957,4,True,0.2124,9.18,N. Essengue,True,31,21,-30,-35
-2026-27,espn,401909870,2026-10-26,BOS,Boston Celtics,CHI,Home,TD Garden,BOS,False,11,9,7.984,5,False,0.3395,,,True,29,21,30,35
-2026-27,espn,401909871,2026-10-26,DAL,Dallas Mavericks,MIA,Away,Kaseya Center,MIA,False,4,3,2.978,1,False,0.0984,,,False,14,13,-1,4
-2026-27,espn,401909871,2026-10-26,MIA,Miami Heat,DAL,Home,Kaseya Center,MIA,False,8,5,6.491,4,False,0.1417,,,True,25,14,1,-4
-2026-27,espn,401909872,2026-10-26,IND,Indiana Pacers,MIL,Away,Fiserv Forum,MIL,False,11,8,8.529,5,False,0.2482,,,True,18,11,1,-8
-2026-27,espn,401909872,2026-10-26,MIL,Milwaukee Bucks,IND,Home,Fiserv Forum,MIL,False,10,6,7.719,5,True,0.2393,2.72,T. Herro,True,21,15,-1,8
-2026-27,espn,401909873,2026-10-26,PHX,Phoenix Suns,OKC,Away,Paycom Center,OKC,False,5,5,3.737,2,False,0.1624,,,False,25,18,-14,-11
-2026-27,espn,401909873,2026-10-26,OKC,Oklahoma City Thunder,PHX,Home,Paycom Center,OKC,False,17,13,13.293,7,False,0.3291,,,False,29,25,14,11
-2026-27,espn,401909874,2026-10-26,ATL,Atlanta Hawks,HOU,Away,Toyota Center (Houston),HOU,False,7,4,5.445,3,False,0.1445,,,False,21,15,-6,-10
-2026-27,espn,401909874,2026-10-26,HOU,Houston Rockets,ATL,Home,Toyota Center (Houston),HOU,False,8,6,6.398,3,False,0.1161,,,False,32,26,6,10
-2026-27,espn,401909875,2026-10-26,MEM,Memphis Grizzlies,UTA,Away,Delta Center,UTA,False,6,6,5.041,3,False,0.0767,,,False,22,20,13,5
-2026-27,espn,401909875,2026-10-26,UTA,Utah Jazz,MEM,Home,Delta Center,UTA,False,5,5,3.908,1,False,0.0529,,,False,25,19,-13,-5
-2026-27,espn,401909876,2026-10-26,GSW,Golden State Warriors,DEN,Away,Ball Arena,DEN,False,4,4,3.409,1,False,0.0567,,,False,21,20,16,20
-2026-27,espn,401909876,2026-10-26,DEN,Denver Nuggets,GSW,Home,Ball Arena,DEN,False,10,7,7.912,4,False,0.1639,,,False,23,20,-16,-20
-2026-27,espn,401909877,2026-10-27,BKN,Brooklyn Nets,BOS,Away,TD Garden,BOS,False,4,3,3.185,2,False,0.0815,,,False,22,17,-4,-1
-2026-27,espn,401909877,2026-10-27,BOS,Boston Celtics,BKN,Home,TD Garden,BOS,False,14,10,11.34,6,True,0.2551,0.05,M. Robinson,True,38,30,4,1
-2026-27,espn,401909878,2026-10-27,DET,Detroit Pistons,NYK,Away,Madison Square Garden,NYK,False,5,3,3.993,2,False,0.0789,,,False,24,14,-25,-14
-2026-27,espn,401909878,2026-10-27,NYK,New York Knicks,DET,Home,Madison Square Garden,NYK,False,3,3,2.54,1,False,0.0251,,,False,28,23,25,14
-2026-27,espn,401909879,2026-10-27,SAC,Sacramento Kings,SAS,Away,Frost Bank Center,SAS,False,2,2,1.631,1,False,0.0341,,,False,13,10,-27,-27
-2026-27,espn,401909879,2026-10-27,SAS,San Antonio Spurs,SAC,Home,Frost Bank Center,SAS,False,5,4,3.61,2,False,0.1477,,,False,19,15,27,27
-2026-27,espn,401909880,2026-10-27,POR,Portland Trail Blazers,LAL,Away,crypto.com Arena,LAL,False,7,3,5.41,3,True,0.1762,0.43,D. Avdija,True,41,26,-1,7
-2026-27,espn,401909880,2026-10-27,LAL,Los Angeles Lakers,POR,Home,crypto.com Arena,LAL,False,7,3,5.59,2,True,0.1482,1.73,W. Kessler,True,30,22,1,-7
-2026-27,espn,401909881,2026-10-28,MIA,Miami Heat,ATL,Away,State Farm Arena,ATL,False,8,5,5.877,3,False,0.1838,,,False,23,16,12,12
-2026-27,espn,401909881,2026-10-28,ATL,Atlanta Hawks,MIA,Home,State Farm Arena,ATL,False,3,1,2.259,1,False,0.0542,,,True,14,9,-12,-12
+2026-27,espn,401909870,2026-10-26,CHI,Chicago Bulls,BOS,Away,TD Garden,BOS,False,9,4,6.979,4,True,0.2083,9.18,N. Essengue,True,31,21,-30,-35
+2026-27,espn,401909870,2026-10-26,BOS,Boston Celtics,CHI,Home,TD Garden,BOS,False,11,9,7.988,5,False,0.3387,,,True,29,21,30,35
+2026-27,espn,401909871,2026-10-26,DAL,Dallas Mavericks,MIA,Away,Kaseya Center,MIA,False,4,3,2.98,1,False,0.0981,,,False,14,13,-1,4
+2026-27,espn,401909871,2026-10-26,MIA,Miami Heat,DAL,Home,Kaseya Center,MIA,False,8,5,6.494,4,False,0.1412,,,True,25,14,1,-4
+2026-27,espn,401909872,2026-10-26,IND,Indiana Pacers,MIL,Away,Fiserv Forum,MIL,False,11,8,8.56,5,False,0.2405,,,True,18,11,1,-8
+2026-27,espn,401909872,2026-10-26,MIL,Milwaukee Bucks,IND,Home,Fiserv Forum,MIL,False,10,6,7.782,5,True,0.23,2.72,T. Herro,True,21,15,-1,8
+2026-27,espn,401909873,2026-10-26,PHX,Phoenix Suns,OKC,Away,Paycom Center,OKC,False,5,5,3.717,2,False,0.1667,,,False,25,18,-14,-11
+2026-27,espn,401909873,2026-10-26,OKC,Oklahoma City Thunder,PHX,Home,Paycom Center,OKC,False,17,13,13.357,7,False,0.3193,,,False,29,25,14,11
+2026-27,espn,401909874,2026-10-26,ATL,Atlanta Hawks,HOU,Away,Toyota Center (Houston),HOU,False,7,4,5.447,3,False,0.1441,,,False,21,15,-6,-10
+2026-27,espn,401909874,2026-10-26,HOU,Houston Rockets,ATL,Home,Toyota Center (Houston),HOU,False,8,6,6.398,3,False,0.1166,,,False,32,26,6,10
+2026-27,espn,401909875,2026-10-26,MEM,Memphis Grizzlies,UTA,Away,Delta Center,UTA,False,6,6,5.062,3,False,0.0738,,,False,22,20,13,5
+2026-27,espn,401909875,2026-10-26,UTA,Utah Jazz,MEM,Home,Delta Center,UTA,False,5,5,3.907,1,False,0.0502,,,False,25,19,-13,-5
+2026-27,espn,401909876,2026-10-26,GSW,Golden State Warriors,DEN,Away,Ball Arena,DEN,False,4,4,3.41,1,False,0.0566,,,False,21,20,16,20
+2026-27,espn,401909876,2026-10-26,DEN,Denver Nuggets,GSW,Home,Ball Arena,DEN,False,10,7,7.917,4,False,0.1631,,,False,23,20,-16,-20
+2026-27,espn,401909877,2026-10-27,BKN,Brooklyn Nets,BOS,Away,TD Garden,BOS,False,4,3,3.209,2,False,0.0766,,,False,22,17,-4,-1
+2026-27,espn,401909877,2026-10-27,BOS,Boston Celtics,BKN,Home,TD Garden,BOS,False,14,10,11.344,6,True,0.2544,0.05,M. Robinson,True,38,30,4,1
+2026-27,espn,401909878,2026-10-27,DET,Detroit Pistons,NYK,Away,Madison Square Garden,NYK,False,5,3,3.995,2,False,0.0786,,,False,24,14,-25,-14
+2026-27,espn,401909878,2026-10-27,NYK,New York Knicks,DET,Home,Madison Square Garden,NYK,False,3,3,2.542,1,False,0.0249,,,False,28,23,25,14
+2026-27,espn,401909879,2026-10-27,SAC,Sacramento Kings,SAS,Away,Frost Bank Center,SAS,False,2,2,1.632,1,False,0.0338,,,False,13,10,-27,-27
+2026-27,espn,401909879,2026-10-27,SAS,San Antonio Spurs,SAC,Home,Frost Bank Center,SAS,False,5,4,3.696,2,False,0.1307,,,False,19,15,27,27
+2026-27,espn,401909880,2026-10-27,POR,Portland Trail Blazers,LAL,Away,crypto.com Arena,LAL,False,7,3,5.375,3,True,0.1875,0.43,D. Avdija,True,41,26,-1,7
+2026-27,espn,401909880,2026-10-27,LAL,Los Angeles Lakers,POR,Home,crypto.com Arena,LAL,False,7,3,5.487,2,True,0.1709,1.73,W. Kessler,True,30,22,1,-7
+2026-27,espn,401909881,2026-10-28,MIA,Miami Heat,ATL,Away,State Farm Arena,ATL,False,8,5,5.878,3,False,0.1836,,,False,23,16,12,12
+2026-27,espn,401909881,2026-10-28,ATL,Atlanta Hawks,MIA,Home,State Farm Arena,ATL,False,3,1,2.261,1,False,0.054,,,True,14,9,-12,-12
 2026-27,espn,401909882,2026-10-28,WAS,Washington Wizards,CLE,Away,Rocket Arena,CLE,False,2,2,1.696,1,False,0.0231,,,False,17,15,0,-10
-2026-27,espn,401909882,2026-10-28,CLE,Cleveland Cavaliers,WAS,Home,Rocket Arena,CLE,False,4,4,3.05,2,False,0.1296,,,False,22,21,0,10
+2026-27,espn,401909882,2026-10-28,CLE,Cleveland Cavaliers,WAS,Home,Rocket Arena,CLE,False,4,4,3.07,2,False,0.1271,,,False,22,21,0,10
 2026-27,espn,401909883,2026-10-28,CHA,Charlotte Hornets,DET,Away,Little Caesars Arena,DET,False,0,0,0.0,0,False,0.0,,,False,19,15,-6,-8
-2026-27,espn,401909883,2026-10-28,DET,Detroit Pistons,CHA,Home,Little Caesars Arena,DET,False,2,0,1.656,1,True,0.0296,10.53,C. Cunningham,True,20,16,6,8
-2026-27,espn,401909884,2026-10-28,PHI,Philadelphia 76ers,IND,Away,Gainbridge Fieldhouse,IND,False,12,10,10.015,5,False,0.1345,,,False,24,21,-13,5
-2026-27,espn,401909884,2026-10-28,IND,Indiana Pacers,PHI,Home,Gainbridge Fieldhouse,IND,False,10,9,7.824,5,False,0.2191,,,False,35,28,13,-5
-2026-27,espn,401909885,2026-10-28,ORL,Orlando Magic,TOR,Away,Scotiabank Arena,TOR,False,7,7,5.36,3,False,0.1735,,,False,29,23,-27,-30
-2026-27,espn,401909885,2026-10-28,TOR,Toronto Raptors,ORL,Home,Scotiabank Arena,TOR,False,10,9,7.356,5,False,0.3209,,,False,31,26,27,30
-2026-27,espn,401909886,2026-10-28,NYK,New York Knicks,CHI,Away,United Center,CHI,False,4,3,3.318,2,False,0.0588,,,False,20,17,-6,6
-2026-27,espn,401909886,2026-10-28,CHI,Chicago Bulls,NYK,Home,United Center,CHI,False,4,4,3.171,2,False,0.0893,,,False,30,21,6,-6
-2026-27,espn,401909887,2026-10-28,HOU,Houston Rockets,MIL,Away,Fiserv Forum,MIL,False,3,3,2.456,1,False,0.0599,,,False,26,23,26,32
-2026-27,espn,401909887,2026-10-28,MIL,Milwaukee Bucks,HOU,Home,Fiserv Forum,MIL,False,8,6,6.056,4,False,0.2166,,,False,18,14,-26,-32
-2026-27,espn,401909888,2026-10-28,GSW,Golden State Warriors,MIN,Away,Target Center,MIN,False,14,12,12.135,6,False,0.146,,,True,37,30,12,5
-2026-27,espn,401909888,2026-10-28,MIN,Minnesota Timberwolves,GSW,Home,Target Center,MIN,False,2,2,1.515,0,False,0.0,,,False,27,19,-12,-5
-2026-27,espn,401909889,2026-10-28,DEN,Denver Nuggets,NOP,Away,Smoothie King Center,NOP,False,4,4,3.198,2,False,0.0788,,,False,19,18,6,13
-2026-27,espn,401909889,2026-10-28,NOP,New Orleans Pelicans,DEN,Home,Smoothie King Center,NOP,False,6,5,4.938,3,False,0.0931,,,False,22,16,-6,-13
-2026-27,espn,401909890,2026-10-28,SAS,San Antonio Spurs,UTA,Away,Delta Center,UTA,False,5,4,3.979,2,False,0.0903,,,False,21,17,0,6
-2026-27,espn,401909890,2026-10-28,UTA,Utah Jazz,SAS,Home,Delta Center,UTA,False,4,4,3.267,1,False,0.0627,,,False,19,18,0,-6
-2026-27,espn,401909891,2026-10-28,OKC,Oklahoma City Thunder,DAL,Away,American Airlines Center,DAL,False,6,3,4.794,2,True,0.1233,1.88,B. Barnhizer,True,23,19,-13,-24
+2026-27,espn,401909883,2026-10-28,DET,Detroit Pistons,CHA,Home,Little Caesars Arena,DET,False,2,0,1.656,1,True,0.0295,10.53,C. Cunningham,True,20,16,6,8
+2026-27,espn,401909884,2026-10-28,PHI,Philadelphia 76ers,IND,Away,Gainbridge Fieldhouse,IND,False,12,10,10.07,5,False,0.1282,,,False,24,21,-13,5
+2026-27,espn,401909884,2026-10-28,IND,Indiana Pacers,PHI,Home,Gainbridge Fieldhouse,IND,False,10,9,7.836,5,False,0.2165,,,False,35,28,13,-5
+2026-27,espn,401909885,2026-10-28,ORL,Orlando Magic,TOR,Away,Scotiabank Arena,TOR,False,7,7,5.363,3,False,0.173,,,False,29,23,-27,-30
+2026-27,espn,401909885,2026-10-28,TOR,Toronto Raptors,ORL,Home,Scotiabank Arena,TOR,False,10,9,7.291,5,False,0.33,,,False,31,26,27,30
+2026-27,espn,401909886,2026-10-28,NYK,New York Knicks,CHI,Away,United Center,CHI,False,4,3,3.319,2,False,0.0587,,,False,20,17,-6,6
+2026-27,espn,401909886,2026-10-28,CHI,Chicago Bulls,NYK,Home,United Center,CHI,False,4,4,3.155,2,False,0.0916,,,False,30,21,6,-6
+2026-27,espn,401909887,2026-10-28,HOU,Houston Rockets,MIL,Away,Fiserv Forum,MIL,False,3,3,2.456,1,False,0.0597,,,False,26,23,26,32
+2026-27,espn,401909887,2026-10-28,MIL,Milwaukee Bucks,HOU,Home,Fiserv Forum,MIL,False,8,6,6.083,4,False,0.2108,,,False,18,14,-26,-32
+2026-27,espn,401909888,2026-10-28,GSW,Golden State Warriors,MIN,Away,Target Center,MIN,False,14,12,12.138,6,False,0.1457,,,True,37,30,12,5
+2026-27,espn,401909888,2026-10-28,MIN,Minnesota Timberwolves,GSW,Home,Target Center,MIN,False,2,2,1.503,0,False,0.0,,,False,27,19,-12,-5
+2026-27,espn,401909889,2026-10-28,DEN,Denver Nuggets,NOP,Away,Smoothie King Center,NOP,False,4,4,3.199,2,False,0.0786,,,False,19,18,6,13
+2026-27,espn,401909889,2026-10-28,NOP,New Orleans Pelicans,DEN,Home,Smoothie King Center,NOP,False,6,5,4.816,3,False,0.1172,,,False,22,16,-6,-13
+2026-27,espn,401909890,2026-10-28,SAS,San Antonio Spurs,UTA,Away,Delta Center,UTA,False,5,4,4.018,2,False,0.0828,,,False,21,17,0,6
+2026-27,espn,401909890,2026-10-28,UTA,Utah Jazz,SAS,Home,Delta Center,UTA,False,4,4,3.238,1,False,0.0674,,,False,19,18,0,-6
+2026-27,espn,401909891,2026-10-28,OKC,Oklahoma City Thunder,DAL,Away,American Airlines Center,DAL,False,6,3,4.869,2,True,0.107,1.88,B. Barnhizer,True,23,19,-13,-24
 2026-27,espn,401909891,2026-10-28,DAL,Dallas Mavericks,OKC,Home,American Airlines Center,DAL,False,0,0,0.0,0,False,0.0,,,False,15,12,13,24
-2026-27,espn,401909892,2026-10-28,LAL,Los Angeles Lakers,LAC,Away,Intuit Dome,LAC,False,12,6,8.955,6,True,0.3391,8.37,C. Sexton,True,33,24,19,16
-2026-27,espn,401909892,2026-10-28,LAC,LA Clippers,LAL,Home,Intuit Dome,LAC,False,4,4,3.271,2,False,0.0671,,,False,27,25,-19,-16
-2026-27,espn,401909893,2026-10-29,CLE,Cleveland Cavaliers,ATL,Away,State Farm Arena,ATL,False,14,10,10.718,6,False,0.3523,,,True,29,22,-7,-3
-2026-27,espn,401909893,2026-10-29,ATL,Atlanta Hawks,CLE,Home,State Farm Arena,ATL,False,2,2,1.691,1,False,0.0238,,,False,18,13,7,3
-2026-27,espn,401909894,2026-10-29,SAC,Sacramento Kings,NOP,Away,Smoothie King Center,NOP,False,6,5,4.846,3,False,0.1085,,,False,20,16,-14,-12
-2026-27,espn,401909894,2026-10-29,NOP,New Orleans Pelicans,SAC,Home,Smoothie King Center,NOP,False,7,4,5.612,2,False,0.057,,,True,32,22,14,12
-2026-27,espn,401909895,2026-10-29,MEM,Memphis Grizzlies,POR,Away,Moda Center,POR,False,4,4,3.441,2,False,0.039,,,False,12,12,8,21
-2026-27,espn,401909895,2026-10-29,POR,Portland Trail Blazers,MEM,Home,Moda Center,POR,False,9,6,6.765,4,True,0.2208,10.95,S. Cissoko,True,26,17,-8,-21
-2026-27,espn,401909277,2026-10-30,CHA,Charlotte Hornets,WAS,Away,Capital One Arena,WAS,False,4,1,2.847,2,True,0.1598,2.9,N. Reid,True,12,7,-20,-16
-2026-27,espn,401909277,2026-10-30,WAS,Washington Wizards,CHA,Home,Capital One Arena,WAS,False,5,4,3.895,2,False,0.093,,,False,35,29,20,16
-2026-27,espn,401909278,2026-10-30,CHI,Chicago Bulls,BOS,Away,TD Garden,BOS,False,14,7,9.839,5,True,0.4073,0.19,T. Awaka,True,40,26,-25,-14
-2026-27,espn,401909278,2026-10-30,BOS,Boston Celtics,CHI,Home,TD Garden,BOS,False,18,13,13.621,8,False,0.4724,,,True,40,31,25,14
-2026-27,espn,401909279,2026-10-30,DET,Detroit Pistons,BKN,Away,Barclays Center,BKN,False,2,0,1.67,1,True,0.0273,7.93,J. Collins,True,28,22,26,16
-2026-27,espn,401909279,2026-10-30,BKN,Brooklyn Nets,DET,Home,Barclays Center,BKN,False,5,3,3.899,2,False,0.1342,,,False,26,21,-26,-16
-2026-27,espn,401909280,2026-10-30,NYK,New York Knicks,PHI,Away,Xfinity Mobile Arena,PHI,False,4,2,3.172,1,False,0.0392,,,False,14,10,-9,-5
-2026-27,espn,401909280,2026-10-30,PHI,Philadelphia 76ers,NYK,Home,Xfinity Mobile Arena,PHI,False,4,3,3.427,2,False,0.0406,,,False,16,12,9,5
-2026-27,espn,401909281,2026-10-30,ORL,Orlando Magic,TOR,Away,Scotiabank Arena,TOR,False,5,5,4.081,2,False,0.0682,,,False,29,25,7,7
-2026-27,espn,401909281,2026-10-30,TOR,Toronto Raptors,ORL,Home,Scotiabank Arena,TOR,False,2,1,1.377,1,False,0.0971,,,False,15,11,-7,-7
-2026-27,espn,401909282,2026-10-30,IND,Indiana Pacers,MIA,Away,Kaseya Center,MIA,False,13,9,9.812,5,False,0.3187,,,True,27,20,-15,-20
-2026-27,espn,401909282,2026-10-30,MIA,Miami Heat,IND,Home,Kaseya Center,MIA,False,3,1,2.328,1,False,0.0284,,,True,23,19,15,20
-2026-27,espn,401909283,2026-10-30,HOU,Houston Rockets,DAL,Away,American Airlines Center,DAL,False,17,11,13.856,8,True,0.2675,1.88,K. Durant,True,33,24,8,-5
-2026-27,espn,401909283,2026-10-30,DAL,Dallas Mavericks,HOU,Home,American Airlines Center,DAL,False,10,9,8.128,4,False,0.1582,,,False,27,20,-8,5
-2026-27,espn,401909284,2026-10-30,LAC,LA Clippers,MIN,Away,Target Center,MIN,False,5,5,4.164,2,False,0.0466,,,False,22,19,-17,-26
-2026-27,espn,401909284,2026-10-30,MIN,Minnesota Timberwolves,LAC,Home,Target Center,MIN,False,4,2,2.961,2,False,0.1374,,,True,11,7,17,26
-2026-27,espn,401909285,2026-10-30,LAL,Los Angeles Lakers,GSW,Away,Chase Center,GSW,False,7,4,5.064,3,True,0.2682,2.75,J. LaRavia,True,24,18,-5,-17
-2026-27,espn,401909285,2026-10-30,GSW,Golden State Warriors,LAL,Home,Chase Center,GSW,False,3,2,2.452,1,False,0.0602,,,False,17,14,5,17
-2026-27,espn,401909286,2026-10-30,DEN,Denver Nuggets,PHX,Away,Mortgage Matchup Center,PHX,False,7,7,5.882,3,False,0.0963,,,False,30,23,10,7
-2026-27,espn,401909286,2026-10-30,PHX,Phoenix Suns,DEN,Home,Mortgage Matchup Center,PHX,False,4,4,3.433,2,False,0.0436,,,False,11,10,-10,-7
-2026-27,espn,401909896,2026-10-31,POR,Portland Trail Blazers,UTA,Away,Delta Center,UTA,False,10,9,7.751,5,False,0.2464,,,False,41,34,24,22
-2026-27,espn,401909896,2026-10-31,UTA,Utah Jazz,POR,Home,Delta Center,UTA,False,4,4,3.135,2,False,0.0913,,,False,26,21,-24,-22
-2026-27,espn,401909897,2026-10-31,PHI,Philadelphia 76ers,CHA,Away,Spectrum Center,CHA,False,10,9,8.282,5,False,0.154,,,False,23,15,-6,5
-2026-27,espn,401909897,2026-10-31,CHA,Charlotte Hornets,PHI,Home,Spectrum Center,CHA,False,2,1,1.685,1,False,0.0248,,,False,16,14,6,-5
-2026-27,espn,401909898,2026-10-31,ATL,Atlanta Hawks,NOP,Away,Smoothie King Center,NOP,False,8,8,6.327,4,False,0.1757,,,False,23,21,-18,-22
-2026-27,espn,401909898,2026-10-31,NOP,New Orleans Pelicans,ATL,Home,Smoothie King Center,NOP,False,4,4,3.285,2,False,0.065,,,False,35,28,18,22
-2026-27,espn,401909899,2026-10-31,SAC,Sacramento Kings,MEM,Away,FedExForum,MEM,False,6,4,4.414,3,True,0.2122,11.38,P. Achiuwa,True,29,24,-28,-31
-2026-27,espn,401909899,2026-10-31,MEM,Memphis Grizzlies,SAC,Home,FedExForum,MEM,False,4,2,3.047,2,False,0.1163,,,False,27,23,28,31
-2026-27,espn,401909900,2026-10-31,CLE,Cleveland Cavaliers,MIL,Away,Fiserv Forum,MIL,False,2,2,1.543,1,False,0.0523,,,False,18,12,33,25
-2026-27,espn,401909900,2026-10-31,MIL,Milwaukee Bucks,CLE,Home,Fiserv Forum,MIL,False,3,3,2.252,1,False,0.0674,,,False,18,12,-33,-25
-2026-27,espn,401909901,2026-10-31,MIN,Minnesota Timberwolves,SAS,Away,Frost Bank Center,SAS,False,4,4,2.805,2,False,0.177,,,False,26,22,-5,-10
-2026-27,espn,401909901,2026-10-31,SAS,San Antonio Spurs,MIN,Home,Frost Bank Center,SAS,False,3,2,2.544,1,False,0.0237,,,False,31,25,5,10
-2026-27,espn,401909902,2026-10-31,OKC,Oklahoma City Thunder,HOU,Away,Toyota Center (Houston),HOU,False,3,3,2.257,1,False,0.0614,,,False,15,14,-17,-21
-2026-27,espn,401909902,2026-10-31,HOU,Houston Rockets,OKC,Home,Toyota Center (Houston),HOU,False,7,5,5.302,3,False,0.1552,,,False,23,19,17,21
-2026-27,espn,401909903,2026-11-01,BOS,Boston Celtics,ORL,Away,Kia Center,ORL,False,5,5,4.096,2,False,0.0683,,,False,26,22,3,11
-2026-27,espn,401909903,2026-11-01,ORL,Orlando Magic,BOS,Home,Kia Center,ORL,False,7,7,5.326,3,False,0.1619,,,False,19,15,-3,-11
-2026-27,espn,401909904,2026-11-01,BKN,Brooklyn Nets,IND,Away,Gainbridge Fieldhouse,IND,False,9,9,6.823,4,False,0.2259,,,False,31,25,9,8
-2026-27,espn,401909904,2026-11-01,IND,Indiana Pacers,BKN,Home,Gainbridge Fieldhouse,IND,False,4,2,3.069,2,False,0.1104,,,False,30,21,-9,-8
-2026-27,espn,401909905,2026-11-01,LAC,LA Clippers,GSW,Away,Chase Center,GSW,False,6,6,4.812,2,False,0.0942,,,False,19,18,-7,-12
-2026-27,espn,401909905,2026-11-01,GSW,Golden State Warriors,LAC,Home,Chase Center,GSW,False,4,3,3.06,1,False,0.0567,,,False,14,10,7,12
-2026-27,espn,401909906,2026-11-01,TOR,Toronto Raptors,LAL,Away,crypto.com Arena,LAL,False,7,6,5.413,2,False,0.0873,,,False,25,18,-22,-6
-2026-27,espn,401909906,2026-11-01,LAL,Los Angeles Lakers,TOR,Home,crypto.com Arena,LAL,False,15,12,11.937,7,False,0.303,,,False,32,27,22,6
-2026-27,espn,401909907,2026-11-02,OKC,Oklahoma City Thunder,CLE,Away,Rocket Arena,CLE,False,5,5,4.02,1,False,0.039,,,False,23,21,6,5
-2026-27,espn,401909907,2026-11-02,CLE,Cleveland Cavaliers,OKC,Home,Rocket Arena,CLE,False,14,9,10.588,6,True,0.3575,3.85,J. Allen,True,24,14,-6,-5
-2026-27,espn,401909908,2026-11-02,DET,Detroit Pistons,CHA,Away,Spectrum Center,CHA,False,2,1,1.503,1,False,0.0618,,,False,15,12,23,33
-2026-27,espn,401909908,2026-11-02,CHA,Charlotte Hornets,DET,Home,Spectrum Center,CHA,False,4,3,3.125,1,False,0.0612,,,False,19,14,-23,-33
-2026-27,espn,401909909,2026-11-02,ATL,Atlanta Hawks,IND,Away,Gainbridge Fieldhouse,IND,False,5,3,3.854,2,False,0.1029,,,False,8,5,8,4
-2026-27,espn,401909909,2026-11-02,IND,Indiana Pacers,ATL,Home,Gainbridge Fieldhouse,IND,False,11,10,8.776,4,False,0.1431,,,False,23,20,-8,-4
-2026-27,espn,401909910,2026-11-02,BKN,Brooklyn Nets,NYK,Away,Madison Square Garden,NYK,False,6,3,4.654,3,True,0.1444,1.43,K. Ellis,True,27,19,4,-13
-2026-27,espn,401909910,2026-11-02,NYK,New York Knicks,BKN,Home,Madison Square Garden,NYK,False,6,4,5.042,3,False,0.0767,,,False,29,24,-4,13
-2026-27,espn,401909911,2026-11-02,WAS,Washington Wizards,ORL,Away,Kia Center,ORL,False,2,2,1.461,1,False,0.0725,,,False,18,14,11,9
-2026-27,espn,401909911,2026-11-02,ORL,Orlando Magic,WAS,Home,Kia Center,ORL,False,3,3,2.479,1,False,0.0301,,,False,10,9,-11,-9
-2026-27,espn,401909912,2026-11-02,CHI,Chicago Bulls,PHI,Away,Xfinity Mobile Arena,PHI,False,14,10,10.619,6,False,0.3682,,,False,32,21,-11,-19
-2026-27,espn,401909912,2026-11-02,PHI,Philadelphia 76ers,CHI,Home,Xfinity Mobile Arena,PHI,False,8,6,6.481,2,False,0.0993,,,True,27,19,11,19
-2026-27,espn,401909913,2026-11-02,SAC,Sacramento Kings,DAL,Away,American Airlines Center,DAL,False,2,2,1.629,1,False,0.0344,,,False,15,10,7,15
-2026-27,espn,401909913,2026-11-02,DAL,Dallas Mavericks,SAC,Home,American Airlines Center,DAL,False,5,5,3.871,2,False,0.1148,,,False,35,29,-7,-15
+2026-27,espn,401909892,2026-10-28,LAL,Los Angeles Lakers,LAC,Away,Intuit Dome,LAC,False,12,6,9.045,6,True,0.3278,8.37,C. Sexton,True,33,24,19,16
+2026-27,espn,401909892,2026-10-28,LAC,LA Clippers,LAL,Home,Intuit Dome,LAC,False,4,4,3.273,2,False,0.0667,,,False,27,25,-19,-16
+2026-27,espn,401909893,2026-10-29,CLE,Cleveland Cavaliers,ATL,Away,State Farm Arena,ATL,False,14,10,10.784,6,False,0.3464,,,True,29,22,-7,-3
+2026-27,espn,401909893,2026-10-29,ATL,Atlanta Hawks,CLE,Home,State Farm Arena,ATL,False,2,2,1.692,1,False,0.0238,,,False,18,13,7,3
+2026-27,espn,401909894,2026-10-29,SAC,Sacramento Kings,NOP,Away,Smoothie King Center,NOP,False,6,5,4.833,3,False,0.1117,,,False,20,16,-14,-12
+2026-27,espn,401909894,2026-10-29,NOP,New Orleans Pelicans,SAC,Home,Smoothie King Center,NOP,False,7,4,5.632,2,False,0.0567,,,True,32,22,14,12
+2026-27,espn,401909895,2026-10-29,MEM,Memphis Grizzlies,POR,Away,Moda Center,POR,False,4,4,3.448,2,False,0.038,,,False,12,12,8,21
+2026-27,espn,401909895,2026-10-29,POR,Portland Trail Blazers,MEM,Home,Moda Center,POR,False,9,6,6.699,4,True,0.2331,10.95,S. Cissoko,True,26,17,-8,-21
+2026-27,espn,401909277,2026-10-30,CHA,Charlotte Hornets,WAS,Away,Capital One Arena,WAS,False,4,1,2.875,2,True,0.152,2.9,N. Reid,True,12,7,-20,-16
+2026-27,espn,401909277,2026-10-30,WAS,Washington Wizards,CHA,Home,Capital One Arena,WAS,False,5,4,3.896,2,False,0.0928,,,False,35,29,20,16
+2026-27,espn,401909278,2026-10-30,CHI,Chicago Bulls,BOS,Away,TD Garden,BOS,False,14,7,9.857,5,True,0.4031,0.19,T. Awaka,True,40,26,-25,-14
+2026-27,espn,401909278,2026-10-30,BOS,Boston Celtics,CHI,Home,TD Garden,BOS,False,18,13,13.628,8,False,0.4715,,,True,40,31,25,14
+2026-27,espn,401909279,2026-10-30,DET,Detroit Pistons,BKN,Away,Barclays Center,BKN,False,2,0,1.67,1,True,0.0272,7.93,J. Collins,True,28,22,26,16
+2026-27,espn,401909279,2026-10-30,BKN,Brooklyn Nets,DET,Home,Barclays Center,BKN,False,5,3,3.911,2,False,0.1317,,,False,26,21,-26,-16
+2026-27,espn,401909280,2026-10-30,NYK,New York Knicks,PHI,Away,Xfinity Mobile Arena,PHI,False,4,2,3.173,1,False,0.0391,,,False,14,10,-9,-5
+2026-27,espn,401909280,2026-10-30,PHI,Philadelphia 76ers,NYK,Home,Xfinity Mobile Arena,PHI,False,4,3,3.452,2,False,0.0371,,,False,16,12,9,5
+2026-27,espn,401909281,2026-10-30,ORL,Orlando Magic,TOR,Away,Scotiabank Arena,TOR,False,5,5,4.083,2,False,0.068,,,False,29,25,7,7
+2026-27,espn,401909281,2026-10-30,TOR,Toronto Raptors,ORL,Home,Scotiabank Arena,TOR,False,2,1,1.397,1,False,0.0908,,,False,15,11,-7,-7
+2026-27,espn,401909282,2026-10-30,IND,Indiana Pacers,MIA,Away,Kaseya Center,MIA,False,13,9,9.837,5,False,0.3111,,,True,27,20,-15,-20
+2026-27,espn,401909282,2026-10-30,MIA,Miami Heat,IND,Home,Kaseya Center,MIA,False,3,1,2.329,1,False,0.0283,,,True,23,19,15,20
+2026-27,espn,401909283,2026-10-30,HOU,Houston Rockets,DAL,Away,American Airlines Center,DAL,False,17,11,13.89,8,True,0.2666,1.88,K. Durant,True,33,24,8,-5
+2026-27,espn,401909283,2026-10-30,DAL,Dallas Mavericks,HOU,Home,American Airlines Center,DAL,False,10,9,8.131,4,False,0.1578,,,False,27,20,-8,5
+2026-27,espn,401909284,2026-10-30,LAC,LA Clippers,MIN,Away,Target Center,MIN,False,5,5,4.166,2,False,0.0465,,,False,22,19,-17,-26
+2026-27,espn,401909284,2026-10-30,MIN,Minnesota Timberwolves,LAC,Home,Target Center,MIN,False,4,2,3.006,2,False,0.1249,,,True,11,7,17,26
+2026-27,espn,401909285,2026-10-30,LAL,Los Angeles Lakers,GSW,Away,Chase Center,GSW,False,7,4,5.071,3,True,0.2686,2.75,J. LaRavia,True,24,18,-5,-17
+2026-27,espn,401909285,2026-10-30,GSW,Golden State Warriors,LAL,Home,Chase Center,GSW,False,3,2,2.453,1,False,0.06,,,False,17,14,5,17
+2026-27,espn,401909286,2026-10-30,DEN,Denver Nuggets,PHX,Away,Mortgage Matchup Center,PHX,False,7,7,5.883,3,False,0.096,,,False,30,23,10,7
+2026-27,espn,401909286,2026-10-30,PHX,Phoenix Suns,DEN,Home,Mortgage Matchup Center,PHX,False,4,4,3.394,2,False,0.0502,,,False,11,10,-10,-7
+2026-27,espn,401909896,2026-10-31,POR,Portland Trail Blazers,UTA,Away,Delta Center,UTA,False,10,9,7.743,5,False,0.2557,,,False,41,34,24,22
+2026-27,espn,401909896,2026-10-31,UTA,Utah Jazz,POR,Home,Delta Center,UTA,False,4,4,3.137,2,False,0.0909,,,False,26,21,-24,-22
+2026-27,espn,401909897,2026-10-31,PHI,Philadelphia 76ers,CHA,Away,Spectrum Center,CHA,False,10,9,8.335,5,False,0.1471,,,False,23,15,-6,5
+2026-27,espn,401909897,2026-10-31,CHA,Charlotte Hornets,PHI,Home,Spectrum Center,CHA,False,2,1,1.704,1,False,0.0218,,,False,16,14,6,-5
+2026-27,espn,401909898,2026-10-31,ATL,Atlanta Hawks,NOP,Away,Smoothie King Center,NOP,False,8,8,6.33,4,False,0.175,,,False,23,21,-18,-22
+2026-27,espn,401909898,2026-10-31,NOP,New Orleans Pelicans,ATL,Home,Smoothie King Center,NOP,False,4,4,3.236,2,False,0.0724,,,False,35,28,18,22
+2026-27,espn,401909899,2026-10-31,SAC,Sacramento Kings,MEM,Away,FedExForum,MEM,False,6,4,4.398,3,True,0.2174,11.38,P. Achiuwa,True,29,24,-28,-31
+2026-27,espn,401909899,2026-10-31,MEM,Memphis Grizzlies,SAC,Home,FedExForum,MEM,False,4,2,3.059,2,False,0.1142,,,False,27,23,28,31
+2026-27,espn,401909900,2026-10-31,CLE,Cleveland Cavaliers,MIL,Away,Fiserv Forum,MIL,False,2,2,1.543,1,False,0.0521,,,False,18,12,33,25
+2026-27,espn,401909900,2026-10-31,MIL,Milwaukee Bucks,CLE,Home,Fiserv Forum,MIL,False,3,3,2.267,1,False,0.0636,,,False,18,12,-33,-25
+2026-27,espn,401909901,2026-10-31,MIN,Minnesota Timberwolves,SAS,Away,Frost Bank Center,SAS,False,4,4,2.831,2,False,0.1714,,,False,26,22,-5,-10
+2026-27,espn,401909901,2026-10-31,SAS,San Antonio Spurs,MIN,Home,Frost Bank Center,SAS,False,3,2,2.545,1,False,0.0236,,,False,31,25,5,10
+2026-27,espn,401909902,2026-10-31,OKC,Oklahoma City Thunder,HOU,Away,Toyota Center (Houston),HOU,False,3,3,2.326,1,False,0.0505,,,False,15,14,-17,-21
+2026-27,espn,401909902,2026-10-31,HOU,Houston Rockets,OKC,Home,Toyota Center (Houston),HOU,False,7,5,5.29,3,False,0.1583,,,False,23,19,17,21
+2026-27,espn,401909903,2026-11-01,BOS,Boston Celtics,ORL,Away,Kia Center,ORL,False,5,5,4.098,2,False,0.068,,,False,26,22,3,11
+2026-27,espn,401909903,2026-11-01,ORL,Orlando Magic,BOS,Home,Kia Center,ORL,False,7,7,5.328,3,False,0.1616,,,False,19,15,-3,-11
+2026-27,espn,401909904,2026-11-01,BKN,Brooklyn Nets,IND,Away,Gainbridge Fieldhouse,IND,False,9,9,6.838,4,False,0.2233,,,False,31,25,9,8
+2026-27,espn,401909904,2026-11-01,IND,Indiana Pacers,BKN,Home,Gainbridge Fieldhouse,IND,False,4,2,3.071,2,False,0.11,,,False,30,21,-9,-8
+2026-27,espn,401909905,2026-11-01,LAC,LA Clippers,GSW,Away,Chase Center,GSW,False,6,6,4.818,2,False,0.0936,,,False,19,18,-7,-12
+2026-27,espn,401909905,2026-11-01,GSW,Golden State Warriors,LAC,Home,Chase Center,GSW,False,4,3,3.061,1,False,0.0566,,,False,14,10,7,12
+2026-27,espn,401909906,2026-11-01,TOR,Toronto Raptors,LAL,Away,crypto.com Arena,LAL,False,7,6,5.374,2,False,0.0963,,,False,25,18,-22,-6
+2026-27,espn,401909906,2026-11-01,LAL,Los Angeles Lakers,TOR,Home,crypto.com Arena,LAL,False,15,12,12.002,7,False,0.297,,,False,32,27,22,6
+2026-27,espn,401909907,2026-11-02,OKC,Oklahoma City Thunder,CLE,Away,Rocket Arena,CLE,False,5,5,4.03,1,False,0.0367,,,False,23,21,6,5
+2026-27,espn,401909907,2026-11-02,CLE,Cleveland Cavaliers,OKC,Home,Rocket Arena,CLE,False,14,9,10.674,6,True,0.3469,3.85,J. Allen,True,24,14,-6,-5
+2026-27,espn,401909908,2026-11-02,DET,Detroit Pistons,CHA,Away,Spectrum Center,CHA,False,2,1,1.503,1,False,0.0616,,,False,15,12,23,33
+2026-27,espn,401909908,2026-11-02,CHA,Charlotte Hornets,DET,Home,Spectrum Center,CHA,False,4,3,3.134,1,False,0.0609,,,False,19,14,-23,-33
+2026-27,espn,401909909,2026-11-02,ATL,Atlanta Hawks,IND,Away,Gainbridge Fieldhouse,IND,False,5,3,3.856,2,False,0.1026,,,False,8,5,8,4
+2026-27,espn,401909909,2026-11-02,IND,Indiana Pacers,ATL,Home,Gainbridge Fieldhouse,IND,False,11,10,8.796,4,False,0.1423,,,False,23,20,-8,-4
+2026-27,espn,401909910,2026-11-02,BKN,Brooklyn Nets,NYK,Away,Madison Square Garden,NYK,False,6,3,4.689,3,True,0.1377,1.43,K. Ellis,True,27,19,4,-13
+2026-27,espn,401909910,2026-11-02,NYK,New York Knicks,BKN,Home,Madison Square Garden,NYK,False,6,4,5.043,3,False,0.0765,,,False,29,24,-4,13
+2026-27,espn,401909911,2026-11-02,WAS,Washington Wizards,ORL,Away,Kia Center,ORL,False,2,2,1.462,1,False,0.0724,,,False,18,14,11,9
+2026-27,espn,401909911,2026-11-02,ORL,Orlando Magic,WAS,Home,Kia Center,ORL,False,3,3,2.48,1,False,0.03,,,False,10,9,-11,-9
+2026-27,espn,401909912,2026-11-02,CHI,Chicago Bulls,PHI,Away,Xfinity Mobile Arena,PHI,False,14,10,10.646,6,False,0.3638,,,False,32,21,-11,-19
+2026-27,espn,401909912,2026-11-02,PHI,Philadelphia 76ers,CHI,Home,Xfinity Mobile Arena,PHI,False,8,6,6.515,2,False,0.0969,,,True,27,19,11,19
+2026-27,espn,401909913,2026-11-02,SAC,Sacramento Kings,DAL,Away,American Airlines Center,DAL,False,2,2,1.637,1,False,0.0329,,,False,15,10,7,15
+2026-27,espn,401909913,2026-11-02,DAL,Dallas Mavericks,SAC,Home,American Airlines Center,DAL,False,5,5,3.873,2,False,0.1145,,,False,35,29,-7,-15
 2026-27,espn,401909914,2026-11-02,NOP,New Orleans Pelicans,MEM,Away,FedExForum,MEM,False,0,0,0.0,0,False,0.0,,,False,30,25,5,1
-2026-27,espn,401909914,2026-11-02,MEM,Memphis Grizzlies,NOP,Home,FedExForum,MEM,False,8,7,6.734,3,False,0.1023,,,False,27,22,-5,-1
-2026-27,espn,401909915,2026-11-02,MIL,Milwaukee Bucks,MIN,Away,Target Center,MIN,False,3,2,2.41,1,False,0.0321,,,False,12,9,-4,-12
-2026-27,espn,401909915,2026-11-02,MIN,Minnesota Timberwolves,MIL,Home,Target Center,MIN,False,14,8,8.474,7,True,0.7406,6.98,R. Gobert,True,26,14,4,12
-2026-27,espn,401909916,2026-11-02,BOS,Boston Celtics,HOU,Away,Toyota Center (Houston),HOU,False,2,1,1.675,0,False,0.0,,,False,20,17,-9,-16
+2026-27,espn,401909914,2026-11-02,MEM,Memphis Grizzlies,NOP,Home,FedExForum,MEM,False,8,7,6.814,3,False,0.0925,,,False,27,22,-5,-1
+2026-27,espn,401909915,2026-11-02,MIL,Milwaukee Bucks,MIN,Away,Target Center,MIN,False,3,2,2.411,1,False,0.0319,,,False,12,9,-4,-12
+2026-27,espn,401909915,2026-11-02,MIN,Minnesota Timberwolves,MIL,Home,Target Center,MIN,False,14,8,8.513,7,True,0.7388,6.98,R. Gobert,True,26,14,4,12
+2026-27,espn,401909916,2026-11-02,BOS,Boston Celtics,HOU,Away,Toyota Center (Houston),HOU,False,2,1,1.676,0,False,0.0,,,False,20,17,-9,-16
 2026-27,espn,401909916,2026-11-02,HOU,Houston Rockets,BOS,Home,Toyota Center (Houston),HOU,False,0,0,0.0,0,False,0.0,,,False,13,9,9,16
-2026-27,espn,401909917,2026-11-02,UTA,Utah Jazz,SAS,Away,Frost Bank Center,SAS,False,12,8,8.742,6,True,0.391,2.0,T. Bradley,True,22,17,-25,-22
-2026-27,espn,401909917,2026-11-02,SAS,San Antonio Spurs,UTA,Home,Frost Bank Center,SAS,False,4,4,2.972,2,False,0.1288,,,False,30,24,25,22
-2026-27,espn,401909918,2026-11-02,POR,Portland Trail Blazers,DEN,Away,Ball Arena,DEN,False,8,6,6.318,3,False,0.1407,,,True,21,17,-2,8
-2026-27,espn,401909918,2026-11-02,DEN,Denver Nuggets,POR,Home,Ball Arena,DEN,False,2,2,1.717,1,False,0.0201,,,False,34,29,2,-8
-2026-27,espn,401909919,2026-11-02,PHX,Phoenix Suns,GSW,Away,Chase Center,GSW,False,4,3,3.093,2,False,0.1039,,,False,30,22,0,-3
-2026-27,espn,401909919,2026-11-02,GSW,Golden State Warriors,PHX,Home,Chase Center,GSW,False,13,12,10.96,6,False,0.177,,,False,37,31,0,3
-2026-27,espn,401909920,2026-11-02,TOR,Toronto Raptors,LAC,Away,Intuit Dome,LAC,False,26,19,18.905,12,True,0.6207,0.76,S. Barnes,True,48,31,-13,7
-2026-27,espn,401909920,2026-11-02,LAC,LA Clippers,TOR,Home,Intuit Dome,LAC,False,10,7,8.551,5,False,0.1014,,,False,27,21,13,-7
-2026-27,espn,401909921,2026-11-02,MIA,Miami Heat,LAL,Away,crypto.com Arena,LAL,False,18,13,13.363,9,False,0.4851,,,False,35,25,-18,-21
-2026-27,espn,401909921,2026-11-02,LAL,Los Angeles Lakers,MIA,Home,crypto.com Arena,LAL,False,6,4,4.479,3,False,0.1975,,,False,24,17,18,21
-2026-27,espn,401909922,2026-11-04,PHI,Philadelphia 76ers,DET,Away,Little Caesars Arena,DET,False,8,8,6.861,4,False,0.0788,,,False,28,25,16,6
-2026-27,espn,401909922,2026-11-04,DET,Detroit Pistons,PHI,Home,Little Caesars Arena,DET,False,8,6,6.564,3,False,0.144,,,False,23,18,-16,-6
-2026-27,espn,401909923,2026-11-04,ATL,Atlanta Hawks,WAS,Away,Capital One Arena,WAS,False,3,3,2.521,1,False,0.0238,,,False,14,11,8,15
-2026-27,espn,401909923,2026-11-04,WAS,Washington Wizards,ATL,Home,Capital One Arena,WAS,False,5,3,3.786,2,False,0.1203,,,False,21,15,-8,-15
-2026-27,espn,401909924,2026-11-04,MIL,Milwaukee Bucks,BOS,Away,TD Garden,BOS,False,10,6,7.656,5,True,0.2606,2.1,J. Jaquez Jr.,True,19,13,-8,-7
-2026-27,espn,401909924,2026-11-04,BOS,Boston Celtics,MIL,Home,TD Garden,BOS,False,12,9,9.918,5,True,0.1453,3.83,P. George,True,25,19,8,7
-2026-27,espn,401909925,2026-11-04,CHA,Charlotte Hornets,BKN,Away,Barclays Center,BKN,False,7,6,5.839,3,False,0.0683,,,False,36,30,0,-10
-2026-27,espn,401909925,2026-11-04,BKN,Brooklyn Nets,CHA,Home,Barclays Center,BKN,False,9,6,6.689,4,False,0.2351,,,True,28,20,0,10
-2026-27,espn,401909926,2026-11-04,CHI,Chicago Bulls,NYK,Away,Madison Square Garden,NYK,False,13,9,9.859,5,False,0.3263,,,False,28,21,-34,-30
+2026-27,espn,401909917,2026-11-02,UTA,Utah Jazz,SAS,Away,Frost Bank Center,SAS,False,12,8,8.691,6,True,0.4028,2.0,T. Bradley,True,22,17,-25,-22
+2026-27,espn,401909917,2026-11-02,SAS,San Antonio Spurs,UTA,Home,Frost Bank Center,SAS,False,4,4,3.046,2,False,0.1112,,,False,30,24,25,22
+2026-27,espn,401909918,2026-11-02,POR,Portland Trail Blazers,DEN,Away,Ball Arena,DEN,False,8,6,6.314,3,False,0.1444,,,True,21,17,-2,8
+2026-27,espn,401909918,2026-11-02,DEN,Denver Nuggets,POR,Home,Ball Arena,DEN,False,2,2,1.717,1,False,0.02,,,False,34,29,2,-8
+2026-27,espn,401909919,2026-11-02,PHX,Phoenix Suns,GSW,Away,Chase Center,GSW,False,4,3,3.095,2,False,0.1012,,,False,30,22,0,-3
+2026-27,espn,401909919,2026-11-02,GSW,Golden State Warriors,PHX,Home,Chase Center,GSW,False,13,12,10.963,6,False,0.1766,,,False,37,31,0,3
+2026-27,espn,401909920,2026-11-02,TOR,Toronto Raptors,LAC,Away,Intuit Dome,LAC,False,26,19,18.98,12,True,0.608,0.76,S. Barnes,True,48,31,-13,7
+2026-27,espn,401909920,2026-11-02,LAC,LA Clippers,TOR,Home,Intuit Dome,LAC,False,10,7,8.566,5,False,0.0992,,,False,27,21,13,-7
+2026-27,espn,401909921,2026-11-02,MIA,Miami Heat,LAL,Away,crypto.com Arena,LAL,False,18,13,13.368,9,False,0.4844,,,False,35,25,-18,-21
+2026-27,espn,401909921,2026-11-02,LAL,Los Angeles Lakers,MIA,Home,crypto.com Arena,LAL,False,6,4,4.453,3,False,0.2064,,,False,24,17,18,21
+2026-27,espn,401909922,2026-11-04,PHI,Philadelphia 76ers,DET,Away,Little Caesars Arena,DET,False,8,8,6.899,4,False,0.0736,,,False,28,25,16,6
+2026-27,espn,401909922,2026-11-04,DET,Detroit Pistons,PHI,Home,Little Caesars Arena,DET,False,8,6,6.566,3,False,0.1437,,,False,23,18,-16,-6
+2026-27,espn,401909923,2026-11-04,ATL,Atlanta Hawks,WAS,Away,Capital One Arena,WAS,False,3,3,2.522,1,False,0.0238,,,False,14,11,8,15
+2026-27,espn,401909923,2026-11-04,WAS,Washington Wizards,ATL,Home,Capital One Arena,WAS,False,5,3,3.788,2,False,0.1201,,,False,21,15,-8,-15
+2026-27,espn,401909924,2026-11-04,MIL,Milwaukee Bucks,BOS,Away,TD Garden,BOS,False,10,6,7.667,5,True,0.262,2.1,J. Jaquez Jr.,True,19,13,-8,-7
+2026-27,espn,401909924,2026-11-04,BOS,Boston Celtics,MIL,Home,TD Garden,BOS,False,12,9,9.922,5,True,0.1448,3.83,P. George,True,25,19,8,7
+2026-27,espn,401909925,2026-11-04,CHA,Charlotte Hornets,BKN,Away,Barclays Center,BKN,False,7,6,5.861,3,False,0.0679,,,False,36,30,0,-10
+2026-27,espn,401909925,2026-11-04,BKN,Brooklyn Nets,CHA,Home,Barclays Center,BKN,False,9,6,6.694,4,False,0.2336,,,True,28,20,0,10
+2026-27,espn,401909926,2026-11-04,CHI,Chicago Bulls,NYK,Away,Madison Square Garden,NYK,False,13,9,9.88,5,False,0.3218,,,False,28,21,-34,-30
 2026-27,espn,401909926,2026-11-04,NYK,New York Knicks,CHI,Home,Madison Square Garden,NYK,False,0,0,0.0,0,False,0.0,,,False,37,30,34,30
-2026-27,espn,401909927,2026-11-04,IND,Indiana Pacers,MEM,Away,FedExForum,MEM,False,4,3,3.085,1,False,0.0567,,,False,17,15,-2,4
-2026-27,espn,401909927,2026-11-04,MEM,Memphis Grizzlies,IND,Home,FedExForum,MEM,False,6,4,4.955,3,False,0.0909,,,False,15,9,2,-4
-2026-27,espn,401909928,2026-11-04,UTA,Utah Jazz,NOP,Away,Smoothie King Center,NOP,False,3,2,2.463,1,False,0.0342,,,False,30,20,10,-7
-2026-27,espn,401909928,2026-11-04,NOP,New Orleans Pelicans,UTA,Home,Smoothie King Center,NOP,False,15,15,11.996,6,False,0.2339,,,False,43,39,-10,7
-2026-27,espn,401909929,2026-11-04,CLE,Cleveland Cavaliers,OKC,Away,Paycom Center,OKC,False,5,4,3.634,2,False,0.1536,,,False,19,17,-14,-8
-2026-27,espn,401909929,2026-11-04,OKC,Oklahoma City Thunder,CLE,Home,Paycom Center,OKC,False,16,13,12.751,8,False,0.3021,,,False,35,27,14,8
-2026-27,espn,401909930,2026-11-04,MIN,Minnesota Timberwolves,HOU,Away,Toyota Center (Houston),HOU,False,5,3,3.338,2,False,0.2705,,,False,19,10,-2,10
-2026-27,espn,401909930,2026-11-04,HOU,Houston Rockets,MIN,Home,Toyota Center (Houston),HOU,False,10,7,8.003,5,False,0.1937,,,False,30,24,2,-10
-2026-27,espn,401909931,2026-11-04,TOR,Toronto Raptors,DEN,Away,Ball Arena,DEN,False,8,5,5.873,4,True,0.2642,6.4,R. Barrett,True,22,15,-23,-19
-2026-27,espn,401909931,2026-11-04,DEN,Denver Nuggets,TOR,Home,Ball Arena,DEN,False,6,6,4.836,3,False,0.1144,,,False,27,23,23,19
-2026-27,espn,401909932,2026-11-04,POR,Portland Trail Blazers,PHX,Away,Mortgage Matchup Center,PHX,False,15,10,11.789,7,True,0.303,7.65,T. Camara,True,41,30,19,13
-2026-27,espn,401909932,2026-11-04,PHX,Phoenix Suns,POR,Home,Mortgage Matchup Center,PHX,False,7,7,5.305,3,False,0.1819,,,False,31,27,-19,-13
-2026-27,espn,401909933,2026-11-04,DAL,Dallas Mavericks,SAS,Away,Frost Bank Center,SAS,False,7,5,5.523,3,False,0.1451,,,False,26,19,-10,-1
-2026-27,espn,401909933,2026-11-04,SAS,San Antonio Spurs,DAL,Home,Frost Bank Center,SAS,False,7,3,5.604,3,True,0.1139,2.17,V. Wembanyama,True,39,33,10,1
-2026-27,espn,401909934,2026-11-04,LAL,Los Angeles Lakers,SAC,Away,Golden 1 Center,SAC,False,17,15,13.313,8,False,0.3851,,,False,38,34,13,13
-2026-27,espn,401909934,2026-11-04,SAC,Sacramento Kings,LAL,Home,Golden 1 Center,SAC,False,14,10,11.076,7,True,0.2739,3.75,D. Sabonis,True,28,21,-13,-13
-2026-27,espn,401909935,2026-11-04,MIA,Miami Heat,LAC,Away,Intuit Dome,LAC,False,12,9,8.418,5,False,0.3854,,,False,26,21,-9,1
-2026-27,espn,401909935,2026-11-04,LAC,LA Clippers,MIA,Home,Intuit Dome,LAC,False,5,4,3.866,2,False,0.1001,,,False,20,14,9,-1
+2026-27,espn,401909927,2026-11-04,IND,Indiana Pacers,MEM,Away,FedExForum,MEM,False,4,3,3.114,1,False,0.0501,,,False,17,15,-2,4
+2026-27,espn,401909927,2026-11-04,MEM,Memphis Grizzlies,IND,Home,FedExForum,MEM,False,6,4,5.011,3,False,0.0812,,,False,15,9,2,-4
+2026-27,espn,401909928,2026-11-04,UTA,Utah Jazz,NOP,Away,Smoothie King Center,NOP,False,3,2,2.456,1,False,0.0341,,,False,30,20,10,-7
+2026-27,espn,401909928,2026-11-04,NOP,New Orleans Pelicans,UTA,Home,Smoothie King Center,NOP,False,15,15,11.91,6,False,0.2378,,,False,43,39,-10,7
+2026-27,espn,401909929,2026-11-04,CLE,Cleveland Cavaliers,OKC,Away,Paycom Center,OKC,False,5,4,3.635,2,False,0.1533,,,False,19,17,-14,-8
+2026-27,espn,401909929,2026-11-04,OKC,Oklahoma City Thunder,CLE,Home,Paycom Center,OKC,False,16,13,12.764,8,False,0.3001,,,False,35,27,14,8
+2026-27,espn,401909930,2026-11-04,MIN,Minnesota Timberwolves,HOU,Away,Toyota Center (Houston),HOU,False,5,3,3.376,2,False,0.266,,,False,19,10,-2,10
+2026-27,espn,401909930,2026-11-04,HOU,Houston Rockets,MIN,Home,Toyota Center (Houston),HOU,False,10,7,8.002,5,False,0.1953,,,False,30,24,2,-10
+2026-27,espn,401909931,2026-11-04,TOR,Toronto Raptors,DEN,Away,Ball Arena,DEN,False,8,5,5.877,4,True,0.2633,6.4,R. Barrett,True,22,15,-23,-19
+2026-27,espn,401909931,2026-11-04,DEN,Denver Nuggets,TOR,Home,Ball Arena,DEN,False,6,6,4.839,3,False,0.1138,,,False,27,23,23,19
+2026-27,espn,401909932,2026-11-04,POR,Portland Trail Blazers,PHX,Away,Mortgage Matchup Center,PHX,False,15,10,11.747,7,True,0.32,7.65,T. Camara,True,41,30,19,13
+2026-27,espn,401909932,2026-11-04,PHX,Phoenix Suns,POR,Home,Mortgage Matchup Center,PHX,False,7,7,5.359,3,False,0.1656,,,False,31,27,-19,-13
+2026-27,espn,401909933,2026-11-04,DAL,Dallas Mavericks,SAS,Away,Frost Bank Center,SAS,False,7,5,5.525,3,False,0.1447,,,False,26,19,-10,-1
+2026-27,espn,401909933,2026-11-04,SAS,San Antonio Spurs,DAL,Home,Frost Bank Center,SAS,False,7,3,5.605,3,True,0.1138,2.17,V. Wembanyama,True,39,33,10,1
+2026-27,espn,401909934,2026-11-04,LAL,Los Angeles Lakers,SAC,Away,Golden 1 Center,SAC,False,17,15,13.303,8,False,0.3865,,,False,38,34,13,13
+2026-27,espn,401909934,2026-11-04,SAC,Sacramento Kings,LAL,Home,Golden 1 Center,SAC,False,14,10,11.036,7,True,0.2813,3.75,D. Sabonis,True,28,21,-13,-13
+2026-27,espn,401909935,2026-11-04,MIA,Miami Heat,LAC,Away,Intuit Dome,LAC,False,12,9,8.42,5,False,0.3851,,,False,26,21,-9,1
+2026-27,espn,401909935,2026-11-04,LAC,LA Clippers,MIA,Home,Intuit Dome,LAC,False,5,4,3.915,2,False,0.091,,,False,20,14,9,-1
 2026-27,espn,401909936,2026-11-05,ORL,Orlando Magic,PHX,Away,Mortgage Matchup Center,PHX,False,0,0,0.0,0,False,0.0,,,False,24,13,-23,-13
-2026-27,espn,401909936,2026-11-05,PHX,Phoenix Suns,ORL,Home,Mortgage Matchup Center,PHX,False,3,0,1.881,1,True,0.2013,4.63,O. Ighodaro,True,13,10,23,13
-2026-27,espn,401909937,2026-11-05,MIA,Miami Heat,GSW,Away,Chase Center,GSW,False,5,4,3.781,2,False,0.1335,,,False,23,17,-15,-20
-2026-27,espn,401909937,2026-11-05,GSW,Golden State Warriors,MIA,Home,Chase Center,GSW,False,2,2,1.641,1,False,0.0322,,,False,25,20,15,20
-2026-27,espn,401909287,2026-11-06,WAS,Washington Wizards,ATL,Away,State Farm Arena,ATL,False,13,11,10.329,6,True,0.262,10.15,K. George,True,24,22,-11,-7
-2026-27,espn,401909287,2026-11-06,ATL,Atlanta Hawks,WAS,Home,State Farm Arena,ATL,False,12,12,9.705,6,False,0.2156,,,False,20,19,11,7
-2026-27,espn,401909288,2026-11-06,BOS,Boston Celtics,CHA,Away,Spectrum Center,CHA,False,6,3,4.318,3,True,0.2182,11.52,L. Garza,True,23,19,39,39
-2026-27,espn,401909288,2026-11-06,CHA,Charlotte Hornets,BOS,Home,Spectrum Center,CHA,False,4,4,3.159,2,False,0.0924,,,False,17,15,-39,-39
-2026-27,espn,401909289,2026-11-06,PHI,Philadelphia 76ers,CLE,Away,Rocket Arena,CLE,False,10,6,7.385,5,True,0.3049,1.33,J. Walker,True,29,23,-17,-24
-2026-27,espn,401909289,2026-11-06,CLE,Cleveland Cavaliers,PHI,Home,Rocket Arena,CLE,False,11,9,8.472,5,False,0.2866,,,False,34,26,17,24
-2026-27,espn,401909290,2026-11-06,UTA,Utah Jazz,DAL,Away,American Airlines Center,DAL,False,10,9,8.191,5,False,0.1534,,,False,14,13,-13,-12
-2026-27,espn,401909290,2026-11-06,DAL,Dallas Mavericks,UTA,Home,American Airlines Center,DAL,False,7,6,5.359,3,False,0.1938,,,False,31,25,13,12
-2026-27,espn,401909291,2026-11-06,OKC,Oklahoma City Thunder,MEM,Away,FedExForum,MEM,False,5,5,4.078,2,False,0.0651,,,False,16,10,22,31
-2026-27,espn,401909291,2026-11-06,MEM,Memphis Grizzlies,OKC,Home,FedExForum,MEM,False,10,9,8.122,5,False,0.1671,,,False,31,29,-22,-31
-2026-27,espn,401909292,2026-11-06,TOR,Toronto Raptors,MIL,Away,Fiserv Forum,MIL,False,7,6,5.14,3,False,0.1995,,,False,31,24,2,14
-2026-27,espn,401909292,2026-11-06,MIL,Milwaukee Bucks,TOR,Home,Fiserv Forum,MIL,False,8,5,6.216,4,True,0.188,9.25,B. Burries,True,25,21,-2,-14
-2026-27,espn,401909293,2026-11-06,MIN,Minnesota Timberwolves,NOP,Away,Smoothie King Center,NOP,False,12,7,8.45,5,True,0.4428,9.77,R. Gobert,True,37,27,-2,6
-2026-27,espn,401909293,2026-11-06,NOP,New Orleans Pelicans,MIN,Home,Smoothie King Center,NOP,False,6,6,4.974,2,False,0.0765,,,False,26,21,2,-6
-2026-27,espn,401909294,2026-11-06,POR,Portland Trail Blazers,LAL,Away,crypto.com Arena,LAL,False,14,11,10.36,6,False,0.3499,,,False,37,27,-12,-6
-2026-27,espn,401909294,2026-11-06,LAL,Los Angeles Lakers,POR,Home,crypto.com Arena,LAL,False,14,12,11.709,7,True,0.2011,7.53,J. LaRavia,True,37,29,12,6
-2026-27,espn,401909295,2026-11-06,SAS,San Antonio Spurs,SAC,Away,Golden 1 Center,SAC,False,8,8,6.406,4,False,0.1537,,,False,42,33,19,15
-2026-27,espn,401909295,2026-11-06,SAC,Sacramento Kings,SAS,Home,Golden 1 Center,SAC,False,7,5,4.843,3,False,0.2727,,,False,19,13,-19,-15
-2026-27,espn,401909938,2026-11-07,DEN,Denver Nuggets,IND,Away,Arena CDMX,IND,True,8,8,6.237,4,False,0.1915,,,False,19,16,12,12
-2026-27,espn,401909938,2026-11-07,IND,Indiana Pacers,DEN,Home,Arena CDMX,IND,True,2,1,1.567,0,False,0.0,,,False,7,5,-12,-12
-2026-27,espn,401909939,2026-11-07,BKN,Brooklyn Nets,ATL,Away,State Farm Arena,ATL,False,5,2,3.777,2,True,0.1588,4.27,D. Wolf,True,29,21,7,-3
-2026-27,espn,401909939,2026-11-07,ATL,Atlanta Hawks,BKN,Home,State Farm Arena,ATL,False,16,10,12.131,7,True,0.3766,0.39,J. Johnson,True,25,18,-7,3
-2026-27,espn,401909940,2026-11-07,NYK,New York Knicks,CLE,Away,Rocket Arena,CLE,False,4,3,3.318,2,False,0.0588,,,False,14,13,18,12
-2026-27,espn,401909940,2026-11-07,CLE,Cleveland Cavaliers,NYK,Home,Rocket Arena,CLE,False,2,1,1.578,1,False,0.0445,,,False,19,11,-18,-12
-2026-27,espn,401909941,2026-11-07,WAS,Washington Wizards,OKC,Away,Paycom Center,OKC,False,2,1,1.589,1,False,0.0418,,,False,15,10,-31,-39
+2026-27,espn,401909936,2026-11-05,PHX,Phoenix Suns,ORL,Home,Mortgage Matchup Center,PHX,False,3,0,1.9,1,True,0.1932,4.63,O. Ighodaro,True,13,10,23,13
+2026-27,espn,401909937,2026-11-05,MIA,Miami Heat,GSW,Away,Chase Center,GSW,False,5,4,3.782,2,False,0.1333,,,False,23,17,-15,-20
+2026-27,espn,401909937,2026-11-05,GSW,Golden State Warriors,MIA,Home,Chase Center,GSW,False,2,2,1.642,1,False,0.0321,,,False,25,20,15,20
+2026-27,espn,401909287,2026-11-06,WAS,Washington Wizards,ATL,Away,State Farm Arena,ATL,False,13,11,10.331,6,True,0.2615,10.15,K. George,True,24,22,-11,-7
+2026-27,espn,401909287,2026-11-06,ATL,Atlanta Hawks,WAS,Home,State Farm Arena,ATL,False,12,12,9.708,6,False,0.2151,,,False,20,19,11,7
+2026-27,espn,401909288,2026-11-06,BOS,Boston Celtics,CHA,Away,Spectrum Center,CHA,False,6,3,4.321,3,True,0.2175,11.52,L. Garza,True,23,19,39,39
+2026-27,espn,401909288,2026-11-06,CHA,Charlotte Hornets,BOS,Home,Spectrum Center,CHA,False,4,4,3.161,2,False,0.0919,,,False,17,15,-39,-39
+2026-27,espn,401909289,2026-11-06,PHI,Philadelphia 76ers,CLE,Away,Rocket Arena,CLE,False,10,6,7.438,5,True,0.2934,1.33,J. Walker,True,29,23,-17,-24
+2026-27,espn,401909289,2026-11-06,CLE,Cleveland Cavaliers,PHI,Home,Rocket Arena,CLE,False,11,9,8.521,5,False,0.2799,,,False,34,26,17,24
+2026-27,espn,401909290,2026-11-06,UTA,Utah Jazz,DAL,Away,American Airlines Center,DAL,False,10,9,8.12,5,False,0.1648,,,False,14,13,-13,-12
+2026-27,espn,401909290,2026-11-06,DAL,Dallas Mavericks,UTA,Home,American Airlines Center,DAL,False,7,6,5.363,3,False,0.193,,,False,31,25,13,12
+2026-27,espn,401909291,2026-11-06,OKC,Oklahoma City Thunder,MEM,Away,FedExForum,MEM,False,5,5,4.097,2,False,0.0627,,,False,16,10,22,31
+2026-27,espn,401909291,2026-11-06,MEM,Memphis Grizzlies,OKC,Home,FedExForum,MEM,False,10,9,8.163,5,False,0.1612,,,False,31,29,-22,-31
+2026-27,espn,401909292,2026-11-06,TOR,Toronto Raptors,MIL,Away,Fiserv Forum,MIL,False,7,6,5.164,3,False,0.199,,,False,31,24,2,14
+2026-27,espn,401909292,2026-11-06,MIL,Milwaukee Bucks,TOR,Home,Fiserv Forum,MIL,False,8,5,6.305,4,True,0.1722,9.25,B. Burries,True,25,21,-2,-14
+2026-27,espn,401909293,2026-11-06,MIN,Minnesota Timberwolves,NOP,Away,Smoothie King Center,NOP,False,12,7,8.482,5,True,0.4391,9.77,R. Gobert,True,37,27,-2,6
+2026-27,espn,401909293,2026-11-06,NOP,New Orleans Pelicans,MIN,Home,Smoothie King Center,NOP,False,6,6,4.877,2,False,0.0927,,,False,26,21,2,-6
+2026-27,espn,401909294,2026-11-06,POR,Portland Trail Blazers,LAL,Away,crypto.com Arena,LAL,False,14,11,10.222,6,False,0.3749,,,False,37,27,-12,-6
+2026-27,espn,401909294,2026-11-06,LAL,Los Angeles Lakers,POR,Home,crypto.com Arena,LAL,False,14,12,11.755,7,True,0.1908,7.53,J. LaRavia,True,37,29,12,6
+2026-27,espn,401909295,2026-11-06,SAS,San Antonio Spurs,SAC,Away,Golden 1 Center,SAC,False,8,8,6.477,4,False,0.14,,,False,42,33,19,15
+2026-27,espn,401909295,2026-11-06,SAC,Sacramento Kings,SAS,Home,Golden 1 Center,SAC,False,7,5,4.846,3,False,0.272,,,False,19,13,-19,-15
+2026-27,espn,401909938,2026-11-07,DEN,Denver Nuggets,IND,Away,Arena CDMX,IND,True,8,8,6.239,4,False,0.191,,,False,19,16,12,12
+2026-27,espn,401909938,2026-11-07,IND,Indiana Pacers,DEN,Home,Arena CDMX,IND,True,2,1,1.558,0,False,0.0,,,False,7,5,-12,-12
+2026-27,espn,401909939,2026-11-07,BKN,Brooklyn Nets,ATL,Away,State Farm Arena,ATL,False,5,2,3.767,2,True,0.1611,4.27,D. Wolf,True,29,21,7,-3
+2026-27,espn,401909939,2026-11-07,ATL,Atlanta Hawks,BKN,Home,State Farm Arena,ATL,False,16,10,12.136,7,True,0.3758,0.39,J. Johnson,True,25,18,-7,3
+2026-27,espn,401909940,2026-11-07,NYK,New York Knicks,CLE,Away,Rocket Arena,CLE,False,4,3,3.319,2,False,0.0587,,,False,14,13,18,12
+2026-27,espn,401909940,2026-11-07,CLE,Cleveland Cavaliers,NYK,Home,Rocket Arena,CLE,False,2,1,1.605,1,False,0.039,,,False,19,11,-18,-12
+2026-27,espn,401909941,2026-11-07,WAS,Washington Wizards,OKC,Away,Paycom Center,OKC,False,2,1,1.59,1,False,0.0415,,,False,15,10,-31,-39
 2026-27,espn,401909941,2026-11-07,OKC,Oklahoma City Thunder,WAS,Home,Paycom Center,OKC,False,0,0,0.0,0,False,0.0,,,False,18,14,31,39
-2026-27,espn,401909942,2026-11-07,ORL,Orlando Magic,GSW,Away,Chase Center,GSW,False,7,7,5.708,3,False,0.1017,,,False,21,15,1,-7
-2026-27,espn,401909942,2026-11-07,GSW,Golden State Warriors,ORL,Home,Chase Center,GSW,False,8,6,6.769,4,True,0.1275,8.72,D. Green,True,31,25,-1,7
-2026-27,espn,401909943,2026-11-07,HOU,Houston Rockets,PHX,Away,Mortgage Matchup Center,PHX,False,2,2,1.484,1,False,0.0667,,,False,19,17,-1,-3
-2026-27,espn,401909943,2026-11-07,PHX,Phoenix Suns,HOU,Home,Mortgage Matchup Center,PHX,False,3,2,2.225,1,False,0.0722,,,False,11,8,1,3
-2026-27,espn,401909944,2026-11-07,SAS,San Antonio Spurs,POR,Away,Moda Center,POR,False,4,4,2.875,2,False,0.1519,,,False,30,28,33,22
-2026-27,espn,401909944,2026-11-07,POR,Portland Trail Blazers,SAS,Home,Moda Center,POR,False,6,5,4.634,3,False,0.1486,,,False,30,24,-33,-22
-2026-27,espn,401909945,2026-11-08,PHI,Philadelphia 76ers,CHI,Away,United Center,CHI,False,12,10,9.131,6,True,0.3111,11.73,J. Brown,True,25,21,6,6
-2026-27,espn,401909945,2026-11-08,CHI,Chicago Bulls,PHI,Home,United Center,CHI,False,10,9,7.542,4,False,0.2204,,,False,23,19,-6,-6
-2026-27,espn,401909946,2026-11-08,LAL,Los Angeles Lakers,DET,Away,Little Caesars Arena,DET,False,17,15,13.276,8,False,0.3515,,,False,33,26,7,5
-2026-27,espn,401909946,2026-11-08,DET,Detroit Pistons,LAL,Home,Little Caesars Arena,DET,False,9,6,7.192,4,True,0.1887,1.22,P. Reed,True,20,13,-7,-5
-2026-27,espn,401909947,2026-11-08,UTA,Utah Jazz,MIN,Away,Target Center,MIN,False,5,4,3.654,2,False,0.1387,,,False,24,19,-12,-15
-2026-27,espn,401909947,2026-11-08,MIN,Minnesota Timberwolves,UTA,Home,Target Center,MIN,False,4,3,3.315,2,False,0.0581,,,False,32,27,12,15
-2026-27,espn,401909948,2026-11-08,BKN,Brooklyn Nets,DAL,Away,American Airlines Center,DAL,False,6,5,4.503,3,False,0.1798,,,False,28,20,-29,-37
-2026-27,espn,401909948,2026-11-08,DAL,Dallas Mavericks,BKN,Home,American Airlines Center,DAL,False,6,6,4.593,3,False,0.1587,,,False,22,20,29,37
-2026-27,espn,401909949,2026-11-08,BOS,Boston Celtics,MIL,Away,Fiserv Forum,MIL,False,6,4,4.427,3,False,0.206,,,False,14,9,17,20
-2026-27,espn,401909949,2026-11-08,MIL,Milwaukee Bucks,BOS,Home,Fiserv Forum,MIL,False,6,4,4.441,3,False,0.2023,,,False,14,12,-17,-20
-2026-27,espn,401909950,2026-11-08,NOP,New Orleans Pelicans,LAC,Away,Intuit Dome,LAC,False,2,2,1.69,1,False,0.0241,,,False,35,31,-7,-16
-2026-27,espn,401909950,2026-11-08,LAC,LA Clippers,NOP,Home,Intuit Dome,LAC,False,13,12,10.433,6,False,0.2478,,,False,38,31,7,16
-2026-27,espn,401909951,2026-11-08,MIA,Miami Heat,SAC,Away,Golden 1 Center,SAC,False,8,3,5.739,4,True,0.2935,0.64,G. Antetokounmpo,True,18,8,10,6
-2026-27,espn,401909951,2026-11-08,SAC,Sacramento Kings,MIA,Home,Golden 1 Center,SAC,False,8,7,6.058,4,False,0.2396,,,False,23,21,-10,-6
-2026-27,espn,401909952,2026-11-09,LAL,Los Angeles Lakers,ATL,Away,State Farm Arena,ATL,False,6,4,4.395,3,False,0.2132,,,False,23,19,5,10
-2026-27,espn,401909952,2026-11-09,ATL,Atlanta Hawks,LAL,Home,State Farm Arena,ATL,False,3,2,2.239,1,False,0.0542,,,False,23,17,-5,-10
-2026-27,espn,401909953,2026-11-09,CLE,Cleveland Cavaliers,CHA,Away,Spectrum Center,CHA,False,4,4,3.137,1,False,0.0523,,,False,18,14,-27,-12
-2026-27,espn,401909953,2026-11-09,CHA,Charlotte Hornets,CLE,Home,Spectrum Center,CHA,False,3,2,2.202,1,False,0.0989,,,False,16,13,27,12
-2026-27,espn,401909954,2026-11-09,WAS,Washington Wizards,DET,Away,Little Caesars Arena,DET,False,2,2,1.461,1,False,0.0725,,,False,28,20,-16,-11
-2026-27,espn,401909954,2026-11-09,DET,Detroit Pistons,WAS,Home,Little Caesars Arena,DET,False,4,4,3.347,1,False,0.0183,,,False,31,28,16,11
-2026-27,espn,401909955,2026-11-09,MEM,Memphis Grizzlies,TOR,Away,Scotiabank Arena,TOR,False,8,8,6.894,4,False,0.0748,,,False,19,18,8,16
+2026-27,espn,401909942,2026-11-07,ORL,Orlando Magic,GSW,Away,Chase Center,GSW,False,7,7,5.71,3,False,0.1014,,,False,21,15,1,-7
+2026-27,espn,401909942,2026-11-07,GSW,Golden State Warriors,ORL,Home,Chase Center,GSW,False,8,6,6.772,4,True,0.1269,8.72,D. Green,True,31,25,-1,7
+2026-27,espn,401909943,2026-11-07,HOU,Houston Rockets,PHX,Away,Mortgage Matchup Center,PHX,False,2,2,1.481,1,False,0.0674,,,False,19,17,-1,-3
+2026-27,espn,401909943,2026-11-07,PHX,Phoenix Suns,HOU,Home,Mortgage Matchup Center,PHX,False,3,2,2.269,1,False,0.0637,,,False,11,8,1,3
+2026-27,espn,401909944,2026-11-07,SAS,San Antonio Spurs,POR,Away,Moda Center,POR,False,4,4,2.945,2,False,0.1344,,,False,30,28,33,22
+2026-27,espn,401909944,2026-11-07,POR,Portland Trail Blazers,SAS,Home,Moda Center,POR,False,6,5,4.638,3,False,0.1478,,,False,30,24,-33,-22
+2026-27,espn,401909945,2026-11-08,PHI,Philadelphia 76ers,CHI,Away,United Center,CHI,False,12,10,9.149,6,True,0.3079,11.73,J. Brown,True,25,21,6,6
+2026-27,espn,401909945,2026-11-08,CHI,Chicago Bulls,PHI,Home,United Center,CHI,False,10,9,7.547,4,False,0.2183,,,False,23,19,-6,-6
+2026-27,espn,401909946,2026-11-08,LAL,Los Angeles Lakers,DET,Away,Little Caesars Arena,DET,False,17,15,13.272,8,False,0.3422,,,False,33,26,7,5
+2026-27,espn,401909946,2026-11-08,DET,Detroit Pistons,LAL,Home,Little Caesars Arena,DET,False,9,6,7.195,4,True,0.1881,1.22,P. Reed,True,20,13,-7,-5
+2026-27,espn,401909947,2026-11-08,UTA,Utah Jazz,MIN,Away,Target Center,MIN,False,5,4,3.656,2,False,0.1382,,,False,24,19,-12,-15
+2026-27,espn,401909947,2026-11-08,MIN,Minnesota Timberwolves,UTA,Home,Target Center,MIN,False,4,3,3.333,2,False,0.0554,,,False,32,27,12,15
+2026-27,espn,401909948,2026-11-08,BKN,Brooklyn Nets,DAL,Away,American Airlines Center,DAL,False,6,5,4.505,3,False,0.1792,,,False,28,20,-29,-37
+2026-27,espn,401909948,2026-11-08,DAL,Dallas Mavericks,BKN,Home,American Airlines Center,DAL,False,6,6,4.597,3,False,0.1577,,,False,22,20,29,37
+2026-27,espn,401909949,2026-11-08,BOS,Boston Celtics,MIL,Away,Fiserv Forum,MIL,False,6,4,4.43,3,False,0.2054,,,False,14,9,17,20
+2026-27,espn,401909949,2026-11-08,MIL,Milwaukee Bucks,BOS,Home,Fiserv Forum,MIL,False,6,4,4.424,3,False,0.208,,,False,14,12,-17,-20
+2026-27,espn,401909950,2026-11-08,NOP,New Orleans Pelicans,LAC,Away,Intuit Dome,LAC,False,2,2,1.691,1,False,0.0239,,,False,35,31,-7,-16
+2026-27,espn,401909950,2026-11-08,LAC,LA Clippers,NOP,Home,Intuit Dome,LAC,False,13,12,10.453,6,False,0.2449,,,False,38,31,7,16
+2026-27,espn,401909951,2026-11-08,MIA,Miami Heat,SAC,Away,Golden 1 Center,SAC,False,8,3,5.741,4,True,0.2932,0.64,G. Antetokounmpo,True,18,8,10,6
+2026-27,espn,401909951,2026-11-08,SAC,Sacramento Kings,MIA,Home,Golden 1 Center,SAC,False,8,7,6.043,4,False,0.2445,,,False,23,21,-10,-6
+2026-27,espn,401909952,2026-11-09,LAL,Los Angeles Lakers,ATL,Away,State Farm Arena,ATL,False,6,4,4.375,3,False,0.2208,,,False,23,19,5,10
+2026-27,espn,401909952,2026-11-09,ATL,Atlanta Hawks,LAL,Home,State Farm Arena,ATL,False,3,2,2.24,1,False,0.054,,,False,23,17,-5,-10
+2026-27,espn,401909953,2026-11-09,CLE,Cleveland Cavaliers,CHA,Away,Spectrum Center,CHA,False,4,4,3.139,1,False,0.0521,,,False,18,14,-27,-12
+2026-27,espn,401909953,2026-11-09,CHA,Charlotte Hornets,CLE,Home,Spectrum Center,CHA,False,3,2,2.238,1,False,0.0901,,,False,16,13,27,12
+2026-27,espn,401909954,2026-11-09,WAS,Washington Wizards,DET,Away,Little Caesars Arena,DET,False,2,2,1.462,1,False,0.0724,,,False,28,20,-16,-11
+2026-27,espn,401909954,2026-11-09,DET,Detroit Pistons,WAS,Home,Little Caesars Arena,DET,False,4,4,3.349,1,False,0.0182,,,False,31,28,16,11
+2026-27,espn,401909955,2026-11-09,MEM,Memphis Grizzlies,TOR,Away,Scotiabank Arena,TOR,False,8,8,6.915,4,False,0.0719,,,False,19,18,8,16
 2026-27,espn,401909955,2026-11-09,TOR,Toronto Raptors,MEM,Home,Scotiabank Arena,TOR,False,0,0,0.0,0,False,0.0,,,False,17,11,-8,-16
-2026-27,espn,401909956,2026-11-09,IND,Indiana Pacers,DAL,Away,American Airlines Center,DAL,False,6,6,4.643,2,False,0.1505,,,False,28,21,3,-3
-2026-27,espn,401909956,2026-11-09,DAL,Dallas Mavericks,IND,Home,American Airlines Center,DAL,False,20,16,15.875,9,True,0.3506,0.07,P. Washington,True,34,25,-3,3
-2026-27,espn,401909957,2026-11-09,DEN,Denver Nuggets,HOU,Away,Toyota Center (Houston),HOU,False,11,7,8.779,5,True,0.2056,4.7,C. Braun,True,25,18,-9,-10
-2026-27,espn,401909957,2026-11-09,HOU,Houston Rockets,DEN,Home,Toyota Center (Houston),HOU,False,5,3,3.967,2,False,0.0822,,,True,17,14,9,10
-2026-27,espn,401909958,2026-11-09,SAS,San Antonio Spurs,PHX,Away,Mortgage Matchup Center,PHX,False,6,5,4.614,2,False,0.1076,,,False,25,19,25,26
-2026-27,espn,401909958,2026-11-09,PHX,Phoenix Suns,SAS,Home,Mortgage Matchup Center,PHX,False,2,2,1.526,1,False,0.0562,,,False,19,17,-25,-26
-2026-27,espn,401909959,2026-11-09,NOP,New Orleans Pelicans,GSW,Away,Chase Center,GSW,False,8,7,6.754,4,False,0.0978,,,False,24,21,-47,-51
+2026-27,espn,401909956,2026-11-09,IND,Indiana Pacers,DAL,Away,American Airlines Center,DAL,False,6,6,4.637,2,False,0.1499,,,False,28,21,3,-3
+2026-27,espn,401909956,2026-11-09,DAL,Dallas Mavericks,IND,Home,American Airlines Center,DAL,False,20,16,15.88,9,True,0.3499,0.07,P. Washington,True,34,25,-3,3
+2026-27,espn,401909957,2026-11-09,DEN,Denver Nuggets,HOU,Away,Toyota Center (Houston),HOU,False,11,7,8.782,5,True,0.205,4.7,C. Braun,True,25,18,-9,-10
+2026-27,espn,401909957,2026-11-09,HOU,Houston Rockets,DEN,Home,Toyota Center (Houston),HOU,False,5,3,3.973,2,False,0.0816,,,True,17,14,9,10
+2026-27,espn,401909958,2026-11-09,SAS,San Antonio Spurs,PHX,Away,Mortgage Matchup Center,PHX,False,6,5,4.654,2,False,0.1017,,,False,25,19,25,26
+2026-27,espn,401909958,2026-11-09,PHX,Phoenix Suns,SAS,Home,Mortgage Matchup Center,PHX,False,2,2,1.547,1,False,0.0513,,,False,19,17,-25,-26
+2026-27,espn,401909959,2026-11-09,NOP,New Orleans Pelicans,GSW,Away,Chase Center,GSW,False,8,7,6.74,4,False,0.1039,,,False,24,21,-47,-51
 2026-27,espn,401909959,2026-11-09,GSW,Golden State Warriors,NOP,Home,Chase Center,GSW,False,0,0,0.0,0,False,0.0,,,False,19,17,47,51
 2026-27,espn,401909960,2026-11-10,MIL,Milwaukee Bucks,NYK,Away,Madison Square Garden,NYK,False,0,0,0.0,0,False,0.0,,,False,10,9,-13,-32
-2026-27,espn,401909960,2026-11-10,NYK,New York Knicks,MIL,Home,Madison Square Garden,NYK,False,7,3,5.38,3,True,0.1542,11.07,K. Towns,True,25,20,13,32
-2026-27,espn,401909961,2026-11-10,BOS,Boston Celtics,PHI,Away,Xfinity Mobile Arena,PHI,False,2,2,1.545,0,False,0.0,,,False,5,5,9,22
-2026-27,espn,401909961,2026-11-10,PHI,Philadelphia 76ers,BOS,Home,Xfinity Mobile Arena,PHI,False,2,2,1.405,1,False,0.0884,,,False,28,24,-9,-22
-2026-27,espn,401909962,2026-11-10,LAC,LA Clippers,PHX,Away,Mortgage Matchup Center,PHX,False,10,8,8.019,4,False,0.1571,,,True,26,19,-27,-23
-2026-27,espn,401909962,2026-11-10,PHX,Phoenix Suns,LAC,Home,Mortgage Matchup Center,PHX,False,9,6,7.004,3,True,0.145,7.33,L. Kennard,True,20,13,27,23
-2026-27,espn,401909963,2026-11-10,MIA,Miami Heat,UTA,Away,Delta Center,UTA,False,13,9,9.927,6,True,0.3132,1.0,G. Antetokounmpo,True,44,33,20,6
-2026-27,espn,401909963,2026-11-10,UTA,Utah Jazz,MIA,Home,Delta Center,UTA,False,4,3,2.504,2,False,0.2601,,,False,22,14,-20,-6
-2026-27,espn,401909964,2026-11-10,ORL,Orlando Magic,SAC,Away,Golden 1 Center,SAC,False,3,3,2.479,1,False,0.0301,,,False,18,17,8,7
-2026-27,espn,401909964,2026-11-10,SAC,Sacramento Kings,ORL,Home,Golden 1 Center,SAC,False,7,5,5.727,2,False,0.0906,,,False,22,18,-8,-7
-2026-27,espn,401909965,2026-11-10,OKC,Oklahoma City Thunder,POR,Away,Moda Center,POR,False,3,2,2.235,1,False,0.0493,,,False,27,21,-17,-20
-2026-27,espn,401909965,2026-11-10,POR,Portland Trail Blazers,OKC,Home,Moda Center,POR,False,7,6,5.344,3,False,0.1509,,,False,26,24,17,20
-2026-27,espn,401909966,2026-11-11,WAS,Washington Wizards,IND,Away,Gainbridge Fieldhouse,IND,False,8,6,6.409,4,False,0.1507,,,False,22,16,0,-13
-2026-27,espn,401909966,2026-11-11,IND,Indiana Pacers,WAS,Home,Gainbridge Fieldhouse,IND,False,8,8,5.926,4,False,0.2433,,,False,24,21,0,13
-2026-27,espn,401909967,2026-11-11,CLE,Cleveland Cavaliers,NYK,Away,Madison Square Garden,NYK,False,7,6,5.592,2,False,0.0861,,,False,25,20,6,8
-2026-27,espn,401909967,2026-11-11,NYK,New York Knicks,CLE,Home,Madison Square Garden,NYK,False,8,8,6.663,4,False,0.114,,,False,11,11,-6,-8
-2026-27,espn,401909968,2026-11-11,BOS,Boston Celtics,TOR,Away,Scotiabank Arena,TOR,False,10,8,7.577,5,False,0.2997,,,True,28,24,-5,5
-2026-27,espn,401909968,2026-11-11,TOR,Toronto Raptors,BOS,Home,Scotiabank Arena,TOR,False,2,2,1.465,1,False,0.0714,,,False,18,13,5,-5
-2026-27,espn,401909969,2026-11-11,SAS,San Antonio Spurs,CHI,Away,United Center,CHI,False,5,5,3.834,2,False,0.1133,,,False,18,13,1,5
-2026-27,espn,401909969,2026-11-11,CHI,Chicago Bulls,SAS,Home,United Center,CHI,False,6,6,4.673,2,False,0.0779,,,False,18,16,-1,-5
-2026-27,espn,401909970,2026-11-11,DEN,Denver Nuggets,MEM,Away,FedExForum,MEM,False,5,4,4.101,2,False,0.0778,,,False,16,11,4,5
-2026-27,espn,401909970,2026-11-11,MEM,Memphis Grizzlies,DEN,Home,FedExForum,MEM,False,4,3,3.488,2,False,0.0325,,,False,21,19,-4,-5
-2026-27,espn,401909971,2026-11-11,LAL,Los Angeles Lakers,MIL,Away,Fiserv Forum,MIL,False,9,9,7.146,4,False,0.1725,,,False,23,20,21,11
-2026-27,espn,401909971,2026-11-11,MIL,Milwaukee Bucks,LAL,Home,Fiserv Forum,MIL,False,18,16,14.121,9,False,0.3501,,,False,33,29,-21,-11
-2026-27,espn,401909972,2026-11-11,BKN,Brooklyn Nets,NOP,Away,Smoothie King Center,NOP,False,16,12,12.116,7,False,0.3768,,,True,42,35,26,34
-2026-27,espn,401909972,2026-11-11,NOP,New Orleans Pelicans,BKN,Home,Smoothie King Center,NOP,False,14,10,11.393,7,True,0.2305,4.25,J. Poole,True,38,31,-26,-34
-2026-27,espn,401909973,2026-11-11,ORL,Orlando Magic,UTA,Away,Delta Center,UTA,False,8,7,6.437,4,False,0.1505,,,False,28,23,-2,15
-2026-27,espn,401909973,2026-11-11,UTA,Utah Jazz,ORL,Home,Delta Center,UTA,False,5,5,3.878,1,False,0.0742,,,False,34,28,2,-15
-2026-27,espn,401909974,2026-11-11,GSW,Golden State Warriors,HOU,Away,Toyota Center (Houston),HOU,False,5,5,3.92,2,False,0.0838,,,False,26,19,-6,-7
-2026-27,espn,401909974,2026-11-11,HOU,Houston Rockets,GSW,Home,Toyota Center (Houston),HOU,False,8,4,6.161,4,True,0.2003,11.23,A. Thompson,True,19,14,6,7
-2026-27,espn,401909975,2026-11-11,OKC,Oklahoma City Thunder,POR,Away,Moda Center,POR,False,12,9,9.41,6,False,0.2571,,,False,28,23,-3,-10
-2026-27,espn,401909975,2026-11-11,POR,Portland Trail Blazers,OKC,Home,Moda Center,POR,False,14,14,10.738,7,False,0.3426,,,False,26,25,3,10
-2026-27,espn,401909976,2026-11-12,TOR,Toronto Raptors,PHI,Away,Xfinity Mobile Arena,PHI,False,10,8,7.941,5,False,0.1947,,,False,24,18,-9,-11
-2026-27,espn,401909976,2026-11-12,PHI,Philadelphia 76ers,TOR,Home,Xfinity Mobile Arena,PHI,False,4,2,3.165,2,True,0.0937,7.7,J. Brown,True,23,18,9,11
-2026-27,espn,401909977,2026-11-12,DET,Detroit Pistons,WAS,Away,Capital One Arena,WAS,False,10,9,8.056,5,False,0.1786,,,False,39,33,4,4
-2026-27,espn,401909977,2026-11-12,WAS,Washington Wizards,DET,Home,Capital One Arena,WAS,False,15,14,12.202,7,False,0.2567,,,False,29,26,-4,-4
-2026-27,espn,401909978,2026-11-12,DAL,Dallas Mavericks,MIN,Away,Target Center,MIN,False,5,4,3.894,2,False,0.0926,,,False,14,11,-34,-39
-2026-27,espn,401909978,2026-11-12,MIN,Minnesota Timberwolves,DAL,Home,Target Center,MIN,False,9,6,6.065,4,False,0.3433,,,True,19,14,34,39
-2026-27,espn,401909979,2026-11-12,CHA,Charlotte Hornets,PHX,Away,Mortgage Matchup Center,PHX,False,7,5,5.304,3,False,0.1855,,,False,20,16,4,-5
-2026-27,espn,401909979,2026-11-12,PHX,Phoenix Suns,CHA,Home,Mortgage Matchup Center,PHX,False,5,5,4.248,2,False,0.0436,,,False,15,12,-4,5
-2026-27,espn,401909296,2026-11-13,NYK,New York Knicks,IND,Away,Gainbridge Fieldhouse,IND,False,2,1,1.531,1,False,0.055,,,False,13,10,-1,-2
-2026-27,espn,401909296,2026-11-13,IND,Indiana Pacers,NYK,Home,Gainbridge Fieldhouse,IND,False,5,2,3.879,2,True,0.1079,0.39,P. Siakam,True,25,18,1,2
-2026-27,espn,401909297,2026-11-13,MIL,Milwaukee Bucks,ORL,Away,Kia Center,ORL,False,16,11,11.436,7,False,0.4913,,,True,31,18,-12,-8
-2026-27,espn,401909297,2026-11-13,ORL,Orlando Magic,MIL,Home,Kia Center,ORL,False,3,3,2.25,1,False,0.0704,,,False,14,14,12,8
-2026-27,espn,401909298,2026-11-13,CLE,Cleveland Cavaliers,MIA,Away,Kaseya Center,MIA,False,3,2,2.438,1,False,0.0445,,,False,25,19,-1,-12
-2026-27,espn,401909298,2026-11-13,MIA,Miami Heat,CLE,Home,Kaseya Center,MIA,False,16,15,11.967,7,False,0.3893,,,False,37,29,1,12
-2026-27,espn,401909299,2026-11-13,ATL,Atlanta Hawks,CHI,Away,United Center,CHI,False,5,4,3.828,2,False,0.1173,,,False,20,15,-1,-8
-2026-27,espn,401909299,2026-11-13,CHI,Chicago Bulls,ATL,Home,United Center,CHI,False,6,5,4.609,3,False,0.1634,,,False,21,15,1,8
-2026-27,espn,401909300,2026-11-13,MEM,Memphis Grizzlies,NOP,Away,Smoothie King Center,NOP,False,12,9,9.45,6,False,0.251,,,False,41,36,19,31
-2026-27,espn,401909300,2026-11-13,NOP,New Orleans Pelicans,MEM,Home,Smoothie King Center,NOP,False,7,4,5.69,2,False,0.0688,,,False,37,32,-19,-31
-2026-27,espn,401909301,2026-11-13,UTA,Utah Jazz,HOU,Away,Toyota Center (Houston),HOU,False,7,6,5.535,2,False,0.0642,,,False,26,21,-3,-7
-2026-27,espn,401909301,2026-11-13,HOU,Houston Rockets,UTA,Home,Toyota Center (Houston),HOU,False,7,5,5.539,3,False,0.1287,,,False,34,27,3,7
-2026-27,espn,401909302,2026-11-13,GSW,Golden State Warriors,SAS,Away,Frost Bank Center,SAS,False,4,4,3.19,2,False,0.0806,,,False,11,8,-37,-38
-2026-27,espn,401909302,2026-11-13,SAS,San Antonio Spurs,GSW,Home,Frost Bank Center,SAS,False,4,2,2.965,2,True,0.1305,1.35,T. Reed Jr.,True,23,17,37,38
-2026-27,espn,401909303,2026-11-13,POR,Portland Trail Blazers,SAC,Away,Golden 1 Center,SAC,False,8,8,6.172,3,False,0.1853,,,False,31,29,15,13
-2026-27,espn,401909303,2026-11-13,SAC,Sacramento Kings,POR,Home,Golden 1 Center,SAC,False,2,2,1.629,1,False,0.0344,,,False,23,18,-15,-13
-2026-27,espn,401909304,2026-11-13,OKC,Oklahoma City Thunder,LAC,Away,Intuit Dome,LAC,False,5,4,3.981,2,False,0.0767,,,False,19,13,2,-1
-2026-27,espn,401909304,2026-11-13,LAC,LA Clippers,OKC,Home,Intuit Dome,LAC,False,4,2,3.177,1,True,0.0854,10.6,G. Dick,True,21,17,-2,1
-2026-27,espn,401909980,2026-11-14,DEN,Denver Nuggets,NOP,Away,Smoothie King Center,NOP,False,10,7,8.084,5,False,0.1826,,,False,37,28,4,8
-2026-27,espn,401909980,2026-11-14,NOP,New Orleans Pelicans,DEN,Home,Smoothie King Center,NOP,False,16,10,12.922,6,True,0.2368,9.9,D. Queen,True,33,21,-4,-8
-2026-27,espn,401909981,2026-11-14,DAL,Dallas Mavericks,CLE,Away,Rocket Arena,CLE,False,5,4,3.869,2,False,0.116,,,False,31,25,-14,-10
-2026-27,espn,401909981,2026-11-14,CLE,Cleveland Cavaliers,DAL,Home,Rocket Arena,CLE,False,8,6,6.187,4,False,0.1961,,,False,18,16,14,10
-2026-27,espn,401909982,2026-11-14,DET,Detroit Pistons,MIA,Away,Kaseya Center,MIA,False,12,10,9.107,5,False,0.2749,,,False,32,28,-17,-20
-2026-27,espn,401909982,2026-11-14,MIA,Miami Heat,DET,Home,Kaseya Center,MIA,False,10,8,7.546,4,False,0.2031,,,False,40,33,17,20
+2026-27,espn,401909960,2026-11-10,NYK,New York Knicks,MIL,Home,Madison Square Garden,NYK,False,7,3,5.382,3,True,0.1539,11.07,K. Towns,True,25,20,13,32
+2026-27,espn,401909961,2026-11-10,BOS,Boston Celtics,PHI,Away,Xfinity Mobile Arena,PHI,False,2,2,1.546,0,False,0.0,,,False,5,5,9,22
+2026-27,espn,401909961,2026-11-10,PHI,Philadelphia 76ers,BOS,Home,Xfinity Mobile Arena,PHI,False,2,2,1.407,1,False,0.088,,,False,28,24,-9,-22
+2026-27,espn,401909962,2026-11-10,LAC,LA Clippers,PHX,Away,Mortgage Matchup Center,PHX,False,10,8,8.023,4,False,0.1565,,,True,26,19,-27,-23
+2026-27,espn,401909962,2026-11-10,PHX,Phoenix Suns,LAC,Home,Mortgage Matchup Center,PHX,False,9,6,7.011,3,True,0.1441,7.33,L. Kennard,True,20,13,27,23
+2026-27,espn,401909963,2026-11-10,MIA,Miami Heat,UTA,Away,Delta Center,UTA,False,13,9,9.93,6,True,0.3128,1.0,G. Antetokounmpo,True,44,33,20,6
+2026-27,espn,401909963,2026-11-10,UTA,Utah Jazz,MIA,Home,Delta Center,UTA,False,4,3,2.552,2,False,0.2448,,,False,22,14,-20,-6
+2026-27,espn,401909964,2026-11-10,ORL,Orlando Magic,SAC,Away,Golden 1 Center,SAC,False,3,3,2.48,1,False,0.03,,,False,18,17,8,7
+2026-27,espn,401909964,2026-11-10,SAC,Sacramento Kings,ORL,Home,Golden 1 Center,SAC,False,7,5,5.744,2,False,0.088,,,False,22,18,-8,-7
+2026-27,espn,401909965,2026-11-10,OKC,Oklahoma City Thunder,POR,Away,Moda Center,POR,False,3,2,2.236,1,False,0.0491,,,False,27,21,-17,-20
+2026-27,espn,401909965,2026-11-10,POR,Portland Trail Blazers,OKC,Home,Moda Center,POR,False,7,6,5.313,3,False,0.1564,,,False,26,24,17,20
+2026-27,espn,401909966,2026-11-11,WAS,Washington Wizards,IND,Away,Gainbridge Fieldhouse,IND,False,8,6,6.41,4,False,0.1504,,,False,22,16,0,-13
+2026-27,espn,401909966,2026-11-11,IND,Indiana Pacers,WAS,Home,Gainbridge Fieldhouse,IND,False,8,8,5.947,4,False,0.2392,,,False,24,21,0,13
+2026-27,espn,401909967,2026-11-11,CLE,Cleveland Cavaliers,NYK,Away,Madison Square Garden,NYK,False,7,6,5.647,2,False,0.0814,,,False,25,20,6,8
+2026-27,espn,401909967,2026-11-11,NYK,New York Knicks,CLE,Home,Madison Square Garden,NYK,False,8,8,6.665,4,False,0.1137,,,False,11,11,-6,-8
+2026-27,espn,401909968,2026-11-11,BOS,Boston Celtics,TOR,Away,Scotiabank Arena,TOR,False,10,8,7.581,5,False,0.2991,,,True,28,24,-5,5
+2026-27,espn,401909968,2026-11-11,TOR,Toronto Raptors,BOS,Home,Scotiabank Arena,TOR,False,2,2,1.468,1,False,0.0706,,,False,18,13,5,-5
+2026-27,espn,401909969,2026-11-11,SAS,San Antonio Spurs,CHI,Away,United Center,CHI,False,5,5,3.87,2,False,0.1039,,,False,18,13,1,5
+2026-27,espn,401909969,2026-11-11,CHI,Chicago Bulls,SAS,Home,United Center,CHI,False,6,6,4.696,2,False,0.0751,,,False,18,16,-1,-5
+2026-27,espn,401909970,2026-11-11,DEN,Denver Nuggets,MEM,Away,FedExForum,MEM,False,5,4,4.102,2,False,0.0776,,,False,16,11,4,5
+2026-27,espn,401909970,2026-11-11,MEM,Memphis Grizzlies,DEN,Home,FedExForum,MEM,False,4,3,3.495,2,False,0.0316,,,False,21,19,-4,-5
+2026-27,espn,401909971,2026-11-11,LAL,Los Angeles Lakers,MIL,Away,Fiserv Forum,MIL,False,9,9,7.162,4,False,0.1698,,,False,23,20,21,11
+2026-27,espn,401909971,2026-11-11,MIL,Milwaukee Bucks,LAL,Home,Fiserv Forum,MIL,False,18,16,14.22,9,False,0.3373,,,False,33,29,-21,-11
+2026-27,espn,401909972,2026-11-11,BKN,Brooklyn Nets,NOP,Away,Smoothie King Center,NOP,False,16,12,12.202,7,False,0.3644,,,True,42,35,26,34
+2026-27,espn,401909972,2026-11-11,NOP,New Orleans Pelicans,BKN,Home,Smoothie King Center,NOP,False,14,10,11.426,7,True,0.2245,4.25,J. Poole,True,38,31,-26,-34
+2026-27,espn,401909973,2026-11-11,ORL,Orlando Magic,UTA,Away,Delta Center,UTA,False,8,7,6.439,4,False,0.1503,,,False,28,23,-2,15
+2026-27,espn,401909973,2026-11-11,UTA,Utah Jazz,ORL,Home,Delta Center,UTA,False,5,5,3.865,1,False,0.074,,,False,34,28,2,-15
+2026-27,espn,401909974,2026-11-11,GSW,Golden State Warriors,HOU,Away,Toyota Center (Houston),HOU,False,5,5,3.923,2,False,0.0833,,,False,26,19,-6,-7
+2026-27,espn,401909974,2026-11-11,HOU,Houston Rockets,GSW,Home,Toyota Center (Houston),HOU,False,8,4,6.145,4,True,0.2039,11.23,A. Thompson,True,19,14,6,7
+2026-27,espn,401909975,2026-11-11,OKC,Oklahoma City Thunder,POR,Away,Moda Center,POR,False,12,9,9.406,6,False,0.2575,,,False,28,23,-3,-10
+2026-27,espn,401909975,2026-11-11,POR,Portland Trail Blazers,OKC,Home,Moda Center,POR,False,14,14,10.659,7,False,0.3607,,,False,26,25,3,10
+2026-27,espn,401909976,2026-11-12,TOR,Toronto Raptors,PHI,Away,Xfinity Mobile Arena,PHI,False,10,8,7.851,5,False,0.2113,,,False,24,18,-9,-11
+2026-27,espn,401909976,2026-11-12,PHI,Philadelphia 76ers,TOR,Home,Xfinity Mobile Arena,PHI,False,4,2,3.18,2,True,0.0915,7.7,J. Brown,True,23,18,9,11
+2026-27,espn,401909977,2026-11-12,DET,Detroit Pistons,WAS,Away,Capital One Arena,WAS,False,10,9,8.058,5,False,0.1782,,,False,39,33,4,4
+2026-27,espn,401909977,2026-11-12,WAS,Washington Wizards,DET,Home,Capital One Arena,WAS,False,15,14,12.204,7,False,0.2562,,,False,29,26,-4,-4
+2026-27,espn,401909978,2026-11-12,DAL,Dallas Mavericks,MIN,Away,Target Center,MIN,False,5,4,3.897,2,False,0.0921,,,False,14,11,-34,-39
+2026-27,espn,401909978,2026-11-12,MIN,Minnesota Timberwolves,DAL,Home,Target Center,MIN,False,9,6,6.068,4,False,0.3427,,,True,19,14,34,39
+2026-27,espn,401909979,2026-11-12,CHA,Charlotte Hornets,PHX,Away,Mortgage Matchup Center,PHX,False,7,5,5.389,3,False,0.1663,,,False,20,16,4,-5
+2026-27,espn,401909979,2026-11-12,PHX,Phoenix Suns,CHA,Home,Mortgage Matchup Center,PHX,False,5,5,4.194,2,False,0.0502,,,False,15,12,-4,5
+2026-27,espn,401909296,2026-11-13,NYK,New York Knicks,IND,Away,Gainbridge Fieldhouse,IND,False,2,1,1.531,1,False,0.0549,,,False,13,10,-1,-2
+2026-27,espn,401909296,2026-11-13,IND,Indiana Pacers,NYK,Home,Gainbridge Fieldhouse,IND,False,5,2,3.871,2,True,0.1077,0.39,P. Siakam,True,25,18,1,2
+2026-27,espn,401909297,2026-11-13,MIL,Milwaukee Bucks,ORL,Away,Kia Center,ORL,False,16,11,11.406,7,False,0.5038,,,True,31,18,-12,-8
+2026-27,espn,401909297,2026-11-13,ORL,Orlando Magic,MIL,Home,Kia Center,ORL,False,3,3,2.251,1,False,0.0703,,,False,14,14,12,8
+2026-27,espn,401909298,2026-11-13,CLE,Cleveland Cavaliers,MIA,Away,Kaseya Center,MIA,False,3,2,2.474,1,False,0.039,,,False,25,19,-1,-12
+2026-27,espn,401909298,2026-11-13,MIA,Miami Heat,CLE,Home,Kaseya Center,MIA,False,16,15,11.971,7,False,0.3887,,,False,37,29,1,12
+2026-27,espn,401909299,2026-11-13,ATL,Atlanta Hawks,CHI,Away,United Center,CHI,False,5,4,3.829,2,False,0.1171,,,False,20,15,-1,-8
+2026-27,espn,401909299,2026-11-13,CHI,Chicago Bulls,ATL,Home,United Center,CHI,False,6,5,4.594,3,False,0.1654,,,False,21,15,1,8
+2026-27,espn,401909300,2026-11-13,MEM,Memphis Grizzlies,NOP,Away,Smoothie King Center,NOP,False,12,9,9.605,6,False,0.2225,,,False,41,36,19,31
+2026-27,espn,401909300,2026-11-13,NOP,New Orleans Pelicans,MEM,Home,Smoothie King Center,NOP,False,7,4,5.664,2,False,0.067,,,False,37,32,-19,-31
+2026-27,espn,401909301,2026-11-13,UTA,Utah Jazz,HOU,Away,Toyota Center (Houston),HOU,False,7,6,5.47,2,False,0.0693,,,False,26,21,-3,-7
+2026-27,espn,401909301,2026-11-13,HOU,Houston Rockets,UTA,Home,Toyota Center (Houston),HOU,False,7,5,5.549,3,False,0.1279,,,False,34,27,3,7
+2026-27,espn,401909302,2026-11-13,GSW,Golden State Warriors,SAS,Away,Frost Bank Center,SAS,False,4,4,3.192,2,False,0.0801,,,False,11,8,-37,-38
+2026-27,espn,401909302,2026-11-13,SAS,San Antonio Spurs,GSW,Home,Frost Bank Center,SAS,False,4,2,3.03,2,True,0.1151,1.35,T. Reed Jr.,True,23,17,37,38
+2026-27,espn,401909303,2026-11-13,POR,Portland Trail Blazers,SAC,Away,Golden 1 Center,SAC,False,8,8,6.145,3,False,0.1931,,,False,31,29,15,13
+2026-27,espn,401909303,2026-11-13,SAC,Sacramento Kings,POR,Home,Golden 1 Center,SAC,False,2,2,1.637,1,False,0.0329,,,False,23,18,-15,-13
+2026-27,espn,401909304,2026-11-13,OKC,Oklahoma City Thunder,LAC,Away,Intuit Dome,LAC,False,5,4,4.041,2,False,0.0685,,,False,19,13,2,-1
+2026-27,espn,401909304,2026-11-13,LAC,LA Clippers,OKC,Home,Intuit Dome,LAC,False,4,2,3.183,1,True,0.085,10.6,G. Dick,True,21,17,-2,1
+2026-27,espn,401909980,2026-11-14,DEN,Denver Nuggets,NOP,Away,Smoothie King Center,NOP,False,10,7,8.086,5,False,0.1821,,,False,37,28,4,8
+2026-27,espn,401909980,2026-11-14,NOP,New Orleans Pelicans,DEN,Home,Smoothie King Center,NOP,False,16,10,12.795,6,True,0.2537,9.9,D. Queen,True,33,21,-4,-8
+2026-27,espn,401909981,2026-11-14,DAL,Dallas Mavericks,CLE,Away,Rocket Arena,CLE,False,5,4,3.872,2,False,0.1155,,,False,31,25,-14,-10
+2026-27,espn,401909981,2026-11-14,CLE,Cleveland Cavaliers,DAL,Home,Rocket Arena,CLE,False,8,6,6.136,4,False,0.2062,,,False,18,16,14,10
+2026-27,espn,401909982,2026-11-14,DET,Detroit Pistons,MIA,Away,Kaseya Center,MIA,False,12,10,9.112,5,False,0.2741,,,False,32,28,-17,-20
+2026-27,espn,401909982,2026-11-14,MIA,Miami Heat,DET,Home,Kaseya Center,MIA,False,10,8,7.55,4,False,0.2024,,,False,40,33,17,20
 2026-27,espn,401909983,2026-11-14,BKN,Brooklyn Nets,MEM,Away,FedExForum,MEM,False,0,0,0.0,0,False,0.0,,,False,17,11,-19,-19
-2026-27,espn,401909983,2026-11-14,MEM,Memphis Grizzlies,BKN,Home,FedExForum,MEM,False,10,9,7.936,4,False,0.1675,,,False,29,22,19,19
-2026-27,espn,401909984,2026-11-14,CHI,Chicago Bulls,MIN,Away,Target Center,MIN,False,6,5,4.784,3,False,0.1213,,,False,18,15,8,11
-2026-27,espn,401909984,2026-11-14,MIN,Minnesota Timberwolves,CHI,Home,Target Center,MIN,False,8,6,6.421,4,False,0.1499,,,False,28,21,-8,-11
-2026-27,espn,401909985,2026-11-15,IND,Indiana Pacers,PHI,Away,Xfinity Mobile Arena,PHI,False,8,7,6.077,2,False,0.0976,,,False,23,20,-10,-7
-2026-27,espn,401909985,2026-11-15,PHI,Philadelphia 76ers,IND,Home,Xfinity Mobile Arena,PHI,False,11,8,8.284,5,False,0.2778,,,False,25,19,10,7
-2026-27,espn,401909986,2026-11-15,LAL,Los Angeles Lakers,PHX,Away,Mortgage Matchup Center,PHX,False,11,9,8.593,5,False,0.217,,,False,36,29,24,8
-2026-27,espn,401909986,2026-11-15,PHX,Phoenix Suns,LAL,Home,Mortgage Matchup Center,PHX,False,10,7,7.586,3,True,0.2337,1.8,J. Goodwin,True,30,24,-24,-8
-2026-27,espn,401909987,2026-11-15,CHA,Charlotte Hornets,LAC,Away,Intuit Dome,LAC,False,7,6,5.864,3,False,0.0985,,,False,20,18,-1,-8
+2026-27,espn,401909983,2026-11-14,MEM,Memphis Grizzlies,BKN,Home,FedExForum,MEM,False,10,9,8.015,4,False,0.1576,,,False,29,22,19,19
+2026-27,espn,401909984,2026-11-14,CHI,Chicago Bulls,MIN,Away,Target Center,MIN,False,6,5,4.769,3,False,0.1233,,,False,18,15,8,11
+2026-27,espn,401909984,2026-11-14,MIN,Minnesota Timberwolves,CHI,Home,Target Center,MIN,False,8,6,6.469,4,False,0.1413,,,False,28,21,-8,-11
+2026-27,espn,401909985,2026-11-15,IND,Indiana Pacers,PHI,Away,Xfinity Mobile Arena,PHI,False,8,7,6.078,2,False,0.0974,,,False,23,20,-10,-7
+2026-27,espn,401909985,2026-11-15,PHI,Philadelphia 76ers,IND,Home,Xfinity Mobile Arena,PHI,False,11,8,8.322,5,False,0.2748,,,False,25,19,10,7
+2026-27,espn,401909986,2026-11-15,LAL,Los Angeles Lakers,PHX,Away,Mortgage Matchup Center,PHX,False,11,9,8.685,5,False,0.2004,,,False,36,29,24,8
+2026-27,espn,401909986,2026-11-15,PHX,Phoenix Suns,LAL,Home,Mortgage Matchup Center,PHX,False,10,7,7.623,3,True,0.2269,1.8,J. Goodwin,True,30,24,-24,-8
+2026-27,espn,401909987,2026-11-15,CHA,Charlotte Hornets,LAC,Away,Intuit Dome,LAC,False,7,6,5.909,3,False,0.091,,,False,20,18,-1,-8
 2026-27,espn,401909987,2026-11-15,LAC,LA Clippers,CHA,Home,Intuit Dome,LAC,False,0,0,0.0,0,False,0.0,,,False,22,15,1,8
-2026-27,espn,401909988,2026-11-15,SAS,San Antonio Spurs,UTA,Away,Delta Center,UTA,False,8,7,6.487,4,False,0.1387,,,False,20,18,0,8
-2026-27,espn,401909988,2026-11-15,UTA,Utah Jazz,SAS,Home,Delta Center,UTA,False,3,3,2.423,1,False,0.0307,,,False,6,3,0,-8
-2026-27,espn,401909989,2026-11-15,DAL,Dallas Mavericks,BOS,Away,TD Garden,BOS,False,4,3,3.174,2,False,0.0885,,,False,17,14,-33,-37
-2026-27,espn,401909989,2026-11-15,BOS,Boston Celtics,DAL,Home,TD Garden,BOS,False,4,3,3.146,2,False,0.0939,,,False,16,12,33,37
-2026-27,espn,401909990,2026-11-15,NYK,New York Knicks,TOR,Away,Scotiabank Arena,TOR,False,2,2,1.521,1,False,0.0574,,,False,28,23,-7,4
+2026-27,espn,401909988,2026-11-15,SAS,San Antonio Spurs,UTA,Away,Delta Center,UTA,False,8,7,6.528,4,False,0.1308,,,False,20,18,0,8
+2026-27,espn,401909988,2026-11-15,UTA,Utah Jazz,SAS,Home,Delta Center,UTA,False,3,3,2.409,1,False,0.0332,,,False,6,3,0,-8
+2026-27,espn,401909989,2026-11-15,DAL,Dallas Mavericks,BOS,Away,TD Garden,BOS,False,4,3,3.175,2,False,0.0881,,,False,17,14,-33,-37
+2026-27,espn,401909989,2026-11-15,BOS,Boston Celtics,DAL,Home,TD Garden,BOS,False,4,3,3.149,2,False,0.0934,,,False,16,12,33,37
+2026-27,espn,401909990,2026-11-15,NYK,New York Knicks,TOR,Away,Scotiabank Arena,TOR,False,2,2,1.521,1,False,0.0573,,,False,28,23,-7,4
 2026-27,espn,401909990,2026-11-15,TOR,Toronto Raptors,NYK,Home,Scotiabank Arena,TOR,False,0,0,0.0,0,False,0.0,,,False,19,11,7,-4
-2026-27,espn,401909991,2026-11-15,HOU,Houston Rockets,WAS,Away,Capital One Arena,WAS,False,5,4,3.985,2,False,0.1094,,,False,34,28,31,28
-2026-27,espn,401909991,2026-11-15,WAS,Washington Wizards,HOU,Home,Capital One Arena,WAS,False,14,10,10.125,5,False,0.337,,,False,34,24,-31,-28
-2026-27,espn,401909992,2026-11-15,ATL,Atlanta Hawks,MIL,Away,Fiserv Forum,MIL,False,15,11,12.072,7,True,0.2624,5.6,J. Johnson,True,34,25,7,7
-2026-27,espn,401909992,2026-11-15,MIL,Milwaukee Bucks,ATL,Home,Fiserv Forum,MIL,False,9,6,6.859,3,False,0.1685,,,True,18,14,-7,-7
-2026-27,espn,401909993,2026-11-15,OKC,Oklahoma City Thunder,SAC,Away,Golden 1 Center,SAC,False,11,9,8.377,5,False,0.27,,,False,28,23,14,22
-2026-27,espn,401909993,2026-11-15,SAC,Sacramento Kings,OKC,Home,Golden 1 Center,SAC,False,11,9,8.276,5,True,0.3027,3.4,D. Cardwell,True,20,15,-14,-22
-2026-27,espn,401909994,2026-11-16,ORL,Orlando Magic,BOS,Away,TD Garden,BOS,False,4,3,3.202,2,False,0.0782,,,False,25,20,-2,10
-2026-27,espn,401909994,2026-11-16,BOS,Boston Celtics,ORL,Home,TD Garden,BOS,False,7,4,5.375,3,True,0.2101,9.88,M. Robinson,True,17,9,2,-10
-2026-27,espn,401909995,2026-11-16,CHI,Chicago Bulls,CLE,Away,Rocket Arena,CLE,False,5,4,3.923,2,False,0.0872,,,False,28,21,-9,-11
-2026-27,espn,401909995,2026-11-16,CLE,Cleveland Cavaliers,CHI,Home,Rocket Arena,CLE,False,12,8,9.101,5,False,0.2642,,,False,21,14,9,11
-2026-27,espn,401909996,2026-11-16,MEM,Memphis Grizzlies,WAS,Away,Capital One Arena,WAS,False,4,4,3.232,2,False,0.0748,,,False,17,14,14,16
-2026-27,espn,401909996,2026-11-16,WAS,Washington Wizards,MEM,Home,Capital One Arena,WAS,False,13,11,10.091,6,False,0.2712,,,False,36,29,-14,-16
-2026-27,espn,401909997,2026-11-16,PHI,Philadelphia 76ers,BKN,Away,Barclays Center,BKN,False,12,10,9.607,6,False,0.2269,,,False,38,32,10,12
-2026-27,espn,401909997,2026-11-16,BKN,Brooklyn Nets,PHI,Home,Barclays Center,BKN,False,7,3,5.202,3,True,0.1949,7.73,D. Wolf,True,34,22,-10,-12
-2026-27,espn,401909998,2026-11-16,HOU,Houston Rockets,MIA,Away,Kaseya Center,MIA,False,12,8,9.396,5,True,0.2361,5.0,O. Tshiebwe,True,30,24,-20,-18
-2026-27,espn,401909998,2026-11-16,MIA,Miami Heat,HOU,Home,Kaseya Center,MIA,False,4,3,3.197,1,False,0.0612,,,False,25,18,20,18
-2026-27,espn,401909999,2026-11-16,POR,Portland Trail Blazers,MIN,Away,Target Center,MIN,False,3,2,2.393,1,False,0.0372,,,False,15,12,-14,-8
-2026-27,espn,401909999,2026-11-16,MIN,Minnesota Timberwolves,POR,Home,Target Center,MIN,False,14,8,8.987,7,True,0.6799,6.33,R. Gobert,True,39,30,14,8
-2026-27,espn,401910000,2026-11-16,GSW,Golden State Warriors,NOP,Away,Smoothie King Center,NOP,False,5,3,3.746,2,False,0.1268,,,False,30,27,-28,-21
-2026-27,espn,401910000,2026-11-16,NOP,New Orleans Pelicans,GSW,Home,Smoothie King Center,NOP,False,4,3,3.523,2,False,0.0282,,,False,24,18,28,21
-2026-27,espn,401910001,2026-11-16,PHX,Phoenix Suns,DEN,Away,Ball Arena,DEN,False,6,4,4.708,3,True,0.2167,4.22,O. Ighodaro,True,25,15,8,12
-2026-27,espn,401910001,2026-11-16,DEN,Denver Nuggets,PHX,Home,Ball Arena,DEN,False,5,5,4.292,2,False,0.0566,,,False,19,16,-8,-12
-2026-27,espn,401910002,2026-11-17,NYK,New York Knicks,TOR,Away,Scotiabank Arena,TOR,False,9,9,7.211,3,False,0.1021,,,False,19,17,-3,9
+2026-27,espn,401909991,2026-11-15,HOU,Houston Rockets,WAS,Away,Capital One Arena,WAS,False,5,4,3.988,2,False,0.1088,,,False,34,28,31,28
+2026-27,espn,401909991,2026-11-15,WAS,Washington Wizards,HOU,Home,Capital One Arena,WAS,False,14,10,10.131,5,False,0.3361,,,False,34,24,-31,-28
+2026-27,espn,401909992,2026-11-15,ATL,Atlanta Hawks,MIL,Away,Fiserv Forum,MIL,False,15,11,12.077,7,True,0.2617,5.6,J. Johnson,True,34,25,7,7
+2026-27,espn,401909992,2026-11-15,MIL,Milwaukee Bucks,ATL,Home,Fiserv Forum,MIL,False,9,6,6.89,3,False,0.1619,,,True,18,14,-7,-7
+2026-27,espn,401909993,2026-11-15,OKC,Oklahoma City Thunder,SAC,Away,Golden 1 Center,SAC,False,11,9,8.429,5,False,0.2598,,,False,28,23,14,22
+2026-27,espn,401909993,2026-11-15,SAC,Sacramento Kings,OKC,Home,Golden 1 Center,SAC,False,11,9,8.248,5,True,0.3102,3.4,D. Cardwell,True,20,15,-14,-22
+2026-27,espn,401909994,2026-11-16,ORL,Orlando Magic,BOS,Away,TD Garden,BOS,False,4,3,3.204,2,False,0.078,,,False,25,20,-2,10
+2026-27,espn,401909994,2026-11-16,BOS,Boston Celtics,ORL,Home,TD Garden,BOS,False,7,4,5.377,3,True,0.2096,9.88,M. Robinson,True,17,9,2,-10
+2026-27,espn,401909995,2026-11-16,CHI,Chicago Bulls,CLE,Away,Rocket Arena,CLE,False,5,4,3.949,2,False,0.0846,,,False,28,21,-9,-11
+2026-27,espn,401909995,2026-11-16,CLE,Cleveland Cavaliers,CHI,Home,Rocket Arena,CLE,False,12,8,9.082,5,False,0.2716,,,False,21,14,9,11
+2026-27,espn,401909996,2026-11-16,MEM,Memphis Grizzlies,WAS,Away,Capital One Arena,WAS,False,4,4,3.277,2,False,0.0662,,,False,17,14,14,16
+2026-27,espn,401909996,2026-11-16,WAS,Washington Wizards,MEM,Home,Capital One Arena,WAS,False,13,11,10.096,6,False,0.2703,,,False,36,29,-14,-16
+2026-27,espn,401909997,2026-11-16,PHI,Philadelphia 76ers,BKN,Away,Barclays Center,BKN,False,12,10,9.663,6,False,0.2189,,,False,38,32,10,12
+2026-27,espn,401909997,2026-11-16,BKN,Brooklyn Nets,PHI,Home,Barclays Center,BKN,False,7,3,5.23,3,True,0.1905,7.73,D. Wolf,True,34,22,-10,-12
+2026-27,espn,401909998,2026-11-16,HOU,Houston Rockets,MIA,Away,Kaseya Center,MIA,False,12,8,9.405,5,True,0.2347,5.0,O. Tshiebwe,True,30,24,-20,-18
+2026-27,espn,401909998,2026-11-16,MIA,Miami Heat,HOU,Home,Kaseya Center,MIA,False,4,3,3.199,1,False,0.0609,,,False,25,18,20,18
+2026-27,espn,401909999,2026-11-16,POR,Portland Trail Blazers,MIN,Away,Target Center,MIN,False,3,2,2.395,1,False,0.0368,,,False,15,12,-14,-8
+2026-27,espn,401909999,2026-11-16,MIN,Minnesota Timberwolves,POR,Home,Target Center,MIN,False,14,8,9.0,7,True,0.6794,6.33,R. Gobert,True,39,30,14,8
+2026-27,espn,401910000,2026-11-16,GSW,Golden State Warriors,NOP,Away,Smoothie King Center,NOP,False,5,3,3.748,2,False,0.1264,,,False,30,27,-28,-21
+2026-27,espn,401910000,2026-11-16,NOP,New Orleans Pelicans,GSW,Home,Smoothie King Center,NOP,False,4,3,3.547,2,False,0.0254,,,False,24,18,28,21
+2026-27,espn,401910001,2026-11-16,PHX,Phoenix Suns,DEN,Away,Ball Arena,DEN,False,6,4,4.711,3,True,0.2101,4.22,O. Ighodaro,True,25,15,8,12
+2026-27,espn,401910001,2026-11-16,DEN,Denver Nuggets,PHX,Home,Ball Arena,DEN,False,5,5,4.292,2,False,0.0565,,,False,19,16,-8,-12
+2026-27,espn,401910002,2026-11-17,NYK,New York Knicks,TOR,Away,Scotiabank Arena,TOR,False,9,9,7.214,3,False,0.1018,,,False,19,17,-3,9
 2026-27,espn,401910002,2026-11-17,TOR,Toronto Raptors,NYK,Home,Scotiabank Arena,TOR,False,0,0,0.0,0,False,0.0,,,False,18,10,3,-9
 2026-27,espn,401910003,2026-11-17,POR,Portland Trail Blazers,MIN,Away,Target Center,MIN,False,0,0,0.0,0,False,0.0,,,False,20,13,0,-1
-2026-27,espn,401910003,2026-11-17,MIN,Minnesota Timberwolves,POR,Home,Target Center,MIN,False,6,2,4.243,3,True,0.2461,10.63,J. Beringer,True,24,12,0,1
-2026-27,espn,401910004,2026-11-17,DET,Detroit Pistons,SAS,Away,Frost Bank Center,SAS,False,4,3,3.183,1,False,0.0351,,,False,12,9,6,12
-2026-27,espn,401910004,2026-11-17,SAS,San Antonio Spurs,DET,Home,Frost Bank Center,SAS,False,7,5,5.931,3,False,0.0673,,,False,14,10,-6,-12
-2026-27,espn,401910005,2026-11-17,CHA,Charlotte Hornets,LAL,Away,crypto.com Arena,LAL,False,6,3,4.74,3,False,0.1429,,,True,20,16,13,-4
-2026-27,espn,401910005,2026-11-17,LAL,Los Angeles Lakers,CHA,Home,crypto.com Arena,LAL,False,8,6,6.134,4,False,0.2105,,,False,29,18,-13,4
-2026-27,espn,401910006,2026-11-17,UTA,Utah Jazz,LAC,Away,Intuit Dome,LAC,False,3,2,2.465,1,False,0.0323,,,False,18,14,2,25
-2026-27,espn,401910006,2026-11-17,LAC,LA Clippers,UTA,Home,Intuit Dome,LAC,False,4,4,3.413,1,False,0.0246,,,False,27,21,-2,-25
-2026-27,espn,401910007,2026-11-18,MEM,Memphis Grizzlies,CLE,Away,Rocket Arena,CLE,False,8,7,6.345,4,False,0.1224,,,False,29,24,1,3
-2026-27,espn,401910007,2026-11-18,CLE,Cleveland Cavaliers,MEM,Home,Rocket Arena,CLE,False,8,6,6.326,4,True,0.1681,0.11,S. Merrill,True,20,18,-1,-3
+2026-27,espn,401910003,2026-11-17,MIN,Minnesota Timberwolves,POR,Home,Target Center,MIN,False,6,2,4.25,3,True,0.2448,10.63,J. Beringer,True,24,12,0,1
+2026-27,espn,401910004,2026-11-17,DET,Detroit Pistons,SAS,Away,Frost Bank Center,SAS,False,4,3,3.184,1,False,0.035,,,False,12,9,6,12
+2026-27,espn,401910004,2026-11-17,SAS,San Antonio Spurs,DET,Home,Frost Bank Center,SAS,False,7,5,5.933,3,False,0.0671,,,False,14,10,-6,-12
+2026-27,espn,401910005,2026-11-17,CHA,Charlotte Hornets,LAL,Away,crypto.com Arena,LAL,False,6,3,4.798,3,False,0.1305,,,True,20,16,13,-4
+2026-27,espn,401910005,2026-11-17,LAL,Los Angeles Lakers,CHA,Home,crypto.com Arena,LAL,False,8,6,6.186,4,False,0.2007,,,False,29,18,-13,4
+2026-27,espn,401910006,2026-11-17,UTA,Utah Jazz,LAC,Away,Intuit Dome,LAC,False,3,2,2.443,1,False,0.035,,,False,18,14,2,25
+2026-27,espn,401910006,2026-11-17,LAC,LA Clippers,UTA,Home,Intuit Dome,LAC,False,4,4,3.421,1,False,0.0235,,,False,27,21,-2,-25
+2026-27,espn,401910007,2026-11-18,MEM,Memphis Grizzlies,CLE,Away,Rocket Arena,CLE,False,8,7,6.41,4,False,0.1119,,,False,29,24,1,3
+2026-27,espn,401910007,2026-11-18,CLE,Cleveland Cavaliers,MEM,Home,Rocket Arena,CLE,False,8,6,6.403,4,True,0.155,0.11,S. Merrill,True,20,18,-1,-3
 2026-27,espn,401910008,2026-11-18,HOU,Houston Rockets,IND,Away,Gainbridge Fieldhouse,IND,False,1,1,0.835,0,False,0.0,,,False,17,12,17,15
-2026-27,espn,401910008,2026-11-18,IND,Indiana Pacers,HOU,Home,Gainbridge Fieldhouse,IND,False,6,5,4.621,2,False,0.1182,,,False,10,8,-17,-15
-2026-27,espn,401910009,2026-11-18,MIL,Milwaukee Bucks,MIA,Away,Kaseya Center,MIA,False,14,13,11.045,6,False,0.2374,,,False,39,30,-26,-7
-2026-27,espn,401910009,2026-11-18,MIA,Miami Heat,MIL,Home,Kaseya Center,MIA,False,9,8,6.423,4,False,0.2922,,,False,44,35,26,7
-2026-27,espn,401910010,2026-11-18,PHI,Philadelphia 76ers,ORL,Away,Kia Center,ORL,False,10,8,8.283,5,True,0.1507,5.65,J. Embiid,True,26,23,-5,5
-2026-27,espn,401910010,2026-11-18,ORL,Orlando Magic,PHI,Home,Kia Center,ORL,False,6,3,4.6,3,False,0.154,,,False,17,9,5,-5
-2026-27,espn,401910011,2026-11-18,CHI,Chicago Bulls,BKN,Away,Barclays Center,BKN,False,2,2,1.597,1,False,0.0406,,,False,12,10,34,30
-2026-27,espn,401910011,2026-11-18,BKN,Brooklyn Nets,CHI,Home,Barclays Center,BKN,False,6,5,4.67,3,False,0.1438,,,False,19,14,-34,-30
-2026-27,espn,401910012,2026-11-18,WAS,Washington Wizards,TOR,Away,Scotiabank Arena,TOR,False,13,8,10.129,6,False,0.2588,,,True,27,20,-1,4
-2026-27,espn,401910012,2026-11-18,TOR,Toronto Raptors,WAS,Home,Scotiabank Arena,TOR,False,3,0,2.307,1,True,0.038,10.07,I. Quickley,True,14,7,1,-4
-2026-27,espn,401910013,2026-11-18,DET,Detroit Pistons,NOP,Away,Smoothie King Center,NOP,False,16,15,12.482,7,False,0.3273,,,False,27,23,6,13
-2026-27,espn,401910013,2026-11-18,NOP,New Orleans Pelicans,DET,Home,Smoothie King Center,NOP,False,9,7,7.234,4,False,0.167,,,False,28,24,-6,-13
-2026-27,espn,401910014,2026-11-18,ATL,Atlanta Hawks,OKC,Away,Paycom Center,OKC,False,5,4,3.828,2,False,0.1173,,,False,12,9,0,5
+2026-27,espn,401910008,2026-11-18,IND,Indiana Pacers,HOU,Home,Gainbridge Fieldhouse,IND,False,6,5,4.65,2,False,0.1125,,,False,10,8,-17,-15
+2026-27,espn,401910009,2026-11-18,MIL,Milwaukee Bucks,MIA,Away,Kaseya Center,MIA,False,14,13,11.049,6,False,0.237,,,False,39,30,-26,-7
+2026-27,espn,401910009,2026-11-18,MIA,Miami Heat,MIL,Home,Kaseya Center,MIA,False,9,8,6.425,4,False,0.2919,,,False,44,35,26,7
+2026-27,espn,401910010,2026-11-18,PHI,Philadelphia 76ers,ORL,Away,Kia Center,ORL,False,10,8,8.294,5,True,0.1488,5.65,J. Embiid,True,26,23,-5,5
+2026-27,espn,401910010,2026-11-18,ORL,Orlando Magic,PHI,Home,Kia Center,ORL,False,6,3,4.603,3,False,0.1533,,,False,17,9,5,-5
+2026-27,espn,401910011,2026-11-18,CHI,Chicago Bulls,BKN,Away,Barclays Center,BKN,False,2,2,1.599,1,False,0.0403,,,False,12,10,34,30
+2026-27,espn,401910011,2026-11-18,BKN,Brooklyn Nets,CHI,Home,Barclays Center,BKN,False,6,5,4.687,3,False,0.1409,,,False,19,14,-34,-30
+2026-27,espn,401910012,2026-11-18,WAS,Washington Wizards,TOR,Away,Scotiabank Arena,TOR,False,13,8,10.132,6,False,0.2584,,,True,27,20,-1,4
+2026-27,espn,401910012,2026-11-18,TOR,Toronto Raptors,WAS,Home,Scotiabank Arena,TOR,False,3,0,2.309,1,True,0.0411,10.07,I. Quickley,True,14,7,1,-4
+2026-27,espn,401910013,2026-11-18,DET,Detroit Pistons,NOP,Away,Smoothie King Center,NOP,False,16,15,12.489,7,False,0.3262,,,False,27,23,6,13
+2026-27,espn,401910013,2026-11-18,NOP,New Orleans Pelicans,DET,Home,Smoothie King Center,NOP,False,9,7,7.286,4,False,0.1589,,,False,28,24,-6,-13
+2026-27,espn,401910014,2026-11-18,ATL,Atlanta Hawks,OKC,Away,Paycom Center,OKC,False,5,4,3.829,2,False,0.1171,,,False,12,9,0,5
 2026-27,espn,401910014,2026-11-18,OKC,Oklahoma City Thunder,ATL,Home,Paycom Center,OKC,False,0,0,0.0,0,False,0.0,,,False,21,11,0,-5
-2026-27,espn,401910015,2026-11-18,BOS,Boston Celtics,DEN,Away,Ball Arena,DEN,False,3,2,2.127,1,False,0.0661,,,False,12,10,0,-4
-2026-27,espn,401910015,2026-11-18,DEN,Denver Nuggets,BOS,Home,Ball Arena,DEN,False,17,15,13.553,8,False,0.3007,,,False,29,24,0,4
-2026-27,espn,401910016,2026-11-18,GSW,Golden State Warriors,DAL,Away,American Airlines Center,DAL,False,2,2,1.614,1,False,0.0372,,,False,17,9,-20,-22
-2026-27,espn,401910016,2026-11-18,DAL,Dallas Mavericks,GSW,Home,American Airlines Center,DAL,False,6,2,4.644,3,True,0.1537,9.23,D. Gafford,True,19,15,20,22
-2026-27,espn,401910017,2026-11-18,UTA,Utah Jazz,LAL,Away,crypto.com Arena,LAL,False,10,8,8.093,5,False,0.1697,,,False,27,21,2,12
-2026-27,espn,401910017,2026-11-18,LAL,Los Angeles Lakers,UTA,Home,crypto.com Arena,LAL,False,4,1,2.584,2,True,0.2351,10.08,W. Kessler,True,28,20,-2,-12
-2026-27,espn,401910018,2026-11-18,PHX,Phoenix Suns,SAC,Away,Golden 1 Center,SAC,False,5,4,4.128,2,False,0.0917,,,False,22,17,15,21
-2026-27,espn,401910018,2026-11-18,SAC,Sacramento Kings,PHX,Home,Golden 1 Center,SAC,False,3,1,2.301,1,True,0.0662,3.77,D. Plowden,True,15,11,-15,-21
-2026-27,espn,401910019,2026-11-19,GSW,Golden State Warriors,MEM,Away,FedExForum,MEM,False,12,10,9.259,6,False,0.2815,,,False,32,27,-19,-28
-2026-27,espn,401910019,2026-11-19,MEM,Memphis Grizzlies,GSW,Home,FedExForum,MEM,False,5,5,3.886,0,False,0.0,,,False,17,17,19,28
-2026-27,espn,401910020,2026-11-19,POR,Portland Trail Blazers,MIL,Away,Fiserv Forum,MIL,False,7,6,5.824,3,False,0.0842,,,False,32,25,4,10
-2026-27,espn,401910020,2026-11-19,MIL,Milwaukee Bucks,POR,Home,Fiserv Forum,MIL,False,3,2,2.259,1,False,0.0702,,,False,26,18,-4,-10
-2026-27,espn,401910021,2026-11-19,NYK,New York Knicks,MIN,Away,Target Center,MIN,False,4,4,3.285,1,False,0.0251,,,False,11,11,14,5
-2026-27,espn,401910021,2026-11-19,MIN,Minnesota Timberwolves,NYK,Home,Target Center,MIN,False,1,1,0.831,0,False,0.0,,,False,17,15,-14,-5
-2026-27,espn,401910022,2026-11-19,LAC,LA Clippers,SAS,Away,Frost Bank Center,SAS,False,5,4,3.309,2,False,0.2144,,,False,17,15,-4,-12
-2026-27,espn,401910022,2026-11-19,SAS,San Antonio Spurs,LAC,Home,Frost Bank Center,SAS,False,5,5,3.898,2,False,0.0954,,,False,23,21,4,12
-2026-27,espn,401909305,2026-11-20,CHA,Charlotte Hornets,ATL,Away,State Farm Arena,ATL,False,4,2,2.742,2,False,0.188,,,False,16,10,-11,-14
-2026-27,espn,401909305,2026-11-20,ATL,Atlanta Hawks,CHA,Home,State Farm Arena,ATL,False,5,4,3.706,2,False,0.1556,,,False,15,12,11,14
-2026-27,espn,401909306,2026-11-20,ORL,Orlando Magic,BKN,Away,Barclays Center,BKN,False,2,0,1.495,1,True,0.0637,11.52,A. Black,True,23,16,3,2
-2026-27,espn,401909306,2026-11-20,BKN,Brooklyn Nets,ORL,Home,Barclays Center,BKN,False,3,3,2.373,1,False,0.0462,,,False,27,23,-3,-2
-2026-27,espn,401909307,2026-11-20,IND,Indiana Pacers,CLE,Away,Rocket Arena,CLE,False,14,11,10.455,7,False,0.3838,,,False,27,19,-22,-9
-2026-27,espn,401909307,2026-11-20,CLE,Cleveland Cavaliers,IND,Home,Rocket Arena,CLE,False,9,8,7.521,4,False,0.1017,,,False,20,17,22,9
-2026-27,espn,401909308,2026-11-20,TOR,Toronto Raptors,DET,Away,Little Caesars Arena,DET,False,2,2,1.583,1,False,0.0435,,,False,14,12,5,3
-2026-27,espn,401909308,2026-11-20,DET,Detroit Pistons,TOR,Home,Little Caesars Arena,DET,False,11,7,8.593,5,True,0.2309,0.04,C. Cunningham,True,21,16,-5,-3
-2026-27,espn,401909309,2026-11-20,WAS,Washington Wizards,CHI,Away,United Center,CHI,False,4,3,3.324,2,False,0.0568,,,False,17,9,6,4
-2026-27,espn,401909309,2026-11-20,CHI,Chicago Bulls,WAS,Home,United Center,CHI,False,13,10,10.112,6,True,0.2774,7.87,N. Essengue,True,16,13,-6,-4
-2026-27,espn,401909310,2026-11-20,NOP,New Orleans Pelicans,OKC,Away,Paycom Center,OKC,False,5,5,4.108,2,False,0.0686,,,False,24,19,6,-6
-2026-27,espn,401909310,2026-11-20,OKC,Oklahoma City Thunder,NOP,Home,Paycom Center,OKC,False,11,8,8.741,5,False,0.2038,,,False,20,14,-6,6
-2026-27,espn,401909311,2026-11-20,PHX,Phoenix Suns,UTA,Away,Delta Center,UTA,False,3,2,2.535,1,False,0.0089,,,False,25,17,13,10
-2026-27,espn,401909311,2026-11-20,UTA,Utah Jazz,PHX,Home,Delta Center,UTA,False,7,4,5.508,3,False,0.1357,,,True,34,21,-13,-10
-2026-27,espn,401909312,2026-11-20,HOU,Houston Rockets,DEN,Away,Ball Arena,DEN,False,9,3,7.017,4,True,0.1939,7.02,A. Thompson,True,35,23,3,-9
-2026-27,espn,401909312,2026-11-20,DEN,Denver Nuggets,HOU,Home,Ball Arena,DEN,False,15,15,12.285,7,False,0.2387,,,False,28,26,-3,9
-2026-27,espn,401909313,2026-11-20,SAC,Sacramento Kings,LAL,Away,crypto.com Arena,LAL,False,5,4,3.956,2,False,0.0851,,,False,12,9,2,-2
-2026-27,espn,401909313,2026-11-20,LAL,Los Angeles Lakers,SAC,Home,crypto.com Arena,LAL,False,7,4,5.101,3,True,0.2576,0.09,W. Kessler,True,22,17,-2,2
-2026-27,espn,401910023,2026-11-21,MIL,Milwaukee Bucks,PHI,Away,Xfinity Mobile Arena,PHI,False,7,6,5.578,3,False,0.111,,,False,18,17,-6,-3
-2026-27,espn,401910023,2026-11-21,PHI,Philadelphia 76ers,MIL,Home,Xfinity Mobile Arena,PHI,False,12,11,9.805,5,False,0.1515,,,False,37,33,6,3
-2026-27,espn,401910024,2026-11-21,POR,Portland Trail Blazers,NYK,Away,Madison Square Garden,NYK,False,7,4,4.967,3,True,0.2233,5.23,D. Avdija,True,17,13,-9,-1
+2026-27,espn,401910015,2026-11-18,BOS,Boston Celtics,DEN,Away,Ball Arena,DEN,False,3,2,2.129,1,False,0.0657,,,False,12,10,0,-4
+2026-27,espn,401910015,2026-11-18,DEN,Denver Nuggets,BOS,Home,Ball Arena,DEN,False,17,15,13.557,8,False,0.3001,,,False,29,24,0,4
+2026-27,espn,401910016,2026-11-18,GSW,Golden State Warriors,DAL,Away,American Airlines Center,DAL,False,2,2,1.616,1,False,0.0368,,,False,17,9,-20,-22
+2026-27,espn,401910016,2026-11-18,DAL,Dallas Mavericks,GSW,Home,American Airlines Center,DAL,False,6,2,4.646,3,True,0.1533,9.23,D. Gafford,True,19,15,20,22
+2026-27,espn,401910017,2026-11-18,UTA,Utah Jazz,LAL,Away,crypto.com Arena,LAL,False,10,8,8.104,5,False,0.1672,,,False,27,21,2,12
+2026-27,espn,401910017,2026-11-18,LAL,Los Angeles Lakers,UTA,Home,crypto.com Arena,LAL,False,4,1,2.527,2,True,0.2527,10.08,W. Kessler,True,28,20,-2,-12
+2026-27,espn,401910018,2026-11-18,PHX,Phoenix Suns,SAC,Away,Golden 1 Center,SAC,False,5,4,4.031,2,False,0.1185,,,False,22,17,15,21
+2026-27,espn,401910018,2026-11-18,SAC,Sacramento Kings,PHX,Home,Golden 1 Center,SAC,False,3,1,2.267,1,True,0.0754,3.77,D. Plowden,True,15,11,-15,-21
+2026-27,espn,401910019,2026-11-19,GSW,Golden State Warriors,MEM,Away,FedExForum,MEM,False,12,10,9.265,6,False,0.2805,,,False,32,27,-19,-28
+2026-27,espn,401910019,2026-11-19,MEM,Memphis Grizzlies,GSW,Home,FedExForum,MEM,False,5,5,3.913,0,False,0.0,,,False,17,17,19,28
+2026-27,espn,401910020,2026-11-19,POR,Portland Trail Blazers,MIL,Away,Fiserv Forum,MIL,False,7,6,5.845,3,False,0.0817,,,False,32,25,4,10
+2026-27,espn,401910020,2026-11-19,MIL,Milwaukee Bucks,POR,Home,Fiserv Forum,MIL,False,3,2,2.26,1,False,0.07,,,False,26,18,-4,-10
+2026-27,espn,401910021,2026-11-19,NYK,New York Knicks,MIN,Away,Target Center,MIN,False,4,4,3.288,1,False,0.0249,,,False,11,11,14,5
+2026-27,espn,401910021,2026-11-19,MIN,Minnesota Timberwolves,NYK,Home,Target Center,MIN,False,1,1,0.82,0,False,0.0,,,False,17,15,-14,-5
+2026-27,espn,401910022,2026-11-19,LAC,LA Clippers,SAS,Away,Frost Bank Center,SAS,False,5,4,3.311,2,False,0.2139,,,False,17,15,-4,-12
+2026-27,espn,401910022,2026-11-19,SAS,San Antonio Spurs,LAC,Home,Frost Bank Center,SAS,False,5,5,3.981,2,False,0.0786,,,False,23,21,4,12
+2026-27,espn,401909305,2026-11-20,CHA,Charlotte Hornets,ATL,Away,State Farm Arena,ATL,False,4,2,2.799,2,False,0.172,,,False,16,10,-11,-14
+2026-27,espn,401909305,2026-11-20,ATL,Atlanta Hawks,CHA,Home,State Farm Arena,ATL,False,5,4,3.708,2,False,0.1551,,,False,15,12,11,14
+2026-27,espn,401909306,2026-11-20,ORL,Orlando Magic,BKN,Away,Barclays Center,BKN,False,2,0,1.496,1,True,0.0636,11.52,A. Black,True,23,16,3,2
+2026-27,espn,401909306,2026-11-20,BKN,Brooklyn Nets,ORL,Home,Barclays Center,BKN,False,3,3,2.394,1,False,0.0426,,,False,27,23,-3,-2
+2026-27,espn,401909307,2026-11-20,IND,Indiana Pacers,CLE,Away,Rocket Arena,CLE,False,14,11,10.592,7,False,0.3582,,,False,27,19,-22,-9
+2026-27,espn,401909307,2026-11-20,CLE,Cleveland Cavaliers,IND,Home,Rocket Arena,CLE,False,9,8,7.619,4,False,0.089,,,False,20,17,22,9
+2026-27,espn,401909308,2026-11-20,TOR,Toronto Raptors,DET,Away,Little Caesars Arena,DET,False,2,2,1.568,1,False,0.0466,,,False,14,12,5,3
+2026-27,espn,401909308,2026-11-20,DET,Detroit Pistons,TOR,Home,Little Caesars Arena,DET,False,11,7,8.596,5,True,0.2304,0.04,C. Cunningham,True,21,16,-5,-3
+2026-27,espn,401909309,2026-11-20,WAS,Washington Wizards,CHI,Away,United Center,CHI,False,4,3,3.325,2,False,0.0567,,,False,17,9,6,4
+2026-27,espn,401909309,2026-11-20,CHI,Chicago Bulls,WAS,Home,United Center,CHI,False,13,10,10.125,6,True,0.2743,7.87,N. Essengue,True,16,13,-6,-4
+2026-27,espn,401909310,2026-11-20,NOP,New Orleans Pelicans,OKC,Away,Paycom Center,OKC,False,5,5,4.022,2,False,0.0811,,,False,24,19,6,-6
+2026-27,espn,401909310,2026-11-20,OKC,Oklahoma City Thunder,NOP,Home,Paycom Center,OKC,False,11,8,8.749,5,False,0.2023,,,False,20,14,-6,6
+2026-27,espn,401909311,2026-11-20,PHX,Phoenix Suns,UTA,Away,Delta Center,UTA,False,3,2,2.543,1,False,0.0097,,,False,25,17,13,10
+2026-27,espn,401909311,2026-11-20,UTA,Utah Jazz,PHX,Home,Delta Center,UTA,False,7,4,5.496,3,False,0.1376,,,True,34,21,-13,-10
+2026-27,espn,401909312,2026-11-20,HOU,Houston Rockets,DEN,Away,Ball Arena,DEN,False,9,3,7.005,4,True,0.1967,7.02,A. Thompson,True,35,23,3,-9
+2026-27,espn,401909312,2026-11-20,DEN,Denver Nuggets,HOU,Home,Ball Arena,DEN,False,15,15,12.289,7,False,0.2381,,,False,28,26,-3,9
+2026-27,espn,401909313,2026-11-20,SAC,Sacramento Kings,LAL,Away,crypto.com Arena,LAL,False,5,4,3.933,2,False,0.0883,,,False,12,9,2,-2
+2026-27,espn,401909313,2026-11-20,LAL,Los Angeles Lakers,SAC,Home,crypto.com Arena,LAL,False,7,4,5.166,3,True,0.2477,0.09,W. Kessler,True,22,17,-2,2
+2026-27,espn,401910023,2026-11-21,MIL,Milwaukee Bucks,PHI,Away,Xfinity Mobile Arena,PHI,False,7,6,5.678,3,False,0.0946,,,False,18,17,-6,-3
+2026-27,espn,401910023,2026-11-21,PHI,Philadelphia 76ers,MIL,Home,Xfinity Mobile Arena,PHI,False,12,11,9.817,5,False,0.1496,,,False,37,33,6,3
+2026-27,espn,401910024,2026-11-21,POR,Portland Trail Blazers,NYK,Away,Madison Square Garden,NYK,False,7,4,4.874,3,True,0.2393,5.23,D. Avdija,True,17,13,-9,-1
 2026-27,espn,401910024,2026-11-21,NYK,New York Knicks,POR,Home,Madison Square Garden,NYK,False,1,1,0.842,0,False,0.0,,,False,6,4,9,1
-2026-27,espn,401910025,2026-11-21,LAC,LA Clippers,DAL,Away,American Airlines Center,DAL,False,8,6,5.848,3,False,0.1987,,,True,24,19,-4,-10
-2026-27,espn,401910025,2026-11-21,DAL,Dallas Mavericks,LAC,Home,American Airlines Center,DAL,False,7,5,5.906,3,True,0.0715,5.87,C. Flagg,True,34,23,4,10
-2026-27,espn,401910026,2026-11-21,MEM,Memphis Grizzlies,MIN,Away,Target Center,MIN,False,1,1,0.877,0,False,0.0,,,False,16,11,-21,-9
+2026-27,espn,401910025,2026-11-21,LAC,LA Clippers,DAL,Away,American Airlines Center,DAL,False,8,6,5.882,3,False,0.1904,,,True,24,19,-4,-10
+2026-27,espn,401910025,2026-11-21,DAL,Dallas Mavericks,LAC,Home,American Airlines Center,DAL,False,7,5,5.908,3,True,0.0714,5.87,C. Flagg,True,34,23,4,10
+2026-27,espn,401910026,2026-11-21,MEM,Memphis Grizzlies,MIN,Away,Target Center,MIN,False,1,1,0.902,0,False,0.0,,,False,16,11,-21,-9
 2026-27,espn,401910026,2026-11-21,MIN,Minnesota Timberwolves,MEM,Home,Target Center,MIN,False,0,0,0.0,0,False,0.0,,,False,10,8,21,9
-2026-27,espn,401910027,2026-11-21,NOP,New Orleans Pelicans,SAS,Away,Frost Bank Center,SAS,False,4,3,2.946,2,False,0.1437,,,False,25,17,-23,-23
-2026-27,espn,401910027,2026-11-21,SAS,San Antonio Spurs,NOP,Home,Frost Bank Center,SAS,False,3,3,2.27,1,False,0.0791,,,False,20,15,23,23
-2026-27,espn,401910028,2026-11-21,BOS,Boston Celtics,SAC,Away,Golden 1 Center,SAC,False,9,5,6.279,4,True,0.3544,2.52,N. Queta,True,25,15,-9,-1
-2026-27,espn,401910028,2026-11-21,SAC,Sacramento Kings,BOS,Home,Golden 1 Center,SAC,False,5,5,4.085,2,False,0.0676,,,False,32,26,9,1
+2026-27,espn,401910027,2026-11-21,NOP,New Orleans Pelicans,SAS,Away,Frost Bank Center,SAS,False,4,3,2.933,2,False,0.1459,,,False,25,17,-23,-23
+2026-27,espn,401910027,2026-11-21,SAS,San Antonio Spurs,NOP,Home,Frost Bank Center,SAS,False,3,3,2.305,1,False,0.0696,,,False,20,15,23,23
+2026-27,espn,401910028,2026-11-21,BOS,Boston Celtics,SAC,Away,Golden 1 Center,SAC,False,9,5,6.282,4,True,0.354,2.52,N. Queta,True,25,15,-9,-1
+2026-27,espn,401910028,2026-11-21,SAC,Sacramento Kings,BOS,Home,Golden 1 Center,SAC,False,5,5,4.101,2,False,0.0647,,,False,32,26,9,1
 2026-27,espn,401910029,2026-11-22,DET,Detroit Pistons,ATL,Away,State Farm Arena,ATL,False,0,0,0.0,0,False,0.0,,,False,14,14,11,-10
-2026-27,espn,401910029,2026-11-22,ATL,Atlanta Hawks,DET,Home,State Farm Arena,ATL,False,7,6,5.309,3,False,0.1837,,,False,23,20,-11,10
-2026-27,espn,401910030,2026-11-22,OKC,Oklahoma City Thunder,MIA,Away,Kaseya Center,MIA,False,5,5,3.927,2,False,0.0868,,,False,19,13,-15,-10
-2026-27,espn,401910030,2026-11-22,MIA,Miami Heat,OKC,Home,Kaseya Center,MIA,False,6,5,4.554,3,False,0.1644,,,False,21,18,15,10
-2026-27,espn,401910031,2026-11-22,ORL,Orlando Magic,WAS,Away,Capital One Arena,WAS,False,2,2,1.653,1,False,0.0301,,,False,13,12,-20,-20
-2026-27,espn,401910031,2026-11-22,WAS,Washington Wizards,ORL,Home,Capital One Arena,WAS,False,2,1,1.473,1,False,0.0695,,,False,20,16,20,20
-2026-27,espn,401910032,2026-11-22,DEN,Denver Nuggets,CHI,Away,United Center,CHI,False,7,5,5.929,3,False,0.0726,,,False,30,26,10,6
-2026-27,espn,401910032,2026-11-22,CHI,Chicago Bulls,DEN,Home,United Center,CHI,False,4,3,3.007,1,False,0.0368,,,False,20,16,-10,-6
+2026-27,espn,401910029,2026-11-22,ATL,Atlanta Hawks,DET,Home,State Farm Arena,ATL,False,7,6,5.311,3,False,0.1832,,,False,23,20,-11,10
+2026-27,espn,401910030,2026-11-22,OKC,Oklahoma City Thunder,MIA,Away,Kaseya Center,MIA,False,5,5,3.998,2,False,0.0761,,,False,19,13,-15,-10
+2026-27,espn,401910030,2026-11-22,MIA,Miami Heat,OKC,Home,Kaseya Center,MIA,False,6,5,4.556,3,False,0.1639,,,False,21,18,15,10
+2026-27,espn,401910031,2026-11-22,ORL,Orlando Magic,WAS,Away,Capital One Arena,WAS,False,2,2,1.653,1,False,0.03,,,False,13,12,-20,-20
+2026-27,espn,401910031,2026-11-22,WAS,Washington Wizards,ORL,Home,Capital One Arena,WAS,False,2,1,1.473,1,False,0.0693,,,False,20,16,20,20
+2026-27,espn,401910032,2026-11-22,DEN,Denver Nuggets,CHI,Away,United Center,CHI,False,7,5,5.93,3,False,0.0724,,,False,30,26,10,6
+2026-27,espn,401910032,2026-11-22,CHI,Chicago Bulls,DEN,Home,United Center,CHI,False,4,3,3.022,1,False,0.0342,,,False,20,16,-10,-6
 2026-27,espn,401910033,2026-11-22,DAL,Dallas Mavericks,UTA,Away,Delta Center,UTA,False,4,3,3.382,2,False,0.0472,,,False,17,14,17,2
-2026-27,espn,401910033,2026-11-22,UTA,Utah Jazz,DAL,Home,Delta Center,UTA,False,7,4,4.943,3,True,0.2976,6.13,K. Filipowski,True,25,16,-17,-2
-2026-27,espn,401910034,2026-11-22,IND,Indiana Pacers,NYK,Away,Madison Square Garden,NYK,False,10,8,8.003,3,False,0.1072,,,False,33,28,-11,-7
+2026-27,espn,401910033,2026-11-22,UTA,Utah Jazz,DAL,Home,Delta Center,UTA,False,7,4,4.937,3,True,0.3035,6.13,K. Filipowski,True,25,16,-17,-2
+2026-27,espn,401910034,2026-11-22,IND,Indiana Pacers,NYK,Away,Madison Square Garden,NYK,False,10,8,7.997,3,False,0.1069,,,False,33,28,-11,-7
 2026-27,espn,401910034,2026-11-22,NYK,New York Knicks,IND,Home,Madison Square Garden,NYK,False,1,1,0.798,0,False,0.0,,,False,22,16,11,7
-2026-27,espn,401910035,2026-11-22,BOS,Boston Celtics,GSW,Away,Chase Center,GSW,False,2,1,1.711,1,False,0.0209,,,False,12,9,6,-1
+2026-27,espn,401910035,2026-11-22,BOS,Boston Celtics,GSW,Away,Chase Center,GSW,False,2,1,1.711,1,False,0.0208,,,False,12,9,6,-1
 2026-27,espn,401910035,2026-11-22,GSW,Golden State Warriors,BOS,Home,Chase Center,GSW,False,0,0,0.0,0,False,0.0,,,False,10,8,-6,1
+2026-27,espn,401910036,2026-11-23,MEM,Memphis Grizzlies,CHA,Away,Spectrum Center,CHA,False,9,9,7.852,4,False,0.0881,,,False,24,24,7,6
+2026-27,espn,401910036,2026-11-23,CHA,Charlotte Hornets,MEM,Home,Spectrum Center,CHA,False,3,3,2.526,1,False,0.0242,,,False,19,17,-7,-6
+2026-27,espn,401910037,2026-11-23,POR,Portland Trail Blazers,PHI,Away,Xfinity Mobile Arena,PHI,False,2,0,1.567,1,True,0.0469,2.17,B. Carlson,True,26,17,9,17
+2026-27,espn,401910037,2026-11-23,PHI,Philadelphia 76ers,POR,Home,Xfinity Mobile Arena,PHI,False,3,2,2.239,1,False,0.0764,,,False,24,20,-9,-17
+2026-27,espn,401910038,2026-11-23,OKC,Oklahoma City Thunder,IND,Away,Gainbridge Fieldhouse,IND,False,4,3,3.207,1,False,0.0322,,,False,21,19,-5,-5
+2026-27,espn,401910038,2026-11-23,IND,Indiana Pacers,OKC,Home,Gainbridge Fieldhouse,IND,False,2,1,1.631,1,False,0.034,,,False,15,12,5,5
+2026-27,espn,401910039,2026-11-23,MIL,Milwaukee Bucks,TOR,Away,Scotiabank Arena,TOR,False,10,10,8.038,4,False,0.1522,,,False,24,20,5,5
+2026-27,espn,401910039,2026-11-23,TOR,Toronto Raptors,MIL,Home,Scotiabank Arena,TOR,False,8,5,5.804,4,True,0.2731,1.85,J. Shead,True,22,15,-5,-5
+2026-27,espn,401910040,2026-11-23,BKN,Brooklyn Nets,MIN,Away,Target Center,MIN,False,3,2,2.286,1,False,0.1006,,,False,21,18,-24,-26
+2026-27,espn,401910040,2026-11-23,MIN,Minnesota Timberwolves,BKN,Home,Target Center,MIN,False,5,5,4.073,2,False,0.075,,,False,28,23,24,26
+2026-27,espn,401910041,2026-11-23,CLE,Cleveland Cavaliers,CHI,Away,United Center,CHI,False,8,8,6.277,4,False,0.1751,,,False,32,28,-4,-14
+2026-27,espn,401910041,2026-11-23,CHI,Chicago Bulls,CLE,Home,United Center,CHI,False,1,1,0.765,0,False,0.0,,,False,17,14,4,14
+2026-27,espn,401910042,2026-11-23,PHX,Phoenix Suns,NOP,Away,Smoothie King Center,NOP,False,4,3,3.027,2,False,0.1205,,,False,27,20,-4,4
+2026-27,espn,401910042,2026-11-23,NOP,New Orleans Pelicans,PHX,Home,Smoothie King Center,NOP,False,12,6,9.696,5,True,0.173,6.25,D. Queen,True,26,18,4,-4
+2026-27,espn,401910043,2026-11-23,LAC,LA Clippers,HOU,Away,Toyota Center (Houston),HOU,False,8,6,6.299,2,False,0.064,,,False,13,11,-10,-12
+2026-27,espn,401910043,2026-11-23,HOU,Houston Rockets,LAC,Home,Toyota Center (Houston),HOU,False,1,0,0.749,0,False,0.0,,,False,15,12,10,12
+2026-27,espn,401910044,2026-11-23,UTA,Utah Jazz,LAL,Away,crypto.com Arena,LAL,False,6,5,4.462,3,False,0.2105,,,False,21,14,-1,-15
+2026-27,espn,401910044,2026-11-23,LAL,Los Angeles Lakers,UTA,Home,crypto.com Arena,LAL,False,15,11,11.253,7,True,0.4034,1.47,W. Kessler,True,35,27,1,15
+2026-27,espn,401910045,2026-11-23,SAS,San Antonio Spurs,SAC,Away,Golden 1 Center,SAC,False,5,5,3.999,2,False,0.0786,,,False,25,23,18,16
+2026-27,espn,401910045,2026-11-23,SAC,Sacramento Kings,SAS,Home,Golden 1 Center,SAC,False,5,3,3.831,2,False,0.1157,,,False,14,9,-18,-16
