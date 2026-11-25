@@ -1869,19 +1869,20 @@ season,personId,team,player,player_short,fta,ftm,road_q4_fta,road_q4_ftm,road_q4
 2026-27,1629021,BKN,Moritz Wagner,M. Wagner,38,27,2,2,1.46,1,0,0,0,espn
 2026-27,1641730,BKN,Noah Clowney,N. Clowney,27,20,4,2,3.05,2,0,2,1,espn
 2026-27,1642849,BKN,Nolan Traore,N. Traore,30,21,0,0,0.0,0,0,5,5,espn
-2026-27,1631248,BOS,Baylor Scheierman,B. Scheierman,8,8,2,2,1.67,1,0,2,2,espn
+2026-27,1631248,BOS,Baylor Scheierman,B. Scheierman,10,10,4,4,3.39,2,0,2,2,espn
 2026-27,15142621,BOS,Chris Cenac Jr.,C. Cenac Jr.,4,2,2,1,1.49,1,0,2,1,espn
 2026-27,1628401,BOS,Derrick White,D. White,24,22,2,2,1.7,1,0,12,12,espn
 2026-27,1642864,BOS,Hugo Gonzalez,H. Gonzalez,15,10,4,3,2.92,2,0,5,4,espn
-2026-27,1628369,BOS,Jayson Tatum,J. Tatum,119,103,6,4,5.13,3,0,14,10,espn
+2026-27,1628369,BOS,Jayson Tatum,J. Tatum,133,112,13,8,10.86,6,0,14,10,espn
 2026-27,1641775,BOS,Jordan Walsh,J. Walsh,8,6,1,1,0.76,0,0,0,0,espn
 2026-27,1630568,BOS,Luka Garza,L. Garza,29,18,6,2,4.16,3,1,6,4,espn
 2026-27,201144,BOS,Mike Conley,M. Conley,3,3,1,1,0.8,0,0,0,0,espn
 2026-27,1629011,BOS,Mitchell Robinson,M. Robinson,21,8,2,0,1.18,1,1,6,1,espn
-2026-27,1629674,BOS,Neemias Queta,N. Queta,55,33,11,7,7.13,5,1,5,3,espn
+2026-27,1629674,BOS,Neemias Queta,N. Queta,58,36,11,7,7.28,5,1,5,3,espn
 2026-27,202331,BOS,Paul George,P. George,43,34,8,6,6.3,3,0,6,3,espn
-2026-27,1630202,BOS,Payton Pritchard,P. Pritchard,36,31,3,2,2.5,0,0,11,10,espn
-2026-27,1630573,BOS,Sam Hauser,S. Hauser,2,2,2,2,1.58,1,0,0,0,espn
+2026-27,1630202,BOS,Payton Pritchard,P. Pritchard,38,33,3,2,2.52,0,0,11,10,espn
+2026-27,1631199,BOS,Ron Harper Jr.,R. Harper Jr.,2,0,0,0,0.0,0,0,0,0,espn
+2026-27,1630573,BOS,Sam Hauser,S. Hauser,4,3,4,3,3.1,2,0,0,0,espn
 2026-27,1641706,CHA,Brandon Miller,B. Miller,48,42,5,3,4.25,2,0,10,8,espn
 2026-27,15060701,CHA,Christian Anderson,C. Anderson,8,8,2,2,1.67,1,0,2,2,espn
 2026-27,1629632,CHA,Coby White,C. White,27,24,6,4,5.08,3,0,1,1,espn
@@ -1909,7 +1910,7 @@ season,personId,team,player,player_short,fta,ftm,road_q4_fta,road_q4_ftm,road_q4
 2026-27,1641824,CHI,Matas Buzelis,M. Buzelis,62,53,18,15,15.06,9,0,7,7,espn
 2026-27,1629651,CHI,Nic Claxton,N. Claxton,17,14,0,0,0.0,0,0,5,5,espn
 2026-27,15242496,CHI,Noa Essengue,N. Essengue,32,19,9,4,6.02,4,1,4,2,espn
-2026-27,1626181,CHI,Norman Powell,N. Powell,90,69,16,11,12.32,6,0,8,7,espn
+2026-27,1626181,CHI,Norman Powell,N. Powell,90,69,16,11,12.31,6,0,8,7,espn
 2026-27,1630172,CHI,Patrick Williams,P. Williams,11,10,2,2,1.64,1,0,3,3,espn
 2026-27,15105555,CHI,Tobe Awaka,T. Awaka,6,2,6,2,4.14,3,1,0,0,espn
 2026-27,1630200,CHI,Tre Jones,T. Jones,59,49,8,8,6.52,4,0,6,6,espn
@@ -1929,48 +1930,48 @@ season,personId,team,player,player_short,fta,ftm,road_q4_fta,road_q4_ftm,road_q4
 2026-27,1642400,CLE,Tristan Enaruna,T. Enaruna,2,1,0,0,0.0,0,0,2,1,espn
 2026-27,1642878,CLE,Tyrese Proctor,T. Proctor,18,13,1,1,0.75,0,0,5,4,espn
 2026-27,1628997,DAL,Caleb Martin,C. Martin,4,4,0,0,0.0,0,0,0,0,espn
-2026-27,1642843,DAL,Cooper Flagg,C. Flagg,118,101,17,13,14.37,5,0,18,15,espn
-2026-27,1629655,DAL,Daniel Gafford,D. Gafford,39,26,4,2,2.83,2,0,7,5,espn
+2026-27,1642843,DAL,Cooper Flagg,C. Flagg,127,108,21,17,17.66,7,0,18,15,espn
+2026-27,1629655,DAL,Daniel Gafford,D. Gafford,43,27,6,2,4.09,3,1,7,5,espn
 2026-27,1641724,DAL,Jett Howard,J. Howard,2,2,0,0,0.0,0,0,2,2,espn
 2026-27,10006442,DAL,Kyrie Irving,K. Irving,45,39,0,0,0.0,0,0,11,11,espn
 2026-27,1631204,DAL,Marcus Sasser,M. Sasser,6,5,3,2,2.39,1,0,2,2,espn
-2026-27,1631108,DAL,Max Christie,M. Christie,4,4,0,0,0.0,0,0,0,0,espn
+2026-27,1631108,DAL,Max Christie,M. Christie,6,6,2,2,1.65,1,0,0,0,espn
 2026-27,14873153,DAL,Morez Johnson Jr.,M. Johnson Jr.,29,21,4,3,2.99,2,0,2,0,espn
 2026-27,1630619,DAL,Moussa Cisse,M. Cisse,8,5,6,3,4.46,3,0,2,2,espn
-2026-27,1630230,DAL,Naji Marshall,N. Marshall,35,25,2,2,1.47,1,0,2,1,espn
-2026-27,1629023,DAL,P.J. Washington,P. Washington,51,38,0,0,0.0,0,0,6,3,espn
+2026-27,1630230,DAL,Naji Marshall,N. Marshall,36,26,3,3,2.21,1,0,2,1,espn
+2026-27,1629023,DAL,P.J. Washington,P. Washington,53,39,0,0,0.0,0,0,6,3,espn
 2026-27,1630583,DAL,Santi Aldama,S. Aldama,8,6,2,1,1.56,1,0,3,3,espn
 2026-27,1642383,DAL,Walter Clayton Jr.,W. Clayton Jr.,25,19,4,4,3.05,1,0,6,5,espn
-2026-27,1642258,DAL,Zaccharie Risacher,Z. Risacher,19,11,2,1,1.37,1,0,0,0,espn
-2026-27,203932,DEN,Aaron Gordon,A. Gordon,55,41,2,2,1.5,1,0,9,7,espn
+2026-27,1642258,DAL,Zaccharie Risacher,Z. Risacher,21,12,4,2,2.71,2,0,0,0,espn
+2026-27,203932,DEN,Aaron Gordon,A. Gordon,57,42,2,2,1.49,1,0,9,7,espn
 2026-27,14565698,DEN,Bryce Hopkins,B. Hopkins,11,8,0,0,0.0,0,0,2,2,espn
 2026-27,1641715,DEN,Cam Whitmore,C. Whitmore,1,0,0,0,0.0,0,0,1,0,espn
-2026-27,1629661,DEN,Cameron Johnson,C. Johnson,23,18,2,1,1.58,1,0,4,4,espn
-2026-27,1631128,DEN,Christian Braun,C. Braun,27,22,4,2,3.22,2,1,2,1,espn
-2026-27,201942,DEN,DeMar DeRozan,D. DeRozan,53,43,13,9,10.45,6,0,14,13,espn
-2026-27,1627750,DEN,Jamal Murray,J. Murray,97,85,15,14,12.89,6,0,18,17,espn
+2026-27,1629661,DEN,Cameron Johnson,C. Johnson,27,21,2,1,1.57,1,0,6,6,espn
+2026-27,1631128,DEN,Christian Braun,C. Braun,29,24,4,2,3.26,2,1,2,1,espn
+2026-27,201942,DEN,DeMar DeRozan,D. DeRozan,54,44,13,9,10.49,6,0,14,13,espn
+2026-27,1627750,DEN,Jamal Murray,J. Murray,103,91,15,14,12.99,6,0,22,21,espn
 2026-27,1628963,DEN,Marvin Bagley III,M. Bagley III,28,19,6,3,4.35,3,0,2,1,espn
-2026-27,203999,DEN,Nikola Jokic,N. Jokic,73,65,10,7,8.68,5,0,6,5,espn
+2026-27,203999,DEN,Nikola Jokic,N. Jokic,78,70,10,7,8.75,5,0,7,6,espn
 2026-27,1642948,DEN,Ryan Nembhard,R. Nembhard,2,2,0,0,0.0,0,0,2,2,espn
-2026-27,1642461,DEN,Spencer Jones,S. Jones,2,1,0,0,0.0,0,0,0,0,espn
+2026-27,1642461,DEN,Spencer Jones,S. Jones,4,3,0,0,0.0,0,0,0,0,espn
 2026-27,14698719,DEN,Trevon Brazile,T. Brazile,15,8,0,0,0.0,0,0,0,0,espn
 2026-27,1626145,DEN,Tyus Jones,T. Jones,6,6,0,0,0.0,0,0,2,2,espn
-2026-27,1630192,DEN,Zeke Nnaji,Z. Nnaji,4,4,0,0,0.0,0,0,4,4,espn
+2026-27,1630192,DEN,Zeke Nnaji,Z. Nnaji,6,5,0,0,0.0,0,0,6,5,espn
 2026-27,1641709,DET,Ausar Thompson,A. Thompson,33,24,7,3,5.27,3,0,3,2,espn
 2026-27,1630595,DET,Cade Cunningham,C. Cunningham,94,78,20,19,16.4,9,0,13,7,espn
-2026-27,1642450,DET,Daniss Jenkins,D. Jenkins,36,33,9,8,7.8,4,0,5,5,espn
+2026-27,1642450,DET,Daniss Jenkins,D. Jenkins,38,35,9,8,7.85,4,0,5,5,espn
 2026-27,1629130,DET,Duncan Robinson,D. Robinson,43,36,1,1,0.82,0,0,14,10,espn
 2026-27,15258459,DET,Ebuka Okorie,E. Okorie,3,3,0,0,0.0,0,0,1,1,espn
-2026-27,1641989,DET,Elijah Harkless,E. Harkless,6,6,6,6,4.94,3,0,0,0,espn
+2026-27,1641989,DET,Elijah Harkless,E. Harkless,7,7,6,6,4.98,3,0,0,0,espn
 2026-27,1630198,DET,Isaiah Joe,I. Joe,17,13,0,0,0.0,0,0,2,2,espn
 2026-27,1631105,DET,Jalen Duren,J. Duren,7,6,0,0,0.0,0,0,1,1,espn
 2026-27,1629750,DET,Javonte Green,J. Green,26,24,0,0,0.0,0,0,2,2,espn
-2026-27,1628381,DET,John Collins,J. Collins,26,22,8,6,6.55,4,1,1,1,espn
+2026-27,1628381,DET,John Collins,J. Collins,31,26,13,10,10.61,6,1,1,1,espn
 2026-27,1628989,DET,Kevin Huerter,K. Huerter,26,19,6,5,4.5,2,0,0,0,espn
-2026-27,1630194,DET,Paul Reed,P. Reed,40,28,7,4,5.1,3,1,4,2,espn
-2026-27,1641842,DET,Ronald Holland II,R. Holland II,13,9,0,0,0.0,0,0,2,2,espn
+2026-27,1630194,DET,Paul Reed,P. Reed,45,31,8,5,5.74,3,1,4,2,espn
+2026-27,1641842,DET,Ronald Holland II,R. Holland II,15,10,0,0,0.0,0,0,2,2,espn
 2026-27,1627752,DET,Taurean Prince,T. Prince,2,1,0,0,0.0,0,0,0,0,espn
-2026-27,1642449,DET,Tolu Smith,T. Smith,11,4,3,1,1.93,1,0,0,0,espn
+2026-27,1642449,DET,Tolu Smith,T. Smith,11,4,3,1,1.92,1,0,0,0,espn
 2026-27,201143,GSW,Al Horford,A. Horford,2,1,0,0,0.0,0,0,1,0,espn
 2026-27,1641764,GSW,Brandin Podziemski,B. Podziemski,50,37,2,2,1.5,0,0,5,4,espn
 2026-27,1630314,GSW,Brandon Williams,B. Williams,36,31,6,3,5.03,2,1,0,0,espn
@@ -2055,7 +2056,7 @@ season,personId,team,player,player_short,fta,ftm,road_q4_fta,road_q4_ftm,road_q4
 2026-27,1641713,MEM,GG Jackson,G. Jackson,18,13,0,0,0.0,0,0,0,0,espn
 2026-27,1630191,MEM,Isaiah Stewart,I. Stewart,17,16,3,3,2.55,1,0,0,0,espn
 2026-27,1642914,MEM,Javon Small,J. Small,20,17,0,0,0.0,0,0,8,7,espn
-2026-27,1642377,MEM,Jaylen Wells,J. Wells,30,25,7,6,5.68,3,0,4,3,espn
+2026-27,1642377,MEM,Jaylen Wells,J. Wells,30,25,7,6,5.67,3,0,4,3,espn
 2026-27,203924,MEM,Jerami Grant,J. Grant,30,23,0,0,0.0,0,0,0,0,espn
 2026-27,15231919,MEM,Karim Lopez,K. Lopez,2,2,0,0,0.0,0,0,2,2,espn
 2026-27,1631200,MEM,Kris Murray,K. Murray,2,2,0,0,0.0,0,0,0,0,espn
@@ -2115,7 +2116,7 @@ season,personId,team,player,player_short,fta,ftm,road_q4_fta,road_q4_ftm,road_q4
 2026-27,1630529,NOP,Herbert Jones,H. Jones,15,10,0,0,0.0,0,0,3,1,espn
 2026-27,14703115,NOP,Jaron Pierre Jr.,J. Pierre Jr.,4,2,0,0,0.0,0,0,2,1,espn
 2026-27,1642847,NOP,Jeremiah Fears,J. Fears,62,50,2,2,1.59,1,0,6,5,espn
-2026-27,1629673,NOP,Jordan Poole,J. Poole,62,57,4,4,3.54,2,0,14,11,espn
+2026-27,1629673,NOP,Jordan Poole,J. Poole,62,57,4,4,3.53,2,0,14,11,espn
 2026-27,1642882,NOP,Julian Reese,J. Reese,2,2,0,0,0.0,0,0,2,2,espn
 2026-27,1631255,NOP,Karlo Matkovic,K. Matkovic,13,8,0,0,0.0,0,0,0,0,espn
 2026-27,1630180,NOP,Saddiq Bey,S. Bey,65,55,4,4,3.31,1,0,18,14,espn
@@ -2151,10 +2152,10 @@ season,personId,team,player,player_short,fta,ftm,road_q4_fta,road_q4_ftm,road_q4
 2026-27,1642363,OKC,Nique Clifford,N. Clifford,8,5,4,3,2.94,2,0,2,2,espn
 2026-27,1628983,OKC,Shai Gilgeous-Alexander,S. Gilgeous-Alexander,142,117,10,8,8.19,4,0,24,20,espn
 2026-27,1631457,ORL,Alex Morales,A. Morales,2,1,0,0,0.0,0,0,0,0,espn
-2026-27,1641710,ORL,Anthony Black,A. Black,58,42,4,2,2.97,2,1,7,7,espn
+2026-27,1641710,ORL,Anthony Black,A. Black,61,43,4,2,2.9,2,1,7,7,espn
 2026-27,1630658,ORL,Colin Castleton,C. Castleton,2,1,0,0,0.0,0,0,2,1,espn
-2026-27,1630217,ORL,Desmond Bane,D. Bane,37,31,14,12,11.43,7,0,0,0,espn
-2026-27,1630532,ORL,Franz Wagner,F. Wagner,93,78,24,23,19.85,10,0,7,6,espn
+2026-27,1630217,ORL,Desmond Bane,D. Bane,38,32,14,12,11.48,7,0,1,1,espn
+2026-27,1630532,ORL,Franz Wagner,F. Wagner,95,80,24,23,19.92,10,0,7,6,espn
 2026-27,1629048,ORL,Goga Bitadze,G. Bitadze,25,15,2,2,1.34,1,0,0,0,espn
 2026-27,1630591,ORL,Jalen Suggs,J. Suggs,15,11,0,0,0.0,0,0,6,3,espn
 2026-27,1631288,ORL,Jamal Cain,J. Cain,16,13,5,5,3.94,2,0,0,0,espn
@@ -2162,7 +2163,7 @@ season,personId,team,player,player_short,fta,ftm,road_q4_fta,road_q4_ftm,road_q4
 2026-27,202696,ORL,Nikola Vucevic,N. Vucevic,5,4,0,0,0.0,0,0,0,0,espn
 2026-27,1631094,ORL,Paolo Banchero,P. Banchero,20,14,0,0,0.0,0,0,1,1,espn
 2026-27,1641783,ORL,Tristan da Silva,T. da Silva,12,8,0,0,0.0,0,0,0,0,espn
-2026-27,1628976,ORL,Wendell Carter Jr.,W. Carter Jr.,56,44,2,1,1.58,1,0,3,3,espn
+2026-27,1628976,ORL,Wendell Carter Jr.,W. Carter Jr.,58,46,2,1,1.59,1,0,3,3,espn
 2026-27,1641737,PHI,Adem Bona,A. Bona,7,3,0,0,0.0,0,0,0,0,espn
 2026-27,1629014,PHI,Anfernee Simons,A. Simons,19,16,0,0,0.0,0,0,0,0,espn
 2026-27,1629731,PHI,Dean Wade,D. Wade,11,8,0,0,0.0,0,0,4,2,espn
@@ -2260,9 +2261,9 @@ season,personId,team,player,player_short,fta,ftm,road_q4_fta,road_q4_ftm,road_q4
 2026-27,14277919,UTA,Mo Bamba,M. Bamba,23,13,0,0,0.0,0,0,0,0,espn
 2026-27,1629004,UTA,Svi Mykhailiuk,S. Mykhailiuk,13,11,6,5,4.83,3,0,3,3,espn
 2026-27,1628396,UTA,Tony Bradley,T. Bradley,8,4,2,0,1.45,1,1,0,0,espn
-2026-27,15142718,WAS,AJ Dybantsa,A. Dybantsa,68,49,10,9,7.32,5,0,12,9,espn
+2026-27,15142718,WAS,AJ Dybantsa,A. Dybantsa,73,53,10,9,7.36,5,0,12,9,espn
 2026-27,1642259,WAS,Alex Sarr,A. Sarr,36,24,1,0,0.72,0,0,10,6,espn
-2026-27,203076,WAS,Anthony Davis,A. Davis,99,81,14,10,11.37,7,0,4,4,espn
+2026-27,203076,WAS,Anthony Davis,A. Davis,109,89,14,10,11.36,7,0,4,4,espn
 2026-27,1630264,WAS,Anthony Gill,A. Gill,5,4,2,1,1.59,1,0,3,3,espn
 2026-27,1641731,WAS,Bilal Coulibaly,B. Coulibaly,27,20,2,1,1.53,1,0,2,2,espn
 2026-27,1642267,WAS,Bub Carrington,B. Carrington,7,6,0,0,0.0,0,0,0,0,espn
@@ -2270,8 +2271,8 @@ season,personId,team,player,player_short,fta,ftm,road_q4_fta,road_q4_ftm,road_q4
 2026-27,15105841,WAS,Felix Okpara,F. Okpara,2,1,0,0,0.0,0,0,2,1,espn
 2026-27,1630551,WAS,Justin Champagnie,J. Champagnie,3,3,0,0,0.0,0,0,1,1,espn
 2026-27,203114,WAS,Khris Middleton,K. Middleton,11,8,0,0,0.0,0,0,0,0,espn
-2026-27,1642273,WAS,Kyshawn George,K. George,47,36,9,7,6.93,4,1,9,6,espn
-2026-27,1629027,WAS,Trae Young,T. Young,122,105,18,17,15.27,8,0,21,19,espn
+2026-27,1642273,WAS,Kyshawn George,K. George,49,38,9,7,6.99,4,1,11,8,espn
+2026-27,1629027,WAS,Trae Young,T. Young,131,113,18,17,15.32,8,0,26,23,espn
 2026-27,1642848,WAS,Tre Johnson,T. Johnson,14,13,0,0,0.0,0,0,0,0,espn
 2026-27,1630544,WAS,Tre Mann,T. Mann,4,3,0,0,0.0,0,0,2,2,espn
 2026-27,1642860,WAS,Will Riley,W. Riley,11,7,0,0,0.0,0,0,5,4,espn
